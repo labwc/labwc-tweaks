@@ -40,9 +40,19 @@ activate(GtkApplication *app, gpointer user_data)
 	widget = gtk_label_new("theme");
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	theme_name = gtk_combo_box_text_new();
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(theme_name), "Adwaita");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(theme_name), "Clearlooks-3.4");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(theme_name), "Numix");
+
+	char filename[PATH_MAX];
+	struct themes themes = { 0 };
+	char *home = getenv("HOME");
+	snprintf(filename, sizeof(filename), "%s/%s", home, ".local/share/themes");
+	find_themes(&themes, filename);
+	find_themes(&themes, "/usr/share/themes");
+	struct theme *theme;
+	for (int i = 0; i < themes.nr; ++i) {
+		theme = themes.data + i;
+		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(theme_name), theme->name);
+	}
+
 	gtk_combo_box_set_active(GTK_COMBO_BOX(theme_name), 0);
 	gtk_grid_attach(GTK_GRID(grid), theme_name, 1, row++, 1, 1);
 

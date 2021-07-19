@@ -1,6 +1,18 @@
 #ifndef __TWEAKS_H
 #define __TWEAKS_H
 
+struct theme {
+	char *name;
+	char *path;
+};
+
+struct themes {
+	struct theme *data;
+	int nr, alloc;
+};
+
+void find_themes(struct themes *themes, const char *path);
+
 void xml_init(const char *filename);
 void xml_save(void);
 void xml_finish(void);
