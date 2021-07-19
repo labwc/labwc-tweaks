@@ -1,6 +1,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include <gtk/gtk.h>
 #include <string.h>
+#include <strings.h>
 #include "tweaks.h"
 
 static GtkWidget *corner_radius;
@@ -15,6 +16,15 @@ update(GtkWidget *widget, gpointer data)
 	if (!fork()) {
 		execl("/bin/sh", "/bin/sh", "-c", "killall -SIGHUP labwc", (void *)NULL);
 	}
+}
+
+/* Sort system themes in alphabetical order */
+static int
+compare(const void *a, const void *b)
+{
+	const struct theme *theme_a = (struct theme *)a;
+	const struct theme *theme_b = (struct theme *)b;
+	return strcasecmp(theme_a->name, theme_b->name);
 }
 
 static void
@@ -47,6 +57,7 @@ activate(GtkApplication *app, gpointer user_data)
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".local/share/themes");
 	find_themes(&themes, filename);
 	find_themes(&themes, "/usr/share/themes");
+	qsort(themes.data, themes.nr, sizeof(struct theme), compare);
 	struct theme *theme;
 	for (int i = 0; i < themes.nr; ++i) {
 		theme = themes.data + i;
