@@ -11,7 +11,7 @@ struct themes {
 	int nr, alloc;
 };
 
-void find_themes(struct themes *themes, const char *path);
+void find_themes(struct themes *themes, const char *path, const char *filename);
 
 void xml_init(const char *filename);
 void xml_save(void);
