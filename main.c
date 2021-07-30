@@ -58,13 +58,18 @@ activate(GtkApplication *app, gpointer user_data)
 	find_themes(&themes, filename);
 	find_themes(&themes, "/usr/share/themes");
 	qsort(themes.data, themes.nr, sizeof(struct theme), compare);
+
+	int active = -1;
+	char *active_id = xml_get("name.theme");
 	struct theme *theme;
 	for (int i = 0; i < themes.nr; ++i) {
 		theme = themes.data + i;
+		if (!strcmp(theme->name, active_id)) {
+			active = i;
+		}
 		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(theme_name), theme->name);
 	}
-
-	gtk_combo_box_set_active(GTK_COMBO_BOX(theme_name), 0);
+	gtk_combo_box_set_active(GTK_COMBO_BOX(theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), theme_name, 1, row++, 1, 1);
 
 	/* corner radius spinbutton */
