@@ -47,7 +47,8 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_box_pack_start(GTK_BOX(vbox), grid, TRUE, TRUE, 5);
 
 	/* theme combobox */
-	widget = gtk_label_new("theme");
+	widget = gtk_label_new("openbox theme");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	theme_name = gtk_combo_box_text_new();
 
@@ -74,6 +75,7 @@ activate(GtkApplication *app, gpointer user_data)
 
 	/* corner radius spinbutton */
 	widget = gtk_label_new("corner radius");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	GtkAdjustment *adjustment = gtk_adjustment_new(0, 0, 10, 1, 2, 0);
 	corner_radius = gtk_spin_button_new(GTK_ADJUSTMENT(adjustment), 1, 0);
