@@ -127,7 +127,6 @@ activate(GtkApplication *app, gpointer user_data)
 
 	for (int i = 0; i < gtk_themes.nr; ++i) {
 		theme = gtk_themes.data + i;
-		printf("active_id=`%s`; theme->name=`%s`\n", active_id, theme->name);
 		if (!strcmp(theme->name, active_id)) {
 			active = i;
 		}
