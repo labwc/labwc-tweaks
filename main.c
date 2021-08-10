@@ -86,7 +86,7 @@ activate(GtkApplication *app, gpointer user_data)
 	struct theme *theme;
 	for (int i = 0; i < openbox_themes.nr; ++i) {
 		theme = openbox_themes.data + i;
-		if (!strcmp(theme->name, active_id)) {
+		if (active_id && !strcmp(theme->name, active_id)) {
 			active = i;
 		}
 		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(openbox_theme_name), theme->name);
