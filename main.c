@@ -2,6 +2,7 @@
 #include <gtk/gtk.h>
 #include <string.h>
 #include <strings.h>
+#include <sys/stat.h>
 #include "tweaks.h"
 
 static GtkWidget *corner_radius;
@@ -156,6 +157,12 @@ main(int argc, char **argv)
 	char filename[PATH_MAX];
 	char *home = getenv("HOME");
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
+
+	struct stat st;
+	if (stat(filename, &st)) {
+		printf("error: need ~/.config/labwc/rc.xml to run\n");
+		exit(EXIT_FAILURE);
+	}
 
 	xml_init(filename);
 
