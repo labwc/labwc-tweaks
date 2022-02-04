@@ -8,6 +8,8 @@
 static GtkWidget *corner_radius;
 static GtkWidget *openbox_theme_name;
 static GtkWidget *gtk_theme_name;
+static GtkWidget *icon_theme_name;
+static GtkWidget *cursor_theme_name;
 static GtkWidget *natural_scroll;
 
 static struct themes openbox_themes = { 0 };
@@ -16,18 +18,61 @@ static struct themes gtk_themes = { 0 };
 static void
 update(GtkWidget *widget, gpointer data)
 {
+	/* corner radius, labwc theme, libinput scroll */
 	xml_set_num("cornerradius.theme", gtk_spin_button_get_value(GTK_SPIN_BUTTON(corner_radius)));
 	xml_set("name.theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(openbox_theme_name)));
 	xml_set("naturalscroll.device.libinput", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(natural_scroll)));
 	xml_save();
+
+	/* set cursor for gtk */
+	char buf_cur[4096];
+	snprintf(buf_cur, sizeof(buf_cur), "gsettings set org.gnome.desktop.interface cursor-theme %s",
+		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name)));
+	popen(buf_cur, "r");
+	
+	/* set cursor for labwc  - should cover 'replace' or 'append' */
+	char xcur[15] = "XCURSOR_THEME=";
+	char filename[PATH_MAX];
+	char bufname[PATH_MAX];
+	char *home = getenv("HOME");
+	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/environment");
+	snprintf(bufname, sizeof(bufname), "%s/%s", home, ".config/labwc/buf");
+	FILE *fe = fopen(filename, "r");
+	FILE *fw = fopen(bufname, "a");
+	if((fe == NULL) || (fw == NULL)) {
+		perror("Unable to open file!");
+		return;
+	}
+	char chunk[128];
+	while(fgets(chunk, sizeof(chunk), fe) != NULL) {
+		if (strstr(chunk, xcur) != NULL) {
+			continue;
+		} else {
+			fprintf(fw, "%s", chunk);
+		}
+	}
+	fclose(fe);
+	fprintf(fw, "%s", strcat(xcur,
+		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name))));
+	fclose(fw);
+	rename(bufname, filename);	
+	
+	/* reset labwc */
 	if (!fork()) {
 		execl("/bin/sh", "/bin/sh", "-c", "killall -SIGHUP labwc", (void *)NULL);
 	}
 
+	/* gtk theme */
 	char buf[4096];
 	snprintf(buf, sizeof(buf), "gsettings set org.gnome.desktop.interface gtk-theme %s",
 		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(gtk_theme_name)));
 	popen(buf, "r");
+
+	/* some icon themes have a space in the name */
+	char buf_ico[4096];
+	snprintf(buf_ico, sizeof(buf_ico), "gsettings set org.gnome.desktop.interface icon-theme \"%s\"",
+		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(icon_theme_name)));
+	popen(buf_ico, "r");
 }
 
 /* Sort system themes in alphabetical order */
@@ -157,6 +202,72 @@ activate(GtkApplication *app, gpointer user_data)
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(gtk_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), gtk_theme_name, 1, row++, 1, 1);
+
+	/* icon theme combobox */
+	widget = gtk_label_new("icon theme");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	icon_theme_name = gtk_combo_box_text_new();
+
+	char path0[PATH_MAX];
+	struct themes icon_themes = { 0 };
+	snprintf(path0, sizeof(path0), "%s/%s", home, ".local/share/icons");
+	find_themes(&icon_themes, path0, "scalable");
+	find_themes(&icon_themes, "/usr/share/icons", "scalable");
+	qsort(icon_themes.data, icon_themes.nr, sizeof(struct theme), compare);
+
+	active = -1;
+	FILE *fp0 = popen("gsettings get org.gnome.desktop.interface icon-theme", "r");
+	char buf0[4096] = { 0 };
+	fgets(buf0, sizeof(buf0), fp);
+	char *p0 = strrchr(buf0, '\n');
+	if (p0) {
+		*p0 = '\0';
+	}
+	fclose(fp0);
+	active_id = remove_single_quotes(buf0);
+
+	for (int i = 0; i < icon_themes.nr; ++i) {
+		theme = icon_themes.data + i;
+		if (!strcmp(theme->name, active_id)) {
+			active = i;
+		}
+		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(icon_theme_name), theme->name);
+	}
+	gtk_combo_box_set_active(GTK_COMBO_BOX(icon_theme_name), active);
+	gtk_grid_attach(GTK_GRID(grid),icon_theme_name, 1, row++, 1, 1);
+
+	/* cursor theme combobox */
+	widget = gtk_label_new("cursor theme");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	cursor_theme_name = gtk_combo_box_text_new();
+
+	struct themes cursor_themes = { 0 };
+	find_themes(&cursor_themes, path0, "cursors/xterm");
+	find_themes(&cursor_themes, "/usr/share/icons", "cursors/xterm");
+	qsort(cursor_themes.data, cursor_themes.nr, sizeof(struct theme), compare);
+
+	active = -1;
+	FILE *fp1 = popen("gsettings get org.gnome.desktop.interface cursor-theme", "r");
+	char buf1[4096] = { 0 };
+	fgets(buf1, sizeof(buf1), fp);
+	char *p1 = strrchr(buf1, '\n');
+	if (p1) {
+		*p1 = '\0';
+	}
+	fclose(fp1);
+	active_id = remove_single_quotes(buf1);
+	
+	for (int i = 0; i < cursor_themes.nr; ++i) {
+		theme = cursor_themes.data + i;
+		if (!strcmp(theme->name, active_id)) {
+			active = i;
+		}
+		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(cursor_theme_name), theme->name);
+	}
+	gtk_combo_box_set_active(GTK_COMBO_BOX(cursor_theme_name), active);
+	gtk_grid_attach(GTK_GRID(grid),cursor_theme_name, 1, row++, 1, 1);
 
 	/* natural scroll combobox */
 	widget = gtk_label_new("natural scroll");

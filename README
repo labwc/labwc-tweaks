@@ -1,0 +1,16 @@
+labwc-tweaks
+============
+
+[WIP] configuration gui app for labwc without any real plan or Acceptance
+Criteria. It was merely written to help change themes for the purposes of
+testing labwc during development.
+
+It only handles the following:
+
+- lawbc theme
+- rounded corner radius
+- GTK theme
+- GTK icon theme
+- cursor theme
+
+Don't expect too much :)

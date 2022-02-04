@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <unistd.h>
 #include "tweaks.h"
 
 static struct
@@ -50,6 +51,10 @@ find_themes(struct themes *themes, const char *path, const char *filename)
 		if (entry->d_type == DT_DIR && entry->d_name[0] != '.') {
 			char buf[PATH_MAX];
 			snprintf(buf, sizeof(buf), "%s/%s/%s", path, entry->d_name, filename);
+			/* filter 'hicolor' as it is not a complete icon set */
+			if (strstr(buf, "hicolor") != NULL) {
+				continue;
+			}
 			if (!stat(buf, &st)) {
 				theme = grow_vector_by_one_theme(themes);
 				theme->name = strdup(entry->d_name);
@@ -58,4 +63,12 @@ find_themes(struct themes *themes, const char *path, const char *filename)
 		}
 	}
 	closedir(dp);
+	/* In some distros Adwaita is builtin to gtk+-3.0 and subsequently no theme dir exists */
+	if ((strncmp(theme->name, "Adwaita", 7) != 0) &&
+		(strstr(theme->path, "icons") == NULL) &&
+		(strstr(theme->path, "openbox") == NULL)) {
+		theme = grow_vector_by_one_theme(themes);
+		theme->name = strdup("Adwaita");
+		theme->path = NULL;		
+	}
 }
