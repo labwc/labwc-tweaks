@@ -10,5 +10,7 @@ It only handles the following:
 - lawbc theme
 - rounded corner radius
 - GTK theme
+- GTK icon theme
+- cursor theme
 
 Don't expect too much :)
