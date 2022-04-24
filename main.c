@@ -224,7 +224,7 @@ activate(GtkApplication *app, gpointer user_data)
 	if (p0) {
 		*p0 = '\0';
 	}
-	fclose(fp0);
+	pclose(fp0);
 	active_id = remove_single_quotes(buf0);
 
 	for (int i = 0; i < icon_themes.nr; ++i) {
@@ -256,7 +256,7 @@ activate(GtkApplication *app, gpointer user_data)
 	if (p1) {
 		*p1 = '\0';
 	}
-	fclose(fp1);
+	pclose(fp1);
 	active_id = remove_single_quotes(buf1);
 	
 	for (int i = 0; i < cursor_themes.nr; ++i) {
