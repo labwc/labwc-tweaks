@@ -10,6 +10,9 @@ static GtkWidget *openbox_theme_name;
 static GtkWidget *gtk_theme_name;
 static GtkWidget *natural_scroll;
 
+static struct themes openbox_themes = { 0 };
+static struct themes gtk_themes = { 0 };
+
 static void
 update(GtkWidget *widget, gpointer data)
 {
@@ -96,7 +99,6 @@ activate(GtkApplication *app, gpointer user_data)
 	openbox_theme_name = gtk_combo_box_text_new();
 
 	char path[4096];
-	struct themes openbox_themes = { 0 };
 	char *home = getenv("HOME");
 	snprintf(path, sizeof(path), "%s/%s", home, ".local/share/themes");
 	find_themes(&openbox_themes, path, "openbox-3/themerc");
@@ -131,7 +133,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	gtk_theme_name = gtk_combo_box_text_new();
 
-	struct themes gtk_themes = { 0 };
 	find_themes(&gtk_themes, path, "gtk-3.0/gtk.css");
 	find_themes(&gtk_themes, "/usr/share/themes", "gtk-3.0/gtk.css");
 	qsort(gtk_themes.data, gtk_themes.nr, sizeof(struct theme), compare);
@@ -144,7 +145,7 @@ activate(GtkApplication *app, gpointer user_data)
 	if (p) {
 		*p = '\0';
 	}
-	fclose(fp);
+	pclose(fp);
 	active_id = remove_single_quotes(buf);
 
 	for (int i = 0; i < gtk_themes.nr; ++i) {
@@ -181,6 +182,21 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_show_all(window);
 }
 
+static void
+free_theme_vector(struct themes *themes)
+{
+	for (int i = 0; i < themes->nr; ++i) {
+		struct theme *theme = themes->data + i;
+		if (theme->name) {
+			free(theme->name);
+		}
+		if (theme->path) {
+			free(theme->path);
+		}
+	}
+	free(themes->data);
+}
+
 int
 main(int argc, char **argv)
 {
@@ -205,7 +221,11 @@ main(int argc, char **argv)
 	status = g_application_run(G_APPLICATION(app), argc, argv);
 	g_object_unref(app);
 
+	/* clean up */
 	xml_finish();
+	free_theme_vector(&openbox_themes);
+	free_theme_vector(&gtk_themes);
+	pango_cairo_font_map_set_default(NULL);
 
 	return status;
 }
