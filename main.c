@@ -31,7 +31,7 @@ update(GtkWidget *widget, gpointer data)
 	popen(buf_cur, "r");
 	
 	/* set cursor for labwc  - should cover 'replace' or 'append' */
-	char xcur[15] = "XCURSOR_THEME=";
+	char xcur[4096] = "XCURSOR_THEME=";
 	char filename[PATH_MAX];
 	char bufname[PATH_MAX];
 	char *home = getenv("HOME");
