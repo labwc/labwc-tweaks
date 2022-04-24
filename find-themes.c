@@ -41,7 +41,7 @@ find_themes(struct themes *themes, const char *path, const char *filename)
 	struct dirent *entry;
 	DIR *dp;
 	struct stat st;
-	struct theme *theme;
+	struct theme *theme = NULL;
 
 	dp = opendir(path);
 	if (!dp) {
@@ -64,6 +64,10 @@ find_themes(struct themes *themes, const char *path, const char *filename)
 	}
 	closedir(dp);
 	/* In some distros Adwaita is builtin to gtk+-3.0 and subsequently no theme dir exists */
+	if (!theme || !theme->name || !theme->path) {
+		fprintf(stderr, "warn: no theme || theme->name || theme->path\n");
+		return;
+	}
 	if ((strncmp(theme->name, "Adwaita", 7) != 0) &&
 		(strstr(theme->path, "icons") == NULL) &&
 		(strstr(theme->path, "openbox") == NULL)) {
