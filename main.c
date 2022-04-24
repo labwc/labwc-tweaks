@@ -55,6 +55,12 @@ static int
 get_yes_no(char *nodename)
 {
 	char *value = xml_get(nodename);
+
+	/* handle <foo></foo> and <foo /> where no value has been specified */
+	if (!value) {
+		return -1;
+	}
+
 	if (!strcmp(value, "yes")) {
 		return 0;
 	} else if (!strcmp(value, "no")) {
