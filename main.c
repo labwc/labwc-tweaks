@@ -14,6 +14,8 @@ static GtkWidget *natural_scroll;
 
 static struct themes openbox_themes = { 0 };
 static struct themes gtk_themes = { 0 };
+static struct themes icon_themes = { 0 };
+static struct themes cursor_themes = { 0 };
 
 static void
 update(GtkWidget *widget, gpointer data)
@@ -210,7 +212,6 @@ activate(GtkApplication *app, gpointer user_data)
 	icon_theme_name = gtk_combo_box_text_new();
 
 	char path0[PATH_MAX];
-	struct themes icon_themes = { 0 };
 	snprintf(path0, sizeof(path0), "%s/%s", home, ".local/share/icons");
 	find_themes(&icon_themes, path0, "scalable");
 	find_themes(&icon_themes, "/usr/share/icons", "scalable");
@@ -243,7 +244,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	cursor_theme_name = gtk_combo_box_text_new();
 
-	struct themes cursor_themes = { 0 };
 	find_themes(&cursor_themes, path0, "cursors/xterm");
 	find_themes(&cursor_themes, "/usr/share/icons", "cursors/xterm");
 	qsort(cursor_themes.data, cursor_themes.nr, sizeof(struct theme), compare);
@@ -336,6 +336,8 @@ main(int argc, char **argv)
 	xml_finish();
 	free_theme_vector(&openbox_themes);
 	free_theme_vector(&gtk_themes);
+	free_theme_vector(&icon_themes);
+	free_theme_vector(&cursor_themes);
 	pango_cairo_font_map_set_default(NULL);
 
 	return status;
