@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Labwc Config
+GenericName=configuration
+Comment=Configure settings for Labwc
+Exec=labwc-tweaks
+Icon=labwc-tweaks
+Type=Application
+Categories=Settings;System;
