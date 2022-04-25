@@ -1,5 +1,6 @@
 #ifndef __TWEAKS_H
 #define __TWEAKS_H
+#include <stdbool.h>
 
 struct theme {
 	char *name;
@@ -13,7 +14,7 @@ struct themes {
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
-void find_themes(struct themes *themes, const char *path, const char *filename);
+void find_themes(struct themes *themes, const char *middle, const char *end);
 
 void xml_init(const char *filename);
 void xml_save(void);

@@ -1,6 +1,5 @@
 #define _POSIX_C_SOURCE 200809L
 #include <gtk/gtk.h>
-#include <stdint.h>
 #include <string.h>
 #include <strings.h>
 #include <sys/stat.h>
@@ -76,15 +75,6 @@ update(GtkWidget *widget, gpointer data)
 	snprintf(buf_ico, sizeof(buf_ico), "gsettings set org.gnome.desktop.interface icon-theme \"%s\"",
 		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(icon_theme_name)));
 	popen(buf_ico, "r");
-}
-
-/* Sort system themes in alphabetical order */
-static int
-compare(const void *a, const void *b)
-{
-	const struct theme *theme_a = (struct theme *)a;
-	const struct theme *theme_b = (struct theme *)b;
-	return strcasecmp(theme_a->name, theme_b->name);
 }
 
 static char *
@@ -285,44 +275,6 @@ free_theme_vector(struct themes *themes)
 	free(themes->data);
 }
 
-static struct {
-	const char *prefix;
-	const char *path;
-} dirs[] = {
-	{ "XDG_DATA_HOME", "" },
-	{ "HOME", ".local/share" },
-	{ "XDG_DATA_DIRS", "" },
-	{ NULL, "/usr/share" },
-	{ NULL, "/usr/local/share" },
-	{ NULL, "/opt/share" },
-};
-
-static void
-load_themes(struct themes *themes, const char *middle, const char *end)
-{
-	char path[4096];
-	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
-		if (dirs[i].prefix) {
-			char *prefix = getenv(dirs[i].prefix);
-			if (!prefix) {
-				continue;
-			}
-			snprintf(path, sizeof(path), "%s/%s/%s", prefix, dirs[i].path, middle);
-		} else {
-			snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
-		}
-		fprintf(stderr, "try path=%s\n", path);
-
-		/*
-		 * Find themes by recursively reading directories at
-		 * "$DATA_DIR/@middle" and then checking for
-		 * "$DATA_DIR/@middle/<themename>/@end"
-		 */
-		find_themes(themes, path, end);
-	}
-	qsort(themes->data, themes->nr, sizeof(struct theme), compare);
-}
-
 int
 main(int argc, char **argv)
 {
@@ -339,10 +291,10 @@ main(int argc, char **argv)
 	xml_init(filename);
 
 	/* load themes */
-	load_themes(&openbox_themes, "themes", "openbox-3/themerc");
-	load_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");
-	load_themes(&icon_themes, "icons", "scalable");
-	load_themes(&cursor_themes, "icons", "cursors/xterm");
+	find_themes(&openbox_themes, "themes", "openbox-3/themerc");
+	find_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");
+	find_themes(&icon_themes, "icons", "scalable");
+	find_themes(&cursor_themes, "icons", "cursors/xterm");
 
 	/* start ui */
 	GtkApplication *app;

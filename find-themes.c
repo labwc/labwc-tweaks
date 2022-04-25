@@ -1,7 +1,8 @@
 #define _POSIX_C_SOURCE 200809L
 #define _DEFAULT_SOURCE
+#include <assert.h>
 #include <dirent.h>
-#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,8 +10,8 @@
 #include <unistd.h>
 #include "tweaks.h"
 
-static struct
-theme *grow_vector_by_one_theme(struct themes *themes)
+static struct theme *
+grow_vector_by_one_theme(struct themes *themes)
 {
 	if (themes->nr == themes->alloc) {
 		themes->alloc = (themes->alloc + 16) * 2;
@@ -23,7 +24,7 @@ theme *grow_vector_by_one_theme(struct themes *themes)
 }
 
 /**
- * find_themes - find themes and store them in vector
+ * process_dir - find themes and store them in vector
  * @themes: vector
  * @path: path to directory to search in
  * @filename: filename for which a successful stat will count as 'found theme',
@@ -35,8 +36,8 @@ theme *grow_vector_by_one_theme(struct themes *themes)
  * @path = "/usr/share/themes"
  * @filename = "openbox-3/themerc"
  */
-void
-find_themes(struct themes *themes, const char *path, const char *filename)
+static void
+process_dir(struct themes *themes, const char *path, const char *filename)
 {
 	struct dirent *entry;
 	DIR *dp;
@@ -63,16 +64,77 @@ find_themes(struct themes *themes, const char *path, const char *filename)
 		}
 	}
 	closedir(dp);
-	/* In some distros Adwaita is builtin to gtk+-3.0 and subsequently no theme dir exists */
-	if (!theme || !theme->name || !theme->path) {
-		fprintf(stderr, "warn: no theme || theme->name || theme->path\n");
-		return;
+}
+
+static bool
+vector_contains(struct themes *themes, const char *needle)
+{
+	assert(needle);
+	for (int i = 0; i < themes->nr; ++i) {
+		struct theme *theme = themes->data + i;
+		if (!theme || !theme->name) {
+			continue;
+		}
+		if ((!strcmp(theme->name, needle))) {
+			return true;
+		}
 	}
-	if ((strncmp(theme->name, "Adwaita", 7) != 0) &&
-		(strstr(theme->path, "icons") == NULL) &&
-		(strstr(theme->path, "openbox") == NULL)) {
-		theme = grow_vector_by_one_theme(themes);
+	return false;
+}
+
+/* Sort system themes in alphabetical order */
+static int
+compare(const void *a, const void *b)
+{
+	const struct theme *theme_a = (struct theme *)a;
+	const struct theme *theme_b = (struct theme *)b;
+	return strcasecmp(theme_a->name, theme_b->name);
+}
+
+static struct {
+	const char *prefix;
+	const char *path;
+} dirs[] = {
+	{ "XDG_DATA_HOME", "" },
+	{ "HOME", ".local/share" },
+	{ "XDG_DATA_DIRS", "" },
+	{ NULL, "/usr/share" },
+	{ NULL, "/usr/local/share" },
+	{ NULL, "/opt/share" },
+};
+
+void
+find_themes(struct themes *themes, const char *middle, const char *end)
+{
+	char path[4096];
+	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
+		if (dirs[i].prefix) {
+			char *prefix = getenv(dirs[i].prefix);
+			if (!prefix) {
+				continue;
+			}
+			snprintf(path, sizeof(path), "%s/%s/%s", prefix, dirs[i].path, middle);
+		} else {
+			snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
+		}
+
+		/*
+		 * Find themes by recursively reading directories at
+		 * "$DATA_DIR/@middle" and then checking for
+		 * "$DATA_DIR/@middle/<themename>/@end"
+		 */
+		process_dir(themes, path, end);
+	}
+
+	/*
+	 * In some distros Adwaita is built-in to gtk+-3.0 and subsequently no
+	 * theme dir exists. In this case we add it manually.
+	 */
+	if (!vector_contains(themes, "Adwaita")) {
+		struct theme *theme = grow_vector_by_one_theme(themes);
 		theme->name = strdup("Adwaita");
 		theme->path = NULL;		
 	}
+
+	qsort(themes->data, themes->nr, sizeof(struct theme), compare);
 }
