@@ -11,6 +11,8 @@ struct themes {
 	int nr, alloc;
 };
 
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
+
 void find_themes(struct themes *themes, const char *path, const char *filename);
 
 void xml_init(const char *filename);

@@ -1,5 +1,6 @@
 #define _POSIX_C_SOURCE 200809L
 #include <gtk/gtk.h>
+#include <stdint.h>
 #include <string.h>
 #include <strings.h>
 #include <sys/stat.h>
@@ -144,14 +145,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	openbox_theme_name = gtk_combo_box_text_new();
-
-	char path[4096];
-	char *home = getenv("HOME");
-	snprintf(path, sizeof(path), "%s/%s", home, ".local/share/themes");
-	find_themes(&openbox_themes, path, "openbox-3/themerc");
-	find_themes(&openbox_themes, "/usr/share/themes", "openbox-3/themerc");
-	qsort(openbox_themes.data, openbox_themes.nr, sizeof(struct theme), compare);
-
 	int active = -1;
 	char *active_id = xml_get("name.theme");
 	struct theme *theme;
@@ -180,10 +173,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	gtk_theme_name = gtk_combo_box_text_new();
 
-	find_themes(&gtk_themes, path, "gtk-3.0/gtk.css");
-	find_themes(&gtk_themes, "/usr/share/themes", "gtk-3.0/gtk.css");
-	qsort(gtk_themes.data, gtk_themes.nr, sizeof(struct theme), compare);
-
 	active = -1;
 	FILE *fp = popen("gsettings get org.gnome.desktop.interface gtk-theme", "r");
 	char buf[4096] = { 0 };
@@ -210,13 +199,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	icon_theme_name = gtk_combo_box_text_new();
-
-	char path0[PATH_MAX];
-	snprintf(path0, sizeof(path0), "%s/%s", home, ".local/share/icons");
-	find_themes(&icon_themes, path0, "scalable");
-	find_themes(&icon_themes, "/usr/share/icons", "scalable");
-	qsort(icon_themes.data, icon_themes.nr, sizeof(struct theme), compare);
-
 	active = -1;
 	FILE *fp0 = popen("gsettings get org.gnome.desktop.interface icon-theme", "r");
 	char buf0[4096] = { 0 };
@@ -243,11 +225,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	cursor_theme_name = gtk_combo_box_text_new();
-
-	find_themes(&cursor_themes, path0, "cursors/xterm");
-	find_themes(&cursor_themes, "/usr/share/icons", "cursors/xterm");
-	qsort(cursor_themes.data, cursor_themes.nr, sizeof(struct theme), compare);
-
 	active = -1;
 	FILE *fp1 = popen("gsettings get org.gnome.desktop.interface cursor-theme", "r");
 	char buf1[4096] = { 0 };
@@ -308,6 +285,44 @@ free_theme_vector(struct themes *themes)
 	free(themes->data);
 }
 
+static struct {
+	const char *prefix;
+	const char *path;
+} dirs[] = {
+	{ "XDG_DATA_HOME", "" },
+	{ "HOME", ".local/share" },
+	{ "XDG_DATA_DIRS", "" },
+	{ NULL, "/usr/share" },
+	{ NULL, "/usr/local/share" },
+	{ NULL, "/opt/share" },
+};
+
+static void
+load_themes(struct themes *themes, const char *middle, const char *end)
+{
+	char path[4096];
+	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
+		if (dirs[i].prefix) {
+			char *prefix = getenv(dirs[i].prefix);
+			if (!prefix) {
+				continue;
+			}
+			snprintf(path, sizeof(path), "%s/%s/%s", prefix, dirs[i].path, middle);
+		} else {
+			snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
+		}
+		fprintf(stderr, "try path=%s\n", path);
+
+		/*
+		 * Find themes by recursively reading directories at
+		 * "$DATA_DIR/@middle" and then checking for
+		 * "$DATA_DIR/@middle/<themename>/@end"
+		 */
+		find_themes(themes, path, end);
+	}
+	qsort(themes->data, themes->nr, sizeof(struct theme), compare);
+}
+
 int
 main(int argc, char **argv)
 {
@@ -321,8 +336,13 @@ main(int argc, char **argv)
 		printf("error: need ~/.config/labwc/rc.xml to run\n");
 		exit(EXIT_FAILURE);
 	}
-
 	xml_init(filename);
+
+	/* load themes */
+	load_themes(&openbox_themes, "themes", "openbox-3/themerc");
+	load_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");
+	load_themes(&icon_themes, "icons", "scalable");
+	load_themes(&cursor_themes, "icons", "cursors/xterm");
 
 	/* start ui */
 	GtkApplication *app;
