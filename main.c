@@ -1,4 +1,5 @@
 #define _POSIX_C_SOURCE 200809L
+#include <gio/gio.h>
 #include <gtk/gtk.h>
 #include <string.h>
 #include <strings.h>
@@ -17,20 +18,32 @@ static struct themes gtk_themes = { 0 };
 static struct themes icon_themes = { 0 };
 static struct themes cursor_themes = { 0 };
 
+static GSettings *settings;
+
+static void
+set_value(GSettings *settings, const char *key, const char *value)
+{
+	if (!value) {
+		fprintf(stderr, "warn: cannot set '%s' - no value specified\n", key);
+		return;
+	}
+	g_settings_set_value(settings, key, g_variant_new("s", value));
+}
+
+
 static void
 update(GtkWidget *widget, gpointer data)
 {
-	/* corner radius, labwc theme, libinput scroll */
+	/* labwc settings */
 	xml_set_num("cornerradius.theme", gtk_spin_button_get_value(GTK_SPIN_BUTTON(corner_radius)));
 	xml_set("name.theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(openbox_theme_name)));
 	xml_set("naturalscroll.device.libinput", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(natural_scroll)));
 	xml_save();
 
-	/* set cursor for gtk */
-	char buf_cur[4096];
-	snprintf(buf_cur, sizeof(buf_cur), "gsettings set org.gnome.desktop.interface cursor-theme %s",
-		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name)));
-	popen(buf_cur, "r");
+	/* gtk settings */
+	set_value(settings, "cursor-theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name)));
+	set_value(settings, "gtk-theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(gtk_theme_name)));
+	set_value(settings, "icon-theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(icon_theme_name)));
 	
 	/* set cursor for labwc  - should cover 'replace' or 'append' */
 	char xcur[4096] = "XCURSOR_THEME=";
@@ -54,27 +67,17 @@ update(GtkWidget *widget, gpointer data)
 		}
 	}
 	fclose(fe);
-	fprintf(fw, "%s", strcat(xcur,
-		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name))));
+	char *s = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name));
+	if (s) {
+		fprintf(fw, "%s", strcat(xcur, s));
+	}
 	fclose(fw);
 	rename(bufname, filename);	
 	
-	/* reset labwc */
+	/* reconfigure labwc */
 	if (!fork()) {
 		execl("/bin/sh", "/bin/sh", "-c", "killall -SIGHUP labwc", (void *)NULL);
 	}
-
-	/* gtk theme */
-	char buf[4096];
-	snprintf(buf, sizeof(buf), "gsettings set org.gnome.desktop.interface gtk-theme %s",
-		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(gtk_theme_name)));
-	popen(buf, "r");
-
-	/* some icon themes have a space in the name */
-	char buf_ico[4096];
-	snprintf(buf_ico, sizeof(buf_ico), "gsettings set org.gnome.desktop.interface icon-theme \"%s\"",
-		gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(icon_theme_name)));
-	popen(buf_ico, "r");
 }
 
 static char *
@@ -295,6 +298,9 @@ main(int argc, char **argv)
 	find_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");
 	find_themes(&icon_themes, "icons", "scalable");
 	find_themes(&cursor_themes, "icons", "cursors/xterm");
+
+	/* connect to gsettings */
+	settings = g_settings_new("org.gnome.desktop.interface");
 
 	/* start ui */
 	GtkApplication *app;
