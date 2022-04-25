@@ -80,21 +80,6 @@ update(GtkWidget *widget, gpointer data)
 	}
 }
 
-static char *
-remove_single_quotes(char *buf)
-{
-	char *s;
-	s = buf;
-	if (s[0] == '\'') {
-		++s;
-	}
-	char *p = strrchr(s, '\'');
-	if (p) {
-		*p = '\0';
-	}
-	return s;
-}
-
 static int
 get_yes_no(char *nodename)
 {
@@ -166,17 +151,8 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	gtk_theme_name = gtk_combo_box_text_new();
 
+	active_id = g_settings_get_string(settings, "gtk-theme");
 	active = -1;
-	FILE *fp = popen("gsettings get org.gnome.desktop.interface gtk-theme", "r");
-	char buf[4096] = { 0 };
-	fgets(buf, sizeof(buf), fp);
-	char *p = strrchr(buf, '\n');
-	if (p) {
-		*p = '\0';
-	}
-	pclose(fp);
-	active_id = remove_single_quotes(buf);
-
 	for (int i = 0; i < gtk_themes.nr; ++i) {
 		theme = gtk_themes.data + i;
 		if (!strcmp(theme->name, active_id)) {
@@ -192,17 +168,9 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	icon_theme_name = gtk_combo_box_text_new();
-	active = -1;
-	FILE *fp0 = popen("gsettings get org.gnome.desktop.interface icon-theme", "r");
-	char buf0[4096] = { 0 };
-	fgets(buf0, sizeof(buf0), fp);
-	char *p0 = strrchr(buf0, '\n');
-	if (p0) {
-		*p0 = '\0';
-	}
-	pclose(fp0);
-	active_id = remove_single_quotes(buf0);
 
+	active_id = g_settings_get_string(settings, "icon-theme");
+	active = -1;
 	for (int i = 0; i < icon_themes.nr; ++i) {
 		theme = icon_themes.data + i;
 		if (!strcmp(theme->name, active_id)) {
@@ -218,17 +186,9 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	cursor_theme_name = gtk_combo_box_text_new();
+
+	active_id = g_settings_get_string(settings, "cursor-theme");
 	active = -1;
-	FILE *fp1 = popen("gsettings get org.gnome.desktop.interface cursor-theme", "r");
-	char buf1[4096] = { 0 };
-	fgets(buf1, sizeof(buf1), fp);
-	char *p1 = strrchr(buf1, '\n');
-	if (p1) {
-		*p1 = '\0';
-	}
-	pclose(fp1);
-	active_id = remove_single_quotes(buf1);
-	
 	for (int i = 0; i < cursor_themes.nr; ++i) {
 		theme = cursor_themes.data + i;
 		if (!strcmp(theme->name, active_id)) {
