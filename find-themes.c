@@ -103,6 +103,8 @@ static struct {
 	{ NULL, "/opt/share" },
 };
 
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
+
 void
 find_themes(struct themes *themes, const char *middle, const char *end)
 {

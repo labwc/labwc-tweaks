@@ -5,6 +5,7 @@
 #include <strings.h>
 #include <sys/stat.h>
 #include "tweaks.h"
+#include "xml.h"
 
 static GtkWidget *corner_radius;
 static GtkWidget *openbox_theme_name;
