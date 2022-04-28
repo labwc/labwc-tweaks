@@ -22,32 +22,12 @@ static struct themes cursor_themes = { 0 };
 static GSettings *settings;
 
 static void
-set_value(GSettings *settings, const char *key, const char *value)
+environment_set(const char *key, const char *value)
 {
-	if (!value) {
-		fprintf(stderr, "warn: cannot set '%s' - no value specified\n", key);
-		return;
-	}
-	g_settings_set_value(settings, key, g_variant_new("s", value));
-}
-
-
-static void
-update(GtkWidget *widget, gpointer data)
-{
-	/* labwc settings */
-	xml_set_num("cornerradius.theme", gtk_spin_button_get_value(GTK_SPIN_BUTTON(corner_radius)));
-	xml_set("name.theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(openbox_theme_name)));
-	xml_set("naturalscroll.device.libinput", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(natural_scroll)));
-	xml_save();
-
-	/* gtk settings */
-	set_value(settings, "cursor-theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name)));
-	set_value(settings, "gtk-theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(gtk_theme_name)));
-	set_value(settings, "icon-theme", gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(icon_theme_name)));
-	
 	/* set cursor for labwc  - should cover 'replace' or 'append' */
-	char xcur[4096] = "XCURSOR_THEME=";
+	char xcur[4096] = {0};
+	strcpy(xcur, key);
+	strcat(xcur, "=");
 	char filename[PATH_MAX];
 	char bufname[PATH_MAX];
 	char *home = getenv("HOME");
@@ -68,13 +48,43 @@ update(GtkWidget *widget, gpointer data)
 		}
 	}
 	fclose(fe);
-	char *s = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(cursor_theme_name));
-	if (s) {
-		fprintf(fw, "%s", strcat(xcur, s));
+	if (value) {
+		fprintf(fw, "%s\n", strcat(xcur, value));
 	}
 	fclose(fw);
 	rename(bufname, filename);	
+}
+
+static void
+set_value(GSettings *settings, const char *key, const char *value)
+{
+	if (!value) {
+		fprintf(stderr, "warn: cannot set '%s' - no value specified\n", key);
+		return;
+	}
+	g_settings_set_value(settings, key, g_variant_new("s", value));
+}
+
+#define COMBO_TEXT(w) gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(w))
+#define SPIN_BUTTON_VAL(w) gtk_spin_button_get_value(GTK_SPIN_BUTTON(w))
+
+static void
+update(GtkWidget *widget, gpointer data)
+{
+	/* ~/.config/labwc/rc.xml */
+	xml_set_num("cornerradius.theme", SPIN_BUTTON_VAL(corner_radius));
+	xml_set("name.theme", COMBO_TEXT(openbox_theme_name));
+	xml_set("naturalscroll.device.libinput", COMBO_TEXT(natural_scroll));
+	xml_save();
+
+	/* gsettings */
+	set_value(settings, "cursor-theme", COMBO_TEXT(cursor_theme_name));
+	set_value(settings, "gtk-theme", COMBO_TEXT(gtk_theme_name));
+	set_value(settings, "icon-theme", COMBO_TEXT(icon_theme_name));
 	
+	/* ~/.config/labwc/environment */
+	environment_set("XCURSOR_THEME", COMBO_TEXT(cursor_theme_name));
+
 	/* reconfigure labwc */
 	if (!fork()) {
 		execl("/bin/sh", "/bin/sh", "-c", "killall -SIGHUP labwc", (void *)NULL);
