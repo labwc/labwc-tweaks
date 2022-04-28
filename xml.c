@@ -186,3 +186,21 @@ xml_get_int(char *nodename)
 	xml_tree_walk(xmlDocGetRootElement(ctx.doc));
 	return atoi(ctx.value);
 }
+
+int
+xml_get_bool_text(char *nodename)
+{
+	char *value = xml_get(nodename);
+
+	/* handle <foo></foo> and <foo /> where no value has been specified */
+	if (!value || !*value) {
+		return -1;
+	}
+	if (!strcasecmp(value, "yes") || !strcasecmp(value, "true")) {
+		return 1;
+	} else if (!strcasecmp(value, "no") || !strcasecmp(value, "false")) {
+		return 0;
+	} else {
+		return -1;
+	}
+}

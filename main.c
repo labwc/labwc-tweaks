@@ -80,25 +80,6 @@ update(GtkWidget *widget, gpointer data)
 	}
 }
 
-static int
-get_yes_no(char *nodename)
-{
-	char *value = xml_get(nodename);
-
-	/* handle <foo></foo> and <foo /> where no value has been specified */
-	if (!value) {
-		return -1;
-	}
-
-	if (!strcmp(value, "yes")) {
-		return 0;
-	} else if (!strcmp(value, "no")) {
-		return 1;
-	} else {
-		return -1;
-	}
-}
-
 static void
 activate(GtkApplication *app, gpointer user_data)
 {
@@ -204,9 +185,9 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	natural_scroll = gtk_combo_box_text_new();
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(natural_scroll), "yes");
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(natural_scroll), "no");
-	gtk_combo_box_set_active(GTK_COMBO_BOX(natural_scroll), get_yes_no("naturalscroll.device.libinput"));
+	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(natural_scroll), "yes");
+	gtk_combo_box_set_active(GTK_COMBO_BOX(natural_scroll), xml_get_bool_text("naturalscroll.device.libinput"));
 	gtk_grid_attach(GTK_GRID(grid), natural_scroll, 1, row++, 1, 1);
 
 	/* bottom button box */
