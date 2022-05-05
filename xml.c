@@ -184,7 +184,7 @@ xml_get_int(char *nodename)
 	ctx.nodename = nodename;
 	ctx.mode = XML_MODE_GETTING;
 	xml_tree_walk(xmlDocGetRootElement(ctx.doc));
-	return atoi(ctx.value);
+	return ctx.value ? atoi(ctx.value) : 0;
 }
 
 int
