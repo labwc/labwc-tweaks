@@ -248,7 +248,7 @@ main(int argc, char **argv)
 	/* load themes */
 	find_themes(&openbox_themes, "themes", "openbox-3/themerc");
 	find_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");
-	find_themes(&icon_themes, "icons", "scalable");
+	find_themes(&icon_themes, "icons", "index.theme");
 	find_themes(&cursor_themes, "icons", "cursors/xterm");
 
 	/* connect to gsettings */
