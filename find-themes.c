@@ -50,7 +50,7 @@ process_dir(struct themes *themes, const char *path, const char *filename)
 	}
 	while ((entry = readdir(dp))) {
 		if (entry->d_type == DT_DIR && entry->d_name[0] != '.') {
-			char buf[PATH_MAX];
+			char buf[4096];
 			snprintf(buf, sizeof(buf), "%s/%s/%s", path, entry->d_name, filename);
 			/* filter 'hicolor' as it is not a complete icon set */
 			if (strstr(buf, "hicolor") != NULL) {

@@ -28,8 +28,8 @@ environment_set(const char *key, const char *value)
 	char xcur[4096] = {0};
 	strcpy(xcur, key);
 	strcat(xcur, "=");
-	char filename[PATH_MAX];
-	char bufname[PATH_MAX];
+	char filename[4096];
+	char bufname[4096];
 	char *home = getenv("HOME");
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/environment");
 	snprintf(bufname, sizeof(bufname), "%s/%s", home, ".config/labwc/buf");
@@ -234,7 +234,7 @@ int
 main(int argc, char **argv)
 {
 	/* read config file */
-	char filename[PATH_MAX];
+	char filename[4096];
 	char *home = getenv("HOME");
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
 
