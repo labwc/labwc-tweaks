@@ -24,6 +24,70 @@ grow_vector_by_one_theme(struct themes *themes)
 }
 
 /**
+ * add_theme_if_icon_theme - add theme iff it is a proper icon theme
+ * @themes: vector
+ * @path: path to directory to search in
+ * The criteria for deciding if a icon theme is a "proper icon theme" is to
+ * verify the existance of a subdirectory other than "cursors"
+ */
+static void
+add_theme_if_icon_theme(struct themes *themes, const char *path)
+{
+	struct dirent *entry;
+	DIR *dp;
+	struct stat st;
+
+	dp = opendir(path);
+	if (!dp) {
+		return;
+	}
+	while ((entry = readdir(dp))) {
+		if (entry->d_type != DT_DIR || entry->d_name[0] == '.') {
+			continue;
+		}
+
+		char buf[4096];
+		snprintf(buf, sizeof(buf), "%s/%s", path, entry->d_name);
+		/* filter 'hicolor' as it is not a complete icon set */
+		if (strstr(buf, "hicolor") != NULL) {
+			continue;
+		}
+
+		/* process subdirectories within the theme directory */
+		struct dirent *sub_entry;
+		DIR *sub_dp;
+		sub_dp = opendir(buf);
+		if (!sub_dp) {
+			return;
+		}
+
+		/*
+		 * Add theme if directory other than 'cursors' exists.
+		 * This could be "scalable", "22x22", or whatever...
+		 */
+		while ((sub_entry = readdir(sub_dp))) {
+			if (sub_entry->d_type != DT_DIR || sub_entry->d_name[0] == '.') {
+				continue;
+			}
+			if (!strcmp(sub_entry->d_name, "cursors")) {
+				continue;
+			}
+
+			/* We've found a directory other than "cursors"! */
+			struct theme *theme = NULL;
+			if (!stat(buf, &st)) {
+				theme = grow_vector_by_one_theme(themes);
+				theme->name = strdup(entry->d_name);
+				theme->path = strdup(buf);
+			}
+			break;
+		}
+		closedir(sub_dp);
+	}
+	closedir(dp);
+}
+
+/**
  * process_dir - find themes and store them in vector
  * @themes: vector
  * @path: path to directory to search in
@@ -120,12 +184,22 @@ find_themes(struct themes *themes, const char *middle, const char *end)
 			snprintf(path, sizeof(path), "%s/%s", dirs[i].path, middle);
 		}
 
-		/*
-		 * Find themes by recursively reading directories at
-		 * "$DATA_DIR/@middle" and then checking for
-		 * "$DATA_DIR/@middle/<themename>/@end"
-		 */
-		process_dir(themes, path, end);
+		if (end) {
+			/*
+			 * Add theme <themename> if
+			 * "$DATA_DIR/@middle/<themename>/@end" exists
+			 */
+			process_dir(themes, path, end);
+		} else {
+			/*
+			 * Add icon theme iff "$DATA_DIR/@middle/<themename>/"
+			 * contains a subdirectory other than "cursors".
+			 * Note: searching for index.theme only is not good
+			 * enough because some cursor themes contain the same
+			 * file and some themes contain both cursors and icons.
+			 */
+			add_theme_if_icon_theme(themes, path);
+		}
 	}
 
 	/*
