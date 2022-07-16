@@ -1,4 +1,5 @@
 #define _POSIX_C_SOURCE 200809L
+#include <assert.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 #include <string.h>
@@ -20,6 +21,19 @@ static struct themes icon_themes = { 0 };
 static struct themes cursor_themes = { 0 };
 
 static GSettings *settings;
+
+void
+spawn_sync(char const *command)
+{
+	GError *err = NULL;
+	assert(command);
+	g_spawn_command_line_sync(command, NULL, NULL, NULL, &err);
+	if (err) {
+		fprintf(stderr, "warn: could not find %s\n", command);
+		g_error_free(err);
+	}
+}
+
 
 static void
 environment_set(const char *key, const char *value)
@@ -84,6 +98,11 @@ update(GtkWidget *widget, gpointer data)
 	
 	/* ~/.config/labwc/environment */
 	environment_set("XCURSOR_THEME", COMBO_TEXT(cursor_theme_name));
+
+
+	if (!strcmp(COMBO_TEXT(openbox_theme_name), "GTK")) {
+		spawn_sync("labwc-gtktheme.py");
+	}
 
 	/* reconfigure labwc */
 	if (!fork()) {
