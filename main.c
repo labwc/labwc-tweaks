@@ -281,6 +281,12 @@ main(int argc, char **argv)
 	}
 	xml_init(filename);
 
+	/* ensure all relevant nodes exist before we start getting/setting */
+	xml_add_node("/labwc_config/theme/cornerradius");
+	xml_add_node("/labwc_config/theme/name");
+	xml_add_node("/labwc_config/libinput/device/naturalscroll");
+	xml_save();
+
 	/* load themes */
 	find_themes(&openbox_themes, "themes", "openbox-3/themerc");
 	find_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");

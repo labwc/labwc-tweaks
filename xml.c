@@ -1,15 +1,22 @@
 #define _POSIX_C_SOURCE 200809L
+#include <assert.h>
 #include <ctype.h>
+#include <glib.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
+#include <libxml/xpath.h>
+#include <libxml/xpathInternals.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
+#include <unistd.h>
 
 static struct ctx {
 	char *filename;
 	xmlDoc *doc;
+	xmlXPathContextPtr xpath_ctx_ptr;
 	char *nodename;
 	char *value;
 	enum {
@@ -140,7 +147,12 @@ xml_init(const char *filename)
 	ctx.filename = strdup(filename);
         ctx.doc = xmlReadFile(filename, NULL, 0);
 	if (!ctx.doc) {
-		fprintf(stderr, "Failed to parse %s\n", filename);
+		fprintf(stderr, "warn: xmlReadFile('%s')\n", filename);
+	}
+	ctx.xpath_ctx_ptr = xmlXPathNewContext(ctx.doc);
+	if (!ctx.xpath_ctx_ptr) {
+		fprintf(stderr, "warn: xmlXPathNewContext()\n");
+		xmlFreeDoc(ctx.doc);
 	}
 }
 
@@ -153,6 +165,7 @@ xml_save(void)
 void
 xml_finish(void)
 {
+	xmlXPathFreeContext(ctx.xpath_ctx_ptr);
 	xmlFreeDoc(ctx.doc);
 	xmlCleanupParser();
 }
@@ -211,4 +224,99 @@ xml_get_bool_text(char *nodename)
 	} else {
 		return -1;
 	}
+}
+
+char *
+xml_get_content(char *xpath_expr)
+{
+	xmlChar *ret = NULL;
+	xmlXPathObjectPtr object = xmlXPathEvalExpression((xmlChar *)xpath_expr, ctx.xpath_ctx_ptr);
+	if (!object) {
+		fprintf(stderr, "warn: xmlXPathEvalExpression()\n");
+		return NULL;
+	}
+	if (!object->nodesetval) {
+		fprintf(stderr, "warn: no nodesetval\n");
+		goto out;
+	}
+	for (int i = 0; i < object->nodesetval->nodeNr; i++) {
+		if (!object->nodesetval->nodeTab[i]) {
+			continue;
+		}
+
+		/* Just grab the first node and go */
+		ret = xmlNodeGetContent(object->nodesetval->nodeTab[i]);
+		goto out;
+
+		/*
+		 * We could process the node here and do things like:
+		 *   xmlNode *children = object->nodesetval->nodeTab[i]->children;
+		 *   for (xmlNode *cur = children; cur; cur = cur->next) { }
+		 */
+	}
+
+out:
+	xmlXPathFreeObject(object);
+	return (char *)ret;
+}
+
+static xmlNode *
+get_node(xmlChar *expr)
+{
+	xmlNode *ret = NULL;
+	xmlXPathObjectPtr object = xmlXPathEvalExpression(expr, ctx.xpath_ctx_ptr);
+	if (!object) {
+		fprintf(stderr, "warn: xmlXPathEvalExpression()\n");
+		return NULL;
+	}
+	if (!object->nodesetval) {
+		fprintf(stderr, "warn: no nodesetval\n");
+		goto out2;
+	}
+
+	for (int i = 0; i < object->nodesetval->nodeNr; i++) {
+		if (!object->nodesetval->nodeTab[i]) {
+			continue;
+		}
+		ret = object->nodesetval->nodeTab[i];
+		break;
+	}
+out2:
+	xmlXPathFreeObject(object);
+	return ret;
+}
+
+void
+xml_add_node(char *xpath_expr)
+{
+	/* find existing parent */
+	char *parent_expr = strdup(xpath_expr);
+	xmlNode *parent_node = NULL;
+	while (parent_expr && *parent_expr) {
+		parent_node = get_node((xmlChar *)parent_expr);
+		if (parent_node) {
+			break;
+		}
+		char *p = strrchr(parent_expr, '/');
+		if (p && *p) {
+			*p = '\0';
+		} else {
+			break;
+		}
+	}
+	assert(parent_expr);
+	if (!*parent_expr) {
+		/* the whole xpath expression is new, so add to root */
+		parent_node = xmlDocGetRootElement(ctx.doc);
+	}
+
+	/* add new nodes */
+	gchar **nodes = g_strsplit(xpath_expr + strlen(parent_expr), "/", -1);
+	for (gchar **s = nodes; *s; s++) {
+		if (*s && **s) {
+			parent_node = xmlNewChild(parent_node, NULL, (xmlChar *)*s, NULL);
+		}
+	}
+	g_free(parent_expr);
+	g_strfreev(nodes);
 }
