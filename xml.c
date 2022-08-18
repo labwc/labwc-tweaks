@@ -129,6 +129,14 @@ void
 xml_init(const char *filename)
 {
 	LIBXML_TEST_VERSION
+
+	/*
+	 * These two global variables have to be set before xmlReadFile()
+	 * in order for xmlSaveFormatFile() to indent properly.
+	 */
+	xmlKeepBlanksDefault(0);
+	xmlIndentTreeOutput = 1;
+
 	ctx.filename = strdup(filename);
         ctx.doc = xmlReadFile(filename, NULL, 0);
 	if (!ctx.doc) {
@@ -139,7 +147,7 @@ xml_init(const char *filename)
 void
 xml_save(void)
 {
-	xmlSaveFile(ctx.filename, ctx.doc);
+	xmlSaveFormatFile(ctx.filename, ctx.doc, 1);
 }
 
 void
