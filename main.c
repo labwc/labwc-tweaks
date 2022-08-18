@@ -100,7 +100,7 @@ update(GtkWidget *widget, gpointer data)
 	environment_set("XCURSOR_THEME", COMBO_TEXT(cursor_theme_name));
 
 
-	if (!strcmp(COMBO_TEXT(openbox_theme_name), "GTK")) {
+	if (!g_strcmp0(COMBO_TEXT(openbox_theme_name), "GTK")) {
 		spawn_sync("labwc-gtktheme.py");
 	}
 
