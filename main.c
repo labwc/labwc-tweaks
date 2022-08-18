@@ -249,18 +249,35 @@ free_theme_vector(struct themes *themes)
 	free(themes->data);
 }
 
+static const char rcxml_template[] =
+	"<?xml version=\"1.0\"?>\n"
+	"<labwc_config>\n"
+	"  <core>\n"
+	"  </core>\n"
+	"</labwc_config>\n";
+
+static void
+create_basic_rcxml(const char *filename)
+{
+	FILE *file = fopen(filename, "w");
+	if (!file) {
+		fprintf(stderr, "warn: fopen(%s) failed\n", filename);
+		return;
+	}
+	if (!fwrite(rcxml_template, sizeof(rcxml_template), 1, file)) {
+		fprintf(stderr, "warn: error writing to %s", filename);
+	}
+	fclose(file);
+}
 int
 main(int argc, char **argv)
 {
-	/* read config file */
+	/* read/create config file */
 	char filename[4096];
 	char *home = getenv("HOME");
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
-
-	struct stat st;
-	if (stat(filename, &st)) {
-		printf("error: need ~/.config/labwc/rc.xml to run\n");
-		exit(EXIT_FAILURE);
+	if (access(filename, F_OK)) {
+		create_basic_rcxml(filename);
 	}
 	xml_init(filename);
 
