@@ -17,4 +17,5 @@ executable(
   install : true,
 )
 
+subdir('tests')
 subdir('data')

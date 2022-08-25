@@ -3,6 +3,7 @@
 
 void xml_init(const char *filename);
 void xml_save(void);
+void xml_save_as(const char *filename);
 void xml_finish(void);
 void xml_set(char *nodename, char *value);
 void xml_set_num(char *nodename, double value);

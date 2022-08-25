@@ -163,6 +163,12 @@ xml_save(void)
 }
 
 void
+xml_save_as(const char *filename)
+{
+	xmlSaveFormatFile(filename, ctx.doc, 1);
+}
+
+void
 xml_finish(void)
 {
 	xmlXPathFreeContext(ctx.xpath_ctx_ptr);

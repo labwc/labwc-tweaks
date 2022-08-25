@@ -1,0 +1,23 @@
+test_lib = static_library(
+  'tests',
+  sources: files(
+    '../xml.c',
+  ),
+  dependencies: [dependency('libxml-2.0'), dependency('glib-2.0')],
+)
+
+tests = [
+  't1000-add-xpath-node.c',
+]
+
+foreach t : tests
+  testname = t.split('.')[0].underscorify()
+  exe = executable(
+    testname,
+    sources: [t, 'tap.c'],
+    dependencies: [dependency('glib-2.0')],
+    link_with: [test_lib],
+  )
+  test(testname, exe)
+endforeach
+
