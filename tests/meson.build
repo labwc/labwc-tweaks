@@ -6,18 +6,13 @@ test_lib = static_library(
   dependencies: [dependency('libxml-2.0'), dependency('glib-2.0')],
 )
 
-tests = [
-  't1000-add-xpath-node.c',
-]
-
-foreach t : tests
+  t = 't1000-add-xpath-node.c'
   testname = t.split('.')[0].underscorify()
-  exe = executable(
-    testname,
-    sources: [t, 'tap.c'],
-    dependencies: [dependency('glib-2.0')],
-    link_with: [test_lib],
-  )
+  exe = executable(testname, sources: [t, 'tap.c'], dependencies: [dependency('glib-2.0')], link_with: [test_lib])
   test(testname, exe)
-endforeach
+
+  t = 't1001-nodenames.c'
+  testname = t.split('.')[0].underscorify()
+  exe = executable(testname, sources: [t, 'tap.c'], dependencies: [dependency('libxml-2.0'), dependency('glib-2.0')])
+  test(testname, exe)
 
