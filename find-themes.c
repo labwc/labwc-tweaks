@@ -1,11 +1,11 @@
 #define _POSIX_C_SOURCE 200809L
-#define _DEFAULT_SOURCE
 #include <assert.h>
 #include <dirent.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <sys/stat.h>
 #include <unistd.h>
 #include "tweaks.h"
@@ -21,6 +21,15 @@ grow_vector_by_one_theme(struct themes *themes)
 	memset(theme, 0, sizeof(*theme));
 	themes->nr++;
 	return theme;
+}
+
+static bool
+isdir(const char *path, const char *dirname)
+{
+	char buf[4096];
+	snprintf(buf, sizeof(buf), "%s/%s", path, dirname);
+	struct stat st;
+	return (!stat(buf, &st) && S_ISDIR(st.st_mode));
 }
 
 /**
@@ -42,7 +51,7 @@ add_theme_if_icon_theme(struct themes *themes, const char *path)
 		return;
 	}
 	while ((entry = readdir(dp))) {
-		if (entry->d_type != DT_DIR || entry->d_name[0] == '.') {
+		if (entry->d_name[0] == '.' || !isdir(path, entry->d_name)) {
 			continue;
 		}
 
@@ -66,7 +75,7 @@ add_theme_if_icon_theme(struct themes *themes, const char *path)
 		 * This could be "scalable", "22x22", or whatever...
 		 */
 		while ((sub_entry = readdir(sub_dp))) {
-			if (sub_entry->d_type != DT_DIR || sub_entry->d_name[0] == '.') {
+			if (sub_entry->d_name[0] == '.' || !isdir(buf, sub_entry->d_name)) {
 				continue;
 			}
 			if (!strcmp(sub_entry->d_name, "cursors")) {
@@ -113,7 +122,7 @@ process_dir(struct themes *themes, const char *path, const char *filename)
 		return;
 	}
 	while ((entry = readdir(dp))) {
-		if (entry->d_type == DT_DIR && entry->d_name[0] != '.') {
+		if (entry->d_name[0] != '.' && isdir(path, entry->d_name)) {
 			char buf[4096];
 			snprintf(buf, sizeof(buf), "%s/%s/%s", path, entry->d_name, filename);
 			/* filter 'hicolor' as it is not a complete icon set */
