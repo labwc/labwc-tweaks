@@ -86,9 +86,9 @@ static void
 update(GtkWidget *widget, gpointer data)
 {
 	/* ~/.config/labwc/rc.xml */
-	xml_set_num("cornerradius.theme", SPIN_BUTTON_VAL(corner_radius));
-	xml_set("name.theme", COMBO_TEXT(openbox_theme_name));
-	xml_set("naturalscroll.device.libinput", COMBO_TEXT(natural_scroll));
+	xml_set_num("/labwc_config/theme/cornerradius", SPIN_BUTTON_VAL(corner_radius));
+	xml_set("/labwc_config/theme/name", COMBO_TEXT(openbox_theme_name));
+	xml_set("/labwc_config/libinput/device/naturalscroll", COMBO_TEXT(natural_scroll));
 	xml_save();
 
 	/* gsettings */
@@ -135,7 +135,7 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	openbox_theme_name = gtk_combo_box_text_new();
 	int active = -1;
-	char *active_id = xml_get("name.theme");
+	char *active_id = xml_get("/labwc_config/theme/name");
 	struct theme *theme;
 	for (int i = 0; i < openbox_themes.nr; ++i) {
 		theme = openbox_themes.data + i;
@@ -153,7 +153,7 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	GtkAdjustment *adjustment = gtk_adjustment_new(0, 0, 10, 1, 2, 0);
 	corner_radius = gtk_spin_button_new(GTK_ADJUSTMENT(adjustment), 1, 0);
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(corner_radius), xml_get_int("cornerradius.theme"));
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(corner_radius), xml_get_int("/labwc_config/theme/cornerradius"));
 	gtk_grid_attach(GTK_GRID(grid), corner_radius, 1, row++, 1, 1);
 
 	/* gtk theme combobox */
@@ -217,7 +217,7 @@ activate(GtkApplication *app, gpointer user_data)
 	natural_scroll = gtk_combo_box_text_new();
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(natural_scroll), "no");
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(natural_scroll), "yes");
-	gtk_combo_box_set_active(GTK_COMBO_BOX(natural_scroll), xml_get_bool_text("naturalscroll.device.libinput"));
+	gtk_combo_box_set_active(GTK_COMBO_BOX(natural_scroll), xml_get_bool_text("/labwc_config/libinput/device/naturalscroll"));
 	gtk_grid_attach(GTK_GRID(grid), natural_scroll, 1, row++, 1, 1);
 
 	/* bottom button box */

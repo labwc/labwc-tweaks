@@ -19,79 +19,70 @@ static struct ctx {
 	xmlXPathContextPtr xpath_ctx_ptr;
 	char *nodename;
 	char *value;
+	xmlNode *node;
 	enum {
 		XML_MODE_SETTING = 0,
 		XML_MODE_GETTING,
 	} mode;
 } ctx;
 
-
-static void
-string_truncate_at_pattern(char *buf, const char *pattern)
-{
-	char *p = strstr(buf, pattern);
-	if (!p) {
-		return;
-	}
-	*p = '\0';
-}
-
 static void
 entry(xmlNode *node, char *nodename, char *content)
 {
 	if (!nodename)
 		return;
-	string_truncate_at_pattern(nodename, ".openbox_config");
-	string_truncate_at_pattern(nodename, ".labwc_config");
-	if (!strcmp(nodename, ctx.nodename)) {
+	if (!strcasecmp(nodename, ctx.nodename)) {
 		if (ctx.mode == XML_MODE_SETTING) {
 			xmlNodeSetContent(node, (const xmlChar *)ctx.value);
 		} else if (ctx.mode == XML_MODE_GETTING) {
 			ctx.value = (char *)content;
+			ctx.node = node;
 		}
 	}
 }
 
+/**
+ * nodename - return simplistic xpath style nodename
+ * For example: <A><B><C></C></B></A> is represented by nodename /a/b/c
+ */
 static char *
-nodename(xmlNode *node, char *buf, int len, bool is_attribute)
+nodename(xmlNode *node, char *buf, int len)
 {
 	if (!node || !node->name) {
 		return NULL;
 	}
 
-	/* Ignore superflous 'text.' in node name */
+	/* Ignore superflous '/text' in node name */
 	if (node->parent && !strcmp((char *)node->name, "text")) {
 		node = node->parent;
 	}
 
-	char *p = buf;
-	p[--len] = 0;
-	if (is_attribute) {
-		*p++ = '@';
-		--len;
-	}
-	for (;;) {
+	buf += len;
+	*--buf = 0;
+	len--;
+
+	for(;;) {
 		const char *name = (char *)node->name;
-		char c;
-		while ((c = *name++) != 0) {
-			*p++ = tolower(c);
+		int i = strlen(name);
+		while (--i >= 0) {
+			unsigned char c = name[i];
+			*--buf = tolower(c);
 			if (!--len)
 				return buf;
 		}
-		*p = 0;
 		node = node->parent;
 		if (!node || !node->name) {
+			*--buf = '/';
 			return buf;
 		}
-		*p++ = '.';
-		if (!--len) {
+		*--buf = '/';
+		if (!--len)
 			return buf;
-		}
 	}
 }
 
 static void
-process_node(xmlNode *node, bool is_attribute)
+process_node(xmlNode *node)
 {
 	char *content;
 	static char buffer[256];
@@ -101,7 +92,7 @@ process_node(xmlNode *node, bool is_attribute)
 	if (xmlIsBlankNode(node)) {
 		return;
 	}
-	name = nodename(node, buffer, sizeof(buffer), is_attribute);
+	name = nodename(node, buffer, sizeof(buffer));
 	entry(node, name, content);
 }
 
@@ -110,14 +101,10 @@ static void xml_tree_walk(xmlNode *node);
 static void
 traverse(xmlNode *n)
 {
-	static bool is_attribute;
-
-	process_node(n, is_attribute);
-	is_attribute = true;
+	process_node(n);
 	for (xmlAttr *attr = n->properties; attr; attr = attr->next) {
 		xml_tree_walk(attr->children);
 	}
-	is_attribute = false;
 	xml_tree_walk(n->children);
 }
 
@@ -232,6 +219,17 @@ xml_get_bool_text(char *nodename)
 	}
 }
 
+/* case-insensitive */
+static xmlNode *
+xml_get_node(char *nodename)
+{
+	ctx.node = NULL;
+	ctx.nodename = nodename;
+	ctx.mode = XML_MODE_GETTING;
+	xml_tree_walk(xmlDocGetRootElement(ctx.doc));
+	return ctx.node;
+}
+
 char *
 xml_get_content(char *xpath_expr)
 {
@@ -266,6 +264,7 @@ out:
 	return (char *)ret;
 }
 
+/* case-sensitive */
 static xmlNode *
 get_node(xmlChar *expr)
 {
@@ -295,6 +294,10 @@ out2:
 void
 xml_add_node(char *xpath_expr)
 {
+	if (xml_get_node(xpath_expr)) {
+		return;
+	}
+
 	/* find existing parent */
 	char *parent_expr = strdup(xpath_expr);
 	xmlNode *parent_node = NULL;
