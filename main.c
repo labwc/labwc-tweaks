@@ -13,6 +13,7 @@ static GtkWidget *openbox_theme_name;
 static GtkWidget *gtk_theme_name;
 static GtkWidget *icon_theme_name;
 static GtkWidget *cursor_theme_name;
+static GtkWidget *cursor_size;
 static GtkWidget *natural_scroll;
 
 static struct themes openbox_themes = { 0 };
@@ -70,6 +71,14 @@ environment_set(const char *key, const char *value)
 }
 
 static void
+environment_set_num(const char *key, int value) {
+	char buffer[255];
+	snprintf(buffer, 255, "%d", value);
+
+	environment_set(key, buffer);
+}
+
+static void
 set_value(GSettings *settings, const char *key, const char *value)
 {
 	if (!value) {
@@ -79,8 +88,15 @@ set_value(GSettings *settings, const char *key, const char *value)
 	g_settings_set_value(settings, key, g_variant_new("s", value));
 }
 
+static void
+set_value_num(GSettings *settings, const char *key, int value)
+{
+	g_settings_set_value(settings, key, g_variant_new("i", value));
+}
+
 #define COMBO_TEXT(w) gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(w))
 #define SPIN_BUTTON_VAL(w) gtk_spin_button_get_value(GTK_SPIN_BUTTON(w))
+#define SPIN_BUTTON_VAL_INT(w) (int)SPIN_BUTTON_VAL(w)
 
 static void
 update(GtkWidget *widget, gpointer data)
@@ -93,12 +109,13 @@ update(GtkWidget *widget, gpointer data)
 
 	/* gsettings */
 	set_value(settings, "cursor-theme", COMBO_TEXT(cursor_theme_name));
+	set_value_num(settings, "cursor-size", SPIN_BUTTON_VAL_INT(cursor_size));
 	set_value(settings, "gtk-theme", COMBO_TEXT(gtk_theme_name));
 	set_value(settings, "icon-theme", COMBO_TEXT(icon_theme_name));
 	
 	/* ~/.config/labwc/environment */
 	environment_set("XCURSOR_THEME", COMBO_TEXT(cursor_theme_name));
-
+	environment_set_num("XCURSOR_SIZE", SPIN_BUTTON_VAL_INT(cursor_size));
 
 	if (!g_strcmp0(COMBO_TEXT(openbox_theme_name), "GTK")) {
 		spawn_sync("labwc-gtktheme.py");
@@ -209,6 +226,15 @@ activate(GtkApplication *app, gpointer user_data)
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(cursor_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid),cursor_theme_name, 1, row++, 1, 1);
+
+	/* cursor size spinbutton */
+	widget = gtk_label_new("cursor size");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	GtkAdjustment *cursor_adjustment = gtk_adjustment_new(0, 0, 512, 1, 2, 0);
+	cursor_size = gtk_spin_button_new(GTK_ADJUSTMENT(cursor_adjustment), 1, 0);
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(cursor_size), g_settings_get_int(settings, "cursor-size"));
+	gtk_grid_attach(GTK_GRID(grid), cursor_size, 1, row++, 1, 1);
 
 	/* natural scroll combobox */
 	widget = gtk_label_new("natural scroll");
