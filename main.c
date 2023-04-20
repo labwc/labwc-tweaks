@@ -308,9 +308,9 @@ main(int argc, char **argv)
 	xml_init(filename);
 
 	/* ensure all relevant nodes exist before we start getting/setting */
-	xml_add_node("/labwc_config/theme/cornerradius");
-	xml_add_node("/labwc_config/theme/name");
-	xml_add_node("/labwc_config/libinput/device/naturalscroll");
+	xpath_add_node("/labwc_config/theme/cornerRadius");
+	xpath_add_node("/labwc_config/theme/name");
+	xpath_add_node("/labwc_config/libinput/device/naturalScroll");
 	xml_save();
 
 	/* load themes */
