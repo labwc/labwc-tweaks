@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 	/* test 1 */
 	diag("generate simple xpath style nodename");
 	xml_init(in);
-	xmlNode *node = get_node((xmlChar *)"/labwc_config/core/gap");
+	xmlNode *node = xpath_get_node((xmlChar *)"/labwc_config/core/gap");
 	char *name = nodename(node, buffer, sizeof(buffer));
 	xml_finish();
 	test(name, "/labwc_config/core/gap");

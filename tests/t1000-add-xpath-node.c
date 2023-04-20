@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 	/* test 1 */
 	diag("add node <theme><cornerradius> using xpath (lowercase)");
 	xml_init(in);
-	xml_add_node("/labwc_config/theme/cornerradius");
+	xpath_add_node("/labwc_config/theme/cornerradius");
 	xml_save_as(out);
 	xml_finish();
 	test(out,
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 	/* test 2 */
 	diag("add node <theme><cornerRadius> using xpath (camelCase)");
 	xml_init(in);
-	xml_add_node("/labwc_config/theme/cornerRadius");
+	xpath_add_node("/labwc_config/theme/cornerRadius");
 	xml_save_as(out);
 	xml_finish();
 	test(out,
@@ -83,8 +83,8 @@ int main(int argc, char **argv)
 	/* test 3 */
 	diag("check xpath does not add duplicate entries - when identical");
 	xml_init(in);
-	xml_add_node("/labwc_config/theme/cornerradius");
-	xml_add_node("/labwc_config/theme/cornerradius");
+	xpath_add_node("/labwc_config/theme/cornerradius");
+	xpath_add_node("/labwc_config/theme/cornerradius");
 	xml_save_as(out);
 	xml_finish();
 	test(out,
@@ -101,8 +101,8 @@ int main(int argc, char **argv)
 	/* test 4 */
 	diag("check xpath does not add duplicate entries - even if they have differing capitalisation");
 	xml_init(in);
-	xml_add_node("/labwc_config/theme/cornerradius");
-	xml_add_node("/labwc_config/theme/Cornerradius");
+	xpath_add_node("/labwc_config/theme/cornerradius");
+	xpath_add_node("/labwc_config/theme/Cornerradius");
 	xml_save_as(out);
 	xml_finish();
 	test(out,

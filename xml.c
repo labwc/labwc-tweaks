@@ -231,7 +231,7 @@ xml_get_node(char *nodename)
 }
 
 char *
-xml_get_content(char *xpath_expr)
+xpath_get_content(char *xpath_expr)
 {
 	xmlChar *ret = NULL;
 	xmlXPathObjectPtr object = xmlXPathEvalExpression((xmlChar *)xpath_expr, ctx.xpath_ctx_ptr);
@@ -266,7 +266,7 @@ out:
 
 /* case-sensitive */
 static xmlNode *
-get_node(xmlChar *expr)
+xpath_get_node(xmlChar *expr)
 {
 	xmlNode *ret = NULL;
 	xmlXPathObjectPtr object = xmlXPathEvalExpression(expr, ctx.xpath_ctx_ptr);
@@ -292,7 +292,7 @@ out2:
 }
 
 void
-xml_add_node(char *xpath_expr)
+xpath_add_node(char *xpath_expr)
 {
 	if (xml_get_node(xpath_expr)) {
 		return;
@@ -302,7 +302,7 @@ xml_add_node(char *xpath_expr)
 	char *parent_expr = strdup(xpath_expr);
 	xmlNode *parent_node = NULL;
 	while (parent_expr && *parent_expr) {
-		parent_node = get_node((xmlChar *)parent_expr);
+		parent_node = xpath_get_node((xmlChar *)parent_expr);
 		if (parent_node) {
 			break;
 		}

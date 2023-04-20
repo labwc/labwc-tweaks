@@ -12,17 +12,17 @@ int xml_get_int(char *nodename);
 int xml_get_bool_text(char *nodename);
 
 /**
- * xml_get_content - get content of node specified by xpath
+ * xpath_get_content() - Get content of node specified by xpath
  * @xpath_expr: xpath expression for node
  */
-char *xml_get_content(char *xpath_expr);
+char *xpath_get_content(char *xpath_expr);
 
 /**
- * xml_add_node - add xml nodes from xpath
+ * xpath_add_node - add xml nodes from xpath
  * @xpath_expr: xpath expression for new node
  * For example xpath_expr="/labwc_config/a/b/c" creates
  * <labwc_config><a><b><c /></b></a></labwc_config>
  */
-void xml_add_node(char *xpath_expr);
+void xpath_add_node(char *xpath_expr);
 
 #endif /* __XML_H */
