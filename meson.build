@@ -12,7 +12,12 @@ gtkdeps = [dependency('gtk+-3.0'), dependency('libxml-2.0'), dependency('gio-2.0
 
 executable(
   meson.project_name(),
-  files('main.c', 'xml.c', 'find-themes.c'),
+  files(
+    'main.c',
+    'xml.c',
+    'find-themes.c',
+    'keyboard-layouts.c',
+  ),
   dependencies: gtkdeps,
   install : true,
 )

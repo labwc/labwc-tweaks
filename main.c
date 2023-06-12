@@ -5,6 +5,7 @@
 #include <string.h>
 #include <strings.h>
 #include <sys/stat.h>
+#include "keyboard-layouts.h"
 #include "tweaks.h"
 #include "xml.h"
 
@@ -15,6 +16,7 @@ static GtkWidget *icon_theme_name;
 static GtkWidget *cursor_theme_name;
 static GtkWidget *cursor_size;
 static GtkWidget *natural_scroll;
+static GtkWidget *keyboard_layout;
 
 static struct themes openbox_themes = { 0 };
 static struct themes gtk_themes = { 0 };
@@ -34,7 +36,6 @@ spawn_sync(char const *command)
 		g_error_free(err);
 	}
 }
-
 
 static void
 environment_set(const char *key, const char *value)
@@ -94,6 +95,15 @@ set_value_num(GSettings *settings, const char *key, int value)
 	g_settings_set_value(settings, key, g_variant_new("i", value));
 }
 
+const char *first_field(const char *s, char delim)
+{
+	char *p = strchr(s, delim);
+	if (p) {
+		*p = '\0';
+	}
+	return s;
+}
+
 #define COMBO_TEXT(w) gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(w))
 #define SPIN_BUTTON_VAL(w) gtk_spin_button_get_value(GTK_SPIN_BUTTON(w))
 #define SPIN_BUTTON_VAL_INT(w) (int)SPIN_BUTTON_VAL(w)
@@ -116,6 +126,7 @@ update(GtkWidget *widget, gpointer data)
 	/* ~/.config/labwc/environment */
 	environment_set("XCURSOR_THEME", COMBO_TEXT(cursor_theme_name));
 	environment_set_num("XCURSOR_SIZE", SPIN_BUTTON_VAL_INT(cursor_size));
+	environment_set("XKB_DEFAULT_LAYOUT", first_field(COMBO_TEXT(keyboard_layout), ' '));
 
 	if (!g_strcmp0(COMBO_TEXT(openbox_theme_name), "GTK")) {
 		spawn_sync("labwc-gtktheme.py");
@@ -225,7 +236,7 @@ activate(GtkApplication *app, gpointer user_data)
 		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(cursor_theme_name), theme->name);
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(cursor_theme_name), active);
-	gtk_grid_attach(GTK_GRID(grid),cursor_theme_name, 1, row++, 1, 1);
+	gtk_grid_attach(GTK_GRID(grid), cursor_theme_name, 1, row++, 1, 1);
 
 	/* cursor size spinbutton */
 	widget = gtk_label_new("cursor size");
@@ -245,6 +256,35 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(natural_scroll), "yes");
 	gtk_combo_box_set_active(GTK_COMBO_BOX(natural_scroll), xml_get_bool_text("/labwc_config/libinput/device/naturalscroll"));
 	gtk_grid_attach(GTK_GRID(grid), natural_scroll, 1, row++, 1, 1);
+
+
+	/* keyboard layout */
+	GList *keyboard_layouts = NULL;
+	keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");
+
+	widget = gtk_label_new("keyboard layout");
+	gtk_widget_set_halign(widget, GTK_ALIGN_START);
+	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
+	keyboard_layout = gtk_combo_box_text_new();
+
+	active_id = "gb";
+	active = -1;
+
+	GList *iter;
+	int i = 0;
+	for (iter = keyboard_layouts; iter; iter = iter->next) {
+		struct layout *layout = (struct layout *)iter->data;
+		if (!strcmp(layout->lang, active_id)) {
+			active = i;
+		}
+		char buf[256];
+		snprintf(buf, sizeof(buf), "%s  %s", layout->lang, layout->description);
+		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(keyboard_layout), buf);
+		++i;
+	}
+	gtk_combo_box_set_active(GTK_COMBO_BOX(keyboard_layout), active);
+	gtk_grid_attach(GTK_GRID(grid), keyboard_layout, 1, row++, 1, 1);
+	keyboard_layouts_finish(keyboard_layouts);
 
 	/* bottom button box */
 	hbbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
