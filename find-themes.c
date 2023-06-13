@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-only
 #define _POSIX_C_SOURCE 200809L
 #include <assert.h>
 #include <dirent.h>
@@ -218,7 +219,7 @@ find_themes(struct themes *themes, const char *middle, const char *end)
 	if (!vector_contains(themes, "Adwaita")) {
 		struct theme *theme = grow_vector_by_one_theme(themes);
 		theme->name = strdup("Adwaita");
-		theme->path = NULL;		
+		theme->path = NULL;
 	}
 
 	qsort(themes->data, themes->nr, sizeof(struct theme), compare);

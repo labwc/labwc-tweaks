@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: GPL-2.0-only */
 #ifndef KEYBOARD_LAYOUTS_H
 #define KEYBOARD_LAYOUTS_H
 #include <gtk/gtk.h>

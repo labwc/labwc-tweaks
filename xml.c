@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-only
 #define _POSIX_C_SOURCE 200809L
 #include <assert.h>
 #include <ctype.h>
@@ -61,7 +62,7 @@ nodename(xmlNode *node, char *buf, int len)
 	*--buf = 0;
 	len--;
 
-	for(;;) {
+	for (;;) {
 		const char *name = (char *)node->name;
 		int i = strlen(name);
 		while (--i >= 0) {
@@ -132,7 +133,7 @@ xml_init(const char *filename)
 	xmlIndentTreeOutput = 1;
 
 	ctx.filename = strdup(filename);
-        ctx.doc = xmlReadFile(filename, NULL, 0);
+	ctx.doc = xmlReadFile(filename, NULL, 0);
 	if (!ctx.doc) {
 		fprintf(stderr, "warn: xmlReadFile('%s')\n", filename);
 	}

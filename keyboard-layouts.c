@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-only
 #define _POSIX_C_SOURCE 200809L
 #include <stdbool.h>
 #include <string.h>
@@ -19,7 +20,7 @@ keyboard_layouts_init(GList **layouts, const char *filename)
 
 	if (!fp) {
 		perror("Error opening file");
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	while (getline(&line, &len, fp) != -1) {
 		char *p = strrchr(line, '\n');
