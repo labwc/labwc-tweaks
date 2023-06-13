@@ -8,7 +8,6 @@
 #include <sys/stat.h>
 #include "state.h"
 #include "tab-appearance.h"
-#include "tweaks.h"
 #include "xml.h"
 
 static void

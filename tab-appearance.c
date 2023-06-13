@@ -2,38 +2,22 @@
 #include "keyboard-layouts.h"
 #include "state.h"
 #include "tab-appearance.h"
-#include "tweaks.h"
+#include "theme.h"
 #include "update.h"
 #include "xml.h"
-
-static struct themes openbox_themes = { 0 };
-static struct themes gtk_themes = { 0 };
-static struct themes icon_themes = { 0 };
-static struct themes cursor_themes = { 0 };
-
-static void
-free_theme_vector(struct themes *themes)
-{
-	for (int i = 0; i < themes->nr; ++i) {
-		struct theme *theme = themes->data + i;
-		if (theme->name) {
-			free(theme->name);
-		}
-		if (theme->path) {
-			free(theme->path);
-		}
-	}
-	free(themes->data);
-}
 
 void
 tab_appearance_init(struct state *state, GtkWidget *stack)
 {
 	/* load themes */
-	find_themes(&openbox_themes, "themes", "openbox-3/themerc");
-	find_themes(&gtk_themes, "themes", "gtk-3.0/gtk.css");
-	find_themes(&cursor_themes, "icons", "cursors");
-	find_themes(&icon_themes, "icons", NULL);
+	struct themes openbox_themes = { 0 };
+	struct themes gtk_themes = { 0 };
+	struct themes icon_themes = { 0 };
+	struct themes cursor_themes = { 0 };
+	theme_find(&openbox_themes, "themes", "openbox-3/themerc");
+	theme_find(&gtk_themes, "themes", "gtk-3.0/gtk.css");
+	theme_find(&cursor_themes, "icons", "cursors");
+	theme_find(&icon_themes, "icons", NULL);
 
 	GtkWidget *vbox, *widget, *hbbox;
 
@@ -186,9 +170,9 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_container_add(GTK_CONTAINER(hbbox), widget);
 	gtk_button_box_set_layout(GTK_BUTTON_BOX(hbbox), GTK_BUTTONBOX_END);
 
-	free_theme_vector(&openbox_themes);
-	free_theme_vector(&gtk_themes);
-	free_theme_vector(&icon_themes);
-	free_theme_vector(&cursor_themes);
+	theme_free_vector(&openbox_themes);
+	theme_free_vector(&gtk_themes);
+	theme_free_vector(&icon_themes);
+	theme_free_vector(&cursor_themes);
 }
 

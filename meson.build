@@ -15,7 +15,7 @@ executable(
   files(
     'main.c',
     'xml.c',
-    'find-themes.c',
+    'theme.c',
     'keyboard-layouts.c',
     'tab-appearance.c',
     'update.c',

@@ -9,7 +9,7 @@
 #include <strings.h>
 #include <sys/stat.h>
 #include <unistd.h>
-#include "tweaks.h"
+#include "theme.h"
 
 static struct theme *
 grow_vector_by_one_theme(struct themes *themes)
@@ -180,7 +180,7 @@ static struct {
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
 void
-find_themes(struct themes *themes, const char *middle, const char *end)
+theme_find(struct themes *themes, const char *middle, const char *end)
 {
 	char path[4096];
 	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
@@ -224,3 +224,19 @@ find_themes(struct themes *themes, const char *middle, const char *end)
 
 	qsort(themes->data, themes->nr, sizeof(struct theme), compare);
 }
+
+void
+theme_free_vector(struct themes *themes)
+{
+	for (int i = 0; i < themes->nr; ++i) {
+		struct theme *theme = themes->data + i;
+		if (theme->name) {
+			free(theme->name);
+		}
+		if (theme->path) {
+			free(theme->path);
+		}
+	}
+	free(themes->data);
+}
+
