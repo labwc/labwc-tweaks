@@ -95,34 +95,6 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.icon_theme_name, 1, row++, 1, 1);
 	theme_free_vector(&icon_themes);
 
-	/* keyboard layout */
-	GList *keyboard_layouts = NULL;
-	keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");
-
-	widget = gtk_label_new("keyboard layout");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	state->widgets.keyboard_layout = gtk_combo_box_text_new();
-
-	active_id = "gb";
-	active = -1;
-
-	GList *iter;
-	int i = 0;
-	for (iter = keyboard_layouts; iter; iter = iter->next) {
-		struct layout *layout = (struct layout *)iter->data;
-		if (!strcmp(layout->lang, active_id)) {
-			active = i;
-		}
-		char buf[256];
-		snprintf(buf, sizeof(buf), "%s  %s", layout->lang, layout->description);
-		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.keyboard_layout), buf);
-		++i;
-	}
-	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.keyboard_layout), active);
-	gtk_grid_attach(GTK_GRID(grid), state->widgets.keyboard_layout, 1, row++, 1, 1);
-	keyboard_layouts_finish(keyboard_layouts);
-
 	/* bottom button box */
 	GtkWidget *hbbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_box_pack_start(GTK_BOX(vbox), hbbox, TRUE, TRUE, 5);

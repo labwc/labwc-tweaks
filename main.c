@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include "state.h"
 #include "stack-appearance.h"
+#include "stack-lang.h"
 #include "stack-mouse.h"
 #include "xml.h"
 
@@ -35,13 +36,10 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_grid_attach(GTK_GRID(grid), stack, 2, 0, 1, 1);
 	gtk_stack_sidebar_set_stack(GTK_STACK_SIDEBAR(sidebar), GTK_STACK(stack));
 
-	/* Tabs */
+	/* Stacks */
 	stack_appearance_init(state, stack);
 	stack_mouse_init(state, stack);
-
-	GtkWidget *baz = gtk_label_new("Language & Region");
-	gtk_stack_add_named(GTK_STACK(stack), baz, "language_and_region");
-	gtk_container_child_set(GTK_CONTAINER(stack), baz, "title", "Language & Region", NULL);
+	stack_lang_init(state, stack);
 
 	gtk_widget_show_all(state->window);
 }
@@ -66,6 +64,7 @@ create_basic_rcxml(const char *filename)
 	}
 	fclose(file);
 }
+
 int
 main(int argc, char **argv)
 {
