@@ -9,19 +9,9 @@
 void
 tab_appearance_init(struct state *state, GtkWidget *stack)
 {
-	/* load themes */
-	struct themes openbox_themes = { 0 };
-	struct themes gtk_themes = { 0 };
-	struct themes icon_themes = { 0 };
-	struct themes cursor_themes = { 0 };
-	theme_find(&openbox_themes, "themes", "openbox-3/themerc");
-	theme_find(&gtk_themes, "themes", "gtk-3.0/gtk.css");
-	theme_find(&cursor_themes, "icons", "cursors");
-	theme_find(&icon_themes, "icons", NULL);
+	GtkWidget *widget;
 
-	GtkWidget *vbox, *widget, *hbbox;
-
-	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+	GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_stack_add_named(GTK_STACK(stack), vbox, "appearance");
 	gtk_container_child_set(GTK_CONTAINER(stack), vbox, "title", "Appearance", NULL);
 
@@ -32,6 +22,8 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_box_pack_start(GTK_BOX(vbox), grid, TRUE, TRUE, 5);
 
 	/* openbox theme combobox */
+	struct themes openbox_themes = { 0 };
+	theme_find(&openbox_themes, "themes", "openbox-3/themerc");
 	widget = gtk_label_new("openbox theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
@@ -48,6 +40,7 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.openbox_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.openbox_theme_name, 1, row++, 1, 1);
+	theme_free_vector(&openbox_themes);
 
 	/* corner radius spinbutton */
 	widget = gtk_label_new("corner radius");
@@ -59,6 +52,9 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.corner_radius, 1, row++, 1, 1);
 
 	/* gtk theme combobox */
+	struct themes gtk_themes = { 0 };
+	theme_find(&gtk_themes, "themes", "gtk-3.0/gtk.css");
+
 	widget = gtk_label_new("gtk theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
@@ -75,8 +71,12 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.gtk_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.gtk_theme_name, 1, row++, 1, 1);
+	theme_free_vector(&gtk_themes);
 
 	/* icon theme combobox */
+	struct themes icon_themes = { 0 };
+	theme_find(&icon_themes, "icons", NULL);
+
 	widget = gtk_label_new("icon theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
@@ -93,8 +93,12 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.icon_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.icon_theme_name, 1, row++, 1, 1);
+	theme_free_vector(&icon_themes);
 
 	/* cursor theme combobox */
+	struct themes cursor_themes = { 0 };
+	theme_find(&cursor_themes, "icons", "cursors");
+
 	widget = gtk_label_new("cursor theme");
 	gtk_widget_set_halign(widget, GTK_ALIGN_START);
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
@@ -111,6 +115,7 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	}
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.cursor_theme_name), active);
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.cursor_theme_name, 1, row++, 1, 1);
+	theme_free_vector(&cursor_themes);
 
 	/* cursor size spinbutton */
 	widget = gtk_label_new("cursor size");
@@ -160,7 +165,7 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	keyboard_layouts_finish(keyboard_layouts);
 
 	/* bottom button box */
-	hbbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
+	GtkWidget *hbbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
 	gtk_box_pack_start(GTK_BOX(vbox), hbbox, TRUE, TRUE, 5);
 	widget = gtk_button_new_with_label("Update");
 	g_signal_connect(widget, "clicked", G_CALLBACK(update), state);
@@ -169,10 +174,5 @@ tab_appearance_init(struct state *state, GtkWidget *stack)
 	g_signal_connect_swapped(widget, "clicked", G_CALLBACK(gtk_widget_destroy), state->window);
 	gtk_container_add(GTK_CONTAINER(hbbox), widget);
 	gtk_button_box_set_layout(GTK_BUTTON_BOX(hbbox), GTK_BUTTONBOX_END);
-
-	theme_free_vector(&openbox_themes);
-	theme_free_vector(&gtk_themes);
-	theme_free_vector(&icon_themes);
-	theme_free_vector(&cursor_themes);
 }
 
