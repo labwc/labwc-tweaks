@@ -18,6 +18,7 @@ executable(
     'theme.c',
     'keyboard-layouts.c',
     'stack-appearance.c',
+    'stack-mouse.c',
     'update.c',
   ),
   dependencies: gtkdeps,

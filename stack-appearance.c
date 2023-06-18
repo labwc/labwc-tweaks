@@ -95,47 +95,6 @@ stack_appearance_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.icon_theme_name, 1, row++, 1, 1);
 	theme_free_vector(&icon_themes);
 
-	/* cursor theme combobox */
-	struct themes cursor_themes = { 0 };
-	theme_find(&cursor_themes, "icons", "cursors");
-
-	widget = gtk_label_new("cursor theme");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	state->widgets.cursor_theme_name = gtk_combo_box_text_new();
-
-	active_id = g_settings_get_string(state->settings, "cursor-theme");
-	active = -1;
-	for (int i = 0; i < cursor_themes.nr; ++i) {
-		theme = cursor_themes.data + i;
-		if (!strcmp(theme->name, active_id)) {
-			active = i;
-		}
-		gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.cursor_theme_name), theme->name);
-	}
-	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.cursor_theme_name), active);
-	gtk_grid_attach(GTK_GRID(grid), state->widgets.cursor_theme_name, 1, row++, 1, 1);
-	theme_free_vector(&cursor_themes);
-
-	/* cursor size spinbutton */
-	widget = gtk_label_new("cursor size");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	GtkAdjustment *cursor_adjustment = gtk_adjustment_new(0, 0, 512, 1, 2, 0);
-	state->widgets.cursor_size = gtk_spin_button_new(GTK_ADJUSTMENT(cursor_adjustment), 1, 0);
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(state->widgets.cursor_size), g_settings_get_int(state->settings, "cursor-size"));
-	gtk_grid_attach(GTK_GRID(grid), state->widgets.cursor_size, 1, row++, 1, 1);
-
-	/* natural scroll combobox */
-	widget = gtk_label_new("natural scroll");
-	gtk_widget_set_halign(widget, GTK_ALIGN_START);
-	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
-	state->widgets.natural_scroll = gtk_combo_box_text_new();
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.natural_scroll), "no");
-	gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(state->widgets.natural_scroll), "yes");
-	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.natural_scroll), xml_get_bool_text("/labwc_config/libinput/device/naturalscroll"));
-	gtk_grid_attach(GTK_GRID(grid), state->widgets.natural_scroll, 1, row++, 1, 1);
-
 	/* keyboard layout */
 	GList *keyboard_layouts = NULL;
 	keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");

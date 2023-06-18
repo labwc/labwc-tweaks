@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include "state.h"
 #include "stack-appearance.h"
+#include "stack-mouse.h"
 #include "xml.h"
 
 static void
@@ -36,10 +37,7 @@ activate(GtkApplication *app, gpointer user_data)
 
 	/* Tabs */
 	stack_appearance_init(state, stack);
-
-	GtkWidget *bar = gtk_label_new("Mouse & Touchpad");
-	gtk_stack_add_named(GTK_STACK(stack), bar, "mouse_and_touchpad");
-	gtk_container_child_set(GTK_CONTAINER(stack), bar, "title", "Mouse & Touchpad", NULL);
+	stack_mouse_init(state, stack);
 
 	GtkWidget *baz = gtk_label_new("Language & Region");
 	gtk_stack_add_named(GTK_STACK(stack), baz, "language_and_region");
