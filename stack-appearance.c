@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-2.0-only
 #include "keyboard-layouts.h"
 #include "state.h"
-#include "tab-appearance.h"
+#include "stack-appearance.h"
 #include "theme.h"
 #include "update.h"
 #include "xml.h"
 
 void
-tab_appearance_init(struct state *state, GtkWidget *stack)
+stack_appearance_init(struct state *state, GtkWidget *stack)
 {
 	GtkWidget *widget;
 

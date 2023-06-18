@@ -7,7 +7,7 @@
 #include <strings.h>
 #include <sys/stat.h>
 #include "state.h"
-#include "tab-appearance.h"
+#include "stack-appearance.h"
 #include "xml.h"
 
 static void
@@ -35,7 +35,7 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_stack_sidebar_set_stack(GTK_STACK_SIDEBAR(sidebar), GTK_STACK(stack));
 
 	/* Tabs */
-	tab_appearance_init(state, stack);
+	stack_appearance_init(state, stack);
 
 	GtkWidget *bar = gtk_label_new("Mouse & Touchpad");
 	gtk_stack_add_named(GTK_STACK(stack), bar, "mouse_and_touchpad");

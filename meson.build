@@ -17,7 +17,7 @@ executable(
     'xml.c',
     'theme.c',
     'keyboard-layouts.c',
-    'tab-appearance.c',
+    'stack-appearance.c',
     'update.c',
   ),
   dependencies: gtkdeps,
