@@ -28,3 +28,6 @@ This installs the binary to /usr/local/bin and data files to their respective lo
 
 If you find it a useful tool and want to expand its scope, feel free.
 
+### packages
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/labwc-tweaks.svg)](https://repology.org/project/labwc-tweaks/versions)
