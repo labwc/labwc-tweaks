@@ -1,8 +1,12 @@
 [Desktop Entry]
-Name=Labwc Config
-GenericName=configuration
-Comment=Configure settings for Labwc
 Exec=labwc-tweaks
 Icon=labwc-tweaks
 Type=Application
 Categories=Settings;System;
+
+Name=Labwc Config
+GenericName=configuration
+Comment=Configure settings for Labwc
+Name[it]=Impostazioni Labwc
+GenericName[it]=Impostazioni
+Comment[it]=Configura impostazioni per Labwc
