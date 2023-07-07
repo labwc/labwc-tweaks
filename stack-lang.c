@@ -3,7 +3,6 @@
 #include "state.h"
 #include "stack-lang.h"
 #include "theme.h"
-#include "update.h"
 #include "xml.h"
 
 void
@@ -48,16 +47,5 @@ stack_lang_init(struct state *state, GtkWidget *stack)
 	gtk_combo_box_set_active(GTK_COMBO_BOX(state->widgets.keyboard_layout), active);
 	gtk_grid_attach(GTK_GRID(grid), state->widgets.keyboard_layout, 1, row++, 1, 1);
 	keyboard_layouts_finish(keyboard_layouts);
-
-	/* bottom button box */
-	GtkWidget *hbbox = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
-	gtk_box_pack_start(GTK_BOX(vbox), hbbox, TRUE, TRUE, 5);
-	widget = gtk_button_new_with_label("Update");
-	g_signal_connect(widget, "clicked", G_CALLBACK(update), state);
-	gtk_container_add(GTK_CONTAINER(hbbox), widget);
-	widget = gtk_button_new_with_label("Quit");
-	g_signal_connect_swapped(widget, "clicked", G_CALLBACK(gtk_widget_destroy), state->window);
-	gtk_container_add(GTK_CONTAINER(hbbox), widget);
-	gtk_button_box_set_layout(GTK_BUTTON_BOX(hbbox), GTK_BUTTONBOX_END);
 }
 
