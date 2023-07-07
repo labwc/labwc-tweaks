@@ -10,6 +10,7 @@
 #include "stack-appearance.h"
 #include "stack-lang.h"
 #include "stack-mouse.h"
+#include "update.h"
 #include "xml.h"
 
 static void
@@ -20,27 +21,36 @@ activate(GtkApplication *app, gpointer user_data)
 	/* window */
 	state->window = gtk_application_window_new(app);
 	gtk_window_set_title(GTK_WINDOW(state->window), "Tweaks");
-	gtk_window_set_default_size(GTK_WINDOW(state->window), 640, 480);
+	gtk_window_set_default_size(GTK_WINDOW(state->window), 800, 600);
 
 	/* grid */
 	GtkWidget *grid = gtk_grid_new();
-	gtk_grid_set_row_homogeneous(GTK_GRID(grid), TRUE);
 	gtk_container_add(GTK_CONTAINER(state->window), grid);
+	GtkWidget *sidebar = gtk_stack_sidebar_new();
+	GtkWidget *separator = gtk_separator_new(GTK_ORIENTATION_VERTICAL);
+	GtkWidget *stack = gtk_stack_new();
+	GtkWidget *bottom_buttons = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
+	gtk_grid_attach(GTK_GRID(grid), sidebar, 0, 0, 1, 2);
+	gtk_grid_attach(GTK_GRID(grid), separator, 1, 0, 1, 2);
+	gtk_grid_attach(GTK_GRID(grid), stack, 2, 0, 1, 1);
+	gtk_grid_attach(GTK_GRID(grid), bottom_buttons, 0, 1, 3, 1);
 
 	/* sidebar + stack */
-	GtkWidget *sidebar = gtk_stack_sidebar_new();
-	GtkWidget *stack = gtk_stack_new();
-	GtkWidget *separator = gtk_separator_new(GTK_ORIENTATION_VERTICAL);
-	gtk_grid_attach(GTK_GRID(grid), sidebar, 0, 0, 1, 1);
-	gtk_grid_attach(GTK_GRID(grid), separator, 1, 0, 1, 1);
-	gtk_grid_attach(GTK_GRID(grid), stack, 2, 0, 1, 1);
 	gtk_stack_sidebar_set_stack(GTK_STACK_SIDEBAR(sidebar), GTK_STACK(stack));
-
-	/* Stacks */
 	stack_appearance_init(state, stack);
 	stack_mouse_init(state, stack);
 	stack_lang_init(state, stack);
 
+	/* bottom buttons */
+	GtkWidget *button = gtk_button_new_with_label("Update");
+	g_signal_connect(button, "clicked", G_CALLBACK(update), state);
+	gtk_container_add(GTK_CONTAINER(bottom_buttons), button);
+	button = gtk_button_new_with_label("Quit");
+	g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_widget_destroy), state->window);
+	gtk_container_add(GTK_CONTAINER(bottom_buttons), button);
+	gtk_button_box_set_layout(GTK_BUTTON_BOX(bottom_buttons), GTK_BUTTONBOX_END);
+
+	/* show */
 	gtk_widget_show_all(state->window);
 }
 
