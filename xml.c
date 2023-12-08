@@ -125,15 +125,9 @@ xml_init(const char *filename)
 {
 	LIBXML_TEST_VERSION
 
-	/*
-	 * These two global variables have to be set before xmlReadFile()
-	 * in order for xmlSaveFormatFile() to indent properly.
-	 */
-	xmlKeepBlanksDefault(0);
-	xmlIndentTreeOutput = 1;
-
+	/* Use XML_PARSE_NOBLANKS for xmlSaveFormatFile() to indent properly */
 	ctx.filename = strdup(filename);
-	ctx.doc = xmlReadFile(filename, NULL, 0);
+	ctx.doc = xmlReadFile(filename, NULL, XML_PARSE_NOBLANKS);
 	if (!ctx.doc) {
 		fprintf(stderr, "warn: xmlReadFile('%s')\n", filename);
 	}
