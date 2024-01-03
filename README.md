@@ -14,14 +14,14 @@ automatically sync with the selected GTK theme.
 ### build
 
 ```
-meson build
-ninja -C build
+meson setup build
+meson compile -C build
 ```
 
 ### install
 
 ```
-ninja -C build install
+meson install -C build
 ```
 
 This installs the binary to /usr/local/bin and data files to their respective locations.
