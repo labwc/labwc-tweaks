@@ -1,9 +1,83 @@
 // SPDX-License-Identifier: GPL-2.0-only
+#define _POSIX_C_SOURCE 200809L
+#include <ctype.h>
 #include "keyboard-layouts.h"
 #include "state.h"
 #include "stack-lang.h"
 #include "theme.h"
 #include "xml.h"
+
+static void
+rtrim(char **s)
+{
+	size_t len = strlen(*s);
+	if (!len) {
+		return;
+	}
+	char *end = *s + len - 1;
+	while (end >= *s && isspace(*end)) {
+		end--;
+	}
+	*(end + 1) = '\0';
+}
+
+static char *
+string_strip(char *s)
+{
+	rtrim(&s);
+	while (isspace(*s)) {
+		s++;
+	}
+	return s;
+}
+
+static char *
+get_value(char *line, const char *key)
+{
+	if (!line || !*line || line[0] == '#') {
+		return NULL;
+	}
+	char *p = strchr(line, '=');
+	if (!p) {
+		return NULL;
+	}
+	*p = '\0';
+	if (!!strcmp(key, string_strip(line))) {
+		return NULL;
+	}
+	char *value = string_strip(++p);
+	return value ? value : NULL;
+}
+
+static char *
+environment_get(const char *key)
+{
+	char filename[4096];
+	snprintf(filename, sizeof(filename), "%s/%s", getenv("HOME"), ".config/labwc/environment");
+
+	char *value = NULL;
+	char *line = NULL;
+	size_t len = 0;
+	FILE *stream = fopen(filename, "r");
+	if (!stream) {
+		goto out;
+	}
+
+	while (getline(&line, &len, stream) != -1) {
+		char *p = strrchr(line, '\n');
+		if (p) {
+			*p = '\0';
+		}
+		value = get_value(line, key);
+		if (value) {
+			goto out;
+		}
+	}
+out:
+	free(line);
+	fclose(stream);
+	return value ? value : "";
+}
 
 void
 stack_lang_init(struct state *state, GtkWidget *stack)
@@ -29,7 +103,7 @@ stack_lang_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.keyboard_layout = gtk_combo_box_text_new();
 
-	char *active_id = "gb";
+	char *active_id = environment_get("XKB_DEFAULT_LAYOUT");
 	int active = -1;
 
 	GList *iter;
