@@ -21,7 +21,6 @@ activate(GtkApplication *app, gpointer user_data)
 	/* window */
 	state->window = gtk_application_window_new(app);
 	gtk_window_set_title(GTK_WINDOW(state->window), "Tweaks");
-	gtk_window_set_default_size(GTK_WINDOW(state->window), 800, 600);
 
 	/* grid */
 	GtkWidget *grid = gtk_grid_new();
@@ -30,6 +29,7 @@ activate(GtkApplication *app, gpointer user_data)
 	GtkWidget *separator = gtk_separator_new(GTK_ORIENTATION_VERTICAL);
 	GtkWidget *stack = gtk_stack_new();
 	GtkWidget *bottom_buttons = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
+	gtk_grid_set_row_spacing(GTK_GRID(grid), 10);
 	gtk_grid_attach(GTK_GRID(grid), sidebar, 0, 0, 1, 2);
 	gtk_grid_attach(GTK_GRID(grid), separator, 1, 0, 1, 2);
 	gtk_grid_attach(GTK_GRID(grid), stack, 2, 0, 1, 1);
