@@ -4,9 +4,7 @@ This is a [WIP] configuration gui app for labwc without any real plan or
 Acceptance Criteria. It was merely written to help change themes for the
 purposes of testing labwc during development. Don't expect too much :smile:
 
-<img src="https://user-images.githubusercontent.com/6955353/164969689-c2115c36-ad38-454c-b752-0356766156fb.png" />
-
-<img src="https://user-images.githubusercontent.com/1019119/151689576-e9934712-f134-44a7-b5e7-3c05181b1a38.png" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/1019119/294060534-84ef3747-f336-444e-9e2c-9a417ebe67e5.png" />
 
 If you install labwc-gtktheme.py and set labwc-theme to GTK it'll
 automatically sync with the selected GTK theme.
