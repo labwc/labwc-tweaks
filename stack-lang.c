@@ -49,8 +49,8 @@ get_value(char *line, const char *key)
 	return value ? value : NULL;
 }
 
-static char *
-environment_get(const char *key)
+static void
+environment_get(char *buffer, size_t size, const char *key)
 {
 	char filename[4096];
 	snprintf(filename, sizeof(filename), "%s/%s", getenv("HOME"), ".config/labwc/environment");
@@ -60,7 +60,7 @@ environment_get(const char *key)
 	size_t len = 0;
 	FILE *stream = fopen(filename, "r");
 	if (!stream) {
-		goto out;
+		return;
 	}
 
 	while (getline(&line, &len, stream) != -1) {
@@ -70,13 +70,12 @@ environment_get(const char *key)
 		}
 		value = get_value(line, key);
 		if (value) {
-			goto out;
+			snprintf(buffer, size, "%s", value);
+			break;
 		}
 	}
-out:
 	free(line);
 	fclose(stream);
-	return value ? value : "";
 }
 
 void
@@ -103,14 +102,15 @@ stack_lang_init(struct state *state, GtkWidget *stack)
 	gtk_grid_attach(GTK_GRID(grid), widget, 0, row, 1, 1);
 	state->widgets.keyboard_layout = gtk_combo_box_text_new();
 
-	char *active_id = environment_get("XKB_DEFAULT_LAYOUT");
+	char xkb_default_layout[1024];
+	environment_get(xkb_default_layout, sizeof(xkb_default_layout), "XKB_DEFAULT_LAYOUT");
 	int active = -1;
 
 	GList *iter;
 	int i = 0;
 	for (iter = keyboard_layouts; iter; iter = iter->next) {
 		struct layout *layout = (struct layout *)iter->data;
-		if (!strcmp(layout->lang, active_id)) {
+		if (!strcmp(layout->lang, xkb_default_layout)) {
 			active = i;
 		}
 		char buf[256];
