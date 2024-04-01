@@ -13,6 +13,7 @@
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
+#include "xml.h"
 
 static struct ctx {
 	char *filename;
@@ -120,10 +121,35 @@ xml_tree_walk(xmlNode *node)
 	}
 }
 
+static const char rcxml_template[] =
+	"<?xml version=\"1.0\"?>\n"
+	"<labwc_config>\n"
+	"  <core>\n"
+	"  </core>\n"
+	"</labwc_config>\n";
+
+static void
+create_basic_rcxml(const char *filename)
+{
+	FILE *file = fopen(filename, "w");
+	if (!file) {
+		fprintf(stderr, "warn: fopen(%s) failed\n", filename);
+		return;
+	}
+	if (!fwrite(rcxml_template, sizeof(rcxml_template), 1, file)) {
+		fprintf(stderr, "warn: error writing to %s", filename);
+	}
+	fclose(file);
+}
+
 void
 xml_init(const char *filename)
 {
 	LIBXML_TEST_VERSION
+
+	if (access(filename, F_OK)) {
+		create_basic_rcxml(filename);
+	}
 
 	/* Use XML_PARSE_NOBLANKS for xmlSaveFormatFile() to indent properly */
 	ctx.filename = strdup(filename);
@@ -136,6 +162,12 @@ xml_init(const char *filename)
 		fprintf(stderr, "warn: xmlXPathNewContext()\n");
 		xmlFreeDoc(ctx.doc);
 	}
+
+	/* Ensure all relevant nodes exist before we start getting/setting */
+	xpath_add_node("/labwc_config/theme/cornerRadius");
+	xpath_add_node("/labwc_config/theme/name");
+	xpath_add_node("/labwc_config/libinput/device/naturalScroll");
+	xml_save();
 }
 
 void
