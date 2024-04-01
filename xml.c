@@ -188,6 +188,7 @@ xml_finish(void)
 	xmlXPathFreeContext(ctx.xpath_ctx_ptr);
 	xmlFreeDoc(ctx.doc);
 	xmlCleanupParser();
+	free(ctx.filename);
 }
 
 void
