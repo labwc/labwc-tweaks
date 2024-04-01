@@ -54,27 +54,6 @@ activate(GtkApplication *app, gpointer user_data)
 	gtk_widget_show_all(state->window);
 }
 
-static const char rcxml_template[] =
-	"<?xml version=\"1.0\"?>\n"
-	"<labwc_config>\n"
-	"  <core>\n"
-	"  </core>\n"
-	"</labwc_config>\n";
-
-static void
-create_basic_rcxml(const char *filename)
-{
-	FILE *file = fopen(filename, "w");
-	if (!file) {
-		fprintf(stderr, "warn: fopen(%s) failed\n", filename);
-		return;
-	}
-	if (!fwrite(rcxml_template, sizeof(rcxml_template), 1, file)) {
-		fprintf(stderr, "warn: error writing to %s", filename);
-	}
-	fclose(file);
-}
-
 int
 main(int argc, char **argv)
 {
@@ -84,16 +63,7 @@ main(int argc, char **argv)
 	char filename[4096];
 	char *home = getenv("HOME");
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
-	if (access(filename, F_OK)) {
-		create_basic_rcxml(filename);
-	}
 	xml_init(filename);
-
-	/* ensure all relevant nodes exist before we start getting/setting */
-	xpath_add_node("/labwc_config/theme/cornerRadius");
-	xpath_add_node("/labwc_config/theme/name");
-	xpath_add_node("/labwc_config/libinput/device/naturalScroll");
-	xml_save();
 
 	/* connect to gsettings */
 	state.settings = g_settings_new("org.gnome.desktop.interface");
