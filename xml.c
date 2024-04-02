@@ -143,6 +143,16 @@ create_basic_rcxml(const char *filename)
 }
 
 void
+xml_setup_nodes(void)
+{
+	/* Ensure all relevant nodes exist before we start getting/setting */
+	xpath_add_node("/labwc_config/theme/cornerRadius");
+	xpath_add_node("/labwc_config/theme/name");
+	xpath_add_node("/labwc_config/libinput/device/naturalScroll");
+	xml_save();
+}
+
+void
 xml_init(const char *filename)
 {
 	LIBXML_TEST_VERSION
@@ -162,12 +172,6 @@ xml_init(const char *filename)
 		fprintf(stderr, "warn: xmlXPathNewContext()\n");
 		xmlFreeDoc(ctx.doc);
 	}
-
-	/* Ensure all relevant nodes exist before we start getting/setting */
-	xpath_add_node("/labwc_config/theme/cornerRadius");
-	xpath_add_node("/labwc_config/theme/name");
-	xpath_add_node("/labwc_config/libinput/device/naturalScroll");
-	xml_save();
 }
 
 void

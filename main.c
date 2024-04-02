@@ -64,6 +64,7 @@ main(int argc, char **argv)
 	char *home = getenv("HOME");
 	snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/rc.xml");
 	xml_init(filename);
+	xml_setup_nodes();
 
 	/* connect to gsettings */
 	state.settings = g_settings_new("org.gnome.desktop.interface");
