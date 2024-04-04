@@ -15,6 +15,7 @@ executable(
   files(
     'main.c',
     'xml.c',
+    'environment.c',
     'theme.c',
     'keyboard-layouts.c',
     'stack-appearance.c',
