@@ -1,0 +1,37 @@
+BasedOnStyle: WebKit
+Standard: c++20
+ColumnLimit: 100
+CommentPragmas: "^!|^:|^ SPDX-License-Identifier:"
+PointerBindsToType: false
+SpaceAfterTemplateKeyword: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterClass: true
+    AfterControlStatement: false
+    AfterEnum: false
+    AfterFunction: true
+    AfterNamespace: false
+    AfterObjCDeclaration: false
+    AfterStruct: true
+    AfterUnion: false
+    BeforeCatch: false
+    BeforeElse: false
+    IndentBraces: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 8
+NamespaceIndentation: None
+IndentPPDirectives: AfterHash
+PPIndentWidth: 2
+AlignAfterOpenBracket: true
+AlwaysBreakTemplateDeclarations: true
+AllowShortFunctionsOnASingleLine: Inline
+SortIncludes: false
+ForEachMacros: [ foreach, Q_FOREACH, forever, Q_FOREVER ]
+BreakConstructorInitializers: BeforeColon
+FixNamespaceComments: true
+ShortNamespaceLines: 1
+AlignEscapedNewlines: Left
+SpaceBeforeCpp11BracedList: false
+
