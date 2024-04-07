@@ -25,6 +25,22 @@ grow_vector_by_one_theme(struct themes *themes)
 }
 
 static bool
+vector_contains(struct themes *themes, const char *needle)
+{
+	assert(needle);
+	for (int i = 0; i < themes->nr; ++i) {
+		struct theme *theme = themes->data + i;
+		if (!theme || !theme->name) {
+			continue;
+		}
+		if ((!strcmp(theme->name, needle))) {
+			return true;
+		}
+	}
+	return false;
+}
+
+static bool
 isdir(const char *path, const char *dirname)
 {
 	char buf[4096];
@@ -130,7 +146,7 @@ process_dir(struct themes *themes, const char *path, const char *filename)
 			if (strstr(buf, "hicolor") != NULL) {
 				continue;
 			}
-			if (!stat(buf, &st)) {
+			if (!stat(buf, &st) && !vector_contains(themes, entry->d_name)) {
 				theme = grow_vector_by_one_theme(themes);
 				theme->name = strdup(entry->d_name);
 				theme->path = strdup(buf);
@@ -138,22 +154,6 @@ process_dir(struct themes *themes, const char *path, const char *filename)
 		}
 	}
 	closedir(dp);
-}
-
-static bool
-vector_contains(struct themes *themes, const char *needle)
-{
-	assert(needle);
-	for (int i = 0; i < themes->nr; ++i) {
-		struct theme *theme = themes->data + i;
-		if (!theme || !theme->name) {
-			continue;
-		}
-		if ((!strcmp(theme->name, needle))) {
-			return true;
-		}
-	}
-	return false;
 }
 
 /* Sort system themes in alphabetical order */
