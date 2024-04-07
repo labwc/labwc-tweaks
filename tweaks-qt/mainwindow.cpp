@@ -33,6 +33,15 @@ MainWindow::~MainWindow()
     xml_finish();
 }
 
+static const char *first_field(char *s, char delim)
+{
+    char *p = strchr(s, delim);
+    if (p) {
+        *p = '\0';
+    }
+    return s;
+}
+
 void MainWindow::activate()
 {
     /* # APPEARANCE */
@@ -99,7 +108,7 @@ void MainWindow::activate()
     int i = 0;
     for (iter = keyboard_layouts; iter; iter = iter->next) {
         struct layout *layout = (struct layout *)iter->data;
-        if (!strcmp(layout->lang, xkb_default_layout)) {
+        if (!strcmp(layout->lang, first_field(xkb_default_layout, ','))) {
             active = i;
         }
         char buf[256];
@@ -116,15 +125,6 @@ void MainWindow::activate()
 void MainWindow::quitSlot(void)
 {
     this->close();
-}
-
-static const char *first_field(char *s, char delim)
-{
-    char *p = strchr(s, delim);
-    if (p) {
-        *p = '\0';
-    }
-    return s;
 }
 
 void MainWindow::updateSlot(void)
