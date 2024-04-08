@@ -1,0 +1,84 @@
+name: CI
+on:
+  push:
+    branches:
+      - '*'
+  # Manual builds and PRs in all branches
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+    branches:
+      - '*'
+jobs:
+  build:
+    name: Build
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        name: [
+          Arch,
+          Debian
+        ]
+        include:
+          - name: Arch
+            os: ubuntu-latest
+            container: archlinux:base-devel
+
+          - name: Debian
+            os: ubuntu-latest
+            container: debian:testing
+
+    runs-on: ${{ matrix.os }}
+    container: ${{ matrix.container }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Arch Linux dependencies
+        if: matrix.name == 'Arch'
+        run: |
+          pacman-key --init
+          pacman -Syu --noconfirm
+          packages=(
+            clang
+            cmake
+            git
+            libxml2
+            qt6-base
+            qt6-tools
+          )
+          pacman -S --noconfirm ${packages[@]}
+
+      - name: Install Debian Testing dependencies
+        if: matrix.name == 'Debian'
+        run: |
+          apt-get update
+          apt-get upgrade -y
+          apt-get install -y cmake clang g++ gcc git \
+            libglib2.0 libgl1-mesa-dev libxml2-dev pkg-config \
+            qt6-base-dev  qt6-l10n-tools \
+            qt6-tools-dev qt6-tools-dev-tools
+
+      # These builds are executed on all runners
+      - name: Build with gcc
+        run: |
+          export CC=gcc
+          export CXX=g++
+          cmake \
+            -D CMAKE_BUILD_TYPE=Release \
+            -B build-gcc \
+            -S .
+          cmake --build build-gcc --verbose
+
+      - name: Build with clang
+        run: |
+          export CC=clang
+          export CXX=clang++
+          cmake \
+            -D CMAKE_BUILD_TYPE=Release \
+            -B build-clang \
+            -S .
+          cmake --build build-clang --verbose
