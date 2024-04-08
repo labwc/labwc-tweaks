@@ -2,8 +2,8 @@
 #include <glib.h>
 #include <string>
 #include <unistd.h>
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "maindialog.h"
+#include "./ui_maindialog.h"
 
 extern "C" {
 #include "environment.h"
@@ -12,7 +12,9 @@ extern "C" {
 #include "xml.h"
 }
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
+MainDialog::MainDialog(QWidget *parent)
+    : QDialog(parent)
+    , ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
 
@@ -21,13 +23,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     xml_init(config_file.data());
     xml_setup_nodes();
 
-    QObject::connect(ui->quit, &QPushButton::clicked, this, &MainWindow::quitSlot);
-    QObject::connect(ui->update, &QPushButton::clicked, this, &MainWindow::updateSlot);
+    QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &MainDialog::onApply);
 
     activate();
 }
 
-MainWindow::~MainWindow()
+MainDialog::~MainDialog()
 {
     delete ui;
     xml_finish();
@@ -42,7 +43,7 @@ static const char *first_field(char *s, char delim)
     return s;
 }
 
-void MainWindow::activate()
+void MainDialog::activate()
 {
     /* # APPEARANCE */
 
@@ -122,12 +123,7 @@ void MainWindow::activate()
     keyboard_layouts_finish(keyboard_layouts);
 }
 
-void MainWindow::quitSlot(void)
-{
-    this->close();
-}
-
-void MainWindow::updateSlot(void)
+void MainDialog::onApply()
 {
     /* ~/.config/labwc/rc.xml */
     xml_set_num((char *)"/labwc_config/theme/cornerradius", ui->cornerRadius->value());
