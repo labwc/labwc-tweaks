@@ -6,106 +6,191 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>658</width>
-    <height>535</height>
+    <width>640</width>
+    <height>480</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>Dialog</string>
-  </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="layout">
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
    <item>
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="minimumSize">
-      <size>
-       <width>640</width>
-       <height>480</height>
-      </size>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="tab">
-      <attribute name="title">
-       <string>Appearance</string>
-      </attribute>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_2">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QListWidget" name="list">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="currentRow">
+         <number>0</number>
+        </property>
+        <item>
          <property name="text">
-          <string>Corner Radius</string>
+          <string>Appearance</string>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label">
+         <property name="icon">
+          <iconset theme="applications-graphics"/>
+         </property>
+        </item>
+        <item>
          <property name="text">
-          <string>Openbox Theme</string>
+          <string>Mouse &amp; Touchpad</string>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="openboxTheme"/>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="cornerRadius"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab_2">
-      <attribute name="title">
-       <string>Mouse &amp;&amp; Touchpad</string>
-      </attribute>
-      <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
+         <property name="icon">
+          <iconset theme="input-mouse"/>
+         </property>
+        </item>
+        <item>
          <property name="text">
-          <string>Cursor Theme</string>
+          <string>Language &amp; Region</string>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="cursorTheme"/>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Cursor Size</string>
+         <property name="icon">
+          <iconset theme="preferences-desktop-locale"/>
          </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stack">
+        <widget class="QWidget" name="page1">
+         <layout class="QFormLayout" name="layPage1">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Openbox Theme</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="openboxTheme"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Corner Radius</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="cornerRadius"/>
+          </item>
+         </layout>
         </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="cursorSize"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Natural Scroll</string>
-         </property>
+        <widget class="QWidget" name="page2">
+         <layout class="QFormLayout" name="layPage2">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Cursor Theme</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="cursorTheme"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Cursor Size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="cursorSize"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Natural Scroll</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="naturalScroll"/>
+          </item>
+         </layout>
         </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="naturalScroll"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab_3">
-      <attribute name="title">
-       <string>Language &amp;&amp; Region</string>
-      </attribute>
-      <layout class="QFormLayout" name="formLayout_3">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>Keyboard Layout</string>
-         </property>
+        <widget class="QWidget" name="page3">
+         <layout class="QFormLayout" name="layPage3">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Keyboard Layout</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="keyboardLayout"/>
+          </item>
+         </layout>
         </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="keyboardLayout"/>
-       </item>
-      </layout>
-     </widget>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
@@ -154,6 +239,22 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stack</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>248</y>
     </hint>
    </hints>
   </connection>

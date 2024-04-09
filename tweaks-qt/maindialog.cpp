@@ -18,6 +18,8 @@ MainDialog::MainDialog(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->list->setFixedWidth(ui->list->sizeHintForColumn(0) + 2 * ui->list->frameWidth());
+
     std::string config_file = std::getenv("HOME");
     config_file += "/.config/labwc/rc.xml";
     xml_init(config_file.data());
