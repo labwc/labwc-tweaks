@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>@PROJECT_APPSTREAM_ID@</id>
+  <metadata_license>@PROJECT_APPSTREAM_SPDX_ID@</metadata_license>
+  <project_license>@PROJECT_SPDX_ID@</project_license>
+  <name>@PROJECT_NAME@</name>
+  <summary>@PROJECT_DESCRIPTION@</summary>
+  <content_rating type="oars-1.0" />
+@PROJECT_DESCRIPTION_HTML@
+  <project_group>@PROJECT_ORGANIZATION_NAME@</project_group>
+  <developer id="@PROJECT_ORGANIZATION_ID@">
+    <name>@PROJECT_AUTHOR_NAME@</name>
+  </developer>
+  <url type="homepage">@PROJECT_HOMEPAGE_URL@</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Screenshot</caption>
+      <image>@PROJECT_SCREENSHOT_URL@</image>
+    </screenshot>
+  </screenshots>
+  <provides>
+    <binary>@PROJECT_ID@</binary>
+  </provides>
+  <launchable type="desktop-id">@PROJECT_APPSTREAM_ID@.desktop</launchable>
+@PROJECT_KEYWORDS_HTML@
+@PROJECT_RELEASES_HTML@
+</component>

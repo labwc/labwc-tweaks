@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=@PROJECT_ID@
+Icon=@PROJECT_APPSTREAM_ID@
+Categories=@PROJECT_CATEGORIES@;
+
