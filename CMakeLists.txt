@@ -37,14 +37,14 @@ set(PROJECT_SOURCES
     tweaks-qt/maindialog.ui
     tweaks-qt/maindialog.cpp
     tweaks-qt/maindialog.h
-    environment.c
-    environment.h
-    theme.c
-    theme.h
-    xml.c
-    xml.h
-    keyboard-layouts.c
-    keyboard-layouts.h
+    src/environment.c
+    src/environment.h
+    src/theme.c
+    src/theme.h
+    src/xml.c
+    src/xml.h
+    src/keyboard-layouts.c
+    src/keyboard-layouts.h
 )
 set(PROJECT_OTHER_FILES
     .github/workflows/build.yml
@@ -97,9 +97,11 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     PROJECT_TRANSLATION_TEST_ENABLED=${PROJECT_TRANSLATION_TEST_ENABLED}
     PROJECT_TRANSLATION_TEST_LANGUAGE="${PROJECT_TRANSLATION_TEST_LANGUAGE}"
 )
-target_include_directories(${PROJECT_NAME} PRIVATE ${GLIB_INCLUDE_DIRS})
-target_include_directories(${PROJECT_NAME} PRIVATE ${LIBXML2_INCLUDE_DIR})
-
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${GLIB_INCLUDE_DIRS}
+    ${LIBXML2_INCLUDE_DIR}
+    src
+)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     ${GLIB_LDFLAGS}
