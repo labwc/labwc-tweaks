@@ -1,7 +1,7 @@
 test_lib = static_library(
   'tests',
   sources: files(
-    '../xml.c',
+    '../src/xml.c',
   ),
   dependencies: [dependency('libxml-2.0'), dependency('glib-2.0')],
 )

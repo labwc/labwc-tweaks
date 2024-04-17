@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "tap.h"
-#include "../xml.c"
+#include "../src/xml.c"
 
 static char template[] =
 	"<?xml version=\"1.0\"?>\n"
