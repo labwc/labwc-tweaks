@@ -1,8 +1,8 @@
 install_data(
-  'labwc-tweaks.svg',
+  'labwc_tweaks.svg',
   install_dir : join_paths(get_option('datadir'), 'icons', 'hicolor', 'scalable', 'apps'),
 )
-install_data(
-  'labwc-tweaks.desktop',
-  install_dir : join_paths(get_option('datadir'), 'applications'),
-)
+#install_data(
+#  'labwc-tweaks.desktop',
+#  install_dir : join_paths(get_option('datadir'), 'applications'),
+#)
