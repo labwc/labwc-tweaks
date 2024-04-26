@@ -2,12 +2,13 @@
 #include <glib.h>
 #include <string>
 #include <unistd.h>
+#include "evdev-lst-layouts.h"
+#include "layoutmodel.h"
 #include "maindialog.h"
 #include "./ui_maindialog.h"
 
 extern "C" {
 #include "environment.h"
-#include "keyboard-layouts.h"
 #include "theme.h"
 #include "xml.h"
 }
@@ -20,12 +21,18 @@ MainDialog::MainDialog(QWidget *parent)
 
     ui->list->setFixedWidth(ui->list->sizeHintForColumn(0) + 2 * ui->list->frameWidth());
 
+    m_model = new LayoutModel(this);
+    ui->layoutView->setModel(m_model);
+
     std::string config_file = std::getenv("HOME");
     config_file += "/.config/labwc/rc.xml";
     xml_init(config_file.data());
     xml_setup_nodes();
 
     QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &MainDialog::onApply);
+
+    connect(ui->layoutAdd, &QPushButton::pressed, this, &MainDialog::addSelectedLayout);
+    connect(ui->layoutDelete, &QPushButton::pressed, this, &MainDialog::deleteSelectedLayout);
 
     activate();
 }
@@ -36,13 +43,20 @@ MainDialog::~MainDialog()
     xml_finish();
 }
 
-static const char *first_field(char *s, char delim)
+void MainDialog::addSelectedLayout(void)
 {
-    char *p = strchr(s, delim);
-    if (p) {
-        *p = '\0';
+    const char *description = ui->layoutCombo->currentText().toLatin1().data();
+    for (int i = 0; i < ARRAY_SIZE(evdev_lst_layouts); ++i) {
+        const struct layout *layout = &evdev_lst_layouts[i];
+        if (!strcmp(description, layout->description)) {
+            m_model->addLayout(QString(layout->code), QString(layout->description));
+        }
     }
-    return s;
+}
+
+void MainDialog::deleteSelectedLayout(void)
+{
+    m_model->deleteLayout(ui->layoutView->currentIndex().row());
 }
 
 void MainDialog::activate()
@@ -101,28 +115,10 @@ void MainDialog::activate()
     /* # LANGUAGE */
 
     /* Keyboard Layout */
-    GList *keyboard_layouts = NULL;
-    keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");
-    char xkb_default_layout[1024];
-    environment_get(xkb_default_layout, sizeof(xkb_default_layout), "XKB_DEFAULT_LAYOUT");
-    active = -1;
-
-    GList *iter;
-    int i = 0;
-    for (iter = keyboard_layouts; iter; iter = iter->next) {
-        struct layout *layout = (struct layout *)iter->data;
-        if (!strcmp(layout->lang, first_field(xkb_default_layout, ','))) {
-            active = i;
-        }
-        char buf[256];
-        snprintf(buf, sizeof(buf), "%s  %s", layout->lang, layout->description);
-        ui->keyboardLayout->addItem(buf);
-        ++i;
+    for (int i = 0; i < ARRAY_SIZE(evdev_lst_layouts); ++i) {
+        const struct layout *layout = &evdev_lst_layouts[i];
+        ui->layoutCombo->addItem(QString(layout->description));
     }
-    if (active != -1) {
-        ui->keyboardLayout->setCurrentIndex(active);
-    }
-    keyboard_layouts_finish(keyboard_layouts);
 }
 
 void MainDialog::onApply()
@@ -137,8 +133,8 @@ void MainDialog::onApply()
     /* ~/.config/labwc/environment */
     environment_set("XCURSOR_THEME", ui->cursorTheme->currentText().toLatin1().data());
     environment_set_num("XCURSOR_SIZE", ui->cursorSize->value());
-    environment_set("XKB_DEFAULT_LAYOUT",
-                    first_field(ui->keyboardLayout->currentText().toLatin1().data(), ' '));
+
+    environment_set("XKB_DEFAULT_LAYOUT", m_model->getXkbDefaultLayout());
 
     /* reconfigure labwc */
     if (!fork()) {

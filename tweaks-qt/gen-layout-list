@@ -1,0 +1,32 @@
+#!/bin/sh
+
+filename="/usr/share/X11/xkb/rules/evdev.lst"
+in_layouts=f
+
+cat << EOF
+#pragma once
+
+// Auto-generated based on "$filename"
+
+struct layout
+{
+    const char *code;
+    const char *description;
+};
+
+static struct layout evdev_lst_layouts[] = {
+EOF
+
+while IFS= read -r line; do
+	[ "$line" = "! layout" ] && { in_layouts=t; continue; }
+	[ "$line" = "" ] && in_layouts=f
+	[ "$in_layouts" = "f" ] && continue
+
+	printf '    { "'
+	printf '%b' "$line" | awk '{printf "%s", $1}'
+	printf '", "'
+	printf '%b' "$line" | awk '{for (i=2; i<=NF; i++) printf "%s", $i}'
+	printf '" },\n'
+done < "$filename"
+
+printf '};\n'
