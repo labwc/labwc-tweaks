@@ -53,7 +53,7 @@ void MainDialog::activate()
     struct themes openbox_themes = { 0 };
     theme_find(&openbox_themes, "themes", "openbox-3/themerc");
     int active = -1;
-    char *active_id = xml_get((char *)"/labwc_config/theme/name");
+    const char *active_id = xml_get("/labwc_config/theme/name");
     for (int i = 0; i < openbox_themes.nr; ++i) {
         struct theme *theme = openbox_themes.data + i;
         if (active_id && !strcmp(theme->name, active_id)) {
@@ -67,7 +67,7 @@ void MainDialog::activate()
     theme_free_vector(&openbox_themes);
 
     /* Corner Radius */
-    ui->cornerRadius->setValue(xml_get_int((char *)"/labwc_config/theme/cornerradius"));
+    ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerradius"));
 
     /* # MOUSE & TOUCHPAD */
 
@@ -96,13 +96,13 @@ void MainDialog::activate()
     ui->naturalScroll->addItem("no");
     ui->naturalScroll->addItem("yes");
     ui->naturalScroll->setCurrentIndex(
-            xml_get_bool_text((char *)"/labwc_config/libinput/device/naturalscroll"));
+            xml_get_bool_text("/labwc_config/libinput/device/naturalscroll"));
 
     /* # LANGUAGE */
 
     /* Keyboard Layout */
     GList *keyboard_layouts = NULL;
-    keyboard_layouts_init(&keyboard_layouts, (char *)"/usr/share/X11/xkb/rules/evdev.lst");
+    keyboard_layouts_init(&keyboard_layouts, "/usr/share/X11/xkb/rules/evdev.lst");
     char xkb_default_layout[1024];
     environment_get(xkb_default_layout, sizeof(xkb_default_layout), "XKB_DEFAULT_LAYOUT");
     active = -1;
@@ -128,9 +128,9 @@ void MainDialog::activate()
 void MainDialog::onApply()
 {
     /* ~/.config/labwc/rc.xml */
-    xml_set_num((char *)"/labwc_config/theme/cornerradius", ui->cornerRadius->value());
-    xml_set((char *)"/labwc_config/theme/name", ui->openboxTheme->currentText().toLatin1().data());
-    xml_set((char *)"/labwc_config/libinput/device/naturalscroll",
+    xml_set_num("/labwc_config/theme/cornerradius", ui->cornerRadius->value());
+    xml_set("/labwc_config/theme/name", ui->openboxTheme->currentText().toLatin1().data());
+    xml_set("/labwc_config/libinput/device/naturalscroll",
             ui->naturalScroll->currentText().toLatin1().data());
     xml_save();
 
