@@ -19,8 +19,8 @@ static struct ctx {
 	char *filename;
 	xmlDoc *doc;
 	xmlXPathContextPtr xpath_ctx_ptr;
-	char *nodename;
-	char *value;
+	const char *nodename;
+	const char *value;
 	xmlNode *node;
 	enum {
 		XML_MODE_SETTING = 0,
@@ -196,7 +196,7 @@ xml_finish(void)
 }
 
 void
-xml_set(char *nodename, char *value)
+xml_set(const char *nodename, const char *value)
 {
 	ctx.nodename = nodename;
 	ctx.value = value;
@@ -205,7 +205,7 @@ xml_set(char *nodename, char *value)
 }
 
 void
-xml_set_num(char *nodename, double value)
+xml_set_num(const char *nodename, double value)
 {
 	char buf[64];
 	snprintf(buf, sizeof(buf), "%.0f", value);
@@ -215,8 +215,8 @@ xml_set_num(char *nodename, double value)
 	xml_tree_walk(xmlDocGetRootElement(ctx.doc));
 }
 
-char *
-xml_get(char *nodename)
+const char *
+xml_get(const char *nodename)
 {
 	ctx.nodename = nodename;
 	ctx.mode = XML_MODE_GETTING;
@@ -225,7 +225,7 @@ xml_get(char *nodename)
 }
 
 int
-xml_get_int(char *nodename)
+xml_get_int(const char *nodename)
 {
 	ctx.nodename = nodename;
 	ctx.mode = XML_MODE_GETTING;
@@ -234,9 +234,9 @@ xml_get_int(char *nodename)
 }
 
 int
-xml_get_bool_text(char *nodename)
+xml_get_bool_text(const char *nodename)
 {
-	char *value = xml_get(nodename);
+	const char *value = xml_get(nodename);
 
 	/* handle <foo></foo> and <foo /> where no value has been specified */
 	if (!value || !*value) {
@@ -263,7 +263,7 @@ xml_get_node(char *nodename)
 }
 
 char *
-xpath_get_content(char *xpath_expr)
+xpath_get_content(const char *xpath_expr)
 {
 	xmlChar *ret = NULL;
 	xmlXPathObjectPtr object = xmlXPathEvalExpression((xmlChar *)xpath_expr, ctx.xpath_ctx_ptr);
