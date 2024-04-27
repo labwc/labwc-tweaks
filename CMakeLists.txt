@@ -33,12 +33,12 @@ pkg_search_module(GLIB REQUIRED glib-2.0)
 find_package(LibXml2 REQUIRED)
 
 set(PROJECT_SOURCES
-    tweaks-qt/main.cpp
-    tweaks-qt/maindialog.ui
-    tweaks-qt/maindialog.cpp
-    tweaks-qt/maindialog.h
-    tweaks-qt/layoutmodel.cpp
-    tweaks-qt/layoutmodel.h
+    src/main.cpp
+    src/maindialog.ui
+    src/maindialog.cpp
+    src/maindialog.h
+    src/layoutmodel.cpp
+    src/layoutmodel.h
     src/environment.c
     src/environment.h
     src/theme.c
