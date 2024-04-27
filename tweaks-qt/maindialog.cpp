@@ -31,7 +31,7 @@ MainDialog::MainDialog(QWidget *parent)
     QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &MainDialog::onApply);
 
     connect(ui->layoutAdd, &QPushButton::pressed, this, &MainDialog::addSelectedLayout);
-    connect(ui->layoutDelete, &QPushButton::pressed, this, &MainDialog::deleteSelectedLayout);
+    connect(ui->layoutRemove, &QPushButton::pressed, this, &MainDialog::deleteSelectedLayout);
 
     activate();
 }
