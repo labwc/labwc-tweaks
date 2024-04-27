@@ -18,7 +18,7 @@ set(PROJECT_REPOSITORY_BRANCH  "master")
 set(PROJECT_HOMEPAGE_URL       ${PROJECT_REPOSITORY_URL}) # TODO: "https://${PROJECT_ORGANIZATION_URL}/${PROJECT_ID}"
 set(PROJECT_SPDX_ID            "GPL-2.0-only")
 set(PROJECT_TRANSLATIONS_DIR   "${CMAKE_SOURCE_DIR}/data/translations")
-set(PROJECT_SCREENSHOT_URL     "https://github-production-user-asset-6210df.s3.amazonaws.com/1019119/294060534-84ef3747-f336-444e-9e2c-9a417ebe67e5.png")
+set(PROJECT_SCREENSHOT_URL     "")
 #===============================================================================
 # Appstream
 #===============================================================================
