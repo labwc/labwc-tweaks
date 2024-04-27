@@ -5,7 +5,7 @@
 # Translatable strings are passed via code.
 #===============================================================================
 set(PROJECT_ID "labwc-tweaks")
-list(APPEND PROJECT_CATEGORIES "Settings;System") # Freedesktop menu categories
+list(APPEND PROJECT_CATEGORIES "Qt;Settings;DesktopSettings;") # Freedesktop menu categories
 list(APPEND PROJECT_KEYWORDS   "labwc;wayland;compositor")
 set(PROJECT_AUTHOR_NAME        "Labwc Team")
 set(PROJECT_COPYRIGHT_YEAR     "2024")  # TODO: from git
