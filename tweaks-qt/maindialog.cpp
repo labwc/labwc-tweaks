@@ -1,5 +1,4 @@
 #include <QDebug>
-#include <glib.h>
 #include <string>
 #include <unistd.h>
 #include "evdev-lst-layouts.h"
@@ -46,10 +45,9 @@ MainDialog::~MainDialog()
 void MainDialog::addSelectedLayout(void)
 {
     const char *description = ui->layoutCombo->currentText().toLatin1().data();
-    for (int i = 0; i < ARRAY_SIZE(evdev_lst_layouts); ++i) {
-        const struct layout *layout = &evdev_lst_layouts[i];
-        if (!strcmp(description, layout->description)) {
-            m_model->addLayout(QString(layout->code), QString(layout->description));
+    for (auto layout : evdev_lst_layouts) {
+        if (!strcmp(description, layout.description)) {
+            m_model->addLayout(QString(layout.code), QString(layout.description));
         }
     }
 }
@@ -115,9 +113,8 @@ void MainDialog::activate()
     /* # LANGUAGE */
 
     /* Keyboard Layout */
-    for (int i = 0; i < ARRAY_SIZE(evdev_lst_layouts); ++i) {
-        const struct layout *layout = &evdev_lst_layouts[i];
-        ui->layoutCombo->addItem(QString(layout->description));
+    for (auto layout : evdev_lst_layouts) {
+        ui->layoutCombo->addItem(QString(layout.description));
     }
 }
 

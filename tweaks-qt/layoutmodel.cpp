@@ -20,10 +20,9 @@ LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
     environment_get(buf, sizeof(buf), "XKB_DEFAULT_LAYOUT");
     QStringList elements = QString(buf).split(',');
     foreach (QString element, elements) {
-        for (int i = 0; i < ARRAY_SIZE(evdev_lst_layouts); ++i) {
-            const struct layout *layout = &evdev_lst_layouts[i];
-            if (element == QString(layout->code)) {
-                addLayout(QString(layout->code), QString(layout->description));
+        for (auto layout : evdev_lst_layouts) {
+            if (element == QString(layout.code)) {
+                addLayout(QString(layout.code), QString(layout.description));
             }
         }
     }

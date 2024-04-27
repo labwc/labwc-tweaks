@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 // Auto-generated based on "/usr/share/X11/xkb/rules/evdev.lst"
 
@@ -8,7 +9,7 @@ struct layout
     const char *description;
 };
 
-static struct layout evdev_lst_layouts[] = {
+static std::vector<struct layout> evdev_lst_layouts = {
     { "al", "Albanian" },
     { "et", "Amharic" },
     { "am", "Armenian" },

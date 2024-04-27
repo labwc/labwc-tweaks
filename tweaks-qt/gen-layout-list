@@ -5,6 +5,7 @@ in_layouts=f
 
 cat << EOF
 #pragma once
+#include <vector>
 
 // Auto-generated based on "$filename"
 
@@ -14,7 +15,7 @@ struct layout
     const char *description;
 };
 
-static struct layout evdev_lst_layouts[] = {
+static std::vector<struct layout> evdev_lst_layouts = {
 EOF
 
 while IFS= read -r line; do

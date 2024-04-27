@@ -1,8 +1,6 @@
 #pragma once
 #include <QAbstractListModel>
 
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
-
 class Layout
 {
 public:
