@@ -37,14 +37,14 @@ set(PROJECT_SOURCES
     tweaks-qt/maindialog.ui
     tweaks-qt/maindialog.cpp
     tweaks-qt/maindialog.h
+    tweaks-qt/layoutmodel.cpp
+    tweaks-qt/layoutmodel.h
     src/environment.c
     src/environment.h
     src/theme.c
     src/theme.h
     src/xml.c
     src/xml.h
-    src/keyboard-layouts.c
-    src/keyboard-layouts.h
 )
 set(PROJECT_OTHER_FILES
     .github/workflows/build.yml

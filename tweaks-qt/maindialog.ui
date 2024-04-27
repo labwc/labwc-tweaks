@@ -184,7 +184,28 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QComboBox" name="keyboardLayout"/>
+           <layout class="QVBoxLayout" name="multiKeyboardLayout">
+            <item>
+             <widget class="QListView" name="layoutView"/>
+            </item>
+            <item>
+             <widget class="QComboBox" name="layoutCombo"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="layoutAdd">
+              <property name="text">
+               <string>Add</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="layoutRemove">
+              <property name="text">
+               <string>Remove</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>
