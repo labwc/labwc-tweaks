@@ -30,7 +30,7 @@ LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
 
 LayoutModel::~LayoutModel() { }
 
-char *LayoutModel::getXkbDefaultLayout(void)
+char *LayoutModel::getXkbDefaultLayout()
 {
     QString ret;
     QVectorIterator<QSharedPointer<Layout>> iter(m_layouts);
@@ -69,7 +69,7 @@ void LayoutModel::update(void)
     emit dataChanged(topLeft, topLeft, { Qt::DisplayRole });
 }
 
-void LayoutModel::addLayout(QString code, QString desc)
+void LayoutModel::addLayout(const QString &code, const QString &desc)
 {
     QVectorIterator<QSharedPointer<Layout>> iter(m_layouts);
     while (iter.hasNext()) {

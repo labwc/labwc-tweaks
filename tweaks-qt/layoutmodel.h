@@ -26,9 +26,9 @@ public:
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    void addLayout(QString code, QString desc);
+    void addLayout(const QString &code, const QString &desc);
     void deleteLayout(int index);
-    char *getXkbDefaultLayout(void);
+    char *getXkbDefaultLayout();
 
 private:
     void update(void);
