@@ -41,12 +41,12 @@
     <message>
         <location filename="../../tweaks-qt/maindialog.ui" line="197"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить</translation>
     </message>
     <message>
         <location filename="../../tweaks-qt/maindialog.ui" line="204"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Убрать</translation>
     </message>
     <message>
         <location filename="../../tweaks-qt/maindialog.ui" line="73"/>
