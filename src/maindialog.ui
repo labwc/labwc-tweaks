@@ -62,6 +62,14 @@
         </item>
         <item>
          <property name="text">
+          <string>Behaviour</string>
+         </property>
+         <property name="icon">
+          <iconset theme="preferences-desktop"/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>Mouse &amp; Touchpad</string>
          </property>
          <property name="icon">
@@ -113,6 +121,32 @@
           </item>
           <item row="1" column="1">
            <widget class="QSpinBox" name="cornerRadius"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page">
+         <layout class="QFormLayout" name="layPage">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Placement Policy</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="placementPolicy"/>
           </item>
          </layout>
         </widget>
