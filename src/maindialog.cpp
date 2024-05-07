@@ -81,6 +81,22 @@ void MainDialog::activate()
     /* Corner Radius */
     ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerradius"));
 
+    /* # BEHAVIOUR */
+    std::vector policies = { "", "center", "automatic", "cursor" };
+    active = -1;
+    active_id = xml_get("/labwc_config/placement/policy");
+    int i = 0;
+    for (auto policy : policies) {
+        if (active_id && !strcmp(policy, active_id)) {
+            active = i;
+        }
+        ui->placementPolicy->addItem(policy);
+        ++i;
+    }
+    if (active != -1) {
+        ui->placementPolicy->setCurrentIndex(active);
+    }
+
     /* # MOUSE & TOUCHPAD */
 
     /* Cursor Theme */
@@ -125,6 +141,7 @@ void MainDialog::onApply()
     xml_set("/labwc_config/theme/name", ui->openboxTheme->currentText().toLatin1().data());
     xml_set("/labwc_config/libinput/device/naturalscroll",
             ui->naturalScroll->currentText().toLatin1().data());
+    xml_set("/labwc_config/placement/policy", ui->placementPolicy->currentText().toLatin1().data());
     xml_save();
 
     /* ~/.config/labwc/environment */
