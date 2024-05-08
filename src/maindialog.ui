@@ -47,7 +47,7 @@
          </sizepolicy>
         </property>
         <property name="sizeAdjustPolicy">
-         <enum>QAbstractScrollArea::AdjustToContents</enum>
+         <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
         </property>
         <property name="currentRow">
          <number>0</number>
@@ -251,10 +251,10 @@
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Apply|QDialogButtonBox::Close</set>
+      <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Close</set>
      </property>
      <property name="centerButtons">
       <bool>false</bool>
