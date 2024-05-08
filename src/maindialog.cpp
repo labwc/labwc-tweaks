@@ -23,8 +23,8 @@ MainDialog::MainDialog(QWidget *parent)
     m_model = new LayoutModel(this);
     ui->layoutView->setModel(m_model);
 
-    std::string config_file = std::getenv("HOME");
-    config_file += "/.config/labwc/rc.xml";
+    std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ? : "/.config/labwc";
+    std::string config_file = std::getenv("HOME") + config_dir + "/rc.xml";
     xml_init(config_file.data());
     xml_setup_nodes();
 
