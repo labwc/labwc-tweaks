@@ -122,6 +122,16 @@
           <item row="1" column="1">
            <widget class="QSpinBox" name="cornerRadius"/>
           </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Drop Shadows</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="dropShadows"/>
+          </item>
          </layout>
         </widget>
         <widget class="QWidget" name="page">

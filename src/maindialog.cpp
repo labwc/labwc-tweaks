@@ -81,6 +81,11 @@ void MainDialog::activate()
     /* Corner Radius */
     ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerradius"));
 
+    /* Drop Shadows */
+    ui->dropShadows->addItem("no");
+    ui->dropShadows->addItem("yes");
+    ui->dropShadows->setCurrentIndex(xml_get_bool_text("/labwc_config/theme/dropShadows"));
+
     /* # BEHAVIOUR */
     std::vector policies = { "", "center", "automatic", "cursor" };
     active = -1;
@@ -139,6 +144,7 @@ void MainDialog::onApply()
     /* ~/.config/labwc/rc.xml */
     xml_set_num("/labwc_config/theme/cornerradius", ui->cornerRadius->value());
     xml_set("/labwc_config/theme/name", ui->openboxTheme->currentText().toLatin1().data());
+    xml_set("/labwc_config/theme/dropShadows", ui->dropShadows->currentText().toLatin1().data());
     xml_set("/labwc_config/libinput/device/naturalscroll",
             ui->naturalScroll->currentText().toLatin1().data());
     xml_set("/labwc_config/placement/policy", ui->placementPolicy->currentText().toLatin1().data());
