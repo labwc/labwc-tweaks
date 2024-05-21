@@ -21,7 +21,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportamento</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Sombras de gotas</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Política de colocação</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
