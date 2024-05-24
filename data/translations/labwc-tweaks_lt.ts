@@ -6,72 +6,72 @@
     <message>
         <location filename="../../src/maindialog.ui" line="57"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Išvaizda</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
         <source>Corner Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Kampų spindulys</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
         <source>Openbox Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Openbox apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>Elgsena</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Pelė ir jutiklinis kilimėlis</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Mesti šešėlius</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Išdėstymo politika</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
         <source>Cursor Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Žymeklio apipavidalinimas</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="190"/>
         <source>Cursor Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Žymeklio dydis</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Natūralus slinkimas</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridėti</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Šalinti</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalba ir regionas</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaviatūros išdėstymas</translation>
     </message>
 </context>
 </TS>
