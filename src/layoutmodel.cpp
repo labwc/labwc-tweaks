@@ -1,10 +1,7 @@
 #include <QVectorIterator>
+#include "environment.h"
 #include "layoutmodel.h"
 #include "evdev-lst-layouts.h"
-
-extern "C" {
-#include "environment.h"
-}
 
 Layout::Layout(QString code, QString desc)
 {
@@ -16,9 +13,8 @@ Layout::~Layout() { }
 
 LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
 {
-    char buf[4096];
-    environment_get(buf, sizeof(buf), "XKB_DEFAULT_LAYOUT");
-    QStringList elements = QString(buf).split(',');
+    QString xkb_default_layout = environment_get("XKB_DEFAULT_LAYOUT");
+    QStringList elements = xkb_default_layout.split(',');
     foreach (QString element, elements) {
         for (auto layout : evdev_lst_layouts) {
             if (element == QString(layout.code)) {
