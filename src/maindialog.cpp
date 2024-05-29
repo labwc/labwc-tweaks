@@ -156,7 +156,12 @@ void MainDialog::onApply()
     environment_set("XCURSOR_THEME", ui->cursorTheme->currentText().toLatin1().data());
     environment_set_num("XCURSOR_SIZE", ui->cursorSize->value());
 
+    /*
+     * We include variants in XKB_DEFAULT_LAYOUT, for example "latam(deadtilde),ru(phonetic),gr",
+     * so XKB_DEFAULT_VARIANT is set to empty.
+     */
     environment_set("XKB_DEFAULT_LAYOUT", m_model->getXkbDefaultLayout());
+    environment_set("XKB_DEFAULT_VARIANT", "");
 
     /* reconfigure labwc */
     if (!fork()) {

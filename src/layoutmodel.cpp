@@ -1,3 +1,4 @@
+#include <QDebug>
 #include <QVectorIterator>
 #include "environment.h"
 #include "layoutmodel.h"
@@ -14,8 +15,28 @@ Layout::~Layout() { }
 LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
 {
     QString xkb_default_layout = environment_get("XKB_DEFAULT_LAYOUT");
-    QStringList elements = xkb_default_layout.split(',');
-    foreach (QString element, elements) {
+    QStringList layoutElements = xkb_default_layout.split(',');
+
+    // We don't advise using XKB_DEFAULT_LAYOUT, but handle it just in case by adding it to the
+    // respective layouts, for example like "latam(deadtilde)"
+    QString xkb_default_variant = environment_get("XKB_DEFAULT_VARIANT");
+    QStringList variantElements = xkb_default_variant.split(',', Qt::KeepEmptyParts);
+    int i = 0;
+    foreach (QString element, variantElements) {
+        if (layoutElements.size() <= i) {
+            break;
+        }
+        // Let's not add another (variant) if one is already specified.
+        if (layoutElements[i].contains("(")) {
+            continue;
+        }
+        if (!element.isEmpty()) {
+            layoutElements[i] += "(" + element + ")";
+        }
+        ++i;
+    }
+
+    foreach (QString element, layoutElements) {
         for (auto layout : evdev_lst_layouts) {
             if (element == QString(layout.code)) {
                 addLayout(QString(layout.code), QString(layout.description));
