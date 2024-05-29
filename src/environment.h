@@ -1,10 +1,9 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 #ifndef ENVIRONMENT_H
 #define ENVIRONMENT_H
-#include <stdio.h>
+#include <QString>
 
-void environment_get(char *buffer, size_t size, const char *key);
-
+QString environment_get(const char *key);
 void environment_set(const char *key, const char *value);
 void environment_set_num(const char *key, int value);
 

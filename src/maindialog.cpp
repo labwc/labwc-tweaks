@@ -1,20 +1,18 @@
 #include <QDebug>
 #include <string>
 #include <unistd.h>
+#include "environment.h"
 #include "evdev-lst-layouts.h"
 #include "layoutmodel.h"
 #include "maindialog.h"
 #include "./ui_maindialog.h"
 
 extern "C" {
-#include "environment.h"
 #include "theme.h"
 #include "xml.h"
 }
 
-MainDialog::MainDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::MainDialog)
+MainDialog::MainDialog(QWidget *parent) : QDialog(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
 
@@ -23,7 +21,7 @@ MainDialog::MainDialog(QWidget *parent)
     m_model = new LayoutModel(this);
     ui->layoutView->setModel(m_model);
 
-    std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ? : "/.config/labwc";
+    std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: "/.config/labwc";
     std::string config_file = std::getenv("HOME") + config_dir + "/rc.xml";
     xml_init(config_file.data());
     xml_setup_nodes();

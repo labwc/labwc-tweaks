@@ -39,7 +39,7 @@ set(PROJECT_SOURCES
     src/maindialog.h
     src/layoutmodel.cpp
     src/layoutmodel.h
-    src/environment.c
+    src/environment.cpp
     src/environment.h
     src/theme.c
     src/theme.h
