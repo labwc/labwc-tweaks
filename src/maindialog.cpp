@@ -28,7 +28,11 @@ MainDialog::MainDialog(QWidget *parent)
     xml_init(config_file.data());
     xml_setup_nodes();
 
-    QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &MainDialog::onApply);
+    QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, [&] (QAbstractButton *button) {
+        if (ui->buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
+            onApply();
+        }
+    });
 
     connect(ui->layoutAdd, &QPushButton::pressed, this, &MainDialog::addSelectedLayout);
     connect(ui->layoutRemove, &QPushButton::pressed, this, &MainDialog::deleteSelectedLayout);
