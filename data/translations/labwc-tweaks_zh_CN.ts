@@ -6,7 +6,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="57"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>外观</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
         <source>Openbox Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Openbox 主题</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>行为</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>鼠标与触摸板</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
         <source>Cursor Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>光标主题</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="190"/>
         <source>Cursor Size</source>
-        <translation type="unfinished"></translation>
+        <translation>光标大小</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
@@ -56,22 +56,22 @@
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation type="unfinished"></translation>
+        <translation>语言与地区</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>键盘布局</translation>
     </message>
 </context>
 </TS>
