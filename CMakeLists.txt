@@ -73,6 +73,22 @@ lxqt_translate_desktop(PROJECT_DESKTOP_FILES
     TRANSLATION_DIR "${PROJECT_TRANSLATIONS_DIR}"
     USE_YAML
 )
+
+#===================================================================================================
+# Tests
+#===================================================================================================
+include(CTest)
+
+add_executable(t1000 tests/t1000-add-xpath-node.c tests/tap.c src/xml.c)
+target_link_libraries(t1000 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
+target_include_directories(t1000 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
+add_test(t1000 t1000)
+
+add_executable(t1001 tests/t1001-nodenames.c tests/tap.c)
+target_link_libraries(t1001 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
+target_include_directories(t1001 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
+add_test(t1001 t1001)
+
 #===================================================================================================
 # Application
 #===================================================================================================
