@@ -28,6 +28,12 @@ cmake -B build -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr -W no-de
 cmake --build build --verbose
 ```
 
+### test
+
+```bash
+ctest --verbose --force-new-ctest-process --test-dir build
+```
+
 ### install
 
 Using `sudo make install` is discouraged, instead use the system package manager where possible.
