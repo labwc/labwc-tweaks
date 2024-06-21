@@ -26,7 +26,7 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent), ui(new Ui::MainDialog
     std::string config_file = config_dir + "/rc.xml";
     initConfig(config_file);
 
-    QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, [&] (QAbstractButton *button) {
+    QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, [&](QAbstractButton *button) {
         if (ui->buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
             onApply();
         }
