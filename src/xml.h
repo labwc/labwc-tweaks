@@ -2,7 +2,6 @@
 #ifndef __XML_H
 #define __XML_H
 
-void xml_setup_nodes(void);
 void xml_init(const char *filename);
 void xml_save(void);
 void xml_save_as(const char *filename);
@@ -25,6 +24,6 @@ char *xpath_get_content(const char *xpath_expr);
  * For example xpath_expr="/labwc_config/a/b/c" creates
  * <labwc_config><a><b><c /></b></a></labwc_config>
  */
-void xpath_add_node(char *xpath_expr);
+void xpath_add_node(const char *xpath_expr);
 
 #endif /* __XML_H */
