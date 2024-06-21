@@ -136,7 +136,7 @@ create_basic_rcxml(const char *filename)
 		fprintf(stderr, "warn: fopen(%s) failed\n", filename);
 		return;
 	}
-	if (!fwrite(rcxml_template, sizeof(rcxml_template), 1, file)) {
+	if (!fwrite(rcxml_template, sizeof(rcxml_template)-1, 1, file)) {
 		fprintf(stderr, "warn: error writing to %s", filename);
 	}
 	fclose(file);
