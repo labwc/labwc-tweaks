@@ -89,12 +89,12 @@ void MainDialog::activate()
     ui->dropShadows->setCurrentIndex(xml_get_bool_text("/labwc_config/theme/dropShadows"));
 
     /* # BEHAVIOUR */
-    std::vector policies = { "", "center", "automatic", "cursor" };
+    std::vector policies = { "", "Center", "Automatic", "Cursor" };
     active = -1;
     active_id = xml_get("/labwc_config/placement/policy");
     int i = 0;
     for (auto policy : policies) {
-        if (active_id && !strcmp(policy, active_id)) {
+        if (active_id && !strcasecmp(policy, active_id)) {
             active = i;
         }
         ui->placementPolicy->addItem(policy);
