@@ -83,3 +83,6 @@ jobs:
             -S .
           cmake --build build-clang --verbose
 
+      - name: Run tests
+        run: |
+          ctest --verbose --force-new-ctest-process --test-dir build-gcc
