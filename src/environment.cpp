@@ -27,7 +27,6 @@ QString environment_get(const char *key)
             continue;
         }
         if (elements[0].trimmed() == QString(key)) {
-            qDebug() << "fount it!" << elements;
             return elements[1].trimmed();
         }
     }

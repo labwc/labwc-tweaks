@@ -57,7 +57,6 @@ char *LayoutModel::getXkbDefaultLayout()
             ret += ",";
         }
     }
-    qDebug() << ret;
     return ret.toLatin1().data();
 }
 
