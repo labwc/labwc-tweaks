@@ -56,12 +56,12 @@
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>أضف</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>احذف</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
