@@ -136,6 +136,7 @@ void MainDialog::activate()
     /* # LANGUAGE */
 
     /* Keyboard Layout */
+    ui->layoutCombo->addItem(tr("Select layout to add..."));
     for (auto layout : evdev_lst_layouts) {
         ui->layoutCombo->addItem(QString(layout.description));
     }
