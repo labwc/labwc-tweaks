@@ -21,7 +21,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>Συμπεριφορά</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Δημιουργία εφέ σκιάς</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Πολιτική Τοποθέτησης</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Φυσική Κύλιση</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Γλώσσα &amp; Περιοχή</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
