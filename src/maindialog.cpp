@@ -175,8 +175,11 @@ void MainDialog::onApply()
      * We include variants in XKB_DEFAULT_LAYOUT, for example "latam(deadtilde),ru(phonetic),gr",
      * so XKB_DEFAULT_VARIANT is set to empty.
      */
-    environment_set("XKB_DEFAULT_LAYOUT", m_model->getXkbDefaultLayout());
-    environment_set("XKB_DEFAULT_VARIANT", "");
+    const char *layout = m_model->getXkbDefaultLayout();
+    if (layout && *layout) {
+        environment_set("XKB_DEFAULT_LAYOUT", layout);
+        environment_set("XKB_DEFAULT_VARIANT", "");
+    }
 
     /* reconfigure labwc */
     if (!fork()) {
