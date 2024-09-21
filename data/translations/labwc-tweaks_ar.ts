@@ -36,7 +36,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>سياسة الموضع</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
