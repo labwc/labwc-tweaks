@@ -182,6 +182,15 @@ static struct {
 void
 theme_find(struct themes *themes, const char *middle, const char *end)
 {
+	struct theme *theme = NULL;
+
+	/*
+	 * Always start with an empty entry to allow users to set it to nothing
+	 * to use default values.
+	 */
+	theme = grow_vector_by_one_theme(themes);
+	theme->name = strdup("");
+
 	char path[4096];
 	for (uint32_t i = 0; i < ARRAY_SIZE(dirs); ++i) {
 		if (dirs[i].prefix) {
@@ -217,7 +226,7 @@ theme_find(struct themes *themes, const char *middle, const char *end)
 	 * theme dir exists. In this case we add it manually.
 	 */
 	if (!vector_contains(themes, "Adwaita")) {
-		struct theme *theme = grow_vector_by_one_theme(themes);
+		theme = grow_vector_by_one_theme(themes);
 		theme->name = strdup("Adwaita");
 		theme->path = NULL;
 	}
