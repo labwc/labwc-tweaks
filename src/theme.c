@@ -239,13 +239,10 @@ theme_free_vector(struct themes *themes)
 {
 	for (int i = 0; i < themes->nr; ++i) {
 		struct theme *theme = themes->data + i;
-		if (theme->name) {
-			free(theme->name);
-		}
-		if (theme->path) {
-			free(theme->path);
-		}
+		free(theme->name);
+		free(theme->path);
 	}
 	free(themes->data);
+	themes->data = NULL;
 }
 
