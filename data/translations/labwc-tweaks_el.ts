@@ -51,7 +51,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation>Φυσική Κύλιση</translation>
+        <translation>Φυσική Κύληση</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation>Γλώσσα &amp; Περιοχή</translation>
+        <translation>Γλώσσα &amp; Τοποθεσία</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
