@@ -11,7 +11,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
         <source>Corner Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>边角半径</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>自然滚动</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
