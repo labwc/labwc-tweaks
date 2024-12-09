@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<TS version="2.1" language="kab">
 <context>
     <name>MainDialog</name>
     <message>
         <location filename="../../src/maindialog.ui" line="57"/>
         <source>Appearance</source>
-        <translation>Внешний вид</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
         <source>Corner Radius</source>
-        <translation>Радиус углов</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
         <source>Openbox Theme</source>
-        <translation>Тема Openbox</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
@@ -26,52 +26,52 @@
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation>Мышь и сенсорная панель</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation>Тени</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation>Правила расположения</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
         <source>Cursor Theme</source>
-        <translation>Тема курсора</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="190"/>
         <source>Cursor Size</source>
-        <translation>Размер курсора</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation>Обратное направление прокрутки</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation>Добавить</translation>
+        <translation>Rnu</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation>Убрать</translation>
+        <translation>Kkes</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation>Язык и регион</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation>Раскладка клавиатура</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
