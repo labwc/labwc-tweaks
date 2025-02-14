@@ -21,7 +21,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>Поведение</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
