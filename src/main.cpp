@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QLibraryInfo>
 #include <QTranslator>
+#include <QFileInfo>
 
 static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
 {
@@ -52,9 +53,8 @@ int main(int argc, char *argv[])
     QString icoLocalPath = QCoreApplication::applicationDirPath() + iconSuffix;
     QString icoSysPath = QStringLiteral(PROJECT_ICON_SYSTEM_PATH) + iconSuffix;
 
-    QIcon appIcon = QIcon(icoLocalPath);
-    if (appIcon.isNull())
-        appIcon = QIcon(icoSysPath);
+    // If icoLocalPath exists, set to icolocalPath; else set to icoSysPath
+    QIcon appIcon = (QFileInfo(icoLocalPath).exists()) ? QIcon(icoLocalPath) : QIcon(icoSysPath);
 
     w.setWindowIcon(appIcon);
 
