@@ -11,7 +11,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
         <source>Corner Radius</source>
-        <translation>边角半径</translation>
+        <translation>圆角半径</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>下拉阴影</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>窗口堆放策略</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
