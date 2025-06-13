@@ -71,7 +71,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation>Раскладка клавиатура</translation>
+        <translation>Раскладка клавиатуры</translation>
     </message>
 </context>
 </TS>
