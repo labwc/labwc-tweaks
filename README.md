@@ -4,6 +4,8 @@
 
 This is a GUI 'Settings' application for labwc.
 
+![labwc tweaks sceenshot](labwc-tweaks.jpg)
+
 ### dependencies
 
 Runtime:
