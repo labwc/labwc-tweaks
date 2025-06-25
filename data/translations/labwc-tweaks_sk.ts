@@ -6,7 +6,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="57"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzhľad</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>Správanie</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Myš a touchpad</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="190"/>
         <source>Cursor Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť kurzora</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
@@ -56,22 +56,22 @@
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrániť</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Jazyk a región</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozloženie klávesnice</translation>
     </message>
 </context>
 </TS>
