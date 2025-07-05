@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es">
+<TS version="2.1" language="fa">
 <context>
     <name>MainDialog</name>
     <message>
         <location filename="../../src/maindialog.ui" line="57"/>
         <source>Appearance</source>
-        <translation>Apariencia</translation>
+        <translation>ظاهر</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
         <source>Corner Radius</source>
-        <translation>Radio de esquina</translation>
+        <translation>گردی گوشه</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
         <source>Openbox Theme</source>
-        <translation>Tema de Openbox</translation>
+        <translation>شکل Openbox</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation>Comportamiento</translation>
+        <translation>رفتار</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation>Ratón y panel táctil</translation>
+        <translation>موشواره و صفحه لمسی</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation>Sombras Proyectadas</translation>
+        <translation>سایه</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation>Política de emplazamiento</translation>
+        <translation>قوانین جایگذاری</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
         <source>Cursor Theme</source>
-        <translation>Tema de cursores</translation>
+        <translation>شکل نشانگر</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="190"/>
         <source>Cursor Size</source>
-        <translation>Tamaño de cursores</translation>
+        <translation>اندازه نشانگر</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation>Desplazamiento natural</translation>
+        <translation>پیمایش طبیعی</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation>Añadir</translation>
+        <translation>اضافه</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation>Quitar</translation>
+        <translation>حذف</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation>Idioma y región</translation>
+        <translation>زبان و منطقه</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation>Disposición de teclado</translation>
+        <translation>چیدمان صفحه‌کلید</translation>
     </message>
 </context>
 </TS>
