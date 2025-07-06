@@ -31,7 +31,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Proiektatutako itzalak</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
@@ -51,7 +51,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Korritze Naturala</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Hizkuntza eta Eskualdea</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
