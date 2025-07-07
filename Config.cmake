@@ -18,7 +18,7 @@ set(PROJECT_REPOSITORY_BRANCH  "master")
 set(PROJECT_HOMEPAGE_URL       ${PROJECT_REPOSITORY_URL}) # TODO: "https://${PROJECT_ORGANIZATION_URL}/${PROJECT_ID}"
 set(PROJECT_SPDX_ID            "GPL-2.0-only")
 set(PROJECT_TRANSLATIONS_DIR   "${CMAKE_SOURCE_DIR}/data/translations")
-set(PROJECT_SCREENSHOT_URL     "")
+set(PROJECT_SCREENSHOT_URL     "https://raw.githubusercontent.com/labwc/labwc-tweaks/refs/heads/master/data/screenshot.png")
 #===============================================================================
 # Appstream
 #===============================================================================
