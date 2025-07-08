@@ -2,7 +2,7 @@
 #ifndef __XML_H
 #define __XML_H
 
-void xml_init(const char *filename);
+bool xml_init(const char *filename);
 void xml_save(void);
 void xml_save_as(const char *filename);
 void xml_finish(void);

@@ -142,10 +142,12 @@ create_basic_rcxml(const char *filename)
 	fclose(file);
 }
 
-void
+bool
 xml_init(const char *filename)
 {
 	LIBXML_TEST_VERSION
+
+	bool success = true;
 
 	if (access(filename, F_OK)) {
 		create_basic_rcxml(filename);
@@ -156,12 +158,15 @@ xml_init(const char *filename)
 	ctx.doc = xmlReadFile(filename, NULL, XML_PARSE_NOBLANKS);
 	if (!ctx.doc) {
 		fprintf(stderr, "warn: xmlReadFile('%s')\n", filename);
+		success = false;
 	}
 	ctx.xpath_ctx_ptr = xmlXPathNewContext(ctx.doc);
 	if (!ctx.xpath_ctx_ptr) {
 		fprintf(stderr, "warn: xmlXPathNewContext()\n");
 		xmlFreeDoc(ctx.doc);
+		success = false;
 	}
+	return success;
 }
 
 void

@@ -1,4 +1,5 @@
 #include <QDebug>
+#include <QMessageBox>
 #include <string>
 #include <unistd.h>
 #include "environment.h"
@@ -144,7 +145,15 @@ void MainDialog::activate()
 
 void MainDialog::initConfig(std::string &config_file)
 {
-    xml_init(config_file.data());
+    bool success = xml_init(config_file.data());
+
+    if (!success) {
+        QMessageBox msgBox;
+        msgBox.setText(tr("Error loading ") + QString(config_file.data()));
+        msgBox.setInformativeText(tr("Run labwc-tweaks from a terminal to view error messages"));
+        msgBox.exec();
+        exit(EXIT_FAILURE);
+    }
 
     /* Ensure all relevant nodes exist before we start getting/setting */
     xpath_add_node("/labwc_config/theme/cornerRadius");
