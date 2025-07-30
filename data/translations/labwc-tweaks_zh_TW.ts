@@ -6,72 +6,72 @@
     <message>
         <location filename="../../src/maindialog.ui" line="57"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>外觀</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
         <source>Corner Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>圓角半徑</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
         <source>Openbox Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Openbox 主題</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="65"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>行為</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="73"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>滑鼠及觸控板</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="128"/>
         <source>Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>下拉陰影</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
         <source>Placement Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>放置政策</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
         <source>Cursor Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>游標主題</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="190"/>
         <source>Cursor Size</source>
-        <translation type="unfinished"></translation>
+        <translation>游標大小</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="200"/>
         <source>Natural Scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>自然捲動</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="241"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>增加</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="248"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>移除</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="81"/>
         <source>Language &amp; Region</source>
-        <translation type="unfinished"></translation>
+        <translation>語言及地區</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="226"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>鍵盤配置</translation>
     </message>
 </context>
 </TS>
