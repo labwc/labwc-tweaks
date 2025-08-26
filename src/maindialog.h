@@ -17,6 +17,7 @@ public:
     MainDialog(QWidget *parent = nullptr);
     ~MainDialog();
     void activate();
+    QStringList findIconThemes();
 
 private slots:
     void addSelectedLayout(void);

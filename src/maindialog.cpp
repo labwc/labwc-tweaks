@@ -1,5 +1,10 @@
 #include <QDebug>
+#include <QDir>
 #include <QMessageBox>
+#include <QFile>
+#include <QString>
+#include <QStandardPaths>
+#include <QTextStream>
 #include <string>
 #include <unistd.h>
 #include "environment.h"
@@ -89,6 +94,11 @@ void MainDialog::activate()
     ui->dropShadows->addItem("yes");
     ui->dropShadows->setCurrentIndex(xml_get_bool_text("/labwc_config/theme/dropShadows"));
 
+    /* Icon Theme */
+    QStringList themes = findIconThemes();
+    ui->iconTheme->addItems(themes);
+    ui->iconTheme->setCurrentIndex(themes.indexOf(xml_get("/labwc_config/theme/icon")));
+
     /* # BEHAVIOUR */
     std::vector policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
     active = -1;
@@ -159,6 +169,7 @@ void MainDialog::initConfig(std::string &config_file)
     xpath_add_node("/labwc_config/theme/cornerRadius");
     xpath_add_node("/labwc_config/theme/name");
     xpath_add_node("/labwc_config/theme/dropShadows");
+    xpath_add_node("/labwc_config/theme/name");
     xpath_add_node("/labwc_config/placement/policy");
     xpath_add_node("/labwc_config/libinput/device/naturalScroll");
 
@@ -171,6 +182,7 @@ void MainDialog::onApply()
     xml_set_num("/labwc_config/theme/cornerradius", ui->cornerRadius->value());
     xml_set("/labwc_config/theme/name", ui->openboxTheme->currentText().toLatin1().data());
     xml_set("/labwc_config/theme/dropShadows", ui->dropShadows->currentText().toLatin1().data());
+    xml_set("/labwc_config/theme/icon", ui->iconTheme->currentText().toLatin1().data());
     xml_set("/labwc_config/libinput/device/naturalscroll",
             ui->naturalScroll->currentText().toLatin1().data());
     xml_set("/labwc_config/placement/policy", ui->placementPolicy->currentText().toLatin1().data());
@@ -194,4 +206,44 @@ void MainDialog::onApply()
     if (!fork()) {
         execl("/bin/sh", "/bin/sh", "-c", "labwc -r", (void *)NULL);
     }
+}
+
+bool hasOnlyCursorSubdir(QString path)
+{
+    QStringList entries = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    return entries.contains("cursors") && entries.length() == 1;
+}
+
+QStringList MainDialog::findIconThemes(void)
+{
+    QStringList paths;
+
+    // Setup paths including
+    //   - $HOME/.icons
+    //   - $XDG_DATA_HOME/icons
+    //   - $XDG_DATA_DIRS/icons
+    paths.push_back(QString(qgetenv("HOME") + "/.icons"));
+    QStringList standardPaths =
+            QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for (const QString &path : std::as_const(standardPaths)) {
+        paths.push_back(QString(path + "/icons"));
+    }
+
+    // Iterate over paths and use any icon-theme which has more than just a
+    // "cursors" subdirectory (because that means it's for cursors only)
+    QStringList themes;
+    themes.push_front("Adwaita");
+    for (const QString &path : std::as_const(paths)) {
+        QDir dir(path);
+        QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const QString &entry : std::as_const(entries)) {
+            if (hasOnlyCursorSubdir(QString(path + "/" + entry))) {
+                continue;
+            }
+            themes.push_back(entry);
+        }
+    }
+    themes.removeDuplicates();
+    themes.sort(Qt::CaseInsensitive);
+    return themes;
 }
