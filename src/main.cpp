@@ -2,8 +2,15 @@
 
 #include <QApplication>
 #include <QLibraryInfo>
+#include <QMessageBox>
 #include <QTranslator>
 #include <QFileInfo>
+
+#include "settings.h"
+
+extern "C" {
+#include "xml.h"
+}
 
 static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
 {
@@ -37,6 +44,30 @@ static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
     app->installTranslator(translator);
 }
 
+void initConfig(std::string &config_file)
+{
+    bool success = xml_init(config_file.data());
+
+    if (!success) {
+        QMessageBox msgBox;
+        msgBox.setText(QObject::tr("Error loading ") + QString(config_file.data()));
+        msgBox.setInformativeText(
+                QObject::tr("Run labwc-tweaks from a terminal to view error messages"));
+        msgBox.exec();
+        exit(EXIT_FAILURE);
+    }
+
+    /* Ensure all relevant nodes exist before we start getting/setting */
+    xpath_add_node("/labwc_config/theme/cornerRadius");
+    xpath_add_node("/labwc_config/theme/name");
+    xpath_add_node("/labwc_config/theme/dropShadows");
+    xpath_add_node("/labwc_config/theme/icon");
+    xpath_add_node("/labwc_config/placement/policy");
+    xpath_add_node("/labwc_config/libinput/device/naturalScroll");
+
+    xml_save();
+}
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -44,6 +75,16 @@ int main(int argc, char *argv[])
 
     QTranslator qtTranslator, translator;
     initLocale(&qtTranslator, &translator);
+
+    std::string config_dir =
+            std::getenv("LABWC_CONFIG_DIR") ?: std::getenv("HOME") + std::string("/.config/labwc");
+    std::string config_file = config_dir + "/rc.xml";
+    initConfig(config_file);
+
+    // The 'settings' vector contains the master state of all settings that can
+    // be changed by labwc-tweaks.
+    std::vector<std::shared_ptr<Setting>> settings;
+    initSettings(settings);
 
     MainDialog w;
     w.show();
