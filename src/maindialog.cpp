@@ -10,6 +10,7 @@
 #include "evdev-lst-layouts.h"
 #include "layoutmodel.h"
 #include "maindialog.h"
+#include "settings.h"
 #include "./ui_maindialog.h"
 
 extern "C" {
@@ -17,7 +18,8 @@ extern "C" {
 #include "xml.h"
 }
 
-MainDialog::MainDialog(QWidget *parent) : QDialog(parent), ui(new Ui::MainDialog)
+MainDialog::MainDialog(std::vector<std::shared_ptr<Setting>> &settings, QWidget *parent)
+    : QDialog(parent), ui(new Ui::MainDialog), m_settings(settings)
 {
     ui->setupUi(this);
 
@@ -81,7 +83,7 @@ void MainDialog::activate()
     theme_free_vector(&openbox_themes);
 
     /* Corner Radius */
-    ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerradius"));
+    ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerRadius"));
 
     /* Drop Shadows */
     ui->dropShadows->addItem("no");
@@ -147,16 +149,102 @@ void MainDialog::activate()
     }
 }
 
+void setInt(std::vector<std::shared_ptr<Setting>> &settings, QString name, int value)
+{
+    std::shared_ptr<Setting> setting = retrieve(settings, name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_INT) {
+        qDebug() << "setInt(): not valid int setting" << name << value;
+    }
+    if (value != std::get<int>(setting->value())) {
+        qDebug() << name << "has changed to" << value;
+        xml_set_num(name.toStdString().c_str(), value);
+    }
+}
+
+void setStr(std::vector<std::shared_ptr<Setting>> &settings, QString name, QString value)
+{
+    std::shared_ptr<Setting> setting = retrieve(settings, name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
+        qDebug() << "setStr(): not valid string setting" << name << value;
+    }
+    if (value != std::get<QString>(setting->value())) {
+        qDebug() << name << "has changed to" << value;
+        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+    }
+}
+
+/**
+ * parse_bool() - Parse boolean value of string.
+ * @string: String to interpret. This check is case-insensitive.
+ * @default_value: Default value to use if string is not a recognised boolean.
+ *                 Use -1 to avoid setting a default value.
+ *
+ * Return: 0 for false; 1 for true; -1 for non-boolean
+ */
+int parseBool(const char *str, int defaultValue)
+{
+    if (!str)
+        goto error_not_a_boolean;
+    else if (!strcasecmp(str, "yes"))
+        return 1;
+    else if (!strcasecmp(str, "true"))
+        return 1;
+    else if (!strcasecmp(str, "on"))
+        return 1;
+    else if (!strcmp(str, "1"))
+        return 1;
+    else if (!strcasecmp(str, "no"))
+        return 0;
+    else if (!strcasecmp(str, "false"))
+        return 0;
+    else if (!strcasecmp(str, "off"))
+        return 0;
+    else if (!strcmp(str, "0"))
+        return 0;
+error_not_a_boolean:
+    qDebug() << str << "is not a boolean value";
+    return defaultValue;
+}
+
+// TODO: make this more bool-ish
+void setBool(std::vector<std::shared_ptr<Setting>> &settings, QString name, QString value)
+{
+    std::shared_ptr<Setting> setting = retrieve(settings, name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
+        qDebug() << "setBool(): not valid bool setting" << name << value;
+    }
+    int boolValue = parseBool(value.toStdString().c_str(), -1);
+    if (boolValue != std::get<int>(setting->value())) {
+        qDebug() << name << "has changed to" << value;
+        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+    }
+}
+
 void MainDialog::onApply()
 {
     /* ~/.config/labwc/rc.xml */
-    xml_set_num("/labwc_config/theme/cornerradius", ui->cornerRadius->value());
-    xml_set("/labwc_config/theme/name", ui->openboxTheme->currentText().toLatin1().data());
-    xml_set("/labwc_config/theme/dropShadows", ui->dropShadows->currentText().toLatin1().data());
-    xml_set("/labwc_config/theme/icon", ui->iconTheme->currentText().toLatin1().data());
-    xml_set("/labwc_config/libinput/device/naturalscroll",
+    setInt(m_settings, "/labwc_config/theme/cornerRadius", ui->cornerRadius->value());
+    setStr(m_settings, "/labwc_config/theme/name",
+           ui->openboxTheme->currentText().toLatin1().data());
+    setBool(m_settings, "/labwc_config/theme/dropShadows",
+            ui->dropShadows->currentText().toLatin1().data());
+    setStr(m_settings, "/labwc_config/theme/icon", ui->iconTheme->currentText().toLatin1().data());
+    setBool(m_settings, "/labwc_config/libinput/device/naturalScroll",
             ui->naturalScroll->currentText().toLatin1().data());
-    xml_set("/labwc_config/placement/policy", ui->placementPolicy->currentText().toLatin1().data());
+    setStr(m_settings, "/labwc_config/placement/policy",
+           ui->placementPolicy->currentText().toLatin1().data());
     xml_save();
 
     /* ~/.config/labwc/environment */

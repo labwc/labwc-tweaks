@@ -76,3 +76,13 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
     }
 };
+
+std::shared_ptr<Setting> retrieve(std::vector<std::shared_ptr<Setting>> &settings, QString name)
+{
+    for (auto &setting : settings) {
+        if (name == setting->name()) {
+            return setting;
+        }
+    }
+    return nullptr;
+}
