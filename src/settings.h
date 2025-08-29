@@ -2,6 +2,7 @@
 #include <memory>
 #include <vector>
 #include <QString>
+#include "settings.h"
 
 enum settingFileType {
     LAB_FILE_TYPE_UNKNOWN = 0,
@@ -50,6 +51,10 @@ public:
     enum settingFileType fileType() const { return m_fileType; }
     enum settingValueOrigin valueOrigin() const { return m_valueOrigin; }
     enum settingValueType valueType() const { return m_valueType; }
+    std::variant<int, QString> value() const { return m_value; }
 };
 
 void initSettings(std::vector<std::shared_ptr<Setting>> &settings);
+
+std::shared_ptr<Setting> retrieve(std::vector<std::shared_ptr<Setting>> &settings, QString name);
+

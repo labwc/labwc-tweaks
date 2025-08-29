@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
     std::vector<std::shared_ptr<Setting>> settings;
     initSettings(settings);
 
-    MainDialog w;
+    MainDialog w(settings);
     w.show();
 
     // Make work the window icon also when the application is not (yet) installed
