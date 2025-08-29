@@ -1,6 +1,5 @@
 #include <QDebug>
 #include <QDir>
-#include <QMessageBox>
 #include <QFile>
 #include <QString>
 #include <QStandardPaths>
@@ -26,11 +25,6 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent), ui(new Ui::MainDialog
 
     m_model = new LayoutModel(this);
     ui->layoutView->setModel(m_model);
-
-    std::string config_dir =
-            std::getenv("LABWC_CONFIG_DIR") ?: std::getenv("HOME") + std::string("/.config/labwc");
-    std::string config_file = config_dir + "/rc.xml";
-    initConfig(config_file);
 
     QObject::connect(ui->buttonBox, &QDialogButtonBox::clicked, [&](QAbstractButton *button) {
         if (ui->buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
@@ -151,29 +145,6 @@ void MainDialog::activate()
     for (auto layout : evdev_lst_layouts) {
         ui->layoutCombo->addItem(QString(layout.description));
     }
-}
-
-void MainDialog::initConfig(std::string &config_file)
-{
-    bool success = xml_init(config_file.data());
-
-    if (!success) {
-        QMessageBox msgBox;
-        msgBox.setText(tr("Error loading ") + QString(config_file.data()));
-        msgBox.setInformativeText(tr("Run labwc-tweaks from a terminal to view error messages"));
-        msgBox.exec();
-        exit(EXIT_FAILURE);
-    }
-
-    /* Ensure all relevant nodes exist before we start getting/setting */
-    xpath_add_node("/labwc_config/theme/cornerRadius");
-    xpath_add_node("/labwc_config/theme/name");
-    xpath_add_node("/labwc_config/theme/dropShadows");
-    xpath_add_node("/labwc_config/theme/name");
-    xpath_add_node("/labwc_config/placement/policy");
-    xpath_add_node("/labwc_config/libinput/device/naturalScroll");
-
-    xml_save();
 }
 
 void MainDialog::onApply()

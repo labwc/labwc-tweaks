@@ -26,7 +26,6 @@ private slots:
 private:
     LayoutModel *m_model;
 
-    void initConfig(std::string &config_file);
     void onApply();
 
     Ui::MainDialog *ui;
