@@ -19,6 +19,7 @@ public:
     ~MainDialog();
     void activate();
     QStringList findIconThemes();
+    QStringList findLabwcThemes();
 
 private slots:
     void addSelectedLayout(void);

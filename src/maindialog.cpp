@@ -65,22 +65,12 @@ void MainDialog::activate()
 {
     /* # APPEARANCE */
 
-    /* Openbox Theme */
-    struct themes openbox_themes = { 0 };
-    theme_find(&openbox_themes, "themes", "openbox-3/themerc");
-    int active = -1;
-    const char *active_id = xml_get("/labwc_config/theme/name");
-    for (int i = 0; i < openbox_themes.nr; ++i) {
-        struct theme *theme = openbox_themes.data + i;
-        if (active_id && !strcmp(theme->name, active_id)) {
-            active = i;
-        }
-        ui->openboxTheme->addItem(theme->name);
-    }
-    if (active != -1) {
-        ui->openboxTheme->setCurrentIndex(active);
-    }
-    theme_free_vector(&openbox_themes);
+    // TODO: Use retrieve() instead of xml_get(), etc.
+
+    /* Labwc Theme */
+    QStringList labwcThemes = findLabwcThemes();
+    ui->openboxTheme->addItems(labwcThemes);
+    ui->openboxTheme->setCurrentIndex(labwcThemes.indexOf(xml_get("/labwc_config/theme/name")));
 
     /* Corner Radius */
     ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerRadius"));
@@ -97,8 +87,8 @@ void MainDialog::activate()
 
     /* # BEHAVIOUR */
     std::vector policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
-    active = -1;
-    active_id = xml_get("/labwc_config/placement/policy");
+    int active = -1;
+    const char *active_id = xml_get("/labwc_config/placement/policy");
     int i = 0;
     for (auto policy : policies) {
         if (active_id && !strcasecmp(policy, active_id)) {
@@ -300,6 +290,39 @@ QStringList MainDialog::findIconThemes(void)
                 continue;
             }
             themes.push_back(entry);
+        }
+    }
+    themes.removeDuplicates();
+    themes.sort(Qt::CaseInsensitive);
+    return themes;
+}
+
+bool hasOpenboxOrLabwcSubdir(QString path)
+{
+    QStringList entries = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    return entries.contains("openbox-3") || entries.contains("labwc");
+}
+
+QStringList MainDialog::findLabwcThemes(void)
+{
+    QStringList paths;
+
+    paths.push_back(QString(qgetenv("HOME") + "/.themes"));
+    QStringList standardPaths =
+            QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for (const QString &path : std::as_const(standardPaths)) {
+        paths.push_back(QString(path + "/themes"));
+    }
+
+    QStringList themes;
+    themes.push_front("Adwaita");
+    for (const QString &path : std::as_const(paths)) {
+        QDir dir(path);
+        QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const QString &entry : std::as_const(entries)) {
+            if (hasOpenboxOrLabwcSubdir(QString(path + "/" + entry))) {
+                themes.push_back(entry);
+            }
         }
     }
     themes.removeDuplicates();
