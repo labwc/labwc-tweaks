@@ -81,7 +81,7 @@ void MainDialog::activate()
     ui->dropShadows->setCurrentIndex(xml_get_bool_text("/labwc_config/theme/dropShadows"));
 
     /* Icon Theme */
-    QStringList themes = findIconThemes();
+    QStringList themes = findIconThemes(LAB_ICON_THEME_TYPE_ICON);
     ui->iconTheme->addItems(themes);
     ui->iconTheme->setCurrentIndex(themes.indexOf(xml_get("/labwc_config/theme/icon")));
 
@@ -104,22 +104,9 @@ void MainDialog::activate()
     /* # MOUSE & TOUCHPAD */
 
     /* Cursor Theme */
-    struct themes cursor_themes = { 0 };
-    theme_find(&cursor_themes, "icons", "cursors");
-
-    active_id = getenv("XCURSOR_THEME") ?: (char *)"";
-    active = -1;
-    for (int i = 0; i < cursor_themes.nr; ++i) {
-        struct theme *theme = cursor_themes.data + i;
-        if (!strcmp(theme->name, active_id)) {
-            active = i;
-        }
-        ui->cursorTheme->addItem(theme->name);
-    }
-    if (active != -1) {
-        ui->cursorTheme->setCurrentIndex(active);
-    }
-    theme_free_vector(&cursor_themes);
+    QStringList cursorThemes = findIconThemes(LAB_ICON_THEME_TYPE_CURSOR);
+    ui->cursorTheme->addItems(cursorThemes);
+    ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getenv("XCURSOR_THEME") ?: (char *)""));
 
     /* Cursor Size */
     ui->cursorSize->setValue(atoi(getenv("XCURSOR_SIZE") ?: "24"));
@@ -263,7 +250,13 @@ bool hasOnlyCursorSubdir(QString path)
     return entries.contains("cursors") && entries.length() == 1;
 }
 
-QStringList MainDialog::findIconThemes(void)
+bool hasCursorSubdir(QString path)
+{
+    QStringList entries = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    return entries.contains("cursors");
+}
+
+QStringList MainDialog::findIconThemes(enum lab_icon_theme_type type)
 {
     QStringList paths;
 
@@ -286,10 +279,21 @@ QStringList MainDialog::findIconThemes(void)
         QDir dir(path);
         QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
         for (const QString &entry : std::as_const(entries)) {
-            if (hasOnlyCursorSubdir(QString(path + "/" + entry))) {
-                continue;
+            switch (type) {
+            case LAB_ICON_THEME_TYPE_ICON:
+                if (hasOnlyCursorSubdir(QString(path + "/" + entry))) {
+                    continue;
+                }
+                themes.push_back(entry);
+                break;
+            case LAB_ICON_THEME_TYPE_CURSOR:
+                if (hasCursorSubdir(QString(path + "/" + entry))) {
+                    themes.push_back(entry);
+                }
+                break;
+            default:
+                break;
             }
-            themes.push_back(entry);
         }
     }
     themes.removeDuplicates();
