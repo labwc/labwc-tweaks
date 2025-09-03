@@ -209,19 +209,17 @@ void setBool(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStr
     }
 }
 
+#define TEXT(widget) widget->currentText().toLatin1().data()
+
 void MainDialog::onApply()
 {
     /* ~/.config/labwc/rc.xml */
     setInt(m_settings, "/labwc_config/theme/cornerRadius", ui->cornerRadius->value());
-    setStr(m_settings, "/labwc_config/theme/name",
-           ui->openboxTheme->currentText().toLatin1().data());
-    setBool(m_settings, "/labwc_config/theme/dropShadows",
-            ui->dropShadows->currentText().toLatin1().data());
-    setStr(m_settings, "/labwc_config/theme/icon", ui->iconTheme->currentText().toLatin1().data());
-    setBool(m_settings, "/labwc_config/libinput/device/naturalScroll",
-            ui->naturalScroll->currentText().toLatin1().data());
-    setStr(m_settings, "/labwc_config/placement/policy",
-           ui->placementPolicy->currentText().toLatin1().data());
+    setStr(m_settings, "/labwc_config/theme/name", TEXT(ui->openboxTheme));
+    setBool(m_settings, "/labwc_config/theme/dropShadows", TEXT(ui->dropShadows));
+    setStr(m_settings, "/labwc_config/theme/icon", TEXT(ui->iconTheme));
+    setBool(m_settings, "/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
+    setStr(m_settings, "/labwc_config/placement/policy", TEXT(ui->placementPolicy));
     xml_save();
 
     /* ~/.config/labwc/environment */
