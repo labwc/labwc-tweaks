@@ -1,5 +1,6 @@
 #include <QDebug>
 #include <variant>
+#include "log.h"
 #include "settings.h"
 
 extern "C" {
@@ -49,7 +50,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             if (value != std::get<QString>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                qDebug() << "USER OVERRIDE: " << m_name << "=" << value;
+                info("[user-override] {}: {}", m_name.toStdString(), value.toStdString());
             }
             break;
         }
@@ -58,7 +59,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             if (value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                qDebug() << "USER OVERRIDE: " << m_name << "=" << value;
+                info("[user-override] {}: {}", m_name.toStdString(), value);
             }
             break;
         }
@@ -67,7 +68,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             if (value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                qDebug() << "USER OVERRIDE: " << m_name << "=" << value;
+                info("[user-override] {}: {}", m_name.toStdString(), value);
             }
             break;
         }

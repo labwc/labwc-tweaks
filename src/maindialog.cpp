@@ -9,6 +9,7 @@
 #include "environment.h"
 #include "evdev-lst-layouts.h"
 #include "layoutmodel.h"
+#include "log.h"
 #include "maindialog.h"
 #include "settings.h"
 #include "./ui_maindialog.h"
@@ -137,7 +138,7 @@ void setInt(std::vector<std::shared_ptr<Setting>> &settings, QString name, int v
         qDebug() << "setInt(): not valid int setting" << name << value;
     }
     if (value != std::get<int>(setting->value())) {
-        qDebug() << name << "has changed to" << value;
+        info("'{} has changed to '{}'", name.toStdString(), value);
         xml_set_num(name.toStdString().c_str(), value);
     }
 }
@@ -153,7 +154,7 @@ void setStr(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStri
         qDebug() << "setStr(): not valid string setting" << name << value;
     }
     if (value != std::get<QString>(setting->value())) {
-        qDebug() << name << "has changed to" << value;
+        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
     }
 }
@@ -204,7 +205,7 @@ void setBool(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStr
     }
     int boolValue = parseBool(value.toStdString().c_str(), -1);
     if (boolValue != std::get<int>(setting->value())) {
-        qDebug() << name << "has changed to" << value;
+        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
     }
 }
