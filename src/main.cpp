@@ -86,8 +86,8 @@ int main(int argc, char *argv[])
     std::vector<std::shared_ptr<Setting>> settings;
     initSettings(settings);
 
-    MainDialog w(settings);
-    w.show();
+    MainDialog window(settings);
+    window.show();
 
     // Make work the window icon also when the application is not (yet) installed
     QString iconSuffix = QString("%1%2%3").arg("/", PROJECT_APPSTREAM_ID, QStringLiteral(".svg"));
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
     // If icoLocalPath exists, set to icolocalPath; else set to icoSysPath
     QIcon appIcon = (QFileInfo(icoLocalPath).exists()) ? QIcon(icoLocalPath) : QIcon(icoSysPath);
 
-    w.setWindowIcon(appIcon);
+    window.setWindowIcon(appIcon);
 
     return app.exec();
 }
