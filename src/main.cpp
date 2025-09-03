@@ -76,8 +76,8 @@ int main(int argc, char *argv[])
     QTranslator qtTranslator, translator;
     initLocale(&qtTranslator, &translator);
 
-    std::string config_dir =
-            std::getenv("LABWC_CONFIG_DIR") ?: std::getenv("HOME") + std::string("/.config/labwc");
+    std::string config_home = std::getenv("HOME") + std::string("/.config/labwc");
+    std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: config_home;
     std::string config_file = config_dir + "/rc.xml";
     initConfig(config_file);
 
