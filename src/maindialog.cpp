@@ -15,7 +15,6 @@
 #include "./ui_maindialog.h"
 
 extern "C" {
-#include "theme.h"
 #include "xml.h"
 }
 
