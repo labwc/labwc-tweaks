@@ -6,6 +6,7 @@
 #include <QTranslator>
 #include <QFileInfo>
 
+#include "log.h"
 #include "settings.h"
 
 extern "C" {
@@ -44,13 +45,21 @@ static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
     app->installTranslator(translator);
 }
 
-void initConfig(std::string &config_file)
+void initConfig(std::string &configFile)
 {
-    bool success = xml_init(config_file.data());
+    // mkdir -p
+    if (!std::filesystem::exists(configFile)) {
+        size_t filenamePosition = configFile.find_last_of("/");
+        std::string dirname = configFile.substr(0, filenamePosition);
+        info("Creating directory '{}'", dirname);
+        std::filesystem::create_directories(dirname);
+    }
+
+    bool success = xml_init(configFile.data());
 
     if (!success) {
         QMessageBox msgBox;
-        msgBox.setText(QObject::tr("Error loading ") + QString(config_file.data()));
+        msgBox.setText(QObject::tr("Error loading ") + QString(configFile.data()));
         msgBox.setInformativeText(
                 QObject::tr("Run labwc-tweaks from a terminal to view error messages"));
         msgBox.exec();

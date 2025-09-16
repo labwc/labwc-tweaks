@@ -133,7 +133,7 @@ create_basic_rcxml(const char *filename)
 {
 	FILE *file = fopen(filename, "w");
 	if (!file) {
-		fprintf(stderr, "warn: fopen(%s) failed\n", filename);
+		fprintf(stderr, "warn: cannot create file '%s'\n", filename);
 		return;
 	}
 	if (!fwrite(rcxml_template, sizeof(rcxml_template)-1, 1, file)) {
