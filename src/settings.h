@@ -38,6 +38,7 @@ public:
     Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
             std::variant<int, QString> defaultValue);
 
+
 private:
     QString m_name;
     enum settingFileType m_fileType;

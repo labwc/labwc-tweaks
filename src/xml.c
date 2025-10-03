@@ -213,6 +213,7 @@ xml_set_num(const char *nodename, double value)
 const char *
 xml_get(const char *nodename)
 {
+	ctx.value = NULL;
 	ctx.nodename = nodename;
 	ctx.mode = XML_MODE_GETTING;
 	xml_tree_walk(xmlDocGetRootElement(ctx.doc));
@@ -222,6 +223,7 @@ xml_get(const char *nodename)
 int
 xml_get_int(const char *nodename)
 {
+	ctx.value = NULL;
 	ctx.nodename = nodename;
 	ctx.mode = XML_MODE_GETTING;
 	xml_tree_walk(xmlDocGetRootElement(ctx.doc));

@@ -65,16 +65,6 @@ void initConfig(std::string &configFile)
         msgBox.exec();
         exit(EXIT_FAILURE);
     }
-
-    /* Ensure all relevant nodes exist before we start getting/setting */
-    xpath_add_node("/labwc_config/theme/cornerRadius");
-    xpath_add_node("/labwc_config/theme/name");
-    xpath_add_node("/labwc_config/theme/dropShadows");
-    xpath_add_node("/labwc_config/theme/icon");
-    xpath_add_node("/labwc_config/placement/policy");
-    xpath_add_node("/labwc_config/libinput/device/naturalScroll");
-
-    xml_save();
 }
 
 int main(int argc, char *argv[])

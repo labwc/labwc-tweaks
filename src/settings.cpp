@@ -15,7 +15,7 @@ void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
     settings.push_back(std::make_shared<Setting>("/labwc_config/theme/cornerRadius",
                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8));
     settings.push_back(std::make_shared<Setting>("/labwc_config/theme/dropShadows",
-                                                 LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
+                                                 LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
     settings.push_back(std::make_shared<Setting>("/labwc_config/theme/icon", LAB_FILE_TYPE_RCXML,
                                                  LAB_VALUE_TYPE_STRING, ""));
 
@@ -47,7 +47,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
             QString value = QString(xml_get(m_name.toStdString().c_str()));
-            if (value != std::get<QString>(m_value)) {
+            if (!value.isNull() && (value != std::get<QString>(m_value))) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value.toStdString());
@@ -56,7 +56,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_INT: {
             int value = xml_get_int(m_name.toStdString().c_str());
-            if (value != std::get<int>(m_value)) {
+            if (value && (value != std::get<int>(m_value))) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);
@@ -65,7 +65,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_BOOL: {
             int value = xml_get_bool_text(m_name.toStdString().c_str());
-            if (value != std::get<int>(m_value)) {
+            if (value != -1 && value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);

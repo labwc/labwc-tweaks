@@ -61,45 +61,72 @@ void MainDialog::deleteSelectedLayout(void)
     m_model->deleteLayout(ui->layoutView->currentIndex().row());
 }
 
+static QString getStr(std::vector<std::shared_ptr<Setting>> &settings, QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(settings, name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return nullptr;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
+        qDebug() << "getStr(): not valid int setting" << name;
+    }
+    return std::get<QString>(setting->value());
+}
+
+static int getInt(std::vector<std::shared_ptr<Setting>> &settings, QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(settings, name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return -65535;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_INT) {
+        qDebug() << "getInt(): not valid int setting" << name;
+    }
+    return std::get<int>(setting->value());
+}
+
+/* Return -1 for error, which works will with setCurrentIndex() */
+static int getBool(std::vector<std::shared_ptr<Setting>> &settings, QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(settings, name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return -1;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
+        qDebug() << "getBool(): not valid int setting" << name;
+    }
+    return std::get<int>(setting->value());
+}
+
 void MainDialog::activate()
 {
     /* # APPEARANCE */
 
-    // TODO: Use retrieve() instead of xml_get(), etc.
-
     /* Labwc Theme */
     QStringList labwcThemes = findLabwcThemes();
     ui->openboxTheme->addItems(labwcThemes);
-    ui->openboxTheme->setCurrentIndex(labwcThemes.indexOf(xml_get("/labwc_config/theme/name")));
+    ui->openboxTheme->setCurrentIndex(labwcThemes.indexOf(getStr(m_settings, "/labwc_config/theme/name")));
 
     /* Corner Radius */
-    ui->cornerRadius->setValue(xml_get_int("/labwc_config/theme/cornerRadius"));
+    ui->cornerRadius->setValue(getInt(m_settings, "/labwc_config/theme/cornerRadius"));
 
     /* Drop Shadows */
     ui->dropShadows->addItem("no");
     ui->dropShadows->addItem("yes");
-    ui->dropShadows->setCurrentIndex(xml_get_bool_text("/labwc_config/theme/dropShadows"));
+    ui->dropShadows->setCurrentIndex(getBool(m_settings, "/labwc_config/theme/dropShadows"));
 
     /* Icon Theme */
     QStringList themes = findIconThemes(LAB_ICON_THEME_TYPE_ICON);
     ui->iconTheme->addItems(themes);
-    ui->iconTheme->setCurrentIndex(themes.indexOf(xml_get("/labwc_config/theme/icon")));
+    ui->iconTheme->setCurrentIndex(themes.indexOf(getStr(m_settings, "/labwc_config/theme/icon")));
 
     /* # BEHAVIOUR */
-    std::vector policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
-    int active = -1;
-    const char *active_id = xml_get("/labwc_config/placement/policy");
-    int i = 0;
-    for (auto policy : policies) {
-        if (active_id && !strcasecmp(policy, active_id)) {
-            active = i;
-        }
-        ui->placementPolicy->addItem(policy);
-        ++i;
-    }
-    if (active != -1) {
-        ui->placementPolicy->setCurrentIndex(active);
-    }
+    QStringList policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
+    ui->placementPolicy->addItems(policies);
+    ui->placementPolicy->setCurrentIndex(policies.indexOf(getStr(m_settings, "/labwc_config/placement/policy")));
 
     /* # MOUSE & TOUCHPAD */
 
@@ -114,8 +141,7 @@ void MainDialog::activate()
     /* Natural Scroll */
     ui->naturalScroll->addItem("no");
     ui->naturalScroll->addItem("yes");
-    ui->naturalScroll->setCurrentIndex(
-            xml_get_bool_text("/labwc_config/libinput/device/naturalscroll"));
+    ui->naturalScroll->setCurrentIndex(getBool(m_settings, "/labwc_config/libinput/device/naturalScroll"));
 
     /* # LANGUAGE */
 
@@ -138,6 +164,8 @@ void setInt(std::vector<std::shared_ptr<Setting>> &settings, QString name, int v
     }
     if (value != std::get<int>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value);
+        xpath_add_node(name.toStdString().c_str());
+        //xml_save();
         xml_set_num(name.toStdString().c_str(), value);
     }
 }
@@ -154,6 +182,8 @@ void setStr(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStri
     }
     if (value != std::get<QString>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
+        xpath_add_node(name.toStdString().c_str());
+        //xml_save();
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
     }
 }
@@ -205,6 +235,8 @@ void setBool(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStr
     int boolValue = parseBool(value.toStdString().c_str(), -1);
     if (boolValue != std::get<int>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
+        xpath_add_node(name.toStdString().c_str());
+        //xml_save();
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
     }
 }
