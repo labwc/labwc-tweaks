@@ -108,7 +108,8 @@ void MainDialog::activate()
     /* Labwc Theme */
     QStringList labwcThemes = findLabwcThemes();
     ui->openboxTheme->addItems(labwcThemes);
-    ui->openboxTheme->setCurrentIndex(labwcThemes.indexOf(getStr(m_settings, "/labwc_config/theme/name")));
+    ui->openboxTheme->setCurrentIndex(
+            labwcThemes.indexOf(getStr(m_settings, "/labwc_config/theme/name")));
 
     /* Corner Radius */
     ui->cornerRadius->setValue(getInt(m_settings, "/labwc_config/theme/cornerRadius"));
@@ -126,22 +127,24 @@ void MainDialog::activate()
     /* # BEHAVIOUR */
     QStringList policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
     ui->placementPolicy->addItems(policies);
-    ui->placementPolicy->setCurrentIndex(policies.indexOf(getStr(m_settings, "/labwc_config/placement/policy")));
+    ui->placementPolicy->setCurrentIndex(
+            policies.indexOf(getStr(m_settings, "/labwc_config/placement/policy")));
 
     /* # MOUSE & TOUCHPAD */
 
     /* Cursor Theme */
     QStringList cursorThemes = findIconThemes(LAB_ICON_THEME_TYPE_CURSOR);
     ui->cursorTheme->addItems(cursorThemes);
-    ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getenv("XCURSOR_THEME") ?: (char *)""));
+    ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getStr(m_settings, "XCURSOR_THEME")));
 
     /* Cursor Size */
-    ui->cursorSize->setValue(atoi(getenv("XCURSOR_SIZE") ?: "24"));
+    ui->cursorSize->setValue(getInt(m_settings, "XCURSOR_SIZE"));
 
     /* Natural Scroll */
     ui->naturalScroll->addItem("no");
     ui->naturalScroll->addItem("yes");
-    ui->naturalScroll->setCurrentIndex(getBool(m_settings, "/labwc_config/libinput/device/naturalScroll"));
+    ui->naturalScroll->setCurrentIndex(
+            getBool(m_settings, "/labwc_config/libinput/device/naturalScroll"));
 
     /* # LANGUAGE */
 
@@ -165,7 +168,6 @@ void setInt(std::vector<std::shared_ptr<Setting>> &settings, QString name, int v
     if (value != std::get<int>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value);
         xpath_add_node(name.toStdString().c_str());
-        //xml_save();
         xml_set_num(name.toStdString().c_str(), value);
     }
 }
@@ -183,7 +185,6 @@ void setStr(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStri
     if (value != std::get<QString>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
         xpath_add_node(name.toStdString().c_str());
-        //xml_save();
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
     }
 }
@@ -236,7 +237,6 @@ void setBool(std::vector<std::shared_ptr<Setting>> &settings, QString name, QStr
     if (boolValue != std::get<int>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
         xpath_add_node(name.toStdString().c_str());
-        //xml_save();
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
     }
 }
@@ -255,7 +255,7 @@ void MainDialog::onApply()
     xml_save();
 
     /* ~/.config/labwc/environment */
-    environment_set("XCURSOR_THEME", ui->cursorTheme->currentText().toLatin1().data());
+    environment_set("XCURSOR_THEME", TEXT(ui->cursorTheme));
     environment_set_num("XCURSOR_SIZE", ui->cursorSize->value());
 
     /*
@@ -267,6 +267,12 @@ void MainDialog::onApply()
         environment_set("XKB_DEFAULT_LAYOUT", layout);
         environment_set("XKB_DEFAULT_VARIANT", "");
     }
+
+    // TODO: Get filename in a more consistent way - share common code with main.cpp
+    std::string config_home = std::getenv("HOME") + std::string("/.config/labwc");
+    std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: config_home;
+    std::string environment_file = config_dir + "/environment";
+    environmentSave(environment_file);
 
     /* reconfigure labwc */
     if (!fork()) {

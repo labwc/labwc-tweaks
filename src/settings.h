@@ -38,7 +38,6 @@ public:
     Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
             std::variant<int, QString> defaultValue);
 
-
 private:
     QString m_name;
     enum settingFileType m_fileType;
@@ -58,4 +57,3 @@ public:
 void initSettings(std::vector<std::shared_ptr<Setting>> &settings);
 
 std::shared_ptr<Setting> retrieve(std::vector<std::shared_ptr<Setting>> &settings, QString name);
-

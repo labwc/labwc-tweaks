@@ -1,75 +1,87 @@
 // SPDX-License-Identifier: GPL-2.0-only
 #define _POSIX_C_SOURCE 200809L
+#include <iostream>
+#include <fstream>
 #include <QDebug>
 #include <QFile>
 #include <QString>
 #include <QTextStream>
 #include <cstring>
+#include <vector>
+#include <memory>
+#include "log.h"
 
-QString environment_get(const char *key)
+class Line
 {
-    QString filename = qgetenv("HOME") + "/.config/labwc/environment";
-    QFile inputFile(filename);
-    inputFile.open(QIODevice::ReadOnly);
-    if (!inputFile.isOpen()) {
-        return nullptr;
-    }
+public:
+    Line();
+    ~Line();
 
-    QTextStream stream(&inputFile);
-    QString line;
-    while (stream.readLineInto(&line)) {
-        if (line.isEmpty() || line.startsWith("#")) {
-            continue;
-        }
+    QString data;
+    bool isKeyValuePair;
+    QString key;
+    QString value;
+};
 
-        QStringList elements = line.split('=');
-        if (elements.count() != 2) {
+static std::vector<std::unique_ptr<Line>> lines;
+
+Line::Line(void)
+{
+    isKeyValuePair = false;
+}
+
+Line::~Line(void) { };
+
+// TODO: should be envGet()
+QString environment_get(QString key)
+{
+    for (auto &line : lines) {
+        if (!line->isKeyValuePair)
             continue;
-        }
-        if (elements[0].trimmed() == QString(key)) {
-            return elements[1].trimmed();
-        }
+        if (line->key == key)
+            return line->value;
     }
     return nullptr;
 }
 
+int environment_get_int(QString key)
+{
+    qDebug() << "key=" << key;
+    for (auto &line : lines) {
+        qDebug() << "line->key=" << line->key << "   key=" << key;
+        if (!line->isKeyValuePair)
+            continue;
+        if (line->key == key)
+            return atoi(line->value.toStdString().c_str());
+    }
+    return -1;
+}
+
+// TODO: use std::string instead of const char *
 void environment_set(const char *key, const char *value)
 {
-	if (!key || !*key) {
-		return;
-	}
-	if (!value || !*value) {
-		return;
-	}
-    /* set cursor for labwc  - should cover 'replace' or 'append' */
-    char xcur[4096] = { 0 };
-    strcpy(xcur, key);
-    strcat(xcur, "=");
-    char filename[4096];
-    char bufname[4096];
-    char *home = getenv("HOME");
-    snprintf(filename, sizeof(filename), "%s/%s", home, ".config/labwc/environment");
-    snprintf(bufname, sizeof(bufname), "%s/%s", home, ".config/labwc/buf");
-    FILE *fe = fopen(filename, "r");
-    FILE *fw = fopen(bufname, "a");
-    if ((fe == NULL) || (fw == NULL)) {
-        perror("Unable to open file!");
+    if (!key || !*key) {
         return;
     }
-    char chunk[128];
-    while (fgets(chunk, sizeof(chunk), fe) != NULL) {
-        if (strstr(chunk, xcur) != NULL) {
+    if (!value || !*value) {
+        return;
+    }
+    for (auto &line : lines) {
+        if (!line->isKeyValuePair) {
             continue;
-        } else {
-            fprintf(fw, "%s", chunk);
+        }
+        if (line->key == key) {
+            // Modify existing key=value pair
+            line->value = QString(value);
+            return;
         }
     }
-    fclose(fe);
-    if (value) {
-        fprintf(fw, "%s\n", strcat(xcur, value));
-    }
-    fclose(fw);
-    rename(bufname, filename);
+
+    // Append
+    lines.push_back(std::make_unique<Line>());
+    lines.back()->isKeyValuePair = true;
+    lines.back()->key = QString(key);
+    lines.back()->value = QString(value);
 }
 
 void environment_set_num(const char *key, int value)
@@ -78,4 +90,45 @@ void environment_set_num(const char *key, int value)
     snprintf(buffer, 255, "%d", value);
 
     environment_set(key, buffer);
+}
+
+static void processLine(QString line)
+{
+    lines.push_back(std::make_unique<Line>());
+    lines.back()->data = line;
+    if (line.isEmpty() || line.startsWith("#") || !line.contains("=")) {
+        return;
+    }
+    lines.back()->isKeyValuePair = true;
+    QStringList elements = line.split('=');
+    lines.back()->key = elements[0].trimmed();
+    lines.back()->value = elements[1].trimmed();
+}
+
+void environmentInit(std::string filename)
+{
+    if (access(filename.c_str(), F_OK)) {
+        info("environment file not found '{}'", filename);
+        return;
+    }
+
+    std::string line;
+    std::ifstream stream(filename);
+    while (getline(stream, line)) {
+        processLine(QString(line.c_str()));
+    }
+    stream.close();
+}
+
+void environmentSave(std::string filename)
+{
+    std::ofstream ofs(filename);
+    for (auto &line : lines) {
+        if (!line->isKeyValuePair) {
+            ofs << line->data.toStdString() << std::endl;
+        } else {
+            ofs << line->key.toStdString() << "=" << line->value.toStdString() << std::endl;
+        }
+    }
+    ofs.close();
 }

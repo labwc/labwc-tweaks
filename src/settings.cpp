@@ -2,10 +2,20 @@
 #include <variant>
 #include "log.h"
 #include "settings.h"
+#include "environment.h"
 
 extern "C" {
 #include "xml.h"
 }
+
+#define DEFAULT_XCURSOR_SIZE 24
+int xcursor_size(void)
+{
+    bool success = false;
+    int size = QString(qgetenv("XCURSOR_SIZE")).toInt(&success);
+    return success ? size : DEFAULT_XCURSOR_SIZE;
+}
+#undef DEFAULT_XCURSOR_SIZE
 
 void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
 {
@@ -26,9 +36,12 @@ void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
 
     // Mouse & Touchpad
     settings.push_back(std::make_shared<Setting>("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_STRING, "Adwaita"));
+                                                 LAB_VALUE_TYPE_STRING,
+                                                 getenv("XCURSOR_THEME") ?: (char *)"Adwaita"));
+
     settings.push_back(std::make_shared<Setting>("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_INT, 24));
+                                                 LAB_VALUE_TYPE_INT, xcursor_size()));
+
     settings.push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
 
@@ -43,6 +56,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
 {
     m_valueOrigin = LAB_VALUE_ORIGIN_DEFAULT;
 
+    // Use values from rc.xml if different from default
     if (m_fileType == LAB_FILE_TYPE_RCXML) {
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
@@ -70,6 +84,41 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);
             }
+            break;
+        }
+        default:
+            break;
+        }
+    }
+
+    // Use values from environment file if different from default
+    if (m_fileType == LAB_FILE_TYPE_ENVIRONMENT) {
+        switch (m_valueType) {
+        case LAB_VALUE_TYPE_STRING: {
+            QString value = QString(environment_get(m_name));
+            if (!value.isNull() && (value != std::get<QString>(m_value))) {
+                m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                m_value = value;
+                info("[user-override] {}: {}", m_name.toStdString(), value.toStdString());
+            }
+            break;
+        }
+        case LAB_VALUE_TYPE_INT: {
+            bool success = false;
+            int value = environment_get_int(m_name);
+            if (value == -1) {
+                // There was no environment file - or it did not contain the key
+                break;
+            }
+            if (value != std::get<int>(m_value)) {
+                m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                m_value = value;
+                info("[user-override] {}: {}", m_name.toStdString(), value);
+            }
+            break;
+        }
+        case LAB_VALUE_TYPE_BOOL: {
+            // do we need this?
             break;
         }
         default:

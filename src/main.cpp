@@ -8,6 +8,7 @@
 
 #include "log.h"
 #include "settings.h"
+#include "environment.h"
 
 extern "C" {
 #include "xml.h"
@@ -77,6 +78,12 @@ int main(int argc, char *argv[])
 
     std::string config_home = std::getenv("HOME") + std::string("/.config/labwc");
     std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: config_home;
+
+    // TODO: do the mkdir -p here
+
+    std::string environment_file = config_dir + "/environment";
+    environmentInit(environment_file);
+
     std::string config_file = config_dir + "/rc.xml";
     initConfig(config_file);
 
