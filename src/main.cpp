@@ -48,14 +48,6 @@ static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
 
 void initConfig(std::string &configFile)
 {
-    // mkdir -p
-    if (!std::filesystem::exists(configFile)) {
-        size_t filenamePosition = configFile.find_last_of("/");
-        std::string dirname = configFile.substr(0, filenamePosition);
-        info("Creating directory '{}'", dirname);
-        std::filesystem::create_directories(dirname);
-    }
-
     bool success = xml_init(configFile.data());
 
     if (!success) {
@@ -65,6 +57,14 @@ void initConfig(std::string &configFile)
                 QObject::tr("Run labwc-tweaks from a terminal to view error messages"));
         msgBox.exec();
         exit(EXIT_FAILURE);
+    }
+}
+
+void mkdir_p(std::string path)
+{
+    if (!std::filesystem::exists(path)) {
+        info("Creating directory '{}'", path);
+        std::filesystem::create_directories(path);
     }
 }
 
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     std::string config_home = std::getenv("HOME") + std::string("/.config/labwc");
     std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: config_home;
 
-    // TODO: do the mkdir -p here
+    mkdir_p(config_dir);
 
     std::string environment_file = config_dir + "/environment";
     environmentInit(environment_file);
