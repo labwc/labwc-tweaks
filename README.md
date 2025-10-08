@@ -1,10 +1,22 @@
-# labwc-tweaks
-
 [![CI]](https://github.com/labwc/labwc-tweaks/actions/workflows/build.yml)
+<br />
+<div align="center">
+  <h3 align="center">labwc-tweaks</h3>
 
-This is a GUI 'Settings' application for labwc.
+  <p align="center">
+    A GUI settings application for labwc
+  </p>
+</div>
+
+# About the Project
 
 <img src="data/screenshot.png"/>
+
+### Description
+
+1. GUI for managing settings in `~/.config/labwc{rc.xml,environment}`
+
+# Getting Started
 
 ### dependencies
 
