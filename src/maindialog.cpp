@@ -310,6 +310,7 @@ QStringList MainDialog::findIconThemes(enum lab_icon_theme_type type)
     // Iterate over paths and use any icon-theme which has more than just a
     // "cursors" subdirectory (because that means it's for cursors only)
     QStringList themes;
+    themes.push_front("");
     themes.push_front("Adwaita");
     for (const QString &path : std::as_const(paths)) {
         QDir dir(path);
