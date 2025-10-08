@@ -46,13 +46,13 @@ QString environment_get(QString key)
 
 int environment_get_int(QString key)
 {
-    qDebug() << "key=" << key;
     for (auto &line : lines) {
-        qDebug() << "line->key=" << line->key << "   key=" << key;
-        if (!line->isKeyValuePair)
+        if (!line->isKeyValuePair) {
             continue;
-        if (line->key == key)
+        }
+        if (line->key == key) {
             return atoi(line->value.toStdString().c_str());
+        }
     }
     return -1;
 }
