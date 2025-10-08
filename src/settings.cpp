@@ -8,15 +8,6 @@ extern "C" {
 #include "xml.h"
 }
 
-#define DEFAULT_XCURSOR_SIZE 24
-int xcursor_size(void)
-{
-    bool success = false;
-    int size = QString(qgetenv("XCURSOR_SIZE")).toInt(&success);
-    return success ? size : DEFAULT_XCURSOR_SIZE;
-}
-#undef DEFAULT_XCURSOR_SIZE
-
 void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
 {
     // Appearance
@@ -36,11 +27,10 @@ void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
 
     // Mouse & Touchpad
     settings.push_back(std::make_shared<Setting>("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_STRING,
-                                                 getenv("XCURSOR_THEME") ?: (char *)"Adwaita"));
+                                                 LAB_VALUE_TYPE_STRING, ""));
 
     settings.push_back(std::make_shared<Setting>("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_INT, xcursor_size()));
+                                                 LAB_VALUE_TYPE_INT, 24));
 
     settings.push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
