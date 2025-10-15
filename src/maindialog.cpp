@@ -13,10 +13,7 @@
 #include "maindialog.h"
 #include "settings.h"
 #include "./ui_maindialog.h"
-
-extern "C" {
 #include "xml.h"
-}
 
 MainDialog::MainDialog(std::vector<std::shared_ptr<Setting>> &settings, QWidget *parent)
     : QDialog(parent), ui(new Ui::MainDialog), m_settings(settings)

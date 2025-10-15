@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "tap.h"
-#include "../src/xml.c"
+#include "../src/xml.cpp"
 
-static char template[] =
+static char base_instance[] =
 	"<?xml version=\"1.0\"?>\n"
 	"<labwc_config>\n"
 	"  <core>\n"
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	int fd = mkstemp(in);
 	if (fd < 0)
 		exit(EXIT_FAILURE);
-	(void)write(fd, template, sizeof(template) - 1);
+	(void)write(fd, base_instance, sizeof(base_instance) - 1);
 
 	/* test 1 */
 	diag("generate simple xpath style nodename");

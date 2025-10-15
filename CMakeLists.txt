@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(labwc-tweaks
     VERSION 0.1.0
-    LANGUAGES C CXX
+    LANGUAGES CXX
 )
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -43,7 +43,7 @@ set(PROJECT_SOURCES
     src/environment.h
     src/settings.cpp
     src/settings.h
-    src/xml.c
+    src/xml.cpp
     src/xml.h
 )
 set(PROJECT_OTHER_FILES
@@ -79,12 +79,12 @@ lxqt_translate_desktop(PROJECT_DESKTOP_FILES
 #===================================================================================================
 include(CTest)
 
-add_executable(t1000 tests/t1000-add-xpath-node.c tests/tap.c src/xml.c)
+add_executable(t1000 tests/t1000-add-xpath-node.cpp tests/tap.cpp src/xml.cpp)
 target_link_libraries(t1000 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1000 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1000 t1000)
 
-add_executable(t1001 tests/t1001-nodenames.c tests/tap.c)
+add_executable(t1001 tests/t1001-nodenames.cpp tests/tap.cpp)
 target_link_libraries(t1001 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1001 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1001 t1001)

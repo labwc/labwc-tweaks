@@ -9,10 +9,7 @@
 #include "log.h"
 #include "settings.h"
 #include "environment.h"
-
-extern "C" {
 #include "xml.h"
-}
 
 static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
 {

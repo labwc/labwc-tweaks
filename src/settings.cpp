@@ -3,10 +3,7 @@
 #include "log.h"
 #include "settings.h"
 #include "environment.h"
-
-extern "C" {
 #include "xml.h"
-}
 
 void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
 {

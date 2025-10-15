@@ -15,6 +15,11 @@
 #include <unistd.h>
 #include "xml.h"
 
+enum xml_mode {
+    XML_MODE_SETTING = 0,
+    XML_MODE_GETTING,
+};
+
 static struct ctx {
 	char *filename;
 	xmlDoc *doc;
@@ -22,10 +27,7 @@ static struct ctx {
 	const char *nodename;
 	const char *value;
 	xmlNode *node;
-	enum {
-		XML_MODE_SETTING = 0,
-		XML_MODE_GETTING,
-	} mode;
+	enum xml_mode mode;
 } ctx;
 
 static void
