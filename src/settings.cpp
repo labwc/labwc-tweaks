@@ -82,7 +82,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     if (m_fileType == LAB_FILE_TYPE_ENVIRONMENT) {
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
-            QString value = QString(environment_get(m_name));
+            QString value = QString(environmentGet(m_name));
             if (!value.isNull() && (value != std::get<QString>(m_value))) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
@@ -92,7 +92,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_INT: {
             bool success = false;
-            int value = environment_get_int(m_name);
+            int value = environmentGetInt(m_name);
             if (value == -1) {
                 // There was no environment file - or it did not contain the key
                 break;

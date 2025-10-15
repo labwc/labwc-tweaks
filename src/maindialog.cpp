@@ -252,8 +252,8 @@ void MainDialog::onApply()
     xml_save();
 
     /* ~/.config/labwc/environment */
-    environment_set("XCURSOR_THEME", TEXT(ui->cursorTheme));
-    environment_set_num("XCURSOR_SIZE", ui->cursorSize->value());
+    environmentSet("XCURSOR_THEME", TEXT(ui->cursorTheme));
+    environmentSetInt("XCURSOR_SIZE", ui->cursorSize->value());
 
     /*
      * We include variants in XKB_DEFAULT_LAYOUT, for example "latam(deadtilde),ru(phonetic),gr",
@@ -261,8 +261,8 @@ void MainDialog::onApply()
      */
     const char *layout = m_model->getXkbDefaultLayout();
     if (layout && *layout) {
-        environment_set("XKB_DEFAULT_LAYOUT", layout);
-        environment_set("XKB_DEFAULT_VARIANT", "");
+        environmentSet("XKB_DEFAULT_LAYOUT", layout);
+        environmentSet("XKB_DEFAULT_VARIANT", "");
     }
 
     // TODO: Get filename in a more consistent way - share common code with main.cpp

@@ -32,8 +32,7 @@ Line::Line(void)
 
 Line::~Line(void) { };
 
-// TODO: should be envGet()
-QString environment_get(QString key)
+QString environmentGet(QString key)
 {
     for (auto &line : lines) {
         if (!line->isKeyValuePair)
@@ -44,13 +43,14 @@ QString environment_get(QString key)
     return nullptr;
 }
 
-int environment_get_int(QString key)
+int environmentGetInt(QString key)
 {
     for (auto &line : lines) {
         if (!line->isKeyValuePair) {
             continue;
         }
         if (line->key == key) {
+            // TODO: Not ideal
             return atoi(line->value.toStdString().c_str());
         }
     }
@@ -58,7 +58,7 @@ int environment_get_int(QString key)
 }
 
 // TODO: use std::string instead of const char *
-void environment_set(const char *key, const char *value)
+void environmentSet(const char *key, const char *value)
 {
     if (!key || !*key) {
         return;
@@ -84,12 +84,12 @@ void environment_set(const char *key, const char *value)
     lines.back()->value = QString(value);
 }
 
-void environment_set_num(const char *key, int value)
+void environmentSetInt(const char *key, int value)
 {
     char buffer[255];
     snprintf(buffer, 255, "%d", value);
 
-    environment_set(key, buffer);
+    environmentSet(key, buffer);
 }
 
 static void processLine(QString line)
