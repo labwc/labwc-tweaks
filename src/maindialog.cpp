@@ -259,8 +259,8 @@ void MainDialog::onApply()
      * We include variants in XKB_DEFAULT_LAYOUT, for example "latam(deadtilde),ru(phonetic),gr",
      * so XKB_DEFAULT_VARIANT is set to empty.
      */
-    const char *layout = m_model->getXkbDefaultLayout();
-    if (layout && *layout) {
+    QString layout = m_model->getXkbDefaultLayout();
+    if (!layout.isEmpty()) {
         environmentSet("XKB_DEFAULT_LAYOUT", layout);
         environmentSet("XKB_DEFAULT_VARIANT", "");
     }

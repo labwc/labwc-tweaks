@@ -47,7 +47,7 @@ LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
 
 LayoutModel::~LayoutModel() { }
 
-char *LayoutModel::getXkbDefaultLayout()
+QString LayoutModel::getXkbDefaultLayout()
 {
     QString ret;
     QVectorIterator<QSharedPointer<Layout>> iter(m_layouts);
@@ -57,7 +57,7 @@ char *LayoutModel::getXkbDefaultLayout()
             ret += ",";
         }
     }
-    return ret.toLatin1().data();
+    return ret;
 }
 
 int LayoutModel::rowCount(const QModelIndex &parent) const

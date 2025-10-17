@@ -1,5 +1,6 @@
 #pragma once
 #include <QAbstractListModel>
+#include <QString>
 
 class Layout
 {
@@ -28,7 +29,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     void addLayout(const QString &code, const QString &desc);
     void deleteLayout(int index);
-    char *getXkbDefaultLayout();
+    QString getXkbDefaultLayout();
 
 private:
     void update(void);

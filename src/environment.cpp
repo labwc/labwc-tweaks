@@ -57,13 +57,9 @@ int environmentGetInt(QString key)
     return -1;
 }
 
-// TODO: use std::string instead of const char *
-void environmentSet(const char *key, const char *value)
+void environmentSet(QString key, QString value)
 {
-    if (!key || !*key) {
-        return;
-    }
-    if (!value || !*value) {
+    if (key.isEmpty() || value.isEmpty()) {
         return;
     }
     for (auto &line : lines) {
@@ -72,7 +68,7 @@ void environmentSet(const char *key, const char *value)
         }
         if (line->key == key) {
             // Modify existing key=value pair
-            line->value = QString(value);
+            line->value = value;
             return;
         }
     }
@@ -80,16 +76,16 @@ void environmentSet(const char *key, const char *value)
     // Append
     lines.push_back(std::make_unique<Line>());
     lines.back()->isKeyValuePair = true;
-    lines.back()->key = QString(key);
-    lines.back()->value = QString(value);
+    lines.back()->key = key;
+    lines.back()->value = value;
 }
 
-void environmentSetInt(const char *key, int value)
+void environmentSetInt(QString key, int value)
 {
     char buffer[255];
     snprintf(buffer, 255, "%d", value);
 
-    environmentSet(key, buffer);
+    environmentSet(key, QString(buffer));
 }
 
 static void processLine(QString line)

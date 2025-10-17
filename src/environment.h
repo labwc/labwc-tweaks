@@ -5,8 +5,8 @@
 
 QString environmentGet(QString key);
 int environmentGetInt(QString key);
-void environmentSet(const char *key, const char *value);
-void environmentSetInt(const char *key, int value);
+void environmentSet(QString key, QString value);
+void environmentSetInt(QString key, int value);
 void environmentInit(std::string filename);
 void environmentSave(std::string filename);
 
