@@ -54,6 +54,16 @@ public:
     std::variant<int, QString> value() const { return m_value; }
 };
 
-void initSettings(std::vector<std::shared_ptr<Setting>> &settings);
+void initSettings(std::vector<std::shared_ptr<Setting>> *settings);
+QString getStr(QString name);
+int getInt(QString name);
+int getBool(QString name);
+void setInt(QString name, int value);
+void setStr(QString name, QString value);
+int parseBool(const char *str, int defaultValue);
+void setBool(QString name, QString value);
 
-std::shared_ptr<Setting> retrieve(std::vector<std::shared_ptr<Setting>> &settings, QString name);
+
+
+
+

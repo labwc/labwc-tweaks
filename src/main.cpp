@@ -87,9 +87,9 @@ int main(int argc, char *argv[])
     // The 'settings' vector contains the master state of all settings that can
     // be changed by labwc-tweaks.
     std::vector<std::shared_ptr<Setting>> settings;
-    initSettings(settings);
+    initSettings(&settings);
 
-    MainDialog window(settings);
+    MainDialog window;
     window.show();
 
     // Make work the window icon also when the application is not (yet) installed

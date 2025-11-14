@@ -88,62 +88,7 @@
       </item>
       <item>
        <widget class="QStackedWidget" name="stack">
-        <widget class="QWidget" name="page1">
-         <layout class="QFormLayout" name="layPage1">
-          <property name="leftMargin">
-           <number>6</number>
-          </property>
-          <property name="topMargin">
-           <number>6</number>
-          </property>
-          <property name="rightMargin">
-           <number>6</number>
-          </property>
-          <property name="bottomMargin">
-           <number>6</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Labwc Theme</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="openboxTheme"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Corner Radius</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QSpinBox" name="cornerRadius"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Drop Shadows</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="dropShadows"/>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_1">
-            <property name="text">
-             <string>Icon Theme</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QComboBox" name="iconTheme"/>
-          </item>
-         </layout>
-        </widget>
+        <widget class="Appearance" name="pageAppearance"/>
         <widget class="QWidget" name="page">
          <layout class="QFormLayout" name="layPage">
           <property name="leftMargin">
@@ -307,6 +252,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Appearance</class>
+   <extends>QWidget</extends>
+   <header>appearance.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

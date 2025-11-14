@@ -5,36 +5,43 @@
 #include "environment.h"
 #include "xml.h"
 
-void initSettings(std::vector<std::shared_ptr<Setting>> &settings)
+//~ We try not to deal with raw pointers, but keeping *settings in this
+// translation unit just helps not trickle it through lots of QWidget
+// derived classes
+static std::vector<std::shared_ptr<Setting>> *_settings;
+
+void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
 {
+    _settings = settings;
+
     // Appearance
-    settings.push_back(std::make_shared<Setting>("/labwc_config/theme/name", LAB_FILE_TYPE_RCXML,
-                                                 LAB_VALUE_TYPE_STRING, ""));
-    settings.push_back(std::make_shared<Setting>("/labwc_config/theme/cornerRadius",
-                                                 LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8));
-    settings.push_back(std::make_shared<Setting>("/labwc_config/theme/dropShadows",
-                                                 LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings.push_back(std::make_shared<Setting>("/labwc_config/theme/icon", LAB_FILE_TYPE_RCXML,
-                                                 LAB_VALUE_TYPE_STRING, ""));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/name", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_STRING, ""));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/cornerRadius",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/dropShadows",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/icon", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_STRING, ""));
 
     // Behaviour
-    settings.push_back(std::make_shared<Setting>("/labwc_config/placement/policy",
-                                                 LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                 "Cascade"));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/placement/policy",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "Cascade"));
 
     // Mouse & Touchpad
-    settings.push_back(std::make_shared<Setting>("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_STRING, ""));
+    settings->push_back(std::make_shared<Setting>("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT,
+                                                  LAB_VALUE_TYPE_STRING, ""));
 
-    settings.push_back(std::make_shared<Setting>("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_INT, 24));
+    settings->push_back(std::make_shared<Setting>("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT,
+                                                  LAB_VALUE_TYPE_INT, 24));
 
-    settings.push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
-                                                 LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
 
     // Language
-    settings.push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
-                                                 LAB_VALUE_TYPE_STRING, "us"));
+    settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
+                                                  LAB_VALUE_TYPE_STRING, "us"));
 }
 
 Setting::Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
@@ -114,12 +121,138 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     }
 };
 
-std::shared_ptr<Setting> retrieve(std::vector<std::shared_ptr<Setting>> &settings, QString name)
+static std::shared_ptr<Setting> retrieve(QString name)
 {
-    for (auto &setting : settings) {
+    for (auto &setting : *_settings) {
         if (name == setting->name()) {
             return setting;
         }
     }
     return nullptr;
+}
+
+QString getStr(QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return nullptr;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
+        qDebug() << "getStr(): not valid int setting" << name;
+    }
+    return std::get<QString>(setting->value());
+}
+
+int getInt(QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return -65535;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_INT) {
+        qDebug() << "getInt(): not valid int setting" << name;
+    }
+    return std::get<int>(setting->value());
+}
+
+/* Return -1 for error, which works will with setCurrentIndex() */
+int getBool(QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return -1;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
+        qDebug() << "getBool(): not valid int setting" << name;
+    }
+    return std::get<int>(setting->value());
+}
+
+void setInt(QString name, int value)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_INT) {
+        qDebug() << "setInt(): not valid int setting" << name << value;
+    }
+    if (value != std::get<int>(setting->value())) {
+        info("'{} has changed to '{}'", name.toStdString(), value);
+        xpath_add_node(name.toStdString().c_str());
+        xml_set_num(name.toStdString().c_str(), value);
+    }
+}
+
+void setStr(QString name, QString value)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
+        qDebug() << "setStr(): not valid string setting" << name << value;
+    }
+    if (value != std::get<QString>(setting->value())) {
+        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
+        xpath_add_node(name.toStdString().c_str());
+        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+    }
+}
+
+/**
+ * parse_bool() - Parse boolean value of string.
+ * @string: String to interpret. This check is case-insensitive.
+ * @default_value: Default value to use if string is not a recognised boolean.
+ *                 Use -1 to avoid setting a default value.
+ *
+ * Return: 0 for false; 1 for true; -1 for non-boolean
+ */
+int parseBool(const char *str, int defaultValue)
+{
+    if (!str)
+        goto error_not_a_boolean;
+    else if (!strcasecmp(str, "yes"))
+        return 1;
+    else if (!strcasecmp(str, "true"))
+        return 1;
+    else if (!strcasecmp(str, "on"))
+        return 1;
+    else if (!strcmp(str, "1"))
+        return 1;
+    else if (!strcasecmp(str, "no"))
+        return 0;
+    else if (!strcasecmp(str, "false"))
+        return 0;
+    else if (!strcasecmp(str, "off"))
+        return 0;
+    else if (!strcmp(str, "0"))
+        return 0;
+error_not_a_boolean:
+    qDebug() << str << "is not a boolean value";
+    return defaultValue;
+}
+
+// TODO: make this more bool-ish
+void setBool(QString name, QString value)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
+        qDebug() << "setBool(): not valid bool setting" << name << value;
+    }
+    int boolValue = parseBool(value.toStdString().c_str(), -1);
+    if (boolValue != std::get<int>(setting->value())) {
+        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
+        xpath_add_node(name.toStdString().c_str());
+        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+    }
 }

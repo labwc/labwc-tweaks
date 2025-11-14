@@ -45,6 +45,11 @@ set(PROJECT_SOURCES
     src/settings.h
     src/xml.cpp
     src/xml.h
+    src/appearance.cpp
+    src/appearance.h
+    src/appearance.ui
+    src/find-themes.cpp
+    src/find-themes.h
 )
 set(PROJECT_OTHER_FILES
     .github/workflows/build.yml

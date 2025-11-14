@@ -8,15 +8,15 @@
 #include <unistd.h>
 #include "environment.h"
 #include "evdev-lst-layouts.h"
+#include "find-themes.h"
 #include "layoutmodel.h"
 #include "log.h"
+#include "macros.h"
 #include "maindialog.h"
-#include "settings.h"
 #include "./ui_maindialog.h"
 #include "xml.h"
 
-MainDialog::MainDialog(std::vector<std::shared_ptr<Setting>> &settings, QWidget *parent)
-    : QDialog(parent), ui(new Ui::MainDialog), m_settings(settings)
+MainDialog::MainDialog(QWidget *parent) : QDialog(parent), ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
 
@@ -58,90 +58,31 @@ void MainDialog::deleteSelectedLayout(void)
     m_model->deleteLayout(ui->layoutView->currentIndex().row());
 }
 
-static QString getStr(std::vector<std::shared_ptr<Setting>> &settings, QString name)
-{
-    std::shared_ptr<Setting> setting = retrieve(settings, name);
-    if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
-        return nullptr;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
-        qDebug() << "getStr(): not valid int setting" << name;
-    }
-    return std::get<QString>(setting->value());
-}
-
-static int getInt(std::vector<std::shared_ptr<Setting>> &settings, QString name)
-{
-    std::shared_ptr<Setting> setting = retrieve(settings, name);
-    if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
-        return -65535;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_INT) {
-        qDebug() << "getInt(): not valid int setting" << name;
-    }
-    return std::get<int>(setting->value());
-}
-
-/* Return -1 for error, which works will with setCurrentIndex() */
-static int getBool(std::vector<std::shared_ptr<Setting>> &settings, QString name)
-{
-    std::shared_ptr<Setting> setting = retrieve(settings, name);
-    if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
-        return -1;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
-        qDebug() << "getBool(): not valid int setting" << name;
-    }
-    return std::get<int>(setting->value());
-}
-
 void MainDialog::activate()
 {
     /* # APPEARANCE */
-
-    /* Labwc Theme */
-    QStringList labwcThemes = findLabwcThemes();
-    ui->openboxTheme->addItems(labwcThemes);
-    ui->openboxTheme->setCurrentIndex(
-            labwcThemes.indexOf(getStr(m_settings, "/labwc_config/theme/name")));
-
-    /* Corner Radius */
-    ui->cornerRadius->setValue(getInt(m_settings, "/labwc_config/theme/cornerRadius"));
-
-    /* Drop Shadows */
-    ui->dropShadows->addItem("no");
-    ui->dropShadows->addItem("yes");
-    ui->dropShadows->setCurrentIndex(getBool(m_settings, "/labwc_config/theme/dropShadows"));
-
-    /* Icon Theme */
-    QStringList themes = findIconThemes(LAB_ICON_THEME_TYPE_ICON);
-    ui->iconTheme->addItems(themes);
-    ui->iconTheme->setCurrentIndex(themes.indexOf(getStr(m_settings, "/labwc_config/theme/icon")));
+    ui->pageAppearance->activate();
 
     /* # BEHAVIOUR */
     QStringList policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
     ui->placementPolicy->addItems(policies);
     ui->placementPolicy->setCurrentIndex(
-            policies.indexOf(getStr(m_settings, "/labwc_config/placement/policy")));
+            policies.indexOf(getStr("/labwc_config/placement/policy")));
 
     /* # MOUSE & TOUCHPAD */
 
     /* Cursor Theme */
     QStringList cursorThemes = findIconThemes(LAB_ICON_THEME_TYPE_CURSOR);
     ui->cursorTheme->addItems(cursorThemes);
-    ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getStr(m_settings, "XCURSOR_THEME")));
+    ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getStr("XCURSOR_THEME")));
 
     /* Cursor Size */
-    ui->cursorSize->setValue(getInt(m_settings, "XCURSOR_SIZE"));
+    ui->cursorSize->setValue(getInt("XCURSOR_SIZE"));
 
     /* Natural Scroll */
     ui->naturalScroll->addItem("no");
     ui->naturalScroll->addItem("yes");
-    ui->naturalScroll->setCurrentIndex(
-            getBool(m_settings, "/labwc_config/libinput/device/naturalScroll"));
+    ui->naturalScroll->setCurrentIndex(getBool("/labwc_config/libinput/device/naturalScroll"));
 
     /* # LANGUAGE */
 
@@ -152,103 +93,13 @@ void MainDialog::activate()
     }
 }
 
-void setInt(std::vector<std::shared_ptr<Setting>> &settings, QString name, int value)
-{
-    std::shared_ptr<Setting> setting = retrieve(settings, name);
-    if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
-        return;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_INT) {
-        qDebug() << "setInt(): not valid int setting" << name << value;
-    }
-    if (value != std::get<int>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value);
-        xpath_add_node(name.toStdString().c_str());
-        xml_set_num(name.toStdString().c_str(), value);
-    }
-}
-
-void setStr(std::vector<std::shared_ptr<Setting>> &settings, QString name, QString value)
-{
-    std::shared_ptr<Setting> setting = retrieve(settings, name);
-    if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
-        return;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
-        qDebug() << "setStr(): not valid string setting" << name << value;
-    }
-    if (value != std::get<QString>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
-        xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
-    }
-}
-
-/**
- * parse_bool() - Parse boolean value of string.
- * @string: String to interpret. This check is case-insensitive.
- * @default_value: Default value to use if string is not a recognised boolean.
- *                 Use -1 to avoid setting a default value.
- *
- * Return: 0 for false; 1 for true; -1 for non-boolean
- */
-int parseBool(const char *str, int defaultValue)
-{
-    if (!str)
-        goto error_not_a_boolean;
-    else if (!strcasecmp(str, "yes"))
-        return 1;
-    else if (!strcasecmp(str, "true"))
-        return 1;
-    else if (!strcasecmp(str, "on"))
-        return 1;
-    else if (!strcmp(str, "1"))
-        return 1;
-    else if (!strcasecmp(str, "no"))
-        return 0;
-    else if (!strcasecmp(str, "false"))
-        return 0;
-    else if (!strcasecmp(str, "off"))
-        return 0;
-    else if (!strcmp(str, "0"))
-        return 0;
-error_not_a_boolean:
-    qDebug() << str << "is not a boolean value";
-    return defaultValue;
-}
-
-// TODO: make this more bool-ish
-void setBool(std::vector<std::shared_ptr<Setting>> &settings, QString name, QString value)
-{
-    std::shared_ptr<Setting> setting = retrieve(settings, name);
-    if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
-        return;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
-        qDebug() << "setBool(): not valid bool setting" << name << value;
-    }
-    int boolValue = parseBool(value.toStdString().c_str(), -1);
-    if (boolValue != std::get<int>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
-        xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
-    }
-}
-
-#define TEXT(widget) widget->currentText().toLatin1().data()
-
 void MainDialog::onApply()
 {
+    ui->pageAppearance->onApply();
+
     /* ~/.config/labwc/rc.xml */
-    setInt(m_settings, "/labwc_config/theme/cornerRadius", ui->cornerRadius->value());
-    setStr(m_settings, "/labwc_config/theme/name", TEXT(ui->openboxTheme));
-    setBool(m_settings, "/labwc_config/theme/dropShadows", TEXT(ui->dropShadows));
-    setStr(m_settings, "/labwc_config/theme/icon", TEXT(ui->iconTheme));
-    setBool(m_settings, "/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
-    setStr(m_settings, "/labwc_config/placement/policy", TEXT(ui->placementPolicy));
+    setBool("/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
+    setStr("/labwc_config/placement/policy", TEXT(ui->placementPolicy));
     xml_save();
 
     /* ~/.config/labwc/environment */
@@ -275,95 +126,4 @@ void MainDialog::onApply()
     if (!fork()) {
         execl("/bin/sh", "/bin/sh", "-c", "labwc -r", (void *)NULL);
     }
-}
-
-bool hasOnlyCursorSubdir(QString path)
-{
-    QStringList entries = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    return entries.contains("cursors") && entries.length() == 1;
-}
-
-bool hasCursorSubdir(QString path)
-{
-    QStringList entries = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    return entries.contains("cursors");
-}
-
-QStringList MainDialog::findIconThemes(enum lab_icon_theme_type type)
-{
-    QStringList paths;
-
-    // Setup paths including
-    //   - $HOME/.icons
-    //   - $XDG_DATA_HOME/icons
-    //   - $XDG_DATA_DIRS/icons
-    paths.push_back(QString(qgetenv("HOME") + "/.icons"));
-    QStringList standardPaths =
-            QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-    for (const QString &path : std::as_const(standardPaths)) {
-        paths.push_back(QString(path + "/icons"));
-    }
-
-    // Iterate over paths and use any icon-theme which has more than just a
-    // "cursors" subdirectory (because that means it's for cursors only)
-    QStringList themes;
-    themes.push_front("");
-    themes.push_front("Adwaita");
-    for (const QString &path : std::as_const(paths)) {
-        QDir dir(path);
-        QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-        for (const QString &entry : std::as_const(entries)) {
-            switch (type) {
-            case LAB_ICON_THEME_TYPE_ICON:
-                if (hasOnlyCursorSubdir(QString(path + "/" + entry))) {
-                    continue;
-                }
-                themes.push_back(entry);
-                break;
-            case LAB_ICON_THEME_TYPE_CURSOR:
-                if (hasCursorSubdir(QString(path + "/" + entry))) {
-                    themes.push_back(entry);
-                }
-                break;
-            default:
-                break;
-            }
-        }
-    }
-    themes.removeDuplicates();
-    themes.sort(Qt::CaseInsensitive);
-    return themes;
-}
-
-bool hasOpenboxOrLabwcSubdir(QString path)
-{
-    QStringList entries = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    return entries.contains("openbox-3") || entries.contains("labwc");
-}
-
-QStringList MainDialog::findLabwcThemes(void)
-{
-    QStringList paths;
-
-    paths.push_back(QString(qgetenv("HOME") + "/.themes"));
-    QStringList standardPaths =
-            QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-    for (const QString &path : std::as_const(standardPaths)) {
-        paths.push_back(QString(path + "/themes"));
-    }
-
-    QStringList themes;
-    themes.push_front("Adwaita");
-    for (const QString &path : std::as_const(paths)) {
-        QDir dir(path);
-        QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-        for (const QString &entry : std::as_const(entries)) {
-            if (hasOpenboxOrLabwcSubdir(QString(path + "/" + entry))) {
-                themes.push_back(entry);
-            }
-        }
-    }
-    themes.removeDuplicates();
-    themes.sort(Qt::CaseInsensitive);
-    return themes;
 }
