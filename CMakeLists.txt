@@ -23,8 +23,11 @@ set(PROJECT_TRANSLATION_TEST_LANGUAGE "en" CACHE STRING "Country code of languag
 set(PROJECT_QT_VERSION 6 CACHE STRING "Qt version to use [Default: 6]")
 option(PROJECT_TRANSLATIONS_UPDATE "Update source translations [default: OFF]" OFF)
 
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fsanitize=undefined")
-#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -fsanitize=undefined")
+if(ASAN)
+  MESSAGE(NOTICE "Use Address Sanitizer")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fsanitize=undefined")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -fsanitize=undefined")
+endif()
 
 find_package(QT NAMES Qt${PROJECT_QT_VERSION})
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
