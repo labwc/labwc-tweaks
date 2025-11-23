@@ -93,7 +93,7 @@ void MainDialog::onApply()
     ui->pageBehaviour->onApply();
 
     /* ~/.config/labwc/rc.xml */
-    setBool("/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
+    setBoolfromString("/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
     xml_save();
 
     /* ~/.config/labwc/environment */

@@ -63,4 +63,5 @@ int getBool(QString name);
 void setInt(QString name, int value);
 void setStr(QString name, QString value);
 int parseBool(const char *str, int defaultValue);
-void setBool(QString name, QString value);
+void setBool(QString name, int value);
+void setBoolfromString(QString name, QString value);

@@ -248,8 +248,7 @@ error_not_a_boolean:
     return defaultValue;
 }
 
-// TODO: make this more bool-ish
-void setBool(QString name, QString value)
+void setBool(QString name, int value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
@@ -259,11 +258,16 @@ void setBool(QString name, QString value)
     if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
         qDebug() << "setBool(): not valid bool setting" << name << value;
     }
-    int boolValue = parseBool(value.toStdString().c_str(), -1);
-    if (boolValue != std::get<int>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
+    if (value != std::get<int>(setting->value())) {
+        info("'{} has changed to '{}'", name.toStdString(), value);
         xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+        xml_set(name.toStdString().c_str(), value ? "yes" : "no");
         setting->setValue(value);
     }
+}
+
+void setBoolfromString(QString name, QString value)
+{
+    int boolValue = parseBool(value.toStdString().c_str(), -1);
+    setBool(name, boolValue);
 }

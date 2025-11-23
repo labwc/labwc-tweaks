@@ -25,9 +25,7 @@ void Appearance::activate()
     ui->cornerRadius->setValue(getInt("/labwc_config/theme/cornerRadius"));
 
     /* Drop Shadows */
-    ui->dropShadows->addItem("no");
-    ui->dropShadows->addItem("yes");
-    ui->dropShadows->setCurrentIndex(getBool("/labwc_config/theme/dropShadows"));
+    ui->dropShadows->setChecked(getBool("/labwc_config/theme/dropShadows"));
 
     /* Icon Theme */
     QStringList themes = findIconThemes(LAB_ICON_THEME_TYPE_ICON);
@@ -39,6 +37,6 @@ void Appearance::onApply()
 {
     setInt("/labwc_config/theme/cornerRadius", ui->cornerRadius->value());
     setStr("/labwc_config/theme/name", TEXT(ui->openboxTheme));
-    setBool("/labwc_config/theme/dropShadows", TEXT(ui->dropShadows));
+    setBool("/labwc_config/theme/dropShadows", ui->dropShadows->isChecked());
     setStr("/labwc_config/theme/icon", TEXT(ui->iconTheme));
 }
