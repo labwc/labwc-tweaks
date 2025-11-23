@@ -89,32 +89,7 @@
       <item>
        <widget class="QStackedWidget" name="stack">
         <widget class="Appearance" name="pageAppearance"/>
-        <widget class="QWidget" name="page">
-         <layout class="QFormLayout" name="layPage">
-          <property name="leftMargin">
-           <number>6</number>
-          </property>
-          <property name="topMargin">
-           <number>6</number>
-          </property>
-          <property name="rightMargin">
-           <number>6</number>
-          </property>
-          <property name="bottomMargin">
-           <number>6</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>Placement Policy</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="placementPolicy"/>
-          </item>
-         </layout>
-        </widget>
+        <widget class="Behaviour" name="pageBehaviour"/>
         <widget class="QWidget" name="page2">
          <layout class="QFormLayout" name="layPage2">
           <property name="leftMargin">
@@ -257,6 +232,11 @@
    <class>Appearance</class>
    <extends>QWidget</extends>
    <header>appearance.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Behaviour</class>
+   <extends>QWidget</extends>
+   <header>behaviour.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

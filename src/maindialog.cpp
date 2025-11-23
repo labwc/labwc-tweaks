@@ -60,14 +60,8 @@ void MainDialog::deleteSelectedLayout(void)
 
 void MainDialog::activate()
 {
-    /* # APPEARANCE */
     ui->pageAppearance->activate();
-
-    /* # BEHAVIOUR */
-    QStringList policies = { "", "Automatic", "Cascade", "Center", "Cursor" };
-    ui->placementPolicy->addItems(policies);
-    ui->placementPolicy->setCurrentIndex(
-            policies.indexOf(getStr("/labwc_config/placement/policy")));
+    ui->pageBehaviour->activate();
 
     /* # MOUSE & TOUCHPAD */
 
@@ -96,10 +90,10 @@ void MainDialog::activate()
 void MainDialog::onApply()
 {
     ui->pageAppearance->onApply();
+    ui->pageBehaviour->onApply();
 
     /* ~/.config/labwc/rc.xml */
     setBool("/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
-    setStr("/labwc_config/placement/policy", TEXT(ui->placementPolicy));
     xml_save();
 
     /* ~/.config/labwc/environment */
