@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cmake \
+	-D ASAN=1 \
+	-B build
+
+cmake --build build && build/labwc-tweaks
