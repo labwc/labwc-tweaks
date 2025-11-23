@@ -62,21 +62,7 @@ void MainDialog::activate()
 {
     ui->pageAppearance->activate();
     ui->pageBehaviour->activate();
-
-    /* # MOUSE & TOUCHPAD */
-
-    /* Cursor Theme */
-    QStringList cursorThemes = findIconThemes(LAB_ICON_THEME_TYPE_CURSOR);
-    ui->cursorTheme->addItems(cursorThemes);
-    ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getStr("XCURSOR_THEME")));
-
-    /* Cursor Size */
-    ui->cursorSize->setValue(getInt("XCURSOR_SIZE"));
-
-    /* Natural Scroll */
-    ui->naturalScroll->addItem("no");
-    ui->naturalScroll->addItem("yes");
-    ui->naturalScroll->setCurrentIndex(getBool("/labwc_config/libinput/device/naturalScroll"));
+    ui->pageMouse->activate();
 
     /* # LANGUAGE */
 
@@ -91,14 +77,7 @@ void MainDialog::onApply()
 {
     ui->pageAppearance->onApply();
     ui->pageBehaviour->onApply();
-
-    /* ~/.config/labwc/rc.xml */
-    setBoolfromString("/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
-    xml_save();
-
-    /* ~/.config/labwc/environment */
-    environmentSet("XCURSOR_THEME", TEXT(ui->cursorTheme));
-    environmentSetInt("XCURSOR_SIZE", ui->cursorSize->value());
+    ui->pageMouse->onApply();
 
     /*
      * We include variants in XKB_DEFAULT_LAYOUT, for example "latam(deadtilde),ru(phonetic),gr",
@@ -114,6 +93,8 @@ void MainDialog::onApply()
     std::string config_home = std::getenv("HOME") + std::string("/.config/labwc");
     std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: config_home;
     std::string environment_file = config_dir + "/environment";
+
+    xml_save();
     environmentSave(environment_file);
 
     /* reconfigure labwc */
