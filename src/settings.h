@@ -14,6 +14,7 @@ enum settingValueOrigin {
     LAB_VALUE_ORIGIN_UNKNOWN = 0,
     LAB_VALUE_ORIGIN_DEFAULT,
     LAB_VALUE_ORIGIN_USER_OVERRIDE,
+    LAB_VALUE_ORIGIN_CHANGED_IN_THIS_SESSION,
 };
 
 enum settingValueType {
@@ -37,6 +38,7 @@ class Setting
 public:
     Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
             std::variant<int, QString> defaultValue);
+    void setValue(std::variant<int, QString> value);
 
 private:
     QString m_name;
@@ -62,8 +64,3 @@ void setInt(QString name, int value);
 void setStr(QString name, QString value);
 int parseBool(const char *str, int defaultValue);
 void setBool(QString name, QString value);
-
-
-
-
-

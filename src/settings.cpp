@@ -121,6 +121,14 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     }
 };
 
+void Setting::setValue(std::variant<int, QString> value)
+{
+    if (value != m_value) {
+        m_valueOrigin = LAB_VALUE_ORIGIN_CHANGED_IN_THIS_SESSION;
+        m_value = value;
+    }
+}
+
 static std::shared_ptr<Setting> retrieve(QString name)
 {
     for (auto &setting : *_settings) {
@@ -185,6 +193,7 @@ void setInt(QString name, int value)
         info("'{} has changed to '{}'", name.toStdString(), value);
         xpath_add_node(name.toStdString().c_str());
         xml_set_num(name.toStdString().c_str(), value);
+        setting->setValue(value);
     }
 }
 
@@ -202,6 +211,7 @@ void setStr(QString name, QString value)
         info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
         xpath_add_node(name.toStdString().c_str());
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+        setting->setValue(value);
     }
 }
 
@@ -254,5 +264,6 @@ void setBool(QString name, QString value)
         info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
         xpath_add_node(name.toStdString().c_str());
         xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+        setting->setValue(value);
     }
 }
