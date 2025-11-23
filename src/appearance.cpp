@@ -16,8 +16,6 @@ Appearance::~Appearance()
 
 void Appearance::activate()
 {
-    /* # APPEARANCE */
-
     /* Labwc Theme */
     QStringList labwcThemes = findLabwcThemes();
     ui->openboxTheme->addItems(labwcThemes);
