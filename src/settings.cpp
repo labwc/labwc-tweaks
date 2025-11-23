@@ -119,7 +119,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             break;
         }
     }
-};
+}
 
 void Setting::setValue(std::variant<int, QString> value)
 {
