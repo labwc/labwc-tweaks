@@ -35,12 +35,16 @@ find_package(LibXml2 REQUIRED)
 set(PROJECT_SOURCES
     src/main.cpp
     src/maindialog.cpp src/maindialog.h src/maindialog.ui
+
     src/layoutmodel.cpp src/layoutmodel.h
+
     src/environment.cpp src/environment.h
     src/settings.cpp src/settings.h
     src/xml.cpp src/xml.h
-    src/appearance.cpp src/appearance.h src/appearance.ui
     src/find-themes.cpp src/find-themes.h
+
+    src/appearance.cpp src/appearance.h src/appearance.ui
+    src/behaviour.cpp src/behaviour.h src/behaviour.ui
 )
 set(PROJECT_OTHER_FILES
     .github/workflows/build.yml
