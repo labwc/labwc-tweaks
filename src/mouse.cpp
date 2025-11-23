@@ -26,15 +26,13 @@ void Mouse::activate()
     ui->cursorSize->setValue(getInt("XCURSOR_SIZE"));
 
     /* Natural Scroll */
-    ui->naturalScroll->addItem("no");
-    ui->naturalScroll->addItem("yes");
-    ui->naturalScroll->setCurrentIndex(getBool("/labwc_config/libinput/device/naturalScroll"));
+    ui->naturalScroll->setChecked(getBool("/labwc_config/libinput/device/naturalScroll"));
 }
 
 void Mouse::onApply()
 {
     /* ~/.config/labwc/rc.xml */
-    setBoolfromString("/labwc_config/libinput/device/naturalScroll", TEXT(ui->naturalScroll));
+    setBool("/labwc_config/libinput/device/naturalScroll", ui->naturalScroll->isChecked());
 
     /* ~/.config/labwc/environment */
     environmentSet("XCURSOR_THEME", TEXT(ui->cursorTheme));
