@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pageLanguage</class>
+ <widget class="QWidget" name="pageLanguage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>251</width>
+    <height>153</height>
+   </rect>
+  </property>
+  <layout class="QFormLayout" name="layPage3">
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Keyboard Layout</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="multiKeyboardLayout">
+     <item>
+      <widget class="QListView" name="layoutView">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>72</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="layoutCombo"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="layoutAdd">
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="layoutRemove">
+         <property name="text">
+          <string>Remove</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
