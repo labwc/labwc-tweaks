@@ -1,12 +1,13 @@
 #pragma once
+#include <QString>
 #include <vector>
 
 // Auto-generated based on "/usr/share/X11/xkb/rules/evdev.lst"
 
 struct layout
 {
-    const char *code;
-    const char *description;
+    QString code;
+    QString description;
 };
 
 static std::vector<struct layout> evdev_lst_layouts = {
