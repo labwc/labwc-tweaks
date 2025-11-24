@@ -27,7 +27,7 @@ void Language::activate()
     /* Keyboard Layout */
     ui->layoutCombo->addItem(tr("Select layout to add..."));
     for (auto layout : evdev_lst_layouts) {
-        ui->layoutCombo->addItem(QString(layout.description));
+        ui->layoutCombo->addItem(layout.description);
     }
 }
 
@@ -47,10 +47,11 @@ void Language::onApply()
 
 void Language::addSelectedLayout(void)
 {
-    const char *description = ui->layoutCombo->currentText().toLatin1().data();
+    QString description = ui->layoutCombo->currentText();
+
     for (auto layout : evdev_lst_layouts) {
-        if (!strcmp(description, layout.description)) {
-            m_model->addLayout(QString(layout.code), QString(layout.description));
+        if (description == layout.description) {
+            m_model->addLayout(layout.code, layout.description);
         }
     }
 }
