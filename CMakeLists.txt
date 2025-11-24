@@ -49,6 +49,7 @@ set(PROJECT_SOURCES
     src/appearance.cpp src/appearance.h src/appearance.ui
     src/behaviour.cpp src/behaviour.h src/behaviour.ui
     src/mouse.cpp src/mouse.h src/mouse.ui
+    src/language.cpp src/language.h src/language.ui
 )
 set(PROJECT_OTHER_FILES
     .github/workflows/build.yml

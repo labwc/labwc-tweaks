@@ -1,7 +1,6 @@
 #ifndef MAINDIALOG_H
 #define MAINDIALOG_H
 #include <QDialog>
-#include "layoutmodel.h"
 #include "settings.h"
 
 QT_BEGIN_NAMESPACE
@@ -19,14 +18,8 @@ public:
     ~MainDialog();
     void activate();
 
-private slots:
-    void addSelectedLayout(void);
-    void deleteSelectedLayout(void);
-
 private:
-    LayoutModel *m_model;
     void onApply();
-
     Ui::MainDialog *ui;
 };
 #endif // MAINDIALOG_H
