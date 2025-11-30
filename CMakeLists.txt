@@ -45,6 +45,7 @@ set(PROJECT_SOURCES
     src/settings.cpp src/settings.h
     src/xml.cpp src/xml.h
     src/find-themes.cpp src/find-themes.h
+    src/pair.h
 
     src/appearance.cpp src/appearance.h src/appearance.ui
     src/behaviour.cpp src/behaviour.h src/behaviour.ui
