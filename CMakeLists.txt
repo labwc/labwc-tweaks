@@ -37,7 +37,7 @@ find_package(LibXml2 REQUIRED)
 
 set(PROJECT_SOURCES
     src/main.cpp
-    src/maindialog.cpp src/maindialog.h src/maindialog.ui
+    src/maindialog.cpp src/maindialog.h
 
     src/layoutmodel.cpp src/layoutmodel.h
 
