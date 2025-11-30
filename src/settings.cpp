@@ -64,7 +64,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_INT: {
             int value = xml_get_int(m_name.toStdString().c_str());
-            if (value && (value != std::get<int>(m_value))) {
+            if (value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);
@@ -147,7 +147,7 @@ QString getStr(QString name)
         return nullptr;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
-        qDebug() << "getStr(): not valid int setting" << name;
+        qDebug() << "getStr(): not valid string setting" << name;
     }
     return std::get<QString>(setting->value());
 }
@@ -174,7 +174,7 @@ int getBool(QString name)
         return -1;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
-        qDebug() << "getBool(): not valid int setting" << name;
+        qDebug() << "getBool(): not valid bool setting" << name;
     }
     return std::get<int>(setting->value());
 }
