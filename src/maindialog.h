@@ -1,13 +1,13 @@
 #ifndef MAINDIALOG_H
 #define MAINDIALOG_H
 #include <QDialog>
+#include <QDialogButtonBox>
 #include "settings.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainDialog;
-}
-QT_END_NAMESPACE
+class Appearance;
+class Behaviour;
+class Mouse;
+class Language;
 
 class MainDialog : public QDialog
 {
@@ -20,6 +20,11 @@ public:
 
 private:
     void onApply();
-    Ui::MainDialog *ui;
+
+    QDialogButtonBox *m_buttonBox;
+    Appearance *m_pageAppearance;
+    Behaviour *m_pageBehaviour;
+    Mouse *m_pageMouse;
+    Language *m_pageLanguage;
 };
 #endif // MAINDIALOG_H
