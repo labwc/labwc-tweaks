@@ -50,8 +50,9 @@ int environmentGetInt(QString key)
             continue;
         }
         if (line->key == key) {
-            // TODO: Not ideal
-            return atoi(line->value.toStdString().c_str());
+            bool success = false;
+            int ret = line->value.toInt(&success);
+            return success ? ret : -1;
         }
     }
     return -1;
