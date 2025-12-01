@@ -215,39 +215,6 @@ void setStr(QString name, QString value)
     }
 }
 
-/**
- * parse_bool() - Parse boolean value of string.
- * @string: String to interpret. This check is case-insensitive.
- * @default_value: Default value to use if string is not a recognised boolean.
- *                 Use -1 to avoid setting a default value.
- *
- * Return: 0 for false; 1 for true; -1 for non-boolean
- */
-int parseBool(const char *str, int defaultValue)
-{
-    if (!str)
-        goto error_not_a_boolean;
-    else if (!strcasecmp(str, "yes"))
-        return 1;
-    else if (!strcasecmp(str, "true"))
-        return 1;
-    else if (!strcasecmp(str, "on"))
-        return 1;
-    else if (!strcmp(str, "1"))
-        return 1;
-    else if (!strcasecmp(str, "no"))
-        return 0;
-    else if (!strcasecmp(str, "false"))
-        return 0;
-    else if (!strcasecmp(str, "off"))
-        return 0;
-    else if (!strcmp(str, "0"))
-        return 0;
-error_not_a_boolean:
-    qDebug() << str << "is not a boolean value";
-    return defaultValue;
-}
-
 void setBool(QString name, int value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
@@ -264,10 +231,4 @@ void setBool(QString name, int value)
         xml_set(name.toStdString().c_str(), value ? "yes" : "no");
         setting->setValue(value);
     }
-}
-
-void setBoolfromString(QString name, QString value)
-{
-    int boolValue = parseBool(value.toStdString().c_str(), -1);
-    setBool(name, boolValue);
 }
