@@ -13,6 +13,7 @@
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
+#include "parse-bool.h"
 #include "xml.h"
 
 enum xml_mode {
@@ -226,13 +227,9 @@ int xml_get_bool_text(const char *nodename)
     if (!value || !*value) {
         return -1;
     }
-    if (!strcasecmp(value, "yes") || !strcasecmp(value, "true")) {
-        return 1;
-    } else if (!strcasecmp(value, "no") || !strcasecmp(value, "false")) {
-        return 0;
-    } else {
-        return -1;
-    }
+
+    /* Parse consistently with labwc */
+    return parseBool(value, -1);
 }
 
 /* case-insensitive */
