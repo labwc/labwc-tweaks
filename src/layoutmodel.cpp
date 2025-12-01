@@ -4,14 +4,6 @@
 #include "layoutmodel.h"
 #include "evdev-lst-layouts.h"
 
-Layout::Layout(QString code, QString desc)
-{
-    m_code = code;
-    m_desc = desc;
-}
-
-Layout::~Layout() { }
-
 LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
 {
     QString xkb_default_layout = environmentGet("XKB_DEFAULT_LAYOUT");
@@ -50,9 +42,9 @@ LayoutModel::~LayoutModel() { }
 QString LayoutModel::getXkbDefaultLayout()
 {
     QString ret;
-    QVectorIterator<QSharedPointer<Layout>> iter(m_layouts);
+    QVectorIterator<QSharedPointer<Pair>> iter(m_layouts);
     while (iter.hasNext()) {
-        ret += iter.next().get()->code();
+        ret += iter.next().get()->value();
         if (iter.hasNext()) {
             ret += ",";
         }
@@ -74,7 +66,7 @@ QVariant LayoutModel::data(const QModelIndex &index, int role) const
     const int row = index.row();
     switch (role) {
     case Qt::DisplayRole:
-        return m_layouts.at(row)->desc() + " [" + m_layouts.at(row)->code() + "]";
+        return m_layouts.at(row)->description() + " [" + m_layouts.at(row)->value() + "]";
     }
     return {};
 }
@@ -87,15 +79,15 @@ void LayoutModel::update(void)
 
 void LayoutModel::addLayout(const QString &code, const QString &desc)
 {
-    QVectorIterator<QSharedPointer<Layout>> iter(m_layouts);
+    QVectorIterator<QSharedPointer<Pair>> iter(m_layouts);
     while (iter.hasNext()) {
-        if (iter.next().get()->code() == code) {
+        if (iter.next().get()->value() == code) {
             qDebug() << "cannot add the same layout twice";
             return;
         }
     }
 
-    m_layouts.append(QSharedPointer<Layout>(new Layout(code, desc)));
+    m_layouts.append(QSharedPointer<Pair>(new Pair(code, desc)));
     update();
 }
 
