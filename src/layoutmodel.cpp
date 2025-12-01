@@ -30,8 +30,8 @@ LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
 
     foreach (QString element, layoutElements) {
         for (auto layout : evdev_lst_layouts) {
-            if (element == QString(layout.code)) {
-                addLayout(QString(layout.code), QString(layout.description));
+            if (element == layout.code) {
+                addLayout(layout.code, layout.description);
             }
         }
     }
