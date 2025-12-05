@@ -22,6 +22,7 @@ enum settingValueType {
     LAB_VALUE_TYPE_INT,
     LAB_VALUE_TYPE_BOOL,
     LAB_VALUE_TYPE_STRING,
+    LAB_VALUE_TYPE_FLOAT
 };
 
 static inline QString settingFileTypeName(enum settingFileType type)
@@ -37,15 +38,15 @@ class Setting
 {
 public:
     Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
-            std::variant<int, QString> defaultValue);
-    void setValue(std::variant<int, QString> value);
+            std::variant<int, float, QString> defaultValue);
+    void setValue(std::variant<int, float, QString> value);
 
 private:
     QString m_name;
     enum settingFileType m_fileType;
     enum settingValueOrigin m_valueOrigin;
     enum settingValueType m_valueType;
-    std::variant<int, QString> m_value;
+    std::variant<int, float, QString> m_value;
 
 public:
     // Getters
@@ -53,15 +54,17 @@ public:
     enum settingFileType fileType() const { return m_fileType; }
     enum settingValueOrigin valueOrigin() const { return m_valueOrigin; }
     enum settingValueType valueType() const { return m_valueType; }
-    std::variant<int, QString> value() const { return m_value; }
+    std::variant<int, float, QString> value() const { return m_value; }// this too or not?
 };
 
 void initSettings(std::vector<std::shared_ptr<Setting>> *settings);
 QString getStr(QString name);
 int getInt(QString name);
 int getBool(QString name);
+float getFloat(QString name);
 void setInt(QString name, int value);
 void setStr(QString name, QString value);
 int parseBool(const char *str, int defaultValue);
 void setBool(QString name, int value);
 void setBoolfromString(QString name, QString value);
+void setFloat(QString name, float value);

@@ -39,13 +39,61 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
 
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/leftHanded",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/pointerSpeed",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/accelProfile",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "Flat"));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tap",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tapButtonMap",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "lrm"));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tapAndDrag",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/dragLock",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/threeFingerDrag",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/middleEmulation",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/disableWhileTyping",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/clickMethod",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "none"));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/scrollMethod",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "twoFinger"));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/sendEventsMode",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "yes"));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/scrollFactor",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f));
+
     // Language
     settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
+
                                                   LAB_VALUE_TYPE_STRING, "us"));
 }
 
 Setting::Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
-                 std::variant<int, QString> defaultValue)
+                 std::variant<int, float, QString> defaultValue)
     : m_name(name), m_fileType(fileType), m_valueType(valueType), m_value(defaultValue)
 {
     m_valueOrigin = LAB_VALUE_ORIGIN_DEFAULT;
@@ -53,35 +101,44 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     // Use values from rc.xml if different from default
     if (m_fileType == LAB_FILE_TYPE_RCXML) {
         switch (m_valueType) {
-        case LAB_VALUE_TYPE_STRING: {
-            QString value = QString(xml_get(m_name.toStdString().c_str()));
-            if (!value.isNull() && (value != std::get<QString>(m_value))) {
-                m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
-                m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value.toStdString());
+            case LAB_VALUE_TYPE_INT: {
+                int value = xml_get_int(m_name.toStdString().c_str());
+                if (value != std::get<int>(m_value)) {
+                    m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                    m_value = value;
+                    info("[user-override] {}: {}", m_name.toStdString(), value);
+                }
+                break;
             }
-            break;
-        }
-        case LAB_VALUE_TYPE_INT: {
-            int value = xml_get_int(m_name.toStdString().c_str());
-            if (value != std::get<int>(m_value)) {
-                m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
-                m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+            case LAB_VALUE_TYPE_FLOAT: {
+                float value = xml_get_float(m_name.toStdString().c_str());
+                if (value != std::get<float>(m_value)) {
+                    m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                    m_value = value;
+                    info("[user-override] {}: {}", m_name.toStdString(), value);
+                }
+                break;
             }
-            break;
-        }
-        case LAB_VALUE_TYPE_BOOL: {
-            int value = xml_get_bool_text(m_name.toStdString().c_str());
-            if (value != -1 && value != std::get<int>(m_value)) {
-                m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
-                m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+            case LAB_VALUE_TYPE_BOOL: {
+                int value = xml_get_bool_text(m_name.toStdString().c_str());
+                if (value != std::get<int>(m_value)) {
+                    m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                    m_value = value;
+                    info("[user-override] {}: {}", m_name.toStdString(), value);
+                }
+                break;
             }
-            break;
-        }
-        default:
-            break;
+            case LAB_VALUE_TYPE_STRING: {
+                const char *value = xml_get(m_name.toStdString().c_str());
+                if (value && QString(value) != std::get<QString>(m_value)) {
+                    m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                    m_value = QString(value);
+                    info("[user-override] {}: {}", m_name.toStdString(), value);
+                }
+                break;
+            }
+            default:
+                break;
         }
     }
 
@@ -121,7 +178,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     }
 }
 
-void Setting::setValue(std::variant<int, QString> value)
+void Setting::setValue(std::variant<int, float, QString> value)
 {
     if (value != m_value) {
         m_valueOrigin = LAB_VALUE_ORIGIN_CHANGED_IN_THIS_SESSION;
@@ -165,6 +222,19 @@ int getInt(QString name)
     return std::get<int>(setting->value());
 }
 
+float getFloat(QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return -65535;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
+        qDebug() << "getFloat(): not valid float setting" << name;
+    }
+    return std::get<float>(setting->value());
+}
+
 /* Return -1 for error, which works will with setCurrentIndex() */
 int getBool(QString name)
 {
@@ -190,6 +260,24 @@ void setInt(QString name, int value)
         qDebug() << "setInt(): not valid int setting" << name << value;
     }
     if (value != std::get<int>(setting->value())) {
+        info("'{} has changed to '{}'", name.toStdString(), value);
+        xpath_add_node(name.toStdString().c_str());
+        xml_set_num(name.toStdString().c_str(), value);
+        setting->setValue(value);
+    }
+}
+
+void setFloat(QString name, float value)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        qDebug() << "warning: no settings with name" << name;
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
+        qDebug() << "setFloat(): not valid float setting" << name << value;
+    }
+    if (value != std::get<float>(setting->value())) {
         info("'{} has changed to '{}'", name.toStdString(), value);
         xpath_add_node(name.toStdString().c_str());
         xml_set_num(name.toStdString().c_str(), value);

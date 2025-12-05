@@ -193,7 +193,7 @@ void xml_set(const char *nodename, const char *value)
 void xml_set_num(const char *nodename, double value)
 {
     char buf[64];
-    snprintf(buf, sizeof(buf), "%.0f", value);
+    snprintf(buf, sizeof(buf), "%g", value);
     ctx.nodename = nodename;
     ctx.value = buf;
     ctx.mode = XML_MODE_SETTING;
@@ -217,6 +217,17 @@ int xml_get_int(const char *nodename)
     xml_tree_walk(xmlDocGetRootElement(ctx.doc));
     return ctx.value ? atoi(ctx.value) : 0;
 }
+
+float xml_get_float(const char *nodename)
+{
+    ctx.value = NULL;
+    ctx.nodename = nodename;
+    ctx.mode = XML_MODE_GETTING;
+    xml_tree_walk(xmlDocGetRootElement(ctx.doc));
+
+    return ctx.value ? atof(ctx.value) : 0.0f;
+}
+
 
 int xml_get_bool_text(const char *nodename)
 {
