@@ -11,6 +11,7 @@ void xml_set_num(const char *nodename, double value);
 const char *xml_get(const char *nodename);
 int xml_get_int(const char *nodename);
 int xml_get_bool_text(const char *nodename);
+float xml_get_float(const char *nodename);
 
 /**
  * xpath_get_content() - Get content of node specified by xpath
