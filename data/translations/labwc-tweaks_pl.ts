@@ -6,22 +6,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatyczne</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="24"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaskada</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursor</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../../src/language.cpp" line="28"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz układ, aby dodać...</translation>
     </message>
 </context>
 <context>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../../src/main.cpp" line="52"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd ładowania </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="54"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom labwc-tweaks z terminala, aby wyświetlić komunikaty o błędach</translation>
     </message>
 </context>
 <context>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="29"/>
         <source>Labwc Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="39"/>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="70"/>
         <source>Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw ikon</translation>
     </message>
 </context>
 <context>
