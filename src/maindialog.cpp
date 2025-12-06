@@ -29,15 +29,15 @@
 
 MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
 {
-    //resize(640, 480);
+    resize(640, 480);
 
     QVBoxLayout *verticalLayout = new QVBoxLayout(this);
-    //verticalLayout->setContentsMargins(6, 6, 6, 6);
+    verticalLayout->setContentsMargins(6, 6, 6, 6);
 
     QWidget *widget = new QWidget(this);
 
     QHBoxLayout *horizontalLayout = new QHBoxLayout(widget);
-    //horizontalLayout->setContentsMargins(6, 6, 6, 6);
+    horizontalLayout->setContentsMargins(6, 6, 6, 6);
 
     // List Widget on the Left
     QListWidget *list = new QListWidget(widget);
@@ -59,22 +59,13 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     item3->setText(tr("Language & Region"));
 
     QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
-    //sizePolicy.setHorizontalStretch(0);
-    //sizePolicy.setVerticalStretch(0);
-    //sizePolicy.setHeightForWidth(list->sizePolicy().hasHeightForWidth());
+    sizePolicy.setHorizontalStretch(0);
+    sizePolicy.setVerticalStretch(0);
+    sizePolicy.setHeightForWidth(list->sizePolicy().hasHeightForWidth());
     list->setSizePolicy(sizePolicy);
     list->setSizeAdjustPolicy(QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents);
-    //list->setCurrentRow(0);
-    //list->setFixedWidth(list->sizeHintForColumn(0) + 2 * list->frameWidth());
-
-    list->setViewMode(QListView::IconMode);
-    list->setMovement(QListView::Static);
-    list->setResizeMode(QListView::Adjust);
-    list->setWrapping(true);
-    list->setIconSize(QSize(48, 48));
-    list->setWordWrap(true);             // prevents text from wrapping inside
-    list->setUniformItemSizes(true);      // keeps all items same layout
-
+    list->setCurrentRow(0);
+    list->setFixedWidth(list->sizeHintForColumn(0) + 2 * list->frameWidth());
 
     horizontalLayout->addWidget(list);
 

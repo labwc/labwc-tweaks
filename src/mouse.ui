@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>500</height>
+    <width>506</width>
+    <height>653</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0,1">
-   <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>Cursor Theme</string>
@@ -21,7 +21,7 @@
    <item row="0" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QComboBox" name="cursorTheme"/>
    </item>
-   <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string>Cursor Size</string>
@@ -31,7 +31,7 @@
    <item row="1" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QSpinBox" name="cursorSize"/>
    </item>
-   <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_5">
      <property name="text">
       <string>Natural Scroll</string>
@@ -48,7 +48,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_leftHanded">
      <property name="text">
       <string>Left Handed</string>
@@ -65,7 +65,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="4" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_pointerSpeed">
      <property name="text">
       <string>Pointer Speed</string>
@@ -88,7 +88,7 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="5" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_accelProfile">
      <property name="text">
       <string>Acceleration Profile</string>
@@ -109,7 +109,7 @@
      </item>
     </widget>
    </item>
-   <item row="6" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="6" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_sendEventsMode">
      <property name="text">
       <string>Touchpad</string>
@@ -135,7 +135,7 @@
      </item>
     </widget>
    </item>
-   <item row="7" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="7" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_tap">
      <property name="text">
       <string>Tap to Click</string>
@@ -155,7 +155,7 @@
      </property>
     </widget>
    </item>
-   <item row="8" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="8" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_tapButtonMap">
      <property name="text">
       <string>Tap Button Map</string>
@@ -176,7 +176,7 @@
      </item>
     </widget>
    </item>
-   <item row="9" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="9" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_tapAndDrag">
      <property name="text">
       <string>Tap and Drag</string>
@@ -223,7 +223,7 @@
      </property>
     </widget>
    </item>
-   <item row="10" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="10" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_threeFingerDrag">
      <property name="text">
       <string>Three Finger Drag</string>
@@ -240,7 +240,7 @@
      </property>
     </widget>
    </item>
-   <item row="11" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="11" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_middleEmulation">
      <property name="text">
       <string>Middle Button Emulation</string>
@@ -257,7 +257,7 @@
      </property>
     </widget>
    </item>
-   <item row="12" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="12" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_disableWhileTyping">
      <property name="text">
       <string>Disable While Typing</string>
@@ -274,7 +274,7 @@
      </property>
     </widget>
    </item>
-   <item row="13" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="13" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_clickMethod">
      <property name="text">
       <string>Click Method</string>
@@ -300,7 +300,7 @@
      </item>
     </widget>
    </item>
-   <item row="14" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="14" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_scrollMethod">
      <property name="text">
       <string>Scroll Method</string>
@@ -331,7 +331,7 @@
      </item>
     </widget>
    </item>
-   <item row="15" column="0" alignment="Qt::AlignmentFlag::AlignRight">
+   <item row="15" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_scrollFactor">
      <property name="text">
       <string>Scroll Factor</string>

@@ -101,6 +101,15 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     // Use values from rc.xml if different from default
     if (m_fileType == LAB_FILE_TYPE_RCXML) {
         switch (m_valueType) {
+           case LAB_VALUE_TYPE_STRING: {
+                const char *value = xml_get(m_name.toStdString().c_str());
+                if (value && QString(value) != std::get<QString>(m_value)) {
+                    m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
+                    m_value = QString(value);
+                    info("[user-override] {}: {}", m_name.toStdString(), value);
+                }
+                break;
+            }
             case LAB_VALUE_TYPE_INT: {
                 int value = xml_get_int(m_name.toStdString().c_str());
                 if (value != std::get<int>(m_value)) {
@@ -124,15 +133,6 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
                 if (value != std::get<int>(m_value)) {
                     m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                     m_value = value;
-                    info("[user-override] {}: {}", m_name.toStdString(), value);
-                }
-                break;
-            }
-            case LAB_VALUE_TYPE_STRING: {
-                const char *value = xml_get(m_name.toStdString().c_str());
-                if (value && QString(value) != std::get<QString>(m_value)) {
-                    m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
-                    m_value = QString(value);
                     info("[user-override] {}: {}", m_name.toStdString(), value);
                 }
                 break;
