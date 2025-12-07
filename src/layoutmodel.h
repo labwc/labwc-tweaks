@@ -1,21 +1,7 @@
 #pragma once
 #include <QAbstractListModel>
 #include <QString>
-
-class Layout
-{
-public:
-    Layout(QString code, QString desc);
-    ~Layout();
-
-private:
-    QString m_code;
-    QString m_desc;
-
-public:
-    QString code() const { return m_code; }
-    QString desc() const { return m_desc; }
-};
+#include "pair.h"
 
 class LayoutModel : public QAbstractListModel
 {
@@ -33,5 +19,5 @@ public:
 
 private:
     void update(void);
-    QVector<QSharedPointer<Layout>> m_layouts;
+    QVector<QSharedPointer<Pair>> m_layouts;
 };
