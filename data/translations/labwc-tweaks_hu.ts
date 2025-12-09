@@ -6,22 +6,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatikus</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="24"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>Lépcsőzetes</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Közép</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Mutató</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../../src/language.cpp" line="28"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Válassz hozzáadandó elrendezést...</translation>
     </message>
 </context>
 <context>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../../src/main.cpp" line="52"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Betöltési hiba </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="54"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Futtasd a labwc-tweaks parancsot a terminálból a hibaüzenetek megtekintéséhez</translation>
     </message>
 </context>
 <context>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="29"/>
         <source>Labwc Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Labwc-téma</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="39"/>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="70"/>
         <source>Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikontéma</translation>
     </message>
 </context>
 <context>
