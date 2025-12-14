@@ -13,6 +13,7 @@
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
+#include "macros.h"
 #include "parse-bool.h"
 #include "xml.h"
 
@@ -216,7 +217,7 @@ int xml_get_int(const char *nodename)
     ctx.nodename = nodename;
     ctx.mode = XML_MODE_GETTING;
     xml_tree_walk(xmlDocGetRootElement(ctx.doc));
-    return ctx.value ? atoi(ctx.value) : 0;
+    return ctx.value ? atoi(ctx.value) : LAB_INVALID;
 }
 
 float xml_get_float(const char *nodename)
@@ -226,9 +227,8 @@ float xml_get_float(const char *nodename)
     ctx.mode = XML_MODE_GETTING;
     xml_tree_walk(xmlDocGetRootElement(ctx.doc));
 
-    return ctx.value ? atof(ctx.value) : 0.0f;
+    return ctx.value ? atof(ctx.value) : LAB_INVALID;
 }
-
 
 int xml_get_bool_text(const char *nodename)
 {
