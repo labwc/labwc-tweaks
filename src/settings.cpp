@@ -3,6 +3,7 @@
 #include "log.h"
 #include "settings.h"
 #include "environment.h"
+#include "macros.h"
 #include "xml.h"
 
 //~ We try not to deal with raw pointers, but keeping *settings in this
@@ -93,6 +94,12 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
                                                   LAB_VALUE_TYPE_STRING, "us"));
 }
 
+bool
+isValidBool(int value)
+{
+    return value != -1;
+}
+
 Setting::Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
                  std::variant<int, float, QString> defaultValue)
     : m_name(name), m_fileType(fileType), m_valueType(valueType), m_value(defaultValue)
@@ -113,7 +120,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_INT: {
             int value = xml_get_int(m_name.toStdString().c_str());
-            if (value != std::get<int>(m_value)) {
+            if (value != LAB_INVALID && value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);
@@ -122,7 +129,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_FLOAT: {
             float value = xml_get_float(m_name.toStdString().c_str());
-            if (value != std::get<float>(m_value)) {
+            if (value != LAB_INVALID && value != value != std::get<float>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);
@@ -131,7 +138,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_BOOL: {
             int value = xml_get_bool_text(m_name.toStdString().c_str());
-            if (value != std::get<int>(m_value)) {
+            if (isValidBool(value) && value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("[user-override] {}: {}", m_name.toStdString(), value);

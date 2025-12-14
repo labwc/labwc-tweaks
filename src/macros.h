@@ -1,5 +1,8 @@
 #ifndef MACROS_H
 #define MACROS_H
+#include <climits>
+
+#define LAB_INVALID SHRT_MAX
 
 #define TEXT(widget) widget->currentText().toLatin1().data()
 
