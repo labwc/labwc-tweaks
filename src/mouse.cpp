@@ -39,8 +39,8 @@ void Mouse::activate()
     ui->accelProfile->clear(); // remove 2 empty values created for some reason
 
     QVector<QSharedPointer<Pair>> profiles;
-    profiles.append(QSharedPointer<Pair>(new Pair("flat", tr("flat"))));
-    profiles.append(QSharedPointer<Pair>(new Pair("adaptive", tr("adaptive"))));
+    profiles.append(QSharedPointer<Pair>(new Pair("flat", tr("Flat"))));
+    profiles.append(QSharedPointer<Pair>(new Pair("adaptive", tr("Adaptive"))));
 
     QString current_profile = getStr("/labwc_config/libinput/device/accelProfile");
     int profile_index = -1;
@@ -98,8 +98,8 @@ void Mouse::activate()
     ui->clickMethod->clear();
 
     QVector<QSharedPointer<Pair>> clickmethods;
-    clickmethods.append(QSharedPointer<Pair>(new Pair("none", tr("none"))));
-    clickmethods.append(QSharedPointer<Pair>(new Pair("buttonAreas", tr("Button area"))));
+    clickmethods.append(QSharedPointer<Pair>(new Pair("none", tr("None"))));
+    clickmethods.append(QSharedPointer<Pair>(new Pair("buttonAreas", tr("Button Area"))));
     clickmethods.append(QSharedPointer<Pair>(new Pair("clickFinger", tr("Clickfinger"))));
 
     QString current_clickmethod = getStr("/labwc_config/libinput/device/clickMethod");
@@ -135,13 +135,10 @@ void Mouse::activate()
     /* Send Events Mode */
     ui->sendEventsMode->clear();
 
+    // Note: Cannot support 'No' until the device="" option is supported because otherwise all
+    // devices (including keyboard) will be disabled which is unlikely to be the desired outcome.
     QVector<QSharedPointer<Pair>> sendeventsmodes;
-    sendeventsmodes.append(QSharedPointer<Pair>(new Pair("enabled", tr("Enabled"))));
-    // sendeventsmodes.append(QSharedPointer<Pair>(new Pair("no", tr("no")))); will disable also
-    // keyboard
-    //  we cannot write "<touchpad>no" here as we get
-    //  <sendEventsMode>&lt;touchpad&gt;disabledOnExternalMouse</sendEventsMode> implement write to
-    //  <libinput><category=touchpad> ?
+    sendeventsmodes.append(QSharedPointer<Pair>(new Pair("yes", tr("Enabled"))));
     sendeventsmodes.append(QSharedPointer<Pair>(
             new Pair("disabledOnExternalMouse", tr("Disable with external mouse"))));
 

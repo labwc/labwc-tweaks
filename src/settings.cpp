@@ -37,6 +37,15 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
     settings->push_back(std::make_shared<Setting>("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT,
                                                   LAB_VALUE_TYPE_INT, 24));
 
+    // We're picking the "usual" default described the libinput documents, although recognise that
+    // some devices do not always use these. We think that this approach makes for fewer
+    // user-surprises.
+    //
+    // The exception is tap-to-click, which labwc enables be default because the original author
+    // rather liked that behaviour.
+    //
+    // https://wayland.freedesktop.org/libinput/doc/latest/configuration.html
+
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
 
@@ -48,21 +57,24 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
 
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/accelProfile",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "Flat"));
+                                                  "adaptive"));
 
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tap",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
 
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tapButtonMap",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
                                                   "lrm"));
 
+    // Most devices have tap-and-drag enabled by default
+    // https://wayland.freedesktop.org/libinput/doc/latest/tapping.html#tapndrag
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tapAndDrag",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
 
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/dragLock",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
 
+    // https://wayland.freedesktop.org/libinput/doc/latest/drag-3fg.html#drag-3fg
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/threeFingerDrag",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
 
@@ -71,7 +83,7 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
 
     settings->push_back(
             std::make_shared<Setting>("/labwc_config/libinput/device/disableWhileTyping",
-                                      LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+                                      LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
 
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/clickMethod",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
@@ -86,11 +98,10 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
                                                   "yes"));
 
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/scrollFactor",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f));
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 1.0f));
 
     // Language
     settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
-
                                                   LAB_VALUE_TYPE_STRING, "us"));
 }
 
