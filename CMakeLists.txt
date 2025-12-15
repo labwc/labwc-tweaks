@@ -42,6 +42,7 @@ set(PROJECT_SOURCES
     src/layoutmodel.cpp src/layoutmodel.h
 
     src/environment.cpp src/environment.h
+    src/setting.cpp src/setting.h
     src/settings.cpp src/settings.h
     src/xml.cpp src/xml.h
     src/find-themes.cpp src/find-themes.h
