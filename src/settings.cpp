@@ -233,7 +233,7 @@ int getInt(QString name)
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
         qDebug() << "warning: no settings with name" << name;
-        return -65535;
+        return LAB_INVALID;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_INT) {
         qDebug() << "getInt(): not valid int setting" << name;
@@ -246,7 +246,7 @@ float getFloat(QString name)
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
         qDebug() << "warning: no settings with name" << name;
-        return -65535;
+        return LAB_INVALID;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
         qDebug() << "getFloat(): not valid float setting" << name;
