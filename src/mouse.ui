@@ -73,18 +73,18 @@
     </widget>
    </item>
    <item row="4" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QDoubleSpinBox" name="pointerSpeed">
-     <property name="decimals">
-      <number>2</number>
-     </property>
+    <widget class="QSlider" name="pointerSpeed">
      <property name="minimum">
-      <double>-1.000000000000000</double>
+      <number>-10</number>
      </property>
      <property name="maximum">
-      <double>1.000000000000000</double>
+      <number>10</number>
      </property>
      <property name="singleStep">
-      <double>0.100000000000000</double>
+      <number>1</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
     </widget>
    </item>
