@@ -162,7 +162,7 @@ void Mouse::onApply()
     /* ~/.config/labwc/rc.xml */
     setBool("/labwc_config/libinput/device/naturalScroll", ui->naturalScroll->isChecked());
     setBool("/labwc_config/libinput/device/leftHanded", ui->leftHanded->isChecked());
-    setFloat("/labwc_config/libinput/device/pointerSpeed", ui->pointerSpeed->value());
+    setFloat("/labwc_config/libinput/device/pointerSpeed", ui->pointerSpeed->value() / 10.0);
     setStr("/labwc_config/libinput/device/accelProfile", DATA(ui->accelProfile));
     setBool("/labwc_config/libinput/device/tap", ui->tap->isChecked());
     setStr("/labwc_config/libinput/device/tapButtonMap", DATA(ui->tapButtonMap));
