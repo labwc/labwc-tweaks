@@ -6,22 +6,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="24"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλιμάκωση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Κεντράρισμα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Δρομέας</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../../src/language.cpp" line="28"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή της διάταξης για προσθήκη...</translation>
     </message>
 </context>
 <context>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../../src/main.cpp" line="52"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα φόρτωσης </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="54"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκτελέστε το labwc-tweaks από ένα τερματικό για να δείτε τα μηνύματα σφάλματος</translation>
     </message>
 </context>
 <context>
@@ -73,7 +73,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="29"/>
         <source>Labwc Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="39"/>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="70"/>
         <source>Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα εικονιδίων</translation>
     </message>
 </context>
 <context>
