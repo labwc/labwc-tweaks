@@ -26,11 +26,12 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
     settings->push_back(std::make_shared<Setting>("/labwc_config/theme/icon", LAB_FILE_TYPE_RCXML,
                                                   LAB_VALUE_TYPE_STRING, ""));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/keepBorder",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
     settings->push_back(std::make_shared<Setting>("/labwc_config/theme/maximizedDecoration",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
                                                   "titlebar"));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/core/decoration",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "Server"));
 
     // Behaviour
     settings->push_back(std::make_shared<Setting>("/labwc_config/placement/policy",
