@@ -43,28 +43,41 @@ void Appearance::activate()
     ui->iconTheme->addItems(themes);
     ui->iconTheme->setCurrentIndex(themes.indexOf(getStr("/labwc_config/theme/icon")));
 
-    /* Keep Border */
-    ui->keepBorder->setChecked(getBool("/labwc_config/theme/keepBorder"));
-    ui->keepBorder->setToolTip(tr("Even when disabling server side decorations via ToggleDecorations,\nkeep a small border (and resize area) around the window"));
-
-    /* Mmaximized Decoration */
-    ui->maximizedDecoration->clear(); // remove 2 empty values created for some reason
-    ui->maximizedDecoration->setToolTip(tr("Specify how server side decorations are shown for maximized windows"));
+    /* Decoration */
+    ui->decoration->clear(); // remove 2 empty values created for some reason
+    ui->decoration->setToolTip(tr("Specify decorations for xdg-shell windows"));
 
     QVector<QSharedPointer<Pair>> decorations;
-    decorations.append(QSharedPointer<Pair>(new Pair("titlebar", tr("Titlebar"))));
-    decorations.append(QSharedPointer<Pair>(new Pair("none", tr("None"))));
+    decorations.append(QSharedPointer<Pair>(new Pair("server", tr("Server"))));
+    decorations.append(QSharedPointer<Pair>(new Pair("client", tr("Client"))));
 
-    QString current_decoration = getStr("/labwc_config/theme/maximizedDecoration");
+    QString current_decoration = getStr("/labwc_config/core/decoration");
     int decoration_index = -1;
     foreach (auto decoration, decorations) {
-        ui->maximizedDecoration->addItem(decoration.get()->description(), QVariant(decoration.get()->value()));
+        ui->decoration->addItem(decoration.get()->description(), QVariant(decoration.get()->value()));
         ++decoration_index;
         if (current_decoration == decoration.get()->value()) {
-            ui->maximizedDecoration->setCurrentIndex(decoration_index);
+            ui->decoration->setCurrentIndex(decoration_index);
         }
     }
 
+    /* Maximized Decoration */
+    ui->maximizedDecoration->clear(); // remove 2 empty values created for some reason
+    ui->maximizedDecoration->setToolTip(tr("Specify if server side decorations are shown for maximized windows."));
+
+    QVector<QSharedPointer<Pair>> maximized_decorations;
+    maximized_decorations.append(QSharedPointer<Pair>(new Pair("titlebar", tr("Titlebar"))));
+    maximized_decorations.append(QSharedPointer<Pair>(new Pair("none", tr("None"))));
+
+    QString current_maximized_decoration = getStr("/labwc_config/theme/maximizedDecoration");
+    int maximized_decoration_index = -1;
+    foreach (auto maximized_decoration, maximized_decorations) {
+        ui->maximizedDecoration->addItem(maximized_decoration.get()->description(), QVariant(maximized_decoration.get()->value()));
+        ++maximized_decoration_index;
+        if (current_maximized_decoration == maximized_decoration.get()->value()) {
+            ui->maximizedDecoration->setCurrentIndex(maximized_decoration_index);
+        }
+    }
 }
 
 void Appearance::onApply()
@@ -74,6 +87,6 @@ void Appearance::onApply()
     setBool("/labwc_config/theme/dropShadows", ui->dropShadows->isChecked());
     setBool("/labwc_config/theme/dropShadowsOnTiled", ui->dropShadowsOnTiled->isChecked());
     setStr("/labwc_config/theme/icon", TEXT(ui->iconTheme));
-    setBool("/labwc_config/theme/keepBorder", ui->keepBorder->isChecked());
+    setStr("/labwc_config/core/decoration", DATA(ui->decoration));
     setStr("/labwc_config/theme/maximizedDecoration", DATA(ui->maximizedDecoration));
 }
