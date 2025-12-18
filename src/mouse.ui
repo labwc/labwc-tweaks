@@ -166,12 +166,12 @@
     <widget class="QComboBox" name="tapButtonMap">
      <item>
       <property name="text">
-       <string>lrm</string>
+       <string>left-right-middle</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>lmr</string>
+       <string>left-middle-right</string>
       </property>
      </item>
     </widget>

@@ -59,8 +59,8 @@ void Mouse::activate()
     ui->tapButtonMap->clear(); // remove 2 empty values created for some reason
 
     QVector<QSharedPointer<Pair>> maps;
-    maps.append(QSharedPointer<Pair>(new Pair("lrm", tr("lrm"))));
-    maps.append(QSharedPointer<Pair>(new Pair("lmr", tr("lmr"))));
+    maps.append(QSharedPointer<Pair>(new Pair("lrm", tr("left-right-middle"))));
+    maps.append(QSharedPointer<Pair>(new Pair("lmr", tr("left-middle-right"))));
 
     QString current_map = getStr("/labwc_config/libinput/device/tapButtonMap");
     int map_index = -1;
