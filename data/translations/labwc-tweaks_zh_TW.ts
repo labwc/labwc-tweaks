@@ -60,58 +60,58 @@
     <message>
         <location filename="../../src/mouse.cpp" line="42"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>平面</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="43"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>自適應</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="62"/>
         <source>lrm</source>
-        <translation type="unfinished"></translation>
+        <translation>lrm</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="63"/>
         <source>lmr</source>
-        <translation type="unfinished"></translation>
+        <translation>lmr</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="101"/>
         <location filename="../../src/mouse.cpp" line="122"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="102"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>按鈕區域</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="103"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>點按手指</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="120"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>兩手指</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="121"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>邊緣</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="141"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>已經啟用</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="143"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>停用外接滑鼠使用</translation>
     </message>
 </context>
 <context>
@@ -196,138 +196,138 @@
     <message>
         <location filename="../../src/mouse.ui" line="54"/>
         <source>Left Handed</source>
-        <translation type="unfinished"></translation>
+        <translation>左撇子</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="71"/>
         <source>Pointer Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>指標速度</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="94"/>
         <source>Acceleration Profile</source>
-        <translation type="unfinished"></translation>
+        <translation>加速調設</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="102"/>
         <source>flat</source>
-        <translation type="unfinished"></translation>
+        <translation>平面</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="107"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>自適應</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="115"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>觸控板</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="123"/>
         <source>enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>已經啟用</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="128"/>
         <source>disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>已經停用</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="133"/>
         <source>disabled-on-external-mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>已經停用-在-外接-滑鼠</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="141"/>
         <source>Tap to Click</source>
-        <translation type="unfinished"></translation>
+        <translation>輕觸點按</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="161"/>
         <source>Tap Button Map</source>
-        <translation type="unfinished"></translation>
+        <translation>輕觸按鈕地圖</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="169"/>
         <source>lrm</source>
-        <translation type="unfinished"></translation>
+        <translation>lrm</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="174"/>
         <source>lmr</source>
-        <translation type="unfinished"></translation>
+        <translation>lmr</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="182"/>
         <source>Tap and Drag</source>
-        <translation type="unfinished"></translation>
+        <translation>輕觸並拖放</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="212"/>
         <source>Drag Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>拖放鎖定</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="229"/>
         <source>Three Finger Drag</source>
-        <translation type="unfinished"></translation>
+        <translation>三手指拖放</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="246"/>
         <source>Middle Button Emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>中鍵按鈕模擬</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="263"/>
         <source>Disable While Typing</source>
-        <translation type="unfinished"></translation>
+        <translation>在打字時停用</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Click Method</source>
-        <translation type="unfinished"></translation>
+        <translation>點按方法</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="288"/>
         <location filename="../../src/mouse.ui" line="329"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="293"/>
         <source>buttonareas</source>
-        <translation type="unfinished"></translation>
+        <translation>按鈕區域</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="298"/>
         <source>clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>點按手指</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="306"/>
         <source>Scroll Method</source>
-        <translation type="unfinished"></translation>
+        <translation>捲動方法</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="314"/>
         <source>twofinger</source>
-        <translation type="unfinished"></translation>
+        <translation>兩手指</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="319"/>
         <source>edge</source>
-        <translation type="unfinished"></translation>
+        <translation>邊緣</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="324"/>
         <source>onbuttondown</source>
-        <translation type="unfinished"></translation>
+        <translation>按下按鈕</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="337"/>
         <source>Scroll Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>捲動係數</translation>
     </message>
 </context>
 </TS>

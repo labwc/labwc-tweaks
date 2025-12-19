@@ -60,58 +60,58 @@
     <message>
         <location filename="../../src/mouse.cpp" line="42"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Piatto</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="43"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Adattivo</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="62"/>
         <source>lrm</source>
-        <translation type="unfinished"></translation>
+        <translation>lrm</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="63"/>
         <source>lmr</source>
-        <translation type="unfinished"></translation>
+        <translation>lmr</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="101"/>
         <location filename="../../src/mouse.cpp" line="122"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuno</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="102"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Area pulsanti</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="103"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Click dito</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="120"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Due dita</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="121"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Bordo</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="141"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilitato</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="143"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Disabilitato con mouse esterno</translation>
     </message>
 </context>
 <context>
@@ -196,42 +196,42 @@
     <message>
         <location filename="../../src/mouse.ui" line="54"/>
         <source>Left Handed</source>
-        <translation type="unfinished"></translation>
+        <translation>Mancino</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="71"/>
         <source>Pointer Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Velocità cursore</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="94"/>
         <source>Acceleration Profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profilo di accelerazione</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="102"/>
         <source>flat</source>
-        <translation type="unfinished"></translation>
+        <translation>piatto</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="107"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>adattivo</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="115"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Touchpad</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="123"/>
         <source>enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>abilitato</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="128"/>
         <source>disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>disabilitato</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="133"/>
@@ -241,58 +241,58 @@
     <message>
         <location filename="../../src/mouse.ui" line="141"/>
         <source>Tap to Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocco per cliccare</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="161"/>
         <source>Tap Button Map</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mappatura pulsanti di tocco</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="169"/>
         <source>lrm</source>
-        <translation type="unfinished"></translation>
+        <translation>lrm</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="174"/>
         <source>lmr</source>
-        <translation type="unfinished"></translation>
+        <translation>lmr</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="182"/>
         <source>Tap and Drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocco a trascina</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="212"/>
         <source>Drag Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Blocco trascinamento</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="229"/>
         <source>Three Finger Drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Trascinamento con tre dita</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="246"/>
         <source>Middle Button Emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulazione pulsante centrale</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="263"/>
         <source>Disable While Typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Disabilita mentre scrivi</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Click Method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metodo di click</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="288"/>
         <location filename="../../src/mouse.ui" line="329"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>nessuno</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="293"/>
@@ -307,7 +307,7 @@
     <message>
         <location filename="../../src/mouse.ui" line="306"/>
         <source>Scroll Method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metodo di scroll</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="314"/>
