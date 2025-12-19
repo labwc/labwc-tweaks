@@ -6,22 +6,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattinen</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="24"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaskadi</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitetty</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursorin alle</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../../src/language.cpp" line="28"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse lisättävä asettelu...</translation>
     </message>
 </context>
 <context>
@@ -60,12 +60,12 @@
     <message>
         <location filename="../../src/mouse.cpp" line="42"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Lineaarinen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="43"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Mukautuva</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="62"/>
@@ -81,37 +81,37 @@
         <location filename="../../src/mouse.cpp" line="101"/>
         <location filename="../../src/mouse.cpp" line="122"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei mitään</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="102"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Painikealue</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="103"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vapaa</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="120"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaksisorminen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="121"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Reuna</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="141"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytössä</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="143"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista käytöstä, kun ulkoinen hiiri kytketty</translation>
     </message>
 </context>
 <context>
@@ -119,12 +119,12 @@
     <message>
         <location filename="../../src/main.cpp" line="52"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe ladattaessa </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="54"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Suorita labwc-tweaks päätteessä nähdäksesi virheilmoitukset</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="29"/>
         <source>Labwc Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Labwc teema</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="39"/>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../../src/appearance.ui" line="70"/>
         <source>Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvaketeema</translation>
     </message>
 </context>
 <context>
@@ -196,42 +196,42 @@
     <message>
         <location filename="../../src/mouse.ui" line="54"/>
         <source>Left Handed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasenkätinen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="71"/>
         <source>Pointer Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Osoittimen nopeus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="94"/>
         <source>Acceleration Profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiihdytysprofiili</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="102"/>
         <source>flat</source>
-        <translation type="unfinished"></translation>
+        <translation>lineaarinen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="107"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>mukautuva</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="115"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Kosketuslevy</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="123"/>
         <source>enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>käytössä</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="128"/>
         <source>disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>pois käytöstä</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="133"/>
@@ -241,12 +241,12 @@
     <message>
         <location filename="../../src/mouse.ui" line="141"/>
         <source>Tap to Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Napauttamalla klikkaus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="161"/>
         <source>Tap Button Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Napautustoimintojen järjestys</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="169"/>
@@ -261,73 +261,73 @@
     <message>
         <location filename="../../src/mouse.ui" line="182"/>
         <source>Tap and Drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Napauta ja raahaa</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="212"/>
         <source>Drag Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Lukitse raahaus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="229"/>
         <source>Three Finger Drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolmisorminen raahaus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="246"/>
         <source>Middle Button Emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskipainikkeen emulointi</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="263"/>
         <source>Disable While Typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista käytöstä kirjoitettaessa</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Click Method</source>
-        <translation type="unfinished"></translation>
+        <translation>Napautustapa</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="288"/>
         <location filename="../../src/mouse.ui" line="329"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>ei käytössä</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="293"/>
         <source>buttonareas</source>
-        <translation type="unfinished"></translation>
+        <translation>näppäinalueet</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="298"/>
         <source>clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">vapaa</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="306"/>
         <source>Scroll Method</source>
-        <translation type="unfinished"></translation>
+        <translation>Vieritystapa</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="314"/>
         <source>twofinger</source>
-        <translation type="unfinished"></translation>
+        <translation>kaksisorminen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="319"/>
         <source>edge</source>
-        <translation type="unfinished"></translation>
+        <translation>reunasta</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="324"/>
         <source>onbuttondown</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">painikepainettuna</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="337"/>
         <source>Scroll Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Vierityskerroin</translation>
     </message>
 </context>
 </TS>
