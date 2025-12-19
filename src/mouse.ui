@@ -164,16 +164,6 @@
    </item>
    <item row="8" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QComboBox" name="tapButtonMap">
-     <item>
-      <property name="text">
-       <string>left-right-middle</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>left-middle-right</string>
-      </property>
-     </item>
     </widget>
    </item>
    <item row="9" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
@@ -283,21 +273,6 @@
    </item>
    <item row="13" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QComboBox" name="clickMethod">
-     <item>
-      <property name="text">
-       <string>none</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>buttonareas</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>clickfinger</string>
-      </property>
-     </item>
     </widget>
    </item>
    <item row="14" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
@@ -309,26 +284,6 @@
    </item>
    <item row="14" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QComboBox" name="scrollMethod">
-     <item>
-      <property name="text">
-       <string>twofinger</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>edge</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>onbuttondown</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>none</string>
-      </property>
-     </item>
     </widget>
    </item>
    <item row="15" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
