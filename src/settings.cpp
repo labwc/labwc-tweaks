@@ -36,7 +36,51 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
     // Behaviour
     settings->push_back(std::make_shared<Setting>("/labwc_config/placement/policy",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "Cascade"));
+                                                  "cascade"));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/focus/followMouse",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/focus/followMouseRequiresMovement",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/focus/raiseOnFocus",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/core/gap", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/snapping/cornerRange", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 50));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/snapping/topMaximize",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/snapping/notifyClient",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "always"));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/screenEdgeStrength", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 20));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/windowEdgeStrength", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 50));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/unSnapTreshold", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 20));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/unMaximizeTreshold", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 150));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/drawContents",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/keepBorder",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/cornerRange", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 8)); // Default is half the titlebar height
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/resizeMinimumArea", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 8));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/popupShow",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
+                                                  "Never"));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/width", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 400));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/height", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 400));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/initScale", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_FLOAT, 2.0f));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/increment", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_FLOAT, 0.2f));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/useFilter",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
 
     // Mouse & Touchpad
     settings->push_back(std::make_shared<Setting>("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT,
