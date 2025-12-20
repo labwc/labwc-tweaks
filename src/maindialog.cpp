@@ -148,13 +148,8 @@ void MainDialog::onApply()
     m_pageMouse->onApply();
     m_pageLanguage->onApply();
 
-    // TODO: Get filename in a more consistent way - share common code with main.cpp
-    std::string config_home = std::getenv("HOME") + std::string("/.config/labwc");
-    std::string config_dir = std::getenv("LABWC_CONFIG_DIR") ?: config_home;
-    std::string environment_file = config_dir + "/environment";
-
     xml_save();
-    environmentSave(environment_file);
+    environmentSave();
 
     /* reconfigure labwc */
     if (!fork()) {
