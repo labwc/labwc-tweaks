@@ -24,6 +24,7 @@ public:
 };
 
 static std::vector<std::unique_ptr<Line>> lines;
+static std::string _filename;
 
 Line::Line(void)
 {
@@ -104,6 +105,10 @@ static void processLine(QString line)
 
 void environmentInit(std::string filename)
 {
+    // Store filename in this translation unit so that environmentSave() uses the same one with no
+    // additional effort from the caller.
+    _filename = filename;
+
     if (access(filename.c_str(), F_OK)) {
         info("environment file not found '{}'", filename);
         return;
@@ -117,9 +122,9 @@ void environmentInit(std::string filename)
     stream.close();
 }
 
-void environmentSave(std::string filename)
+void environmentSave(void)
 {
-    std::ofstream ofs(filename);
+    std::ofstream ofs(_filename);
     for (auto &line : lines) {
         if (!line->isKeyValuePair) {
             ofs << line->data.toStdString() << std::endl;

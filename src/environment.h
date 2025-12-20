@@ -8,6 +8,6 @@ int environmentGetInt(QString key);
 void environmentSet(QString key, QString value);
 void environmentSetInt(QString key, int value);
 void environmentInit(std::string filename);
-void environmentSave(std::string filename);
+void environmentSave(void);
 
 #endif /* ENVIRONMENT_H */
