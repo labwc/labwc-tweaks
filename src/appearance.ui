@@ -133,18 +133,7 @@
      </widget>
     </item>
     <item row="4" column="3">
-     <widget class="QComboBox" name="decoration">
-      <item>
-       <property name="text">
-        <string>Server</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Client</string>
-       </property>
-      </item>
-     </widget>
+     <widget class="QComboBox" name="decoration"/>
     </item>
     <item row="4" column="4" colspan="2">
      <spacer name="horizontalSpacer">
@@ -169,18 +158,7 @@
      </widget>
     </item>
     <item row="5" column="3">
-     <widget class="QComboBox" name="maximizedDecoration">
-      <item>
-       <property name="text">
-        <string>Titlebar</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>None</string>
-       </property>
-      </item>
-     </widget>
+     <widget class="QComboBox" name="maximizedDecoration"/>
     </item>
     <item row="5" column="4" colspan="2">
      <spacer name="horizontalSpacer_2">
