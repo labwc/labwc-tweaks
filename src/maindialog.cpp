@@ -7,10 +7,11 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include <language.h>
-#include <mouse.h>
 #include "appearance.h"
 #include "behaviour.h"
+#include "mouse.h"
+#include "language.h"
+#include "template.h"
 
 #include <QDebug>
 #include <QDir>
@@ -58,6 +59,12 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     item3->setIcon(QIcon::fromTheme("preferences-desktop-locale"));
     item3->setText(tr("Language & Region"));
 
+    if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
+        QListWidgetItem *item99 = new QListWidgetItem(list);
+        item99->setIcon(QIcon::fromTheme("preferences-system"));
+        item99->setText("Template");
+    }
+
     QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
     sizePolicy.setHorizontalStretch(0);
     sizePolicy.setVerticalStretch(0);
@@ -83,6 +90,11 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
 
     m_pageLanguage = new Language();
     stack->addWidget(m_pageLanguage);
+
+    if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
+        m_pageTemplate = new Template();
+        stack->addWidget(m_pageTemplate);
+    }
 
     horizontalLayout->addWidget(stack);
 
@@ -117,12 +129,16 @@ MainDialog::~MainDialog()
     xml_finish();
 }
 
+// Init settings and setup UI widgets
 void MainDialog::activate()
 {
     m_pageAppearance->activate();
     m_pageBehaviour->activate();
     m_pageMouse->activate();
     m_pageLanguage->activate();
+    if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
+        m_pageTemplate->activate();
+    }
 }
 
 void MainDialog::onApply()
