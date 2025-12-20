@@ -44,7 +44,6 @@ void Appearance::activate()
     ui->iconTheme->setCurrentIndex(themes.indexOf(getStr("/labwc_config/theme/icon")));
 
     /* Decoration */
-    ui->decoration->clear(); // remove 2 empty values created for some reason
     ui->decoration->setToolTip(tr("Specify decorations for xdg-shell windows"));
 
     QVector<QSharedPointer<Pair>> decorations;
@@ -62,7 +61,6 @@ void Appearance::activate()
     }
 
     /* Maximized Decoration */
-    ui->maximizedDecoration->clear(); // remove 2 empty values created for some reason
     ui->maximizedDecoration->setToolTip(tr("Specify if server side decorations are shown for maximized windows."));
 
     QVector<QSharedPointer<Pair>> maximized_decorations;
