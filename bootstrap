@@ -4,4 +4,6 @@ cmake \
 	-D ASAN=1 \
 	-B build
 
+export LABWC_TWEAKS_SHOW_TEMPLATE=1
+
 cmake --build build && build/labwc-tweaks
