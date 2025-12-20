@@ -96,18 +96,7 @@
     </widget>
    </item>
    <item row="5" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="accelProfile">
-     <item>
-      <property name="text">
-       <string>flat</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>adaptive</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="QComboBox" name="accelProfile"/>
    </item>
    <item row="6" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_sendEventsMode">
@@ -117,23 +106,7 @@
     </widget>
    </item>
    <item row="6" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="sendEventsMode">
-     <item>
-      <property name="text">
-       <string>enabled</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>disabled</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>disabled-on-external-mouse</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="QComboBox" name="sendEventsMode"/>
    </item>
    <item row="7" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_tap">
@@ -163,8 +136,7 @@
     </widget>
    </item>
    <item row="8" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="tapButtonMap">
-    </widget>
+    <widget class="QComboBox" name="tapButtonMap"/>
    </item>
    <item row="9" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_tapAndDrag">
@@ -272,8 +244,7 @@
     </widget>
    </item>
    <item row="13" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="clickMethod">
-    </widget>
+    <widget class="QComboBox" name="clickMethod"/>
    </item>
    <item row="14" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_scrollMethod">
@@ -283,8 +254,7 @@
     </widget>
    </item>
    <item row="14" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="scrollMethod">
-    </widget>
+    <widget class="QComboBox" name="scrollMethod"/>
    </item>
    <item row="15" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
     <widget class="QLabel" name="label_scrollFactor">
