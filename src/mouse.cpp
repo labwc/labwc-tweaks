@@ -36,8 +36,6 @@ void Mouse::activate()
     ui->pointerSpeed->setValue(getFloat("/labwc_config/libinput/device/pointerSpeed"));
 
     /* Accel Profiles */
-    ui->accelProfile->clear(); // remove 2 empty values created for some reason
-
     QVector<QSharedPointer<Pair>> profiles;
     profiles.append(QSharedPointer<Pair>(new Pair("flat", tr("Flat"))));
     profiles.append(QSharedPointer<Pair>(new Pair("adaptive", tr("Adaptive"))));
@@ -56,8 +54,6 @@ void Mouse::activate()
     ui->tap->setChecked(getBool("/labwc_config/libinput/device/tap"));
 
     /* Tap Button Map */
-    ui->tapButtonMap->clear(); // remove 2 empty values created for some reason
-
     QVector<QSharedPointer<Pair>> maps;
     maps.append(QSharedPointer<Pair>(new Pair("lrm", tr("left-right-middle"))));
     maps.append(QSharedPointer<Pair>(new Pair("lmr", tr("left-middle-right"))));
@@ -95,8 +91,6 @@ void Mouse::activate()
     ui->disableWhileTyping->setChecked(getBool("/labwc_config/libinput/device/disableWhileTyping"));
 
     /* Click Method */
-    ui->clickMethod->clear();
-
     QVector<QSharedPointer<Pair>> clickmethods;
     clickmethods.append(QSharedPointer<Pair>(new Pair("none", tr("None"))));
     clickmethods.append(QSharedPointer<Pair>(new Pair("buttonAreas", tr("Button Area"))));
@@ -114,8 +108,6 @@ void Mouse::activate()
     }
 
     /* Scroll Method */
-    ui->scrollMethod->clear();
-
     QVector<QSharedPointer<Pair>> scrollmethods;
     scrollmethods.append(QSharedPointer<Pair>(new Pair("twoFinger", tr("Two Finger"))));
     scrollmethods.append(QSharedPointer<Pair>(new Pair("edge", tr("Edge"))));
@@ -133,8 +125,6 @@ void Mouse::activate()
     }
 
     /* Send Events Mode */
-    ui->sendEventsMode->clear();
-
     // Note: Cannot support 'No' until the device="" option is supported because otherwise all
     // devices (including keyboard) will be disabled which is unlikely to be the desired outcome.
     QVector<QSharedPointer<Pair>> sendeventsmodes;
