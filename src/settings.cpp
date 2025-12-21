@@ -111,7 +111,16 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
     // Keyboard
     settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
                                                   LAB_VALUE_TYPE_STRING, "us"));
+
+    settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/numlock",
+                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/repeatRate", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 25));
+    settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/repeatDelay", LAB_FILE_TYPE_RCXML,
+                                                  LAB_VALUE_TYPE_INT, 600));
+
 }
+
 
 static std::shared_ptr<Setting> retrieve(QString name)
 {
