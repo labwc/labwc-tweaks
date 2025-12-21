@@ -108,7 +108,7 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
     settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/scrollFactor",
                                                   LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 1.0f));
 
-    // Language
+    // Keyboard
     settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
                                                   LAB_VALUE_TYPE_STRING, "us"));
 }
