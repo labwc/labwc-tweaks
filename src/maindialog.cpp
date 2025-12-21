@@ -10,7 +10,7 @@
 #include "appearance.h"
 #include "behaviour.h"
 #include "mouse.h"
-#include "language.h"
+#include "keyboard.h"
 #include "template.h"
 
 #include <QDebug>
@@ -56,8 +56,8 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     item2->setText(tr("Mouse & Touchpad"));
 
     QListWidgetItem *item3 = new QListWidgetItem(list);
-    item3->setIcon(QIcon::fromTheme("preferences-desktop-locale"));
-    item3->setText(tr("Language & Region"));
+    item3->setIcon(QIcon::fromTheme("preferences-desktop-keyboard"));
+    item3->setText(tr("Keyboard"));
 
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         QListWidgetItem *item99 = new QListWidgetItem(list);
@@ -88,8 +88,8 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     m_pageMouse = new Mouse();
     stack->addWidget(m_pageMouse);
 
-    m_pageLanguage = new Language();
-    stack->addWidget(m_pageLanguage);
+    m_pageKeyboard = new Keyboard();
+    stack->addWidget(m_pageKeyboard);
 
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         m_pageTemplate = new Template();
@@ -135,7 +135,7 @@ void MainDialog::activate()
     m_pageAppearance->activate();
     m_pageBehaviour->activate();
     m_pageMouse->activate();
-    m_pageLanguage->activate();
+    m_pageKeyboard->activate();
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         m_pageTemplate->activate();
     }
@@ -146,7 +146,7 @@ void MainDialog::onApply()
     m_pageAppearance->onApply();
     m_pageBehaviour->onApply();
     m_pageMouse->onApply();
-    m_pageLanguage->onApply();
+    m_pageKeyboard->onApply();
 
     xml_save();
     environmentSave();
