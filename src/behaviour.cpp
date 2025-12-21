@@ -63,10 +63,11 @@ void Behaviour::activate()
     ui->topMaximize->setToolTip(tr("Maximize instead of snapping on top edge"));
 
     /* Notify Clients */
+    ui->notifyClients->setToolTip(tr("Snapping windows can trigger corresponding\ntiling events for native Wayland clients."));
     QVector<QSharedPointer<Pair>> notifyclients;
     notifyclients.append(QSharedPointer<Pair>(new Pair("always", tr("Always"))));
-    notifyclients.append(QSharedPointer<Pair>(new Pair("region", tr("Region"))));
-    notifyclients.append(QSharedPointer<Pair>(new Pair("edge", tr("Edge"))));
+    notifyclients.append(QSharedPointer<Pair>(new Pair("region", tr("Only on regions"))));
+    notifyclients.append(QSharedPointer<Pair>(new Pair("edge", tr("Only on edges"))));
     notifyclients.append(QSharedPointer<Pair>(new Pair("never", tr("Never"))));
 
     QString current_notifyclientvalue = getStr("/labwc_config/snapping/notifyClient");
