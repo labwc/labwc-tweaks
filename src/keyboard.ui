@@ -2,6 +2,8 @@
 <ui version="4.0">
  <class>pageKeyboard</class>
  <widget class="QWidget" name="pageKeyboard">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
   <widget class="QScrollArea" name="scrollArea">
    <property name="frameShape">
     <enum>QFrame::Shape::NoFrame</enum>
@@ -123,6 +125,8 @@
     </layout>
    </widget>
   </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
