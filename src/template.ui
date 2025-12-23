@@ -19,7 +19,13 @@
          <property name="title">
           <string>GroupBox1</string>
          </property>
-         <layout class="QGridLayout" name="groupBox1_gridLayout">
+         <layout class="QGridLayout" name="groupBox1_gridLayout" columnstretch="0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="label">
             <property name="text">
