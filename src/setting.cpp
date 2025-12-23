@@ -76,7 +76,6 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             break;
         }
         case LAB_VALUE_TYPE_INT: {
-            bool success = false;
             int value = environmentGetInt(m_name);
             if (value == -1) {
                 // There was no environment file - or it did not contain the key
