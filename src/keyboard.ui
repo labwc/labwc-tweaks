@@ -13,7 +13,12 @@
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <layout class="QVBoxLayout" name="main_layout">
+       <!-- General Settings -->
        <item>
+        <widget class="QGroupBox" name="groupBox_General">
+         <property name="title">
+          <string>General</string>
+         </property>
         <layout class="QGridLayout" name="other_settings">
          <item row="0" column="0">
           <widget class="QLabel" name="label">
@@ -79,7 +84,9 @@
           </widget>
          </item>
         </layout>
+        </widget>
        </item>
+       <!-- Keyboard Layout -->
        <item>
         <widget class="QGroupBox" name="groupBox_keyboardLayout">
          <property name="title">
@@ -109,6 +116,7 @@
          </layout>
         </widget>
        </item>
+       <!-- Bottom Spacer -->
        <item>
         <spacer name="bottomSpacer">
          <property name="orientation">
