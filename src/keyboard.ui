@@ -13,6 +13,9 @@
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <layout class="QVBoxLayout" name="main_layout">
+       <property name="spacing">
+        <number>30</number>
+       </property>
        <!-- General Settings -->
        <item>
         <widget class="QGroupBox" name="groupBox_General">
