@@ -48,7 +48,7 @@ void Behaviour::activate()
 
     /* Raise on Focus */
     ui->raiseOnFocus->setChecked(getBool("/labwc_config/focus/raiseOnFocus"));
-    ui->raiseOnFocus->setToolTip(tr("Raise window to top when focused."));
+    ui->raiseOnFocus->setToolTip(tr("Raise window to front when focused."));
 
     /* Gap (Core) */
     ui->gap->setValue(getInt("/labwc_config/core/gap"));
@@ -83,11 +83,11 @@ void Behaviour::activate()
 
     /* Resistance: Screen Edge Strength */
     ui->screenEdgeStrength->setValue(getInt("/labwc_config/resistance/screenEdgeStrength"));
-    ui->screenEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\nacross screen edges or the edges of any other window, respectively"));//FIXME
+    ui->screenEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window across screen edges"));
 
         /* Window Edge Strength */
     ui->windowEdgeStrength->setValue(getInt("/labwc_config/resistance/windowEdgeStrength"));
-    ui->windowEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\nacross screen edges or the edges of any other window, respectively"));//FIXME
+    ui->windowEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window across the edges of any other window"));
 
     /* resistance UnSnap Treshold */
     ui->unSnapTreshold->setValue(getInt("/labwc_config/resistance/unSnapTreshold"));
