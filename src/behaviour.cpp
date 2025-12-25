@@ -51,7 +51,7 @@ void Behaviour::activate()
 
     /* Raise on Focus */
     ui->raiseOnFocus->setChecked(getBool("/labwc_config/focus/raiseOnFocus"));
-    ui->raiseOnFocus->setToolTip(tr("Raise window to front when focused."));
+    ui->raiseOnFocus->setToolTip(tr("Raise window to front when focused"));
 
     /* Gap (Core) */
     ui->gap->setValue(getInt("/labwc_config/core/gap"));
@@ -68,7 +68,7 @@ void Behaviour::activate()
 
     /* Notify Clients */
     ui->notifyClients->setToolTip(tr("Snapping windows can trigger corresponding\ntiling events "
-                                     "for native Wayland clients."));
+                                     "for native Wayland clients"));
     QVector<QSharedPointer<Pair>> notifyclients;
     notifyclients.append(QSharedPointer<Pair>(new Pair("always", tr("Always"))));
     notifyclients.append(QSharedPointer<Pair>(new Pair("region", tr("Only on regions"))));
@@ -88,24 +88,19 @@ void Behaviour::activate()
 
     /* Resistance: Screen Edge Strength */
     ui->screenEdgeStrength->setValue(getInt("/labwc_config/resistance/screenEdgeStrength"));
-    ui->screenEdgeStrength->setToolTip(
-            tr("Resist interactive moves and resizes of a window across screen edges"));
+    ui->screenEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\n across screen edges"));
 
     /* Window Edge Strength */
     ui->windowEdgeStrength->setValue(getInt("/labwc_config/resistance/windowEdgeStrength"));
-    ui->windowEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window across "
-                                          "the edges of any other window"));
+    ui->windowEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\n across the edges of any other window"));
 
     /* resistance UnSnap Treshold */
     ui->unSnapTreshold->setValue(getInt("/labwc_config/resistance/unSnapTreshold"));
-    ui->unSnapTreshold->setToolTip(
-            tr("Movement of cursor required for a tiled or maximized window to be moved"));
+    ui->unSnapTreshold->setToolTip(tr("Movement of cursor required for a tiled or maximized window to be moved"));
 
     /* resistance UnMaximizeTreshold */
     ui->unMaximizeTreshold->setValue(getInt("/labwc_config/resistance/unMaximizeTreshold"));
-    ui->unMaximizeTreshold->setToolTip(
-            tr("One-dimensional movement of cursor required for\na vertically or horizontally "
-               "maximized window to be moved."));
+    ui->unMaximizeTreshold->setToolTip(tr("One-dimensional movement of cursor required for\na vertically or horizontally maximized window to be moved"));
 
     /* Resize: drawContents */
     ui->drawContents->setChecked(getBool("/labwc_config/resize/drawContents"));

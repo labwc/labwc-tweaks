@@ -61,7 +61,7 @@ void Appearance::activate()
     }
 
     /* Maximized Decoration */
-    ui->maximizedDecoration->setToolTip(tr("Specify if server side decorations are shown for maximized windows."));
+    ui->maximizedDecoration->setToolTip(tr("Show server side decorations on maximized windows"));
 
     QVector<QSharedPointer<Pair>> maximized_decorations;
     maximized_decorations.append(QSharedPointer<Pair>(new Pair("titlebar", tr("Titlebar"))));

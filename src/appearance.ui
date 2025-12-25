@@ -44,7 +44,7 @@
       </property>
      </spacer>
     </item>
-    
+
     <!-- Row 1 -->
     <item row="1" column="0">
      <widget class="QLabel" name="label_1">
@@ -69,7 +69,7 @@
       </property>
      </spacer>
     </item>
-    
+
     <!-- Row 2 -->
     <item row="2" column="0" colspan="2">
      <widget class="QCheckBox" name="dropShadows">
@@ -98,7 +98,7 @@
       </property>
      </spacer>
     </item>
-    
+
     <!-- Row 3 -->
     <item row="3" column="0">
      <widget class="QLabel" name="label_2">
@@ -127,7 +127,7 @@
       </property>
      </spacer>
     </item>
-    
+
     <!-- Row 4 -->
     <item row="4" column="0">
      <widget class="QLabel" name="label_5">
@@ -152,12 +152,12 @@
       </property>
      </spacer>
     </item>
-    
+
     <!-- Row 5 -->
     <item row="5" column="0" colspan="3">
      <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Maximized Decoration</string>
+       <string>Maximized decoration</string>
       </property>
      </widget>
     </item>
@@ -177,7 +177,7 @@
       </property>
      </spacer>
     </item>
-    
+
     <!-- Row 6 -->
     <item row="6" column="3">
      <spacer name="verticalSpacer">
