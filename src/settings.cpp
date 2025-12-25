@@ -239,12 +239,13 @@ void setInt(QString name, int value)
     if (setting->valueType() != LAB_VALUE_TYPE_INT) {
         qDebug() << "setInt(): not valid int setting" << name << value;
     }
-    if (value != std::get<int>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value);
-        xpath_add_node(name.toStdString().c_str());
-        xml_set_num(name.toStdString().c_str(), value);
-        setting->setValue(value);
+    if (value == std::get<int>(setting->value())) {
+        return;
     }
+    xpath_add_node(name.toStdString().c_str());
+    xml_set_num(name.toStdString().c_str(), value);
+    setting->setValue(value);
+    info("'{} has changed to '{}'", name.toStdString(), value);
 }
 
 void setFloat(QString name, float value)
@@ -257,12 +258,13 @@ void setFloat(QString name, float value)
     if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
         qDebug() << "setFloat(): not valid float setting" << name << value;
     }
-    if (value != std::get<float>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value);
-        xpath_add_node(name.toStdString().c_str());
-        xml_set_num(name.toStdString().c_str(), value);
-        setting->setValue(value);
+    if (value == std::get<float>(setting->value())) {
+        return;
     }
+    xpath_add_node(name.toStdString().c_str());
+    xml_set_num(name.toStdString().c_str(), value);
+    setting->setValue(value);
+    info("'{} has changed to '{}'", name.toStdString(), value);
 }
 
 void setStr(QString name, QString value)
@@ -275,12 +277,13 @@ void setStr(QString name, QString value)
     if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
         qDebug() << "setStr(): not valid string setting" << name << value;
     }
-    if (value != std::get<QString>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
-        xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
-        setting->setValue(value);
+    if (value == std::get<QString>(setting->value())) {
+        return;
     }
+    xpath_add_node(name.toStdString().c_str());
+    xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+    setting->setValue(value);
+    info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
 }
 
 void setBool(QString name, int value)
@@ -293,10 +296,11 @@ void setBool(QString name, int value)
     if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
         qDebug() << "setBool(): not valid bool setting" << name << value;
     }
-    if (value != std::get<int>(setting->value())) {
-        info("'{} has changed to '{}'", name.toStdString(), value);
-        xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value ? "yes" : "no");
-        setting->setValue(value);
+    if (value == std::get<int>(setting->value())) {
+        return;
     }
+    xpath_add_node(name.toStdString().c_str());
+    xml_set(name.toStdString().c_str(), value ? "yes" : "no");
+    setting->setValue(value);
+    info("'{} has changed to '{}'", name.toStdString(), value);
 }
