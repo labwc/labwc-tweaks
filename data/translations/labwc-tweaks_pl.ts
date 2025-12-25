@@ -6,47 +6,47 @@
     <message>
         <location filename="../../src/appearance.cpp" line="27"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Promień górnych narożników dekoracji po stronie serwera</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="31"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Renderuj cienie za oknami</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="35"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Renderuj cienie za kafelkowymi oknami</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="47"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ dekoracje dla okien xdg-shell</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="50"/>
         <source>Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Serwer</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="51"/>
         <source>Client</source>
-        <translation type="unfinished"></translation>
+        <translation>Klient</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="64"/>
         <source>Specify if server side decorations are shown for maximized windows.</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ, czy dekoracje po stronie serwera mają być wyświetlane dla zmaksymalizowanych okien.</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="67"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasek tytułu</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="68"/>
         <source>None</source>
-        <translation type="unfinished">Brak</translation>
+        <translation>Brak</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="22"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Zasady umieszczania nowych okien</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="24"/>
@@ -79,22 +79,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="41"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokus jest przekazywany do okna pod kursorem myszy</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="47"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Wymaga ruchu kursora, jeśli włączona jest opcja followMouse</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="54"/>
         <source>Raise window to front when focused.</source>
-        <translation type="unfinished"></translation>
+        <translation>Po ustawieniu fokusu podnieś okno na przód.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="59"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Odległość między oknami i krawędziami wyjściowymi podczas korzystania z akcji ruchu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="63"/>
@@ -104,111 +104,117 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="67"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksymalizuj zamiast przypinać do górnej krawędzi</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="70"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland clients.</source>
-        <translation type="unfinished"></translation>
+        <translation>Przyciąganie okien może wywołać odpowiednie zdarzenia
+kafelkowania dla natywnych klientów Wayland.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="73"/>
         <location filename="../../src/behaviour.cpp" line="137"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Zawsze</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="74"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>Tylko w regionach</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="75"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Tylko na krawędziach</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="76"/>
         <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Nigdy</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Resist interactive moves and resizes of a window across screen edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="96"/>
         <source>Resist interactive moves and resizes of a window across the edges of any other window</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Aby przesunąć kafelkowe lub zmaksymalizowane okno, wymagany jest ruch kursora</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednowymiarowy ruch kursora wymagany do przesunięcia
+okna zmaksymalizowanego w pionie lub poziomie.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="112"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacja odświeża swoją zawartość podczas zmiany rozmiaru.
+Jeśli ta opcja jest wyłączona, wyświetlany jest obramowany prostokąt</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="118"/>
         <source>Even when disabling server side decorations via ToggleDecorations,
 keep a small border (and resize area) around the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Nawet po wyłączeniu dekoracji po stronie serwera za pomocą ToggleDecorations,
+zachowaj małą ramkę (i obszar zmiany rozmiaru) wokół okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="124"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar obszarów narożników, do których mają zastosowanie wszystkie konteksty powiązań myszy „Narożnik”
+a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmiaru myszy w dowolnym kierunku.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="129"/>
         <source>Treat borders of server-side decorations as 
 if they were at least the indicated thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Traktuj granice dekoracji po stronie serwera tak,
+jakby miały co najmniej wskazaną grubość</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="134"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetl mały wskaźnik na górze okna podczas zmiany rozmiaru lub przesuwania</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="138"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Niepikselowy</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="153"/>
         <location filename="../../src/behaviour.cpp" line="155"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>Aby uzyskać pełny ekran, ustaw lupę na -1</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="158"/>
         <source>Initial number of times by which magnified image is scaled</source>
-        <translation type="unfinished"></translation>
+        <translation>Początkowa liczba krotności, o jaką powiększony obraz jest skalowany</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="161"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kroki wprowadzania zmian przy każdym wywołaniu funkcji „ZoomIn” i „ZoomOut”</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="164"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastosuj filtr dwuliniowy do powiększonego obrazu</translation>
     </message>
 </context>
 <context>
@@ -216,22 +222,22 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="28"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished">Wybierz układ, aby dodać...</translation>
+        <translation>Wybierz układ, który chcesz dodać...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwość, z jaką naciśnięcia klawiszy są powtarzane na sekundę</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Opóźnienie przed ponownym naciśnięciem klawisza</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="43"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz Num Lock podczas rozpoznawania nowej klawiatury</translation>
     </message>
 </context>
 <context>
@@ -254,7 +260,7 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="60"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Klawiatura</translation>
     </message>
 </context>
 <context>
@@ -272,12 +278,12 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>lewy-prawy-środkowy</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>lewy-środkowy-prawy</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="95"/>
@@ -339,12 +345,12 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/appearance.ui" line="77"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz cienie</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="84"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz w oknach kafelkowych</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="106"/>
@@ -354,12 +360,12 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/appearance.ui" line="135"/>
         <source>Decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoracja</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="160"/>
         <source>Maximized Decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoracja zmaksymalizowana</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="52"/>
@@ -377,22 +383,22 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/behaviour.ui" line="61"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokus podąża za myszą</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="68"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>Wymaga ruchu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Podnieś przy fokusie</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="99"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>Przerwa</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="106"/>
@@ -406,108 +412,108 @@ if they were at least the indicated thickness</source>
         <location filename="../../src/behaviour.ui" line="472"/>
         <location filename="../../src/behaviour.ui" line="495"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="147"/>
         <source>Window snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>Przyciąganie okien</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="173"/>
         <location filename="../../src/behaviour.ui" line="377"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakres narożnka</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="180"/>
         <source>Maximize on top</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmaksymalizuj na wierzchu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="187"/>
         <source>Notify clients</source>
-        <translation type="unfinished"></translation>
+        <translation>Powiadom klienty</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="200"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>Opór</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="206"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Wytrzymałość krawędzi ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="236"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Wytrzymałość krawędzi okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="266"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>Próg odłączenia</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="293"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Próg demaksymalizacji</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="329"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmień rozmiar</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="337"/>
         <source>Draw contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Rysuj zawartość</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="344"/>
         <source>Keep border</source>
-        <translation type="unfinished"></translation>
+        <translation>Utrzymuj granicę</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="404"/>
         <source>Minimum area</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimalny obszar</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="431"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż wyskakujące okienko</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="459"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Lupa</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="465"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Szerokość</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="488"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Wysokość</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="524"/>
         <source>Initscale</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala początkowa</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="544"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>Przyrost</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="574"/>
         <source>Use filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj filtra</translation>
     </message>
 </context>
 <context>
@@ -515,47 +521,47 @@ if they were at least the indicated thickness</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Częstotliwość powtarzania</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="45"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Opóźnienie powtarzania</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="55"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="65"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Num Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz przy uruchamianiu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="83"/>
         <source>Keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Układ klawiatury</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="95"/>
         <source>Add</source>
-        <translation type="unfinished">Dodaj</translation>
+        <translation>Dodaj</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="102"/>
         <source>Remove</source>
-        <translation type="unfinished">Usuń</translation>
+        <translation>Usuń</translation>
     </message>
 </context>
 <context>
