@@ -13,6 +13,9 @@
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
