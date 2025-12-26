@@ -86,6 +86,8 @@ void Behaviour::activate()
         }
     }
 
+    // clang-format off
+
     /* Resistance: Screen Edge Strength */
     ui->screenEdgeStrength->setValue(getInt("/labwc_config/resistance/screenEdgeStrength"));
     ui->screenEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\n across screen edges"));
@@ -123,6 +125,8 @@ void Behaviour::activate()
     ui->resizeMinimumArea->setValue(getInt("/labwc_config/resize/resizeMinimumArea"));
     ui->resizeMinimumArea->setToolTip(tr("Treat borders of server-side decorations as \nif they "
                                          "were at least the indicated thickness"));
+
+    // clang-format on
 
     /* Show Popup */
     ui->popupShow->setToolTip(
