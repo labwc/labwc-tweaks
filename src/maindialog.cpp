@@ -103,7 +103,7 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     m_buttonBox = new QDialogButtonBox(this);
     m_buttonBox->setOrientation(Qt::Orientation::Horizontal);
     m_buttonBox->setStandardButtons(QDialogButtonBox::StandardButton::Apply
-                                  | QDialogButtonBox::StandardButton::Close);
+                                    | QDialogButtonBox::StandardButton::Close);
     m_buttonBox->setCenterButtons(false);
 
     verticalLayout->addWidget(m_buttonBox);

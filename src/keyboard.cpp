@@ -41,7 +41,6 @@ void Keyboard::activate()
     /* Numlock */
     ui->numlock->setChecked(getBool("/labwc_config/keyboard/numlock"));
     ui->numlock->setToolTip(tr("Enable Num Lock when recognizing a new keyboard"));
-
 }
 
 void Keyboard::addSelectedLayout(void)
