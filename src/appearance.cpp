@@ -53,7 +53,8 @@ void Appearance::activate()
     QString current_decoration = getStr("/labwc_config/core/decoration");
     int decoration_index = -1;
     foreach (auto decoration, decorations) {
-        ui->decoration->addItem(decoration.get()->description(), QVariant(decoration.get()->value()));
+        ui->decoration->addItem(decoration.get()->description(),
+                                QVariant(decoration.get()->value()));
         ++decoration_index;
         if (current_decoration == decoration.get()->value()) {
             ui->decoration->setCurrentIndex(decoration_index);
@@ -70,7 +71,8 @@ void Appearance::activate()
     QString current_maximized_decoration = getStr("/labwc_config/theme/maximizedDecoration");
     int maximized_decoration_index = -1;
     foreach (auto maximized_decoration, maximized_decorations) {
-        ui->maximizedDecoration->addItem(maximized_decoration.get()->description(), QVariant(maximized_decoration.get()->value()));
+        ui->maximizedDecoration->addItem(maximized_decoration.get()->description(),
+                                         QVariant(maximized_decoration.get()->value()));
         ++maximized_decoration_index;
         if (current_maximized_decoration == maximized_decoration.get()->value()) {
             ui->maximizedDecoration->setCurrentIndex(maximized_decoration_index);
