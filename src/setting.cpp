@@ -6,9 +6,7 @@
 #include "macros.h"
 #include "xml.h"
 
-
-bool
-isValidBool(int value)
+bool isValidBool(int value)
 {
     return value != -1;
 }
