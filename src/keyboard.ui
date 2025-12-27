@@ -106,6 +106,32 @@
          </layout>
         </widget>
        </item>
+       <!-- Layout Group Switching -->
+       <item>
+        <widget class="QGroupBox" name="groupBox_General">
+         <property name="title">
+          <string>Keyboard layout switching</string>
+         </property>
+         <layout class="QGridLayout" name="other_settings" columnstretch="0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Key combination</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="layoutGrpSwitcher"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
        <!-- Bottom Spacer -->
        <item>
         <spacer name="bottomSpacer">
