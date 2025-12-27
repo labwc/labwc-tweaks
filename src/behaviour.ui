@@ -34,7 +34,7 @@
          <item>
           <widget class="QLabel" name="label_7">
            <property name="text">
-            <string>Placement Policy</string>
+            <string>Placement policy</string>
            </property>
           </widget>
          </item>
@@ -147,7 +147,7 @@
        <item>
         <widget class="QGroupBox" name="snapping">
          <property name="title">
-          <string>Window snapping</string>
+          <string>Window Snapping</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="2">
