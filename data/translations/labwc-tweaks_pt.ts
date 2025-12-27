@@ -648,37 +648,4 @@ if they were at least the indicated thickness</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
-    <name>pageTemplate</name>
-    <message>
-        <location filename="../../src/template.ui" line="28"/>
-        <source>GroupBox1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/template.ui" line="49"/>
-        <source>ComboBox Test</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/template.ui" line="59"/>
-        <source>Checkbox Test</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/template.ui" line="66"/>
-        <source>Enable in special situation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/template.ui" line="73"/>
-        <source>ComboBox Test2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/template.ui" line="87"/>
-        <source>GroupBox2</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
 </TS>
