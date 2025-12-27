@@ -23,8 +23,6 @@ int parseBool(const char *str, int defaultValue)
     else if (!strcmp(str, "0"))
         return 0;
 error_not_a_boolean:
-    warn("{} is not a boolean value", str);;
+    warn("{} is not a boolean value", str);
     return defaultValue;
 }
-
-
