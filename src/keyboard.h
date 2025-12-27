@@ -27,5 +27,7 @@ private slots:
 private:
     Ui::pageKeyboard *ui;
     LayoutModel *m_model;
+
+    void getGrpToggleOptions(QVector<QSharedPointer<Pair>> &combo);
 };
 #endif // KEYBOARD_H
