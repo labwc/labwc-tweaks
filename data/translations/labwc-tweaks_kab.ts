@@ -10,12 +10,12 @@
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="118"/>
-        <source>Corner Radius</source>
+        <source>Corner radius</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="108"/>
-        <source>Openbox Theme</source>
+        <source>Openbox theme</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -35,12 +35,12 @@
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="154"/>
-        <source>Placement Policy</source>
+        <source>Placement policy</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/maindialog.ui" line="180"/>
-        <source>Cursor Theme</source>
+        <source>Cursor theme</source>
         <translation type="unfinished"/>
     </message>
     <message>
