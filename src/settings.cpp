@@ -163,6 +163,8 @@ void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
     settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/repeatDelay", LAB_FILE_TYPE_RCXML,
                                                   LAB_VALUE_TYPE_INT, 600));
 
+    settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_OPTIONS", LAB_FILE_TYPE_ENVIRONMENT,
+                                                  LAB_VALUE_TYPE_STRING, ""));
 }
 
 

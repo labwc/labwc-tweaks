@@ -41,6 +41,24 @@ void Keyboard::activate()
     /* Numlock */
     ui->numlock->setChecked(getBool("/labwc_config/keyboard/numlock"));
     ui->numlock->setToolTip(tr("Enable Num Lock when recognizing a new keyboard"));
+
+    /* Keyboard Layout Group Switching */
+    ui->layoutGrpSwitcher->setToolTip(tr("Key combination to switch keyboard layout"));
+    QVector<QSharedPointer<Pair>> combo;
+    combo.append(QSharedPointer<Pair>(new Pair("", "")));
+    combo.append(QSharedPointer<Pair>(new Pair("grp:shift_caps_toggle", tr("Shift+Caps Lock"))));
+    combo.append(QSharedPointer<Pair>(new Pair("grp:alt_caps_toggle", tr("Alt+Caps Lock"))));
+    combo.append(QSharedPointer<Pair>(new Pair("grp:shifts_toggle", tr("Both Shifts together"))));
+
+    QString current = getStr("XKB_DEFAULT_OPTIONS");
+    int index = -1;
+    foreach (auto policy, combo) {
+        ui->layoutGrpSwitcher->addItem(policy.get()->description(), QVariant(policy.get()->value()));
+        ++index;
+        if (current == policy.get()->value()) {
+            ui->layoutGrpSwitcher->setCurrentIndex(index);
+        }
+    }
 }
 
 void Keyboard::addSelectedLayout(void)
@@ -75,4 +93,6 @@ void Keyboard::onApply()
     setInt("/labwc_config/keyboard/repeatRate", ui->repeatRate->value());
     setInt("/labwc_config/keyboard/repeatDelay", ui->repeatDelay->value());
     setBool("/labwc_config/keyboard/numlock", ui->numlock->isChecked());
+
+    environmentSet("XKB_DEFAULT_OPTIONS", DATA(ui->layoutGrpSwitcher));
 }
