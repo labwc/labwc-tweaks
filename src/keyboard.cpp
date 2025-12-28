@@ -153,7 +153,7 @@ void Keyboard::onApply()
      */
     QString layout = m_model->getXkbDefaultLayout();
     if (!layout.isEmpty()) {
-        environmentSet("XKB_DEFAULT_LAYOUT", layout);
+        setStr("XKB_DEFAULT_LAYOUT", layout);
         environmentSet("XKB_DEFAULT_VARIANT", "");
     }
 
@@ -161,5 +161,5 @@ void Keyboard::onApply()
     setInt("/labwc_config/keyboard/repeatDelay", ui->repeatDelay->value());
     setBool("/labwc_config/keyboard/numlock", ui->numlock->isChecked());
 
-    environmentSet("XKB_DEFAULT_OPTIONS", DATA(ui->layoutGrpSwitcher));
+    setStr("XKB_DEFAULT_OPTIONS", DATA(ui->layoutGrpSwitcher));
 }
