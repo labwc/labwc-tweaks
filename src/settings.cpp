@@ -11,7 +11,7 @@
 // derived classes
 static std::vector<std::shared_ptr<Setting>> *_settings;
 
-void initSettings(std::vector<std::shared_ptr<Setting>> *settings)
+void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
 
