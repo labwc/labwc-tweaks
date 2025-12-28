@@ -168,6 +168,6 @@ void Mouse::onApply()
     setFloat("/labwc_config/libinput/device/scrollFactor", ui->scrollFactor->value());
 
     /* ~/.config/labwc/environment */
-    environmentSet("XCURSOR_THEME", TEXT(ui->cursorTheme));
-    environmentSetInt("XCURSOR_SIZE", ui->cursorSize->value());
+    setStr("XCURSOR_THEME", TEXT(ui->cursorTheme));
+    setInt("XCURSOR_SIZE", ui->cursorSize->value());
 }
