@@ -108,11 +108,11 @@
        </item>
        <!-- Layout Group Switching -->
        <item>
-        <widget class="QGroupBox" name="groupBox_General">
+        <widget class="QGroupBox" name="groupBox_General_2">
          <property name="title">
           <string>Keyboard layout switching</string>
          </property>
-         <layout class="QGridLayout" name="other_settings" columnstretch="0,1">
+         <layout class="QGridLayout" name="gridLayout" columnstretch="0,1">
           <property name="horizontalSpacing">
            <number>16</number>
           </property>
@@ -120,7 +120,7 @@
            <number>8</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="label_1">
             <property name="text">
              <string>Key combination</string>
             </property>
