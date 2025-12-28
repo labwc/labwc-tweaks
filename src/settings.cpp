@@ -11,83 +11,57 @@
 // derived classes
 static std::vector<std::shared_ptr<Setting>> *_settings;
 
+static void add(QString name, enum settingFileType fileType, enum settingValueType valueType,
+         std::variant<int, float, QString> defaultValue)
+{
+    _settings->push_back(std::make_shared<Setting>(name, fileType, valueType, defaultValue));
+}
+
+void settingsAddXmlStr(QString name, QString defaultValue)
+{
+    add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING, defaultValue);
+}
+
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
 
     // Appearance
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/name", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_STRING, ""));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/cornerRadius",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/dropShadows",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/dropShadowsOnTiled",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/icon", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_STRING, ""));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/maximizedDecoration",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "titlebar"));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/core/decoration",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "Server"));
+    settingsAddXmlStr("/labwc_config/theme/name", "");
+    add("/labwc_config/theme/cornerRadius", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8);
+    add("/labwc_config/theme/dropShadows", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/theme/dropShadowsOnTiled", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    settingsAddXmlStr("/labwc_config/theme/icon", "");
+    settingsAddXmlStr("/labwc_config/theme/maximizedDecoration", "titlebar");
+    settingsAddXmlStr("/labwc_config/core/decoration", "Server");
 
     // Behaviour
-    settings->push_back(std::make_shared<Setting>("/labwc_config/placement/policy",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "cascade"));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/focus/followMouse",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/focus/followMouseRequiresMovement",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/focus/raiseOnFocus",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/core/gap", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/snapping/cornerRange", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 50));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/snapping/topMaximize",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/snapping/notifyClient",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "always"));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/screenEdgeStrength", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 20));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/windowEdgeStrength", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 50));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/unSnapTreshold", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 20));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resistance/unMaximizeTreshold", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 150));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/drawContents",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/theme/keepBorder",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/cornerRange", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 8)); // Default is half the titlebar height
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/resizeMinimumArea", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 8));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/resize/popupShow",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "Never"));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/width", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 400));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/height", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 400));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/initScale", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_FLOAT, 2.0f));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/increment", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_FLOAT, 0.2f));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/magnifier/useFilter",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
+    settingsAddXmlStr("/labwc_config/placement/policy", "cascade");
+    add("/labwc_config/focus/followMouse", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/focus/followMouseRequiresMovement", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/focus/raiseOnFocus", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/core/gap", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 0);
+    add("/labwc_config/snapping/cornerRange", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 50);
+    add("/labwc_config/snapping/topMaximize", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlStr("/labwc_config/snapping/notifyClient", "always");
+    add("/labwc_config/resistance/screenEdgeStrength", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 20);
+    add("/labwc_config/resistance/windowEdgeStrength", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 50);
+    add("/labwc_config/resistance/unSnapTreshold", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 20);
+    add("/labwc_config/resistance/unMaximizeTreshold", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 150);
+    add("/labwc_config/resize/drawContents", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    add("/labwc_config/theme/keepBorder", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    add("/labwc_config/resize/cornerRange", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8); // Default is half the titlebar height
+    add("/labwc_config/resize/resizeMinimumArea", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8);
+    settingsAddXmlStr("/labwc_config/resize/popupShow", "Never");
+    add("/labwc_config/magnifier/width", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 400);
+    add("/labwc_config/magnifier/height", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 400);
+    add("/labwc_config/magnifier/initScale", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 2.0f);
+    add("/labwc_config/magnifier/increment", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.2f);
+    add("/labwc_config/magnifier/useFilter", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
 
     // Mouse & Touchpad
-    settings->push_back(std::make_shared<Setting>("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT,
-                                                  LAB_VALUE_TYPE_STRING, ""));
-
-    settings->push_back(std::make_shared<Setting>("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT,
-                                                  LAB_VALUE_TYPE_INT, 24));
+    add("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
+    add("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_INT, 24);
 
     // We're picking the "usual" default described the libinput documents, although recognise that
     // some devices do not always use these. We think that this approach makes for fewer
@@ -98,73 +72,33 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     //
     // https://wayland.freedesktop.org/libinput/doc/latest/configuration.html
 
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/naturalScroll",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/leftHanded",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/pointerSpeed",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/accelProfile",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "adaptive"));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tap",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tapButtonMap",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "lrm"));
+    add("/labwc_config/libinput/device/naturalScroll", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/libinput/device/leftHanded", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/libinput/device/pointerSpeed", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f);
+    settingsAddXmlStr("/labwc_config/libinput/device/accelProfile", "adaptive");
+    add("/labwc_config/libinput/device/tap", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlStr("/labwc_config/libinput/device/tapButtonMap", "lrm");
 
     // Most devices have tap-and-drag enabled by default
     // https://wayland.freedesktop.org/libinput/doc/latest/tapping.html#tapndrag
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/tapAndDrag",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/dragLock",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
+    add("/labwc_config/libinput/device/tapAndDrag", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    add("/labwc_config/libinput/device/dragLock", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
 
     // https://wayland.freedesktop.org/libinput/doc/latest/drag-3fg.html#drag-3fg
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/threeFingerDrag",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/middleEmulation",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-
-    settings->push_back(
-            std::make_shared<Setting>("/labwc_config/libinput/device/disableWhileTyping",
-                                      LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/clickMethod",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "none"));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/scrollMethod",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "twoFinger"));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/sendEventsMode",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING,
-                                                  "yes"));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/libinput/device/scrollFactor",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 1.0f));
+    add("/labwc_config/libinput/device/threeFingerDrag", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/libinput/device/middleEmulation", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/libinput/device/disableWhileTyping", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlStr("/labwc_config/libinput/device/clickMethod", "none");
+    settingsAddXmlStr("/labwc_config/libinput/device/scrollMethod", "twoFinger");
+    settingsAddXmlStr("/labwc_config/libinput/device/sendEventsMode", "yes");
+    add("/labwc_config/libinput/device/scrollFactor", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 1.0f);
 
     // Keyboard
-    settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT,
-                                                  LAB_VALUE_TYPE_STRING, "us"));
-
-    settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/numlock",
-                                                  LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/repeatRate", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 25));
-    settings->push_back(std::make_shared<Setting>("/labwc_config/keyboard/repeatDelay", LAB_FILE_TYPE_RCXML,
-                                                  LAB_VALUE_TYPE_INT, 600));
-
-    settings->push_back(std::make_shared<Setting>("XKB_DEFAULT_OPTIONS", LAB_FILE_TYPE_ENVIRONMENT,
-                                                  LAB_VALUE_TYPE_STRING, ""));
+    add("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "us");
+    add("/labwc_config/keyboard/numlock", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    add("/labwc_config/keyboard/repeatRate", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 25);
+    add("/labwc_config/keyboard/repeatDelay", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 600);
+    add("XKB_DEFAULT_OPTIONS", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
 }
 
 
