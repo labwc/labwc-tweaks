@@ -22,7 +22,7 @@ jobs:
 
           - name: Debian
             os: ubuntu-latest
-            container: debian:testing
+            container: debian:trixie
 
     runs-on: ${{ matrix.os }}
     container: ${{ matrix.container }}
