@@ -1,4 +1,4 @@
-#include <QDebug>
+#include <QString>
 #include <variant>
 #include "log.h"
 #include "settings.h"

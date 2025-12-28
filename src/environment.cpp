@@ -2,7 +2,6 @@
 #define _POSIX_C_SOURCE 200809L
 #include <iostream>
 #include <fstream>
-#include <QDebug>
 #include <QFile>
 #include <QString>
 #include <QTextStream>
