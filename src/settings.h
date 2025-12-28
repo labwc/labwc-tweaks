@@ -16,5 +16,3 @@ void setStr(QString name, QString value);
 void setInt(QString name, int value);
 void setBool(QString name, int value);
 void setFloat(QString name, float value);
-
-int parseBool(const char *str, int defaultValue);
