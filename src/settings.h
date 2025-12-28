@@ -12,8 +12,8 @@ int getInt(QString name);
 int getBool(QString name);
 float getFloat(QString name);
 
-void setInt(QString name, int value);
 void setStr(QString name, QString value);
+void setInt(QString name, int value);
 void setBool(QString name, int value);
 void setFloat(QString name, float value);
 

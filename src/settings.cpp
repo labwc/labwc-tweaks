@@ -206,20 +206,6 @@ int getInt(QString name)
     return std::get<int>(setting->value());
 }
 
-float getFloat(QString name)
-{
-    std::shared_ptr<Setting> setting = retrieve(name);
-    if (setting == nullptr) {
-        warn("no setting with name '{}'", name.toStdString());
-        return LAB_INVALID;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
-        warn("not a valid float setting '{}'", name.toStdString());
-        return LAB_INVALID;
-    }
-    return std::get<float>(setting->value());
-}
-
 /* Return -1 for warnor, which works will with setCurrentIndex() */
 int getBool(QString name)
 {
@@ -235,10 +221,54 @@ int getBool(QString name)
     return std::get<int>(setting->value());
 }
 
+float getFloat(QString name)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        warn("no setting with name '{}'", name.toStdString());
+        return LAB_INVALID;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
+        warn("not a valid float setting '{}'", name.toStdString());
+        return LAB_INVALID;
+    }
+    return std::get<float>(setting->value());
+}
+
 //
 // The setters below are for key=value pairs in "rc.xml" and "environment". More complex
 // configuration involving objects like `<keybind>` cannot be managed through these.
 //
+
+void setStr(QString name, QString value)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        warn("no setting with name '{}'", name.toStdString());
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
+        warn("not a valid string setting '{}'", name.toStdString());
+        return;
+    }
+    if (value == std::get<QString>(setting->value())) {
+        return;
+    }
+    switch (setting->fileType()) {
+    case LAB_FILE_TYPE_RCXML:
+        xpath_add_node(name.toStdString().c_str());
+        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+        break;
+    case LAB_FILE_TYPE_ENVIRONMENT:
+        environmentSet(name, value);
+        break;
+    case LAB_FILE_TYPE_UNKNOWN:
+    default:
+        warn("cannot handle file type associated with '{}'", name.toStdString());
+    }
+    setting->setValue(value);
+    info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
+}
 
 void setInt(QString name, int value)
 {
@@ -258,6 +288,36 @@ void setInt(QString name, int value)
     case LAB_FILE_TYPE_RCXML:
         xpath_add_node(name.toStdString().c_str());
         xml_set_num(name.toStdString().c_str(), value);
+        break;
+    case LAB_FILE_TYPE_ENVIRONMENT:
+        environmentSetInt(name, value);
+        break;
+    case LAB_FILE_TYPE_UNKNOWN:
+    default:
+        warn("cannot handle file type associated with '{}'", name.toStdString());
+    }
+    setting->setValue(value);
+    info("'{} has changed to '{}'", name.toStdString(), value);
+}
+
+void setBool(QString name, int value)
+{
+    std::shared_ptr<Setting> setting = retrieve(name);
+    if (setting == nullptr) {
+        warn("no setting with name '{}'", name.toStdString());
+        return;
+    }
+    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
+        warn("not a valid boolean setting '{}'", name.toStdString());
+        return;
+    }
+    if (value == std::get<int>(setting->value())) {
+        return;
+    }
+    switch (setting->fileType()) {
+    case LAB_FILE_TYPE_RCXML:
+        xpath_add_node(name.toStdString().c_str());
+        xml_set(name.toStdString().c_str(), value ? "yes" : "no");
         break;
     case LAB_FILE_TYPE_ENVIRONMENT:
         environmentSetInt(name, value);
@@ -291,66 +351,6 @@ void setFloat(QString name, float value)
         break;
     case LAB_FILE_TYPE_ENVIRONMENT:
         warn("do not yet support setting floats in environment file");
-        break;
-    case LAB_FILE_TYPE_UNKNOWN:
-    default:
-        warn("cannot handle file type associated with '{}'", name.toStdString());
-    }
-    setting->setValue(value);
-    info("'{} has changed to '{}'", name.toStdString(), value);
-}
-
-void setStr(QString name, QString value)
-{
-    std::shared_ptr<Setting> setting = retrieve(name);
-    if (setting == nullptr) {
-        warn("no setting with name '{}'", name.toStdString());
-        return;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
-        warn("not a valid string setting '{}'", name.toStdString());
-        return;
-    }
-    if (value == std::get<QString>(setting->value())) {
-        return;
-    }
-    switch (setting->fileType()) {
-    case LAB_FILE_TYPE_RCXML:
-        xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
-        break;
-    case LAB_FILE_TYPE_ENVIRONMENT:
-        environmentSet(name, value);
-        break;
-    case LAB_FILE_TYPE_UNKNOWN:
-    default:
-        warn("cannot handle file type associated with '{}'", name.toStdString());
-    }
-    setting->setValue(value);
-    info("'{} has changed to '{}'", name.toStdString(), value.toStdString());
-}
-
-void setBool(QString name, int value)
-{
-    std::shared_ptr<Setting> setting = retrieve(name);
-    if (setting == nullptr) {
-        warn("no setting with name '{}'", name.toStdString());
-        return;
-    }
-    if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
-        warn("not a valid boolean setting '{}'", name.toStdString());
-        return;
-    }
-    if (value == std::get<int>(setting->value())) {
-        return;
-    }
-    switch (setting->fileType()) {
-    case LAB_FILE_TYPE_RCXML:
-        xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value ? "yes" : "no");
-        break;
-    case LAB_FILE_TYPE_ENVIRONMENT:
-        environmentSetInt(name, value);
         break;
     case LAB_FILE_TYPE_UNKNOWN:
     default:
