@@ -1,7 +1,7 @@
-#include <QDebug>
 #include <QVectorIterator>
 #include "environment.h"
 #include "layoutmodel.h"
+#include "log.h"
 #include "evdev-lst-layouts.h"
 
 LayoutModel::LayoutModel(QObject *parent) : QAbstractListModel(parent)
@@ -82,7 +82,7 @@ void LayoutModel::addLayout(const QString &code, const QString &desc)
     QVectorIterator<QSharedPointer<Pair>> iter(m_layouts);
     while (iter.hasNext()) {
         if (iter.next().get()->value() == code) {
-            qDebug() << "cannot add the same layout twice";
+            warn("cannot add the same layout twice");
             return;
         }
     }

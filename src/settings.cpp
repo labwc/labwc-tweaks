@@ -1,7 +1,7 @@
+#include "settings.h"
 #include <QDebug>
 #include <variant>
 #include "log.h"
-#include "settings.h"
 #include "environment.h"
 #include "macros.h"
 #include "xml.h"
@@ -182,11 +182,12 @@ QString getStr(QString name)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return nullptr;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
-        qDebug() << "getStr(): not valid string setting" << name;
+        warn("not a valid string setting '{}'", name.toStdString());
+        return nullptr;
     }
     return std::get<QString>(setting->value());
 }
@@ -195,11 +196,12 @@ int getInt(QString name)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return LAB_INVALID;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_INT) {
-        qDebug() << "getInt(): not valid int setting" << name;
+        warn("not a valid int setting '{}'", name.toStdString());
+        return LAB_INVALID;
     }
     return std::get<int>(setting->value());
 }
@@ -208,25 +210,27 @@ float getFloat(QString name)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return LAB_INVALID;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
-        qDebug() << "getFloat(): not valid float setting" << name;
+        warn("not a valid float setting '{}'", name.toStdString());
+        return LAB_INVALID;
     }
     return std::get<float>(setting->value());
 }
 
-/* Return -1 for error, which works will with setCurrentIndex() */
+/* Return -1 for warnor, which works will with setCurrentIndex() */
 int getBool(QString name)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return -1;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
-        qDebug() << "getBool(): not valid bool setting" << name;
+        warn("not a valid boolean setting '{}'", name.toStdString());
+        return LAB_INVALID;
     }
     return std::get<int>(setting->value());
 }
@@ -240,11 +244,11 @@ void setInt(QString name, int value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_INT) {
-        qDebug() << "setInt(): not valid int setting" << name << value;
+        warn("not a valid int setting '{}'", name.toStdString());
         return;
     }
     if (value == std::get<int>(setting->value())) {
@@ -270,11 +274,11 @@ void setFloat(QString name, float value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_FLOAT) {
-        qDebug() << "setFloat(): not valid float setting" << name << value;
+        warn("not a valid float setting '{}'", name.toStdString());
         return;
     }
     if (value == std::get<float>(setting->value())) {
@@ -300,11 +304,11 @@ void setStr(QString name, QString value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_STRING) {
-        qDebug() << "setStr(): not valid string setting" << name << value;
+        warn("not a valid string setting '{}'", name.toStdString());
         return;
     }
     if (value == std::get<QString>(setting->value())) {
@@ -330,11 +334,11 @@ void setBool(QString name, int value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
     if (setting == nullptr) {
-        qDebug() << "warning: no settings with name" << name;
+        warn("no setting with name '{}'", name.toStdString());
         return;
     }
     if (setting->valueType() != LAB_VALUE_TYPE_BOOL) {
-        qDebug() << "setBool(): not valid bool setting" << name << value;
+        warn("not a valid boolean setting '{}'", name.toStdString());
         return;
     }
     if (value == std::get<int>(setting->value())) {

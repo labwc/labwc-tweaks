@@ -13,7 +13,6 @@
 #include "keyboard.h"
 #include "template.h"
 
-#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QString>
