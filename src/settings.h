@@ -5,7 +5,7 @@
 #include <QString>
 #include "setting.h"
 
-void initSettings(std::vector<std::shared_ptr<Setting>> *settings);
+void settingsInit(std::vector<std::shared_ptr<Setting>> *settings);
 
 QString getStr(QString name);
 int getInt(QString name);
