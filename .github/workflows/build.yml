@@ -1,15 +1,9 @@
 name: CI
 on:
-  push:
-    branches:
-      - '*'
-  # Manual builds and PRs in all branches
   pull_request:
     branches:
       - '*'
-  workflow_dispatch:
-    branches:
-      - '*'
+
 jobs:
   build:
     name: Build
