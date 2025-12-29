@@ -9,6 +9,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings);
 
 // Helpers to add entries in settings vector
 void settingsAddXmlStr(QString name, QString defaultValue);
+void settingsAddXmlInt(QString name, int defaultValue);
 
 // Getters
 QString getStr(QString name);
