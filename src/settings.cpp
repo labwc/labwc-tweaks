@@ -22,13 +22,18 @@ void settingsAddXmlStr(QString name, QString defaultValue)
     add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING, defaultValue);
 }
 
+void settingsAddXmlInt(QString name, int defaultValue)
+{
+    add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, defaultValue);
+}
+
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
 
     // Appearance
     settingsAddXmlStr("/labwc_config/theme/name", "");
-    add("/labwc_config/theme/cornerRadius", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8);
+    settingsAddXmlInt("/labwc_config/theme/cornerRadius", 8);
     add("/labwc_config/theme/dropShadows", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
     add("/labwc_config/theme/dropShadowsOnTiled", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
     settingsAddXmlStr("/labwc_config/theme/icon", "");
@@ -40,21 +45,21 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     add("/labwc_config/focus/followMouse", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
     add("/labwc_config/focus/followMouseRequiresMovement", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
     add("/labwc_config/focus/raiseOnFocus", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/core/gap", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 0);
-    add("/labwc_config/snapping/cornerRange", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 50);
+    settingsAddXmlInt("/labwc_config/core/gap", 0);
+    settingsAddXmlInt("/labwc_config/snapping/cornerRange", 50);
     add("/labwc_config/snapping/topMaximize", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
     settingsAddXmlStr("/labwc_config/snapping/notifyClient", "always");
-    add("/labwc_config/resistance/screenEdgeStrength", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 20);
-    add("/labwc_config/resistance/windowEdgeStrength", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 50);
-    add("/labwc_config/resistance/unSnapTreshold", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 20);
-    add("/labwc_config/resistance/unMaximizeTreshold", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 150);
+    settingsAddXmlInt("/labwc_config/resistance/screenEdgeStrength", 20);
+    settingsAddXmlInt("/labwc_config/resistance/windowEdgeStrength", 50);
+    settingsAddXmlInt("/labwc_config/resistance/unSnapTreshold", 20);
+    settingsAddXmlInt("/labwc_config/resistance/unMaximizeTreshold", 150);
     add("/labwc_config/resize/drawContents", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
     add("/labwc_config/theme/keepBorder", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
-    add("/labwc_config/resize/cornerRange", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8); // Default is half the titlebar height
-    add("/labwc_config/resize/resizeMinimumArea", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 8);
+    settingsAddXmlInt("/labwc_config/resize/cornerRange", 8);
+    settingsAddXmlInt("/labwc_config/resize/resizeMinimumArea", 8);
     settingsAddXmlStr("/labwc_config/resize/popupShow", "Never");
-    add("/labwc_config/magnifier/width", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 400);
-    add("/labwc_config/magnifier/height", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 400);
+    settingsAddXmlInt("/labwc_config/magnifier/width", 400);
+    settingsAddXmlInt("/labwc_config/magnifier/height", 400);
     add("/labwc_config/magnifier/initScale", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 2.0f);
     add("/labwc_config/magnifier/increment", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.2f);
     add("/labwc_config/magnifier/useFilter", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
@@ -96,8 +101,8 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     // Keyboard
     add("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "us");
     add("/labwc_config/keyboard/numlock", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/keyboard/repeatRate", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 25);
-    add("/labwc_config/keyboard/repeatDelay", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, 600);
+    settingsAddXmlInt("/labwc_config/keyboard/repeatRate", 25);
+    settingsAddXmlInt("/labwc_config/keyboard/repeatDelay", 600);
     add("XKB_DEFAULT_OPTIONS", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
 }
 
