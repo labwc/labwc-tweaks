@@ -27,6 +27,11 @@ void settingsAddXmlInt(QString name, int defaultValue)
     add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_INT, defaultValue);
 }
 
+void settingsAddXmlBoo(QString name, bool defaultValue)
+{
+    add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, defaultValue);
+}
+
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
@@ -34,27 +39,27 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     // Appearance
     settingsAddXmlStr("/labwc_config/theme/name", "");
     settingsAddXmlInt("/labwc_config/theme/cornerRadius", 8);
-    add("/labwc_config/theme/dropShadows", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/theme/dropShadowsOnTiled", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    settingsAddXmlBoo("/labwc_config/theme/dropShadows", false);
+    settingsAddXmlBoo("/labwc_config/theme/dropShadowsOnTiled", false);
     settingsAddXmlStr("/labwc_config/theme/icon", "");
     settingsAddXmlStr("/labwc_config/theme/maximizedDecoration", "titlebar");
     settingsAddXmlStr("/labwc_config/core/decoration", "Server");
 
     // Behaviour
     settingsAddXmlStr("/labwc_config/placement/policy", "cascade");
-    add("/labwc_config/focus/followMouse", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/focus/followMouseRequiresMovement", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/focus/raiseOnFocus", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    settingsAddXmlBoo("/labwc_config/focus/followMouse", false);
+    settingsAddXmlBoo("/labwc_config/focus/followMouseRequiresMovement", false);
+    settingsAddXmlBoo("/labwc_config/focus/raiseOnFocus", false);
     settingsAddXmlInt("/labwc_config/core/gap", 0);
     settingsAddXmlInt("/labwc_config/snapping/cornerRange", 50);
-    add("/labwc_config/snapping/topMaximize", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlBoo("/labwc_config/snapping/topMaximize", true);
     settingsAddXmlStr("/labwc_config/snapping/notifyClient", "always");
     settingsAddXmlInt("/labwc_config/resistance/screenEdgeStrength", 20);
     settingsAddXmlInt("/labwc_config/resistance/windowEdgeStrength", 50);
     settingsAddXmlInt("/labwc_config/resistance/unSnapTreshold", 20);
     settingsAddXmlInt("/labwc_config/resistance/unMaximizeTreshold", 150);
-    add("/labwc_config/resize/drawContents", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
-    add("/labwc_config/theme/keepBorder", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlBoo("/labwc_config/resize/drawContents", true);
+    settingsAddXmlBoo("/labwc_config/theme/keepBorder", true);
     settingsAddXmlInt("/labwc_config/resize/cornerRange", 8);
     settingsAddXmlInt("/labwc_config/resize/resizeMinimumArea", 8);
     settingsAddXmlStr("/labwc_config/resize/popupShow", "Never");
@@ -62,7 +67,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlInt("/labwc_config/magnifier/height", 400);
     add("/labwc_config/magnifier/initScale", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 2.0f);
     add("/labwc_config/magnifier/increment", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.2f);
-    add("/labwc_config/magnifier/useFilter", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlBoo("/labwc_config/magnifier/useFilter", true);
 
     // Mouse & Touchpad
     add("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
@@ -77,22 +82,22 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     //
     // https://wayland.freedesktop.org/libinput/doc/latest/configuration.html
 
-    add("/labwc_config/libinput/device/naturalScroll", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/libinput/device/leftHanded", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    settingsAddXmlBoo("/labwc_config/libinput/device/naturalScroll", false);
+    settingsAddXmlBoo("/labwc_config/libinput/device/leftHanded", false);
     add("/labwc_config/libinput/device/pointerSpeed", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f);
     settingsAddXmlStr("/labwc_config/libinput/device/accelProfile", "adaptive");
-    add("/labwc_config/libinput/device/tap", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlBoo("/labwc_config/libinput/device/tap", true);
     settingsAddXmlStr("/labwc_config/libinput/device/tapButtonMap", "lrm");
 
     // Most devices have tap-and-drag enabled by default
     // https://wayland.freedesktop.org/libinput/doc/latest/tapping.html#tapndrag
-    add("/labwc_config/libinput/device/tapAndDrag", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
-    add("/labwc_config/libinput/device/dragLock", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    settingsAddXmlBoo("/labwc_config/libinput/device/tapAndDrag", true);
+    settingsAddXmlBoo("/labwc_config/libinput/device/dragLock", false);
 
     // https://wayland.freedesktop.org/libinput/doc/latest/drag-3fg.html#drag-3fg
-    add("/labwc_config/libinput/device/threeFingerDrag", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/libinput/device/middleEmulation", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
-    add("/labwc_config/libinput/device/disableWhileTyping", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 1);
+    settingsAddXmlBoo("/labwc_config/libinput/device/threeFingerDrag", false);
+    settingsAddXmlBoo("/labwc_config/libinput/device/middleEmulation", false);
+    settingsAddXmlBoo("/labwc_config/libinput/device/disableWhileTyping", true);
     settingsAddXmlStr("/labwc_config/libinput/device/clickMethod", "none");
     settingsAddXmlStr("/labwc_config/libinput/device/scrollMethod", "twoFinger");
     settingsAddXmlStr("/labwc_config/libinput/device/sendEventsMode", "yes");
@@ -100,7 +105,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 
     // Keyboard
     add("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "us");
-    add("/labwc_config/keyboard/numlock", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, 0);
+    settingsAddXmlBoo("/labwc_config/keyboard/numlock", false);
     settingsAddXmlInt("/labwc_config/keyboard/repeatRate", 25);
     settingsAddXmlInt("/labwc_config/keyboard/repeatDelay", 600);
     add("XKB_DEFAULT_OPTIONS", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
