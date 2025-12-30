@@ -7,17 +7,19 @@
 
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings);
 
-// Helpers to add entries in settings vector
+// Add new entries
 void settingsAddXmlStr(QString name, QString defaultValue);
 void settingsAddXmlInt(QString name, int defaultValue);
+void settingsAddXmlBoo(QString name, bool defaultValue);
+void settingsAddXmlFlt(QString name, float defaultValue);
 
-// Getters
+// Get values
 QString getStr(QString name);
 int getInt(QString name);
 int getBool(QString name);
 float getFloat(QString name);
 
-// Setters (for entries that already exist)
+// Set values for entries that already exist
 void setStr(QString name, QString value);
 void setInt(QString name, int value);
 void setBool(QString name, int value);
