@@ -32,6 +32,11 @@ void settingsAddXmlBoo(QString name, bool defaultValue)
     add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_BOOL, defaultValue);
 }
 
+void settingsAddXmlFlt(QString name, float defaultValue)
+{
+    add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, defaultValue);
+}
+
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
@@ -65,8 +70,8 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlStr("/labwc_config/resize/popupShow", "Never");
     settingsAddXmlInt("/labwc_config/magnifier/width", 400);
     settingsAddXmlInt("/labwc_config/magnifier/height", 400);
-    add("/labwc_config/magnifier/initScale", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 2.0f);
-    add("/labwc_config/magnifier/increment", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.2f);
+    settingsAddXmlFlt("/labwc_config/magnifier/initScale", 2.0f);
+    settingsAddXmlFlt("/labwc_config/magnifier/increment", 0.2f);
     settingsAddXmlBoo("/labwc_config/magnifier/useFilter", true);
 
     // Mouse & Touchpad
@@ -84,7 +89,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 
     settingsAddXmlBoo("/labwc_config/libinput/device/naturalScroll", false);
     settingsAddXmlBoo("/labwc_config/libinput/device/leftHanded", false);
-    add("/labwc_config/libinput/device/pointerSpeed", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 0.0f);
+    settingsAddXmlFlt("/labwc_config/libinput/device/pointerSpeed", 0.0f);
     settingsAddXmlStr("/labwc_config/libinput/device/accelProfile", "adaptive");
     settingsAddXmlBoo("/labwc_config/libinput/device/tap", true);
     settingsAddXmlStr("/labwc_config/libinput/device/tapButtonMap", "lrm");
@@ -101,7 +106,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlStr("/labwc_config/libinput/device/clickMethod", "none");
     settingsAddXmlStr("/labwc_config/libinput/device/scrollMethod", "twoFinger");
     settingsAddXmlStr("/labwc_config/libinput/device/sendEventsMode", "yes");
-    add("/labwc_config/libinput/device/scrollFactor", LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, 1.0f);
+    settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
 
     // Keyboard
     add("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "us");
