@@ -12,11 +12,12 @@
 static std::vector<std::shared_ptr<Setting>> *_settings;
 
 static void add(QString name, enum settingFileType fileType, enum settingValueType valueType,
-         std::variant<int, float, QString> defaultValue)
+                std::variant<int, float, QString> defaultValue)
 {
     _settings->push_back(std::make_shared<Setting>(name, fileType, valueType, defaultValue));
 }
 
+// rc.xml config file helpers
 void settingsAddXmlStr(QString name, QString defaultValue)
 {
     add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_STRING, defaultValue);
@@ -35,6 +36,17 @@ void settingsAddXmlBoo(QString name, bool defaultValue)
 void settingsAddXmlFlt(QString name, float defaultValue)
 {
     add(name, LAB_FILE_TYPE_RCXML, LAB_VALUE_TYPE_FLOAT, defaultValue);
+}
+
+// environment file helpers
+void settingsAddEnvStr(QString name, QString defaultValue)
+{
+    add(name, LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, defaultValue);
+}
+
+void settingsAddEnvInt(QString name, int defaultValue)
+{
+    add(name, LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_INT, defaultValue);
 }
 
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
@@ -75,8 +87,8 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlBoo("/labwc_config/magnifier/useFilter", true);
 
     // Mouse & Touchpad
-    add("XCURSOR_THEME", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
-    add("XCURSOR_SIZE", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_INT, 24);
+    settingsAddEnvStr("XCURSOR_THEME", "");
+    settingsAddEnvInt("XCURSOR_SIZE", 24);
 
     // We're picking the "usual" default described the libinput documents, although recognise that
     // some devices do not always use these. We think that this approach makes for fewer
@@ -109,13 +121,12 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
 
     // Keyboard
-    add("XKB_DEFAULT_LAYOUT", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "us");
+    settingsAddEnvStr("XKB_DEFAULT_LAYOUT", "us");
     settingsAddXmlBoo("/labwc_config/keyboard/numlock", false);
     settingsAddXmlInt("/labwc_config/keyboard/repeatRate", 25);
     settingsAddXmlInt("/labwc_config/keyboard/repeatDelay", 600);
-    add("XKB_DEFAULT_OPTIONS", LAB_FILE_TYPE_ENVIRONMENT, LAB_VALUE_TYPE_STRING, "");
+    settingsAddEnvStr("XKB_DEFAULT_OPTIONS", "");
 }
-
 
 static std::shared_ptr<Setting> retrieve(QString name)
 {
