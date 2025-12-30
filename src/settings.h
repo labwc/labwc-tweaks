@@ -12,6 +12,8 @@ void settingsAddXmlStr(QString name, QString defaultValue);
 void settingsAddXmlInt(QString name, int defaultValue);
 void settingsAddXmlBoo(QString name, bool defaultValue);
 void settingsAddXmlFlt(QString name, float defaultValue);
+void settingsAddEnvStr(QString name, QString defaultValue);
+void settingsAddEnvInt(QString name, int defaultValue);
 
 // Get values
 QString getStr(QString name);
