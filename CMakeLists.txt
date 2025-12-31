@@ -48,6 +48,7 @@ set(PROJECT_SOURCES
     src/find-themes.cpp src/find-themes.h
     src/pair.h
     src/parse-bool.cpp src/parse-bool.h
+    src/nodename.cpp src/nodename.h
 
     src/appearance.cpp src/appearance.h src/appearance.ui
     src/behaviour.cpp src/behaviour.h src/behaviour.ui
@@ -88,12 +89,12 @@ lxqt_translate_desktop(PROJECT_DESKTOP_FILES
 #===================================================================================================
 include(CTest)
 
-add_executable(t1000 tests/t1000-add-xpath-node.cpp tests/tap.cpp src/xml.cpp src/parse-bool.cpp)
+add_executable(t1000 tests/t1000-add-xpath-node.cpp tests/tap.cpp src/xml.cpp src/parse-bool.cpp src/nodename.cpp)
 target_link_libraries(t1000 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1000 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1000 t1000)
 
-add_executable(t1001 tests/t1001-nodenames.cpp tests/tap.cpp src/parse-bool.cpp)
+add_executable(t1001 tests/t1001-nodenames.cpp tests/tap.cpp src/parse-bool.cpp src/nodename.cpp)
 target_link_libraries(t1001 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1001 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1001 t1001)

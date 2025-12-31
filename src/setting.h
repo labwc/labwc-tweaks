@@ -34,7 +34,7 @@ public:
     void setValue(std::variant<int, float, QString> value);
 
 private:
-    QString m_name;
+    QString m_name; // xpath-style like /foo/bar/baz
     enum settingFileType m_fileType;
     enum settingValueOrigin m_valueOrigin;
     enum settingValueType m_valueType;

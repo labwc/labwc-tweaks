@@ -10,10 +10,12 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
 #include "macros.h"
+#include "nodename.h"
 #include "parse-bool.h"
 #include "xml.h"
 
@@ -51,7 +53,7 @@ static void entry(xmlNode *node, char *nodename, char *content)
  * nodename - return simplistic xpath style nodename
  * For example: <A><B><C></C></B></A> is represented by nodename /a/b/c
  */
-static char *nodename(xmlNode *node, char *buf, int len)
+static char *nodename_xpath_style(xmlNode *node, char *buf, int len)
 {
     if (!node || !node->name) {
         return NULL;
@@ -83,6 +85,49 @@ static char *nodename(xmlNode *node, char *buf, int len)
         *--buf = '/';
         if (!--len)
             return buf;
+    }
+}
+
+/**
+ * nodename - give xml node an ascii name
+ * @node: xml-node
+ * @buf: buffer to receive the name
+ * @len: size of buffer
+ *
+ * For example, the xml structure <a><b><c></c></b></a> would return the
+ * name c.b.a
+ */
+static char *nodename(xmlNode *node, char *buf, int len)
+{
+    if (!node || !node->name) {
+        return NULL;
+    }
+
+    /* Ignore superfluous 'text.' in node name */
+    if (node->parent && !strcmp((char *)node->name, "text")) {
+        node = node->parent;
+    }
+
+    char *p = buf;
+    p[--len] = 0;
+    for (;;) {
+        const char *name = (char *)node->name;
+        char c;
+        while ((c = *name++) != 0) {
+            *p++ = tolower(c);
+            if (!--len) {
+                return buf;
+            }
+        }
+        *p = 0;
+        node = node->parent;
+        if (!node || !node->name) {
+            return buf;
+        }
+        *p++ = '.';
+        if (!--len) {
+            return buf;
+        }
     }
 }
 
@@ -244,10 +289,11 @@ int xml_get_bool_text(const char *nodename)
 }
 
 /* case-insensitive */
-static xmlNode *xml_get_node(const char *nodename)
+static xmlNode *xml_get_node(const char *xpath)
 {
+    std::string nodename = nodenameFromXPath(xpath);
     ctx.node = NULL;
-    ctx.nodename = nodename;
+    ctx.nodename = nodename.c_str();
     ctx.mode = XML_MODE_GETTING;
     xml_tree_walk(xmlDocGetRootElement(ctx.doc));
     return ctx.node;
@@ -314,6 +360,7 @@ out2:
 
 void xpath_add_node(const char *xpath_expr)
 {
+    // Do not add another entry if the only difference is capitalisation
     if (xml_get_node(xpath_expr)) {
         return;
     }

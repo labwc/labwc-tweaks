@@ -1,10 +1,12 @@
 #include "settings.h"
 #include <QDebug>
+#include <string>
 #include <variant>
 #include "log.h"
 #include "environment.h"
 #include "macros.h"
 #include "xml.h"
+#include "nodename.h"
 
 //~ We try not to deal with raw pointers, but keeping *settings in this
 // translation unit just helps not trickle it through lots of QWidget
@@ -60,7 +62,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlBoo("/labwc_config/theme/dropShadowsOnTiled", false);
     settingsAddXmlStr("/labwc_config/theme/icon", "");
     settingsAddXmlStr("/labwc_config/theme/maximizedDecoration", "titlebar");
-    settingsAddXmlStr("/labwc_config/core/decoration", "Server");
+    settingsAddXmlStr("/labwc_config/core/decoration", "server");
 
     // Behaviour
     settingsAddXmlStr("/labwc_config/placement/policy", "cascade");
@@ -79,7 +81,7 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlBoo("/labwc_config/theme/keepBorder", true);
     settingsAddXmlInt("/labwc_config/resize/cornerRange", 8);
     settingsAddXmlInt("/labwc_config/resize/resizeMinimumArea", 8);
-    settingsAddXmlStr("/labwc_config/resize/popupShow", "Never");
+    settingsAddXmlStr("/labwc_config/resize/popupShow", "never");
     settingsAddXmlInt("/labwc_config/magnifier/width", 400);
     settingsAddXmlInt("/labwc_config/magnifier/height", 400);
     settingsAddXmlFlt("/labwc_config/magnifier/initScale", 2.0f);
@@ -215,10 +217,12 @@ void setStr(QString name, QString value)
         return;
     }
     switch (setting->fileType()) {
-    case LAB_FILE_TYPE_RCXML:
+    case LAB_FILE_TYPE_RCXML: {
         xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value.toStdString().c_str());
+        std::string nodename = nodenameFromXPath(name.toStdString());
+        xml_set(nodename.c_str(), value.toStdString().c_str());
         break;
+    }
     case LAB_FILE_TYPE_ENVIRONMENT:
         environmentSet(name, value);
         break;
@@ -245,10 +249,12 @@ void setInt(QString name, int value)
         return;
     }
     switch (setting->fileType()) {
-    case LAB_FILE_TYPE_RCXML:
+    case LAB_FILE_TYPE_RCXML: {
         xpath_add_node(name.toStdString().c_str());
-        xml_set_num(name.toStdString().c_str(), value);
+        std::string nodename = nodenameFromXPath(name.toStdString());
+        xml_set_num(nodename.c_str(), value);
         break;
+    }
     case LAB_FILE_TYPE_ENVIRONMENT:
         environmentSetInt(name, value);
         break;
@@ -275,10 +281,12 @@ void setBool(QString name, int value)
         return;
     }
     switch (setting->fileType()) {
-    case LAB_FILE_TYPE_RCXML:
+    case LAB_FILE_TYPE_RCXML: {
         xpath_add_node(name.toStdString().c_str());
-        xml_set(name.toStdString().c_str(), value ? "yes" : "no");
+        std::string nodename = nodenameFromXPath(name.toStdString());
+        xml_set(nodename.c_str(), value ? "yes" : "no");
         break;
+    }
     case LAB_FILE_TYPE_ENVIRONMENT:
         environmentSetInt(name, value);
         break;
@@ -305,10 +313,12 @@ void setFloat(QString name, float value)
         return;
     }
     switch (setting->fileType()) {
-    case LAB_FILE_TYPE_RCXML:
+    case LAB_FILE_TYPE_RCXML: {
         xpath_add_node(name.toStdString().c_str());
-        xml_set_num(name.toStdString().c_str(), value);
+        std::string nodename = nodenameFromXPath(name.toStdString());
+        xml_set_num(nodename.c_str(), value);
         break;
+    }
     case LAB_FILE_TYPE_ENVIRONMENT:
         warn("do not yet support setting floats in environment file");
         break;
