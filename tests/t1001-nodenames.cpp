@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	xmlNode *node = xpath_get_node((xmlChar *)"/labwc_config/core/gap");
 	char *name = nodename(node, buffer, sizeof(buffer));
 	xml_finish();
-	test(name, "/labwc_config/core/gap");
+	test(name, "gap.core.labwc_config");
 
 	unlink(in);
 	return exit_status();

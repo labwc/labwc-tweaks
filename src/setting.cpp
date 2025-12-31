@@ -4,6 +4,7 @@
 #include "settings.h"
 #include "environment.h"
 #include "macros.h"
+#include "nodename.h"
 #include "xml.h"
 
 bool isValidBool(int value)
@@ -17,42 +18,48 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
 {
     m_valueOrigin = LAB_VALUE_ORIGIN_DEFAULT;
 
+    std::string nodename, truncatedXPath;
+    if (m_fileType == LAB_FILE_TYPE_RCXML) {
+        nodename = nodenameFromXPath(name.toStdString());
+        truncatedXPath = name.replace("/labwc_config", "").toStdString();
+    }
+
     // Use values from rc.xml if different from default
     if (m_fileType == LAB_FILE_TYPE_RCXML) {
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
-            const char *value = xml_get(m_name.toStdString().c_str());
+            const char *value = xml_get(nodename.c_str());
             if (value && QString(value) != std::get<QString>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = QString(value);
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+                info("from rc.xml use {}={}", truncatedXPath, value);
             }
             break;
         }
         case LAB_VALUE_TYPE_INT: {
-            int value = xml_get_int(m_name.toStdString().c_str());
+            int value = xml_get_int(nodename.c_str());
             if (value != LAB_INVALID && value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+                info("from rc.xml use {}={}", truncatedXPath, value);
             }
             break;
         }
         case LAB_VALUE_TYPE_FLOAT: {
-            float value = xml_get_float(m_name.toStdString().c_str());
+            float value = xml_get_float(nodename.c_str());
             if (value != LAB_INVALID && value != value != std::get<float>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+                info("from rc.xml use {}={}", truncatedXPath, value);
             }
             break;
         }
         case LAB_VALUE_TYPE_BOOL: {
-            int value = xml_get_bool_text(m_name.toStdString().c_str());
+            int value = xml_get_bool_text(nodename.c_str());
             if (isValidBool(value) && value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+                info("from rc.xml use {}={}", truncatedXPath, value ? "true" : "false");
             }
             break;
         }
@@ -69,7 +76,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             if (!value.isNull() && (value != std::get<QString>(m_value))) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value.toStdString());
+                info("from environment file use {}={}", m_name.toStdString(), value.toStdString());
             }
             break;
         }
@@ -82,7 +89,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
             if (value != std::get<int>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
-                info("[user-override] {}: {}", m_name.toStdString(), value);
+                info("from environment file use {}={}", m_name.toStdString(), value);
             }
             break;
         }
