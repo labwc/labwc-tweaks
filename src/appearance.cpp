@@ -18,19 +18,23 @@ Appearance::~Appearance()
 void Appearance::activate()
 {
     /* Labwc Theme */
+    settingsAddXmlStr("/labwc_config/theme/name", "");
     QStringList labwcThemes = findLabwcThemes();
     ui->openboxTheme->addItems(labwcThemes);
     ui->openboxTheme->setCurrentIndex(labwcThemes.indexOf(getStr("/labwc_config/theme/name")));
 
     /* Corner Radius */
+    settingsAddXmlInt("/labwc_config/theme/cornerRadius", 8);
     ui->cornerRadius->setValue(getInt("/labwc_config/theme/cornerRadius"));
     ui->cornerRadius->setToolTip(tr("Radius of server side decoration top corners"));
 
     /* Drop Shadows */
+    settingsAddXmlBoo("/labwc_config/theme/dropShadows", false);
     ui->dropShadows->setChecked(getBool("/labwc_config/theme/dropShadows"));
     ui->dropShadows->setToolTip(tr("Render drop-shadows behind windows"));
 
     /* Drop Shadows On Tiled */
+    settingsAddXmlBoo("/labwc_config/theme/dropShadowsOnTiled", false);
     ui->dropShadowsOnTiled->setChecked(getBool("/labwc_config/theme/dropShadowsOnTiled"));
     ui->dropShadowsOnTiled->setToolTip(tr("Render drop-shadows behind tiled windows"));
 
@@ -39,11 +43,13 @@ void Appearance::activate()
     connect(ui->dropShadows, &QCheckBox::toggled, ui->dropShadowsOnTiled, &QWidget::setEnabled);
 
     /* Icon Theme */
+    settingsAddXmlStr("/labwc_config/theme/icon", "");
     QStringList themes = findIconThemes(LAB_ICON_THEME_TYPE_ICON);
     ui->iconTheme->addItems(themes);
     ui->iconTheme->setCurrentIndex(themes.indexOf(getStr("/labwc_config/theme/icon")));
 
     /* Decoration */
+    settingsAddXmlStr("/labwc_config/core/decoration", "server");
     ui->decoration->setToolTip(tr("Specify decorations for xdg-shell windows"));
 
     QVector<QSharedPointer<Pair>> decorations;
@@ -62,6 +68,7 @@ void Appearance::activate()
     }
 
     /* Maximized Decoration */
+    settingsAddXmlStr("/labwc_config/theme/maximizedDecoration", "titlebar");
     ui->maximizedDecoration->setToolTip(tr("Show server side decorations on maximized windows"));
 
     QVector<QSharedPointer<Pair>> maximized_decorations;
