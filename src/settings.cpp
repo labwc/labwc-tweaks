@@ -55,15 +55,6 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
 
-    // Appearance
-    settingsAddXmlStr("/labwc_config/theme/name", "");
-    settingsAddXmlInt("/labwc_config/theme/cornerRadius", 8);
-    settingsAddXmlBoo("/labwc_config/theme/dropShadows", false);
-    settingsAddXmlBoo("/labwc_config/theme/dropShadowsOnTiled", false);
-    settingsAddXmlStr("/labwc_config/theme/icon", "");
-    settingsAddXmlStr("/labwc_config/theme/maximizedDecoration", "titlebar");
-    settingsAddXmlStr("/labwc_config/core/decoration", "server");
-
     // Behaviour
     settingsAddXmlStr("/labwc_config/placement/policy", "cascade");
     settingsAddXmlBoo("/labwc_config/focus/followMouse", false);
