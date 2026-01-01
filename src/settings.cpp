@@ -55,30 +55,6 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
 
-    // Behaviour
-    settingsAddXmlStr("/labwc_config/placement/policy", "cascade");
-    settingsAddXmlBoo("/labwc_config/focus/followMouse", false);
-    settingsAddXmlBoo("/labwc_config/focus/followMouseRequiresMovement", false);
-    settingsAddXmlBoo("/labwc_config/focus/raiseOnFocus", false);
-    settingsAddXmlInt("/labwc_config/core/gap", 0);
-    settingsAddXmlInt("/labwc_config/snapping/cornerRange", 50);
-    settingsAddXmlBoo("/labwc_config/snapping/topMaximize", true);
-    settingsAddXmlStr("/labwc_config/snapping/notifyClient", "always");
-    settingsAddXmlInt("/labwc_config/resistance/screenEdgeStrength", 20);
-    settingsAddXmlInt("/labwc_config/resistance/windowEdgeStrength", 50);
-    settingsAddXmlInt("/labwc_config/resistance/unSnapTreshold", 20);
-    settingsAddXmlInt("/labwc_config/resistance/unMaximizeTreshold", 150);
-    settingsAddXmlBoo("/labwc_config/resize/drawContents", true);
-    settingsAddXmlBoo("/labwc_config/theme/keepBorder", true);
-    settingsAddXmlInt("/labwc_config/resize/cornerRange", 8);
-    settingsAddXmlInt("/labwc_config/resize/resizeMinimumArea", 8);
-    settingsAddXmlStr("/labwc_config/resize/popupShow", "never");
-    settingsAddXmlInt("/labwc_config/magnifier/width", 400);
-    settingsAddXmlInt("/labwc_config/magnifier/height", 400);
-    settingsAddXmlFlt("/labwc_config/magnifier/initScale", 2.0f);
-    settingsAddXmlFlt("/labwc_config/magnifier/increment", 0.2f);
-    settingsAddXmlBoo("/labwc_config/magnifier/useFilter", true);
-
     // Mouse & Touchpad
     settingsAddEnvStr("XCURSOR_THEME", "");
     settingsAddEnvInt("XCURSOR_SIZE", 24);
