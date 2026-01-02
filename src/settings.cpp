@@ -8,9 +8,10 @@
 #include "xml.h"
 #include "nodename.h"
 
-//~ We try not to deal with raw pointers, but keeping *settings in this
-// translation unit just helps not trickle it through lots of QWidget
-// derived classes
+/*~
+ * We try not to deal with raw pointers, but keeping *settings in this translation unit just helps
+ * not trickle it through to lots of QWidget derived classes.
+ */
 static std::vector<std::shared_ptr<Setting>> *_settings;
 
 static void add(QString name, enum settingFileType fileType, enum settingValueType valueType,
@@ -94,7 +95,7 @@ int getInt(QString name)
     return std::get<int>(setting->value());
 }
 
-/* Return -1 for warnor, which works will with setCurrentIndex() */
+/* Return -1 for error because this works well with setCurrentIndex() */
 int getBool(QString name)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
@@ -123,11 +124,11 @@ float getFloat(QString name)
     return std::get<float>(setting->value());
 }
 
-//
-// The setters below are for key=value pairs in "rc.xml" and "environment". More complex
-// configuration involving objects like `<keybind>` cannot be managed through these.
-//
 
+/*~
+ * The setters below are for key=value pairs in "rc.xml" and "environment". More complex
+ * configuration involving objects like `<keybind>` cannot be managed through these.
+ */
 void setStr(QString name, QString value)
 {
     std::shared_ptr<Setting> setting = retrieve(name);
