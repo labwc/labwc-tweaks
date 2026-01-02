@@ -149,9 +149,9 @@ void Behaviour::activate()
     ui->popupShow->setToolTip(
             tr("Show a small indicator on top of the window when resizing or moving"));
     QVector<QSharedPointer<Pair>> resizeShowPopup;
-    resizeShowPopup.append(QSharedPointer<Pair>(new Pair("Never", tr("Never"))));
-    resizeShowPopup.append(QSharedPointer<Pair>(new Pair("Always", tr("Always"))));
-    resizeShowPopup.append(QSharedPointer<Pair>(new Pair("Nonpixel", tr("Nonpixel"))));
+    resizeShowPopup.append(QSharedPointer<Pair>(new Pair("never", tr("Never"))));
+    resizeShowPopup.append(QSharedPointer<Pair>(new Pair("always", tr("Always"))));
+    resizeShowPopup.append(QSharedPointer<Pair>(new Pair("nonpixel", tr("Nonpixel"))));
 
     QString current_popupValue = getStr("/labwc_config/resize/popupShow");
     int popupValue_index = -1;
