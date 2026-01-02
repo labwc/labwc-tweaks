@@ -19,23 +19,41 @@ Mouse::~Mouse()
 void Mouse::activate()
 {
     /* Cursor Theme */
+    settingsAddEnvStr("XCURSOR_THEME", "");
     QStringList cursorThemes = findIconThemes(LAB_ICON_THEME_TYPE_CURSOR);
     ui->cursorTheme->addItems(cursorThemes);
     ui->cursorTheme->setCurrentIndex(cursorThemes.indexOf(getStr("XCURSOR_THEME")));
 
     /* Cursor Size */
+    settingsAddEnvInt("XCURSOR_SIZE", 24);
     ui->cursorSize->setValue(getInt("XCURSOR_SIZE"));
 
+    /*~
+     * For libinput settings we pick the default described the libinput documents, although
+     * recognise that this is not 100% consistent across all devices. We think that this approach
+     * makes for the least amount of user-surprises and it seems consistent with how some big
+     * established compositors handle this.
+     *
+     * The exception is tap-to-click, which labwc enables by default for historic reasons.
+     *
+     * Ref:
+     *   - https://wayland.freedesktop.org/libinput/doc/latest/configuration.html
+     */
+
     /* Natural Scroll */
+    settingsAddXmlBoo("/labwc_config/libinput/device/naturalScroll", false);
     ui->naturalScroll->setChecked(getBool("/labwc_config/libinput/device/naturalScroll"));
 
     /* Left Handed */
+    settingsAddXmlBoo("/labwc_config/libinput/device/leftHanded", false);
     ui->leftHanded->setChecked(getBool("/labwc_config/libinput/device/leftHanded"));
 
     /* Pointer Speed */
+    settingsAddXmlFlt("/labwc_config/libinput/device/pointerSpeed", 0.0f);
     ui->pointerSpeed->setValue(getFloat("/labwc_config/libinput/device/pointerSpeed"));
 
     /* Accel Profiles */
+    settingsAddXmlStr("/labwc_config/libinput/device/accelProfile", "adaptive");
     QVector<QSharedPointer<Pair>> profiles;
     profiles.append(QSharedPointer<Pair>(new Pair("flat", tr("Flat"))));
     profiles.append(QSharedPointer<Pair>(new Pair("adaptive", tr("Adaptive"))));
@@ -51,9 +69,11 @@ void Mouse::activate()
     }
 
     /* Tap to click */
+    settingsAddXmlBoo("/labwc_config/libinput/device/tap", true);
     ui->tap->setChecked(getBool("/labwc_config/libinput/device/tap"));
 
     /* Tap Button Map */
+    settingsAddXmlStr("/labwc_config/libinput/device/tapButtonMap", "lrm");
     QVector<QSharedPointer<Pair>> maps;
     maps.append(QSharedPointer<Pair>(new Pair("lrm", tr("left-right-middle"))));
     maps.append(QSharedPointer<Pair>(new Pair("lmr", tr("left-middle-right"))));
@@ -68,29 +88,48 @@ void Mouse::activate()
         }
     }
 
-    /* Tap And Drag */
+    /*
+     * Tap And Drag
+     *
+     * Most devices have tap-and-drag enabled by default.
+     *
+     * Ref:
+     *   - https://wayland.freedesktop.org/libinput/doc/latest/tapping.html#tapndrag
+     */
+    settingsAddXmlBoo("/labwc_config/libinput/device/tapAndDrag", true);
     ui->tapAndDrag->setChecked(getBool("/labwc_config/libinput/device/tapAndDrag"));
 
-    /* Drag Lock */
+    /*
+     * Drag Lock
+     *
+     * We disable this when tapAndDrag is unchecked.
+     */
+    settingsAddXmlBoo("/labwc_config/libinput/device/dragLock", false);
     ui->dragLock->setChecked(getBool("/labwc_config/libinput/device/dragLock"));
-
-    // Disable it when tapAndDrag is unchecked
     ui->dragLock->setEnabled(ui->tapAndDrag->isChecked());
     ui->label_dragLock->setEnabled(ui->tapAndDrag->isChecked());
-
     connect(ui->tapAndDrag, &QCheckBox::toggled, ui->dragLock, &QWidget::setEnabled);
     connect(ui->tapAndDrag, &QCheckBox::toggled, ui->label_dragLock, &QWidget::setEnabled);
 
-    /* 3 Finger Drag */
+    /*
+     * Three Finger Drag
+     *
+     * Ref:
+     *   - https://wayland.freedesktop.org/libinput/doc/latest/drag-3fg.html#drag-3fg
+     */
+    settingsAddXmlBoo("/labwc_config/libinput/device/threeFingerDrag", false);
     ui->threeFingerDrag->setChecked(getBool("/labwc_config/libinput/device/threeFingerDrag"));
 
     /* Middle Emulation */
+    settingsAddXmlBoo("/labwc_config/libinput/device/middleEmulation", false);
     ui->middleEmulation->setChecked(getBool("/labwc_config/libinput/device/middleEmulation"));
 
     /* Disable While Typing */
+    settingsAddXmlBoo("/labwc_config/libinput/device/disableWhileTyping", true);
     ui->disableWhileTyping->setChecked(getBool("/labwc_config/libinput/device/disableWhileTyping"));
 
     /* Click Method */
+    settingsAddXmlStr("/labwc_config/libinput/device/clickMethod", "none");
     QVector<QSharedPointer<Pair>> clickmethods;
     clickmethods.append(QSharedPointer<Pair>(new Pair("none", tr("None"))));
     clickmethods.append(QSharedPointer<Pair>(new Pair("buttonAreas", tr("Button Area"))));
@@ -108,6 +147,7 @@ void Mouse::activate()
     }
 
     /* Scroll Method */
+    settingsAddXmlStr("/labwc_config/libinput/device/scrollMethod", "twoFinger");
     QVector<QSharedPointer<Pair>> scrollmethods;
     scrollmethods.append(QSharedPointer<Pair>(new Pair("twoFinger", tr("Two Finger"))));
     scrollmethods.append(QSharedPointer<Pair>(new Pair("edge", tr("Edge"))));
@@ -124,9 +164,13 @@ void Mouse::activate()
         }
     }
 
-    /* Send Events Mode */
-    // Note: Cannot support 'No' until the device="" option is supported because otherwise all
-    // devices (including keyboard) will be disabled which is unlikely to be the desired outcome.
+    /*
+     * Send Events Mode
+     *
+     * Note: We cannot support 'No' until the device="" option is supported because otherwise all
+     * devices (including keyboard) will be disabled which is unlikely to be the desired outcome.
+     */
+    settingsAddXmlStr("/labwc_config/libinput/device/sendEventsMode", "yes");
     QVector<QSharedPointer<Pair>> sendeventsmodes;
     sendeventsmodes.append(QSharedPointer<Pair>(new Pair("yes", tr("Enabled"))));
     sendeventsmodes.append(QSharedPointer<Pair>(
@@ -144,6 +188,7 @@ void Mouse::activate()
     }
 
     /* Scroll Factor */
+    settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
     ui->scrollFactor->setValue(getFloat("/labwc_config/libinput/device/scrollFactor"));
 }
 

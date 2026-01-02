@@ -54,40 +54,6 @@ void settingsAddEnvInt(QString name, int defaultValue)
 void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
 {
     _settings = settings;
-
-    // Mouse & Touchpad
-    settingsAddEnvStr("XCURSOR_THEME", "");
-    settingsAddEnvInt("XCURSOR_SIZE", 24);
-
-    // We're picking the "usual" default described the libinput documents, although recognise that
-    // some devices do not always use these. We think that this approach makes for fewer
-    // user-surprises.
-    //
-    // The exception is tap-to-click, which labwc enables be default because the original author
-    // rather liked that behaviour.
-    //
-    // https://wayland.freedesktop.org/libinput/doc/latest/configuration.html
-
-    settingsAddXmlBoo("/labwc_config/libinput/device/naturalScroll", false);
-    settingsAddXmlBoo("/labwc_config/libinput/device/leftHanded", false);
-    settingsAddXmlFlt("/labwc_config/libinput/device/pointerSpeed", 0.0f);
-    settingsAddXmlStr("/labwc_config/libinput/device/accelProfile", "adaptive");
-    settingsAddXmlBoo("/labwc_config/libinput/device/tap", true);
-    settingsAddXmlStr("/labwc_config/libinput/device/tapButtonMap", "lrm");
-
-    // Most devices have tap-and-drag enabled by default
-    // https://wayland.freedesktop.org/libinput/doc/latest/tapping.html#tapndrag
-    settingsAddXmlBoo("/labwc_config/libinput/device/tapAndDrag", true);
-    settingsAddXmlBoo("/labwc_config/libinput/device/dragLock", false);
-
-    // https://wayland.freedesktop.org/libinput/doc/latest/drag-3fg.html#drag-3fg
-    settingsAddXmlBoo("/labwc_config/libinput/device/threeFingerDrag", false);
-    settingsAddXmlBoo("/labwc_config/libinput/device/middleEmulation", false);
-    settingsAddXmlBoo("/labwc_config/libinput/device/disableWhileTyping", true);
-    settingsAddXmlStr("/labwc_config/libinput/device/clickMethod", "none");
-    settingsAddXmlStr("/labwc_config/libinput/device/scrollMethod", "twoFinger");
-    settingsAddXmlStr("/labwc_config/libinput/device/sendEventsMode", "yes");
-    settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
 }
 
 static std::shared_ptr<Setting> retrieve(QString name)
