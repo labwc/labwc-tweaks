@@ -303,7 +303,7 @@
              <string> px</string>
             </property>
             <property name="maximum">
-             <number>100</number>
+             <number>600</number>
             </property>
             <property name="singleStep">
              <number>10</number>
