@@ -102,7 +102,7 @@ void Behaviour::activate()
     ui->screenEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\n across screen edges"));
 
     /* Window Edge Strength */
-    settingsAddXmlInt("/labwc_config/resistance/windowEdgeStrength", 50);
+    settingsAddXmlInt("/labwc_config/resistance/windowEdgeStrength", 20);
     ui->windowEdgeStrength->setValue(getInt("/labwc_config/resistance/windowEdgeStrength"));
     ui->windowEdgeStrength->setToolTip(tr("Resist interactive moves and resizes of a window\n across the edges of any other window"));
 
