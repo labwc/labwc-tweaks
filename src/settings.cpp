@@ -88,13 +88,6 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     settingsAddXmlStr("/labwc_config/libinput/device/scrollMethod", "twoFinger");
     settingsAddXmlStr("/labwc_config/libinput/device/sendEventsMode", "yes");
     settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
-
-    // Keyboard
-    settingsAddEnvStr("XKB_DEFAULT_LAYOUT", "us");
-    settingsAddXmlBoo("/labwc_config/keyboard/numlock", false);
-    settingsAddXmlInt("/labwc_config/keyboard/repeatRate", 25);
-    settingsAddXmlInt("/labwc_config/keyboard/repeatDelay", 600);
-    settingsAddEnvStr("XKB_DEFAULT_OPTIONS", "");
 }
 
 static std::shared_ptr<Setting> retrieve(QString name)
