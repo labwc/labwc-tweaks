@@ -47,7 +47,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_FLOAT: {
             float value = xml_get_float(nodename.c_str());
-            if (value != LAB_INVALID && value != value != std::get<float>(m_value)) {
+            if (value != LAB_INVALID && value != std::get<float>(m_value)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from rc.xml use {}={}", truncatedXPath, value);
