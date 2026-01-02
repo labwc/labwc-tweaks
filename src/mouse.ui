@@ -2,298 +2,407 @@
 <ui version="4.0">
  <class>pageMouse</class>
  <widget class="QWidget" name="pageMouse">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>506</width>
-    <height>653</height>
-   </rect>
-  </property>
-  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0,1">
-   <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Cursor theme</string>
+
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
      </property>
-    </widget>
-   </item>
-   <item row="0" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="cursorTheme"/>
-   </item>
-   <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>Cursor size</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QSpinBox" name="cursorSize"/>
-   </item>
-   <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_5">
-     <property name="text">
-      <string>Natural scroll</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="naturalScroll">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_leftHanded">
-     <property name="text">
-      <string>Left handed</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="leftHanded">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_pointerSpeed">
-     <property name="text">
-      <string>Pointer speed</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1" colspan="4">
-    <widget class="QSlider" name="pointerSpeed">
-     <property name="minimum">
-      <number>-10</number>
-     </property>
-     <property name="maximum">
-      <number>10</number>
-     </property>
-     <property name="singleStep">
-      <number>1</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Orientation::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_accelProfile">
-     <property name="text">
-      <string>Acceleration profile</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="accelProfile"/>
-   </item>
-   <item row="6" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_sendEventsMode">
-     <property name="text">
-      <string>Touchpad</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="sendEventsMode"/>
-   </item>
-   <item row="7" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_tap">
-     <property name="text">
-      <string>Tap to click</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="tap">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-     <property name="checked">
+     <property name="widgetResizable">
       <bool>true</bool>
      </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>30</number>
+       </property>
+       <!-- Group Box - Cursor -->
+       <item>
+        <widget class="QGroupBox" name="groupBox_cursor">
+         <property name="title">
+          <string>Cursor</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_cursor" columnstretch="0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Theme</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="cursorTheme">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="cursorSize">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <!-- Group Box - Pointer General -->
+       <item>
+        <widget class="QGroupBox" name="groupBox_pointerGeneral">
+         <property name="title">
+          <string>Pointer General</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_general" columnstretch="0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Scroll</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="naturalScroll">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Natural</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_leftHanded">
+            <property name="text">
+             <string>Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="leftHanded">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Left handed</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_pointerSpeed">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Pointer speed</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSlider" name="pointerSpeed">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="minimum">
+             <number>-10</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="singleStep">
+             <number>1</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_accelProfile">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Acceleration profile</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="accelProfile">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_scrollFactor">
+            <property name="text">
+             <string>Scroll factor</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QDoubleSpinBox" name="scrollFactor">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="decimals">
+             <number>2</number>
+            </property>
+            <property name="minimum">
+             <double>0.100000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>5.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.100000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <!-- Group Box - Touchpad -->
+       <item>
+        <widget class="QGroupBox" name="groupBox_touchpad">
+         <property name="title">
+          <string>Touchpad</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_touchpad" columnstretch="0,0,0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_sendEventsMode">
+            <property name="text">
+             <string>Touchpad</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QComboBox" name="sendEventsMode"/>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_tap">
+            <property name="text">
+             <string>Tap to click</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QCheckBox" name="tap">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_tapButtonMap">
+            <property name="text">
+             <string>Tap button map</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QComboBox" name="tapButtonMap"/>
+          </item>
+          <item row="4" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_tapAndDrag">
+            <property name="text">
+             <string>Tap and drag</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QCheckBox" name="tapAndDrag">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>1</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="4" column="3" alignment="Qt::AlignmentFlag::AlignRight">
+           <widget class="QLabel" name="label_dragLock">
+            <property name="text">
+             <string>Drag lock</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QCheckBox" name="dragLock">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_threeFingerDrag">
+            <property name="text">
+             <string>Three finger drag</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QCheckBox" name="threeFingerDrag">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_middleEmulation">
+            <property name="text">
+             <string>Middle button emulation</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QCheckBox" name="middleEmulation">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_disableWhileTyping">
+            <property name="text">
+             <string>Disable while typing</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QCheckBox" name="disableWhileTyping">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_clickMethod">
+            <property name="text">
+             <string>Click method</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QComboBox" name="clickMethod"/>
+          </item>
+          <item row="9" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_scrollMethod">
+            <property name="text">
+             <string>Scroll method</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QComboBox" name="scrollMethod"/>
+          </item>
+          <item row="10" column="1">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>5</width>
+              <height>1</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
-   </item>
-   <item row="8" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_tapButtonMap">
-     <property name="text">
-      <string>Tap button map</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="tapButtonMap"/>
-   </item>
-   <item row="9" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_tapAndDrag">
-     <property name="text">
-      <string>Tap and drag</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="1" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="tapAndDrag">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="2">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Orientation::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>1</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="9" column="3" alignment="Qt::AlignmentFlag::AlignRight">
-    <widget class="QLabel" name="label_dragLock">
-     <property name="text">
-      <string>Drag lock</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="dragLock">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_threeFingerDrag">
-     <property name="text">
-      <string>Three finger drag</string>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="threeFingerDrag">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_middleEmulation">
-     <property name="text">
-      <string>Middle button emulation</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="middleEmulation">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_disableWhileTyping">
-     <property name="text">
-      <string>Disable while typing</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QCheckBox" name="disableWhileTyping">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>33</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="13" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_clickMethod">
-     <property name="text">
-      <string>Click method</string>
-     </property>
-    </widget>
-   </item>
-   <item row="13" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="clickMethod"/>
-   </item>
-   <item row="14" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_scrollMethod">
-     <property name="text">
-      <string>Scroll method</string>
-     </property>
-    </widget>
-   </item>
-   <item row="14" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QComboBox" name="scrollMethod"/>
-   </item>
-   <item row="15" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QLabel" name="label_scrollFactor">
-     <property name="text">
-      <string>Scroll factor</string>
-     </property>
-    </widget>
-   </item>
-   <item row="15" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
-    <widget class="QDoubleSpinBox" name="scrollFactor">
-     <property name="decimals">
-      <number>2</number>
-     </property>
-     <property name="minimum">
-      <double>0.100000000000000</double>
-     </property>
-     <property name="maximum">
-      <double>5.000000000000000</double>
-     </property>
-     <property name="singleStep">
-      <double>0.100000000000000</double>
-     </property>
-     <property name="value">
-      <double>1.000000000000000</double>
-     </property>
-    </widget>
-   </item>
-   <item row="16" column="1">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>5</width>
-       <height>1</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
