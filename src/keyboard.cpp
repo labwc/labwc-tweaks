@@ -10,11 +10,6 @@
 Keyboard::Keyboard(QWidget *parent) : QWidget(parent), ui(new Ui::pageKeyboard)
 {
     ui->setupUi(this);
-
-    m_model = new LayoutModel(this);
-    ui->layoutView->setModel(m_model);
-    connect(ui->layoutAdd, &QPushButton::pressed, this, &Keyboard::addSelectedLayout);
-    connect(ui->layoutRemove, &QPushButton::pressed, this, &Keyboard::deleteSelectedLayout);
 }
 
 Keyboard::~Keyboard()
@@ -95,31 +90,43 @@ void Keyboard::getGrpToggleOptions(QVector<QSharedPointer<Pair>> &combo)
 void Keyboard::activate()
 {
     /* Keyboard Layout */
+    settingsAddEnvStr("XKB_DEFAULT_LAYOUT", "us");
+
+    m_model = new LayoutModel(this);
+    ui->layoutView->setModel(m_model);
+    connect(ui->layoutAdd, &QPushButton::pressed, this, &Keyboard::addSelectedLayout);
+    connect(ui->layoutRemove, &QPushButton::pressed, this, &Keyboard::deleteSelectedLayout);
+
     ui->layoutCombo->addItem(tr("Select layout to add..."));
     for (auto layout : evdev_lst_layouts) {
         ui->layoutCombo->addItem(layout.description);
     }
 
     /* Repeat Rate */
+    settingsAddXmlInt("/labwc_config/keyboard/repeatRate", 25);
     ui->repeatRate->setValue(getInt("/labwc_config/keyboard/repeatRate"));
     ui->repeatRate->setToolTip(tr("Rate at which keypresses are repeated per second"));
 
     /* Repeat Delay */
+    settingsAddXmlInt("/labwc_config/keyboard/repeatDelay", 600);
     ui->repeatDelay->setValue(getInt("/labwc_config/keyboard/repeatDelay"));
     ui->repeatDelay->setToolTip(tr("Delay before keypresses are repeated"));
 
     /* Numlock */
+    settingsAddXmlBoo("/labwc_config/keyboard/numlock", false);
     ui->numlock->setChecked(getBool("/labwc_config/keyboard/numlock"));
     ui->numlock->setToolTip(tr("Enable Num Lock when recognizing a new keyboard"));
 
     // Keyboard Layout Group Switching
+    settingsAddEnvStr("XKB_DEFAULT_OPTIONS", "");
     ui->layoutGrpSwitcher->setToolTip(tr("Key combination to switch keyboard layout"));
     QVector<QSharedPointer<Pair>> combo;
     getGrpToggleOptions(combo);
     QString current = getStr("XKB_DEFAULT_OPTIONS");
     int index = -1;
     foreach (auto policy, combo) {
-        ui->layoutGrpSwitcher->addItem(policy.get()->description(), QVariant(policy.get()->value()));
+        ui->layoutGrpSwitcher->addItem(policy.get()->description(),
+                                       QVariant(policy.get()->value()));
         ++index;
         if (current == policy.get()->value()) {
             ui->layoutGrpSwitcher->setCurrentIndex(index);
