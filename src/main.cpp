@@ -1,14 +1,18 @@
-#include "maindialog.h"
-
+/*~
+ * Welcome, dear reader. This is the main file of labwc-tweaks, and as such, a good starting point
+ * for reading the code.  Comments beginning with a tilde (~) are part of a thread running through
+ * the source with the aim of shortening the route to familiarity. They are meant to be read in a
+ * certain order.
+ */
 #include <QApplication>
+#include <QFileInfo>
 #include <QLibraryInfo>
 #include <QMessageBox>
 #include <QTranslator>
-#include <QFileInfo>
-
-#include "log.h"
-#include "settings.h"
 #include "environment.h"
+#include "log.h"
+#include "maindialog.h"
+#include "settings.h"
 #include "xml.h"
 
 static void initLocale(QTranslator *qtTranslator, QTranslator *translator)
@@ -84,8 +88,12 @@ int main(int argc, char *argv[])
     std::string config_file = config_dir + "/rc.xml";
     initConfig(config_file);
 
-    // The 'settings' vector contains the master state of all settings that can
-    // be changed by labwc-tweaks.
+    /*~
+     * This settings vector contains the master state of all key=value type settings that can be
+     * changed by labwc-tweaks.
+     *
+     * settings.h contains an API for working with these.
+     */
     std::vector<std::shared_ptr<Setting>> settings;
     settingsInit(&settings);
 
