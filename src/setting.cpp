@@ -29,7 +29,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
             const char *value = xml_get(nodename.c_str());
-            if (value && QString(value) != std::get<QString>(m_value)) {
+            if (value && QString::compare(value, std::get<QString>(m_value), Qt::CaseInsensitive)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = QString(value);
                 info("from rc.xml use {}={}", truncatedXPath, value);
