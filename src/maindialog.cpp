@@ -29,8 +29,6 @@
 
 MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
 {
-    resize(640, 480);
-
     QVBoxLayout *verticalLayout = new QVBoxLayout(this);
     verticalLayout->setContentsMargins(6, 6, 6, 6);
 
