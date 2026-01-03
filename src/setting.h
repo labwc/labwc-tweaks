@@ -2,7 +2,7 @@
 #include <memory>
 #include <vector>
 #include <QString>
-#include "settings.h"
+#include <QVariant>
 
 enum settingFileType {
     LAB_FILE_TYPE_UNKNOWN = 0,
@@ -29,16 +29,16 @@ class Setting
 {
 public:
     Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
-            std::variant<int, float, QString> defaultValue);
+            QVariant defaultValue);
 
-    void setValue(std::variant<int, float, QString> value);
+    void setValue(QVariant value);
 
 private:
     QString m_name; // xpath-style like /foo/bar/baz
     enum settingFileType m_fileType;
     enum settingValueOrigin m_valueOrigin;
     enum settingValueType m_valueType;
-    std::variant<int, float, QString> m_value;
+    QVariant m_value;
 
 public:
     // Getters
@@ -46,5 +46,5 @@ public:
     enum settingFileType fileType() const { return m_fileType; }
     enum settingValueOrigin valueOrigin() const { return m_valueOrigin; }
     enum settingValueType valueType() const { return m_valueType; }
-    std::variant<int, float, QString> value() const { return m_value; }
+    QVariant value() const { return m_value; }
 };
