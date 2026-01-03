@@ -1,7 +1,7 @@
 #include "settings.h"
 #include <QDebug>
+#include <QVariant>
 #include <string>
-#include <variant>
 #include "log.h"
 #include "environment.h"
 #include "macros.h"
@@ -15,7 +15,7 @@
 static std::vector<std::shared_ptr<Setting>> *_settings;
 
 static void add(QString name, enum settingFileType fileType, enum settingValueType valueType,
-                std::variant<int, float, QString> defaultValue)
+                QVariant defaultValue)
 {
     _settings->push_back(std::make_shared<Setting>(name, fileType, valueType, defaultValue));
 }
@@ -78,7 +78,8 @@ QString getStr(QString name)
         warn("not a valid string setting '{}'", name.toStdString());
         return nullptr;
     }
-    return std::get<QString>(setting->value());
+    QString ret = setting->value().toString();
+    return ret;
 }
 
 int getInt(QString name)
@@ -92,7 +93,8 @@ int getInt(QString name)
         warn("not a valid int setting '{}'", name.toStdString());
         return LAB_INVALID;
     }
-    return std::get<int>(setting->value());
+    int ret = setting->value().toInt();
+    return ret;
 }
 
 /* Return -1 for error because this works well with setCurrentIndex() */
@@ -107,7 +109,8 @@ int getBool(QString name)
         warn("not a valid boolean setting '{}'", name.toStdString());
         return LAB_INVALID;
     }
-    return std::get<int>(setting->value());
+    int ret = setting->value().toInt();
+    return ret;
 }
 
 float getFloat(QString name)
@@ -121,9 +124,9 @@ float getFloat(QString name)
         warn("not a valid float setting '{}'", name.toStdString());
         return LAB_INVALID;
     }
-    return std::get<float>(setting->value());
+    float ret = setting->value().toFloat();
+    return ret;
 }
-
 
 /*~
  * The setters below are for key=value pairs in "rc.xml" and "environment". More complex
@@ -140,7 +143,7 @@ void setStr(QString name, QString value)
         warn("not a valid string setting '{}'", name.toStdString());
         return;
     }
-    if (value == std::get<QString>(setting->value())) {
+    if (value == setting->value().toString()) {
         return;
     }
     switch (setting->fileType()) {
@@ -172,7 +175,7 @@ void setInt(QString name, int value)
         warn("not a valid int setting '{}'", name.toStdString());
         return;
     }
-    if (value == std::get<int>(setting->value())) {
+    if (value == setting->value().toInt()) {
         return;
     }
     switch (setting->fileType()) {
@@ -204,7 +207,7 @@ void setBool(QString name, int value)
         warn("not a valid boolean setting '{}'", name.toStdString());
         return;
     }
-    if (value == std::get<int>(setting->value())) {
+    if (value == setting->value().toInt()) {
         return;
     }
     switch (setting->fileType()) {
@@ -236,7 +239,7 @@ void setFloat(QString name, float value)
         warn("not a valid float setting '{}'", name.toStdString());
         return;
     }
-    if (value == std::get<float>(setting->value())) {
+    if (value == setting->value().toFloat()) {
         return;
     }
     switch (setting->fileType()) {

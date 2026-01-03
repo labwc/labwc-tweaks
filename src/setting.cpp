@@ -1,5 +1,5 @@
 #include <QString>
-#include <variant>
+#include <QVariant>
 #include "log.h"
 #include "settings.h"
 #include "environment.h"
@@ -13,7 +13,7 @@ bool isValidBool(int value)
 }
 
 Setting::Setting(QString name, enum settingFileType fileType, enum settingValueType valueType,
-                 std::variant<int, float, QString> defaultValue)
+                 QVariant defaultValue)
     : m_name(name), m_fileType(fileType), m_valueType(valueType), m_value(defaultValue)
 {
     m_valueOrigin = LAB_VALUE_ORIGIN_DEFAULT;
@@ -29,7 +29,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
             const char *value = xml_get(nodename.c_str());
-            if (value && QString::compare(value, std::get<QString>(m_value), Qt::CaseInsensitive)) {
+            if (value && QString::compare(value, m_value.toString(), Qt::CaseInsensitive)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = QString(value);
                 info("from rc.xml use {}={}", truncatedXPath, value);
@@ -38,7 +38,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_INT: {
             int value = xml_get_int(nodename.c_str());
-            if (value != LAB_INVALID && value != std::get<int>(m_value)) {
+            if (value != LAB_INVALID && value != m_value.toInt()) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from rc.xml use {}={}", truncatedXPath, value);
@@ -47,7 +47,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_FLOAT: {
             float value = xml_get_float(nodename.c_str());
-            if (value != LAB_INVALID && value != std::get<float>(m_value)) {
+            if (value != LAB_INVALID && value != m_value.toFloat()) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from rc.xml use {}={}", truncatedXPath, value);
@@ -56,7 +56,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         }
         case LAB_VALUE_TYPE_BOOL: {
             int value = xml_get_bool_text(nodename.c_str());
-            if (isValidBool(value) && value != std::get<int>(m_value)) {
+            if (isValidBool(value) && value != m_value.toInt()) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from rc.xml use {}={}", truncatedXPath, value ? "true" : "false");
@@ -73,7 +73,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
             QString value = QString(environmentGet(m_name));
-            if (!value.isNull() && (value != std::get<QString>(m_value))) {
+            if (!value.isNull() && (value != m_value.toString())) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from environment file use {}={}", m_name.toStdString(), value.toStdString());
@@ -86,7 +86,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
                 // There was no environment file - or it did not contain the key
                 break;
             }
-            if (value != std::get<int>(m_value)) {
+            if (value != m_value.toInt()) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from environment file use {}={}", m_name.toStdString(), value);
@@ -103,7 +103,7 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
     }
 }
 
-void Setting::setValue(std::variant<int, float, QString> value)
+void Setting::setValue(QVariant value)
 {
     if (value != m_value) {
         m_valueOrigin = LAB_VALUE_ORIGIN_CHANGED_IN_THIS_SESSION;
