@@ -89,8 +89,13 @@ void Keyboard::getGrpToggleOptions(QVector<QSharedPointer<Pair>> &combo)
 
 void Keyboard::activate()
 {
-    /* Keyboard Layout */
-    settingsAddEnvStr("XKB_DEFAULT_LAYOUT", "us");
+    /*
+     * Keyboard Layout
+     *
+     * We fallback on the environment variable if nothing has been set in the environment file
+     */
+    QString xkb_default_layout = qgetenv("XKB_DEFAULT_LAYOUT");
+    settingsAddEnvStr("XKB_DEFAULT_LAYOUT", xkb_default_layout.isEmpty() ? "" : xkb_default_layout);
 
     m_model = new LayoutModel(this);
     ui->layoutView->setModel(m_model);
