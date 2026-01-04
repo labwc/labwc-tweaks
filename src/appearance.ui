@@ -2,198 +2,181 @@
 <ui version="4.0">
  <class>pageAppearance</class>
  <widget class="QWidget" name="pageAppearance">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>581</width>
-    <height>596</height>
-   </rect>
-  </property>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>659</width>
-     <height>287</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <!-- Row 0 -->
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Labwc theme</string>
-      </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>30</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox1">
+         <property name="title">
+          <string>Theme</string>
+         </property>
+         <layout class="QGridLayout" name="groupBox1_gridLayout" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Compositor</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="openboxTheme"/>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_1">
+            <property name="text">
+             <string>Icon</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="iconTheme"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox2">
+         <property name="title">
+          <string>Window Drop Shadows</string>
+         </property>
+         <layout class="QGridLayout" name="groupBox2_gridLayout" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="dropShadows">
+            <property name="text">
+             <string>Enable shadows</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="dropShadowsOnTiled">
+            <property name="text">
+             <string>Enable on tiled windows</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox3">
+         <property name="title">
+          <string>Titlebar</string>
+         </property>
+         <layout class="QGridLayout" name="groupBox3_gridLayout" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Corner radius</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="cornerRadius">
+            <property name="maximum">
+             <number>24</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Maximized decoration</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="maximizedDecoration"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox4">
+         <property name="title">
+          <string>Advanced</string>
+         </property>
+         <layout class="QGridLayout" name="groupBox4_gridLayout" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Decoration mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="decoration"/>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
-    </item>
-    <item row="0" column="3">
-     <widget class="QComboBox" name="openboxTheme"/>
-    </item>
-    <item row="0" column="5">
-     <spacer name="horizontalSpacer_8">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>118</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-
-    <!-- Row 1 -->
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_1">
-      <property name="text">
-       <string>Icon theme</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QComboBox" name="iconTheme"/>
-    </item>
-    <item row="1" column="4" colspan="2">
-     <spacer name="horizontalSpacer_9">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>118</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-
-    <!-- Row 2 -->
-    <item row="2" column="0" colspan="2">
-     <widget class="QCheckBox" name="dropShadows">
-      <property name="text">
-       <string>Enable shadows</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2" colspan="3">
-     <widget class="QCheckBox" name="dropShadowsOnTiled">
-      <property name="text">
-       <string>Enable on tiled windows</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="5">
-     <spacer name="horizontalSpacer_11">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>118</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-
-    <!-- Row 3 -->
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Corner radius</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1" colspan="2">
-     <widget class="QSpinBox" name="cornerRadius">
-      <property name="maximum">
-       <number>24</number>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="3" colspan="3">
-     <spacer name="horizontalSpacer_6">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>418</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-
-    <!-- Row 4 -->
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>Decoration</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="3">
-     <widget class="QComboBox" name="decoration"/>
-    </item>
-    <item row="4" column="4" colspan="2">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>188</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-
-    <!-- Row 5 -->
-    <item row="5" column="0" colspan="3">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Maximized decoration</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="3">
-     <widget class="QComboBox" name="maximizedDecoration"/>
-    </item>
-    <item row="5" column="4" colspan="2">
-     <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>198</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-
-    <!-- Row 6 -->
-    <item row="6" column="3">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>13</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-   </layout>
-  </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

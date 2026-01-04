@@ -53,8 +53,10 @@ void Appearance::activate()
     ui->decoration->setToolTip(tr("Specify decorations for xdg-shell windows"));
 
     QVector<QSharedPointer<Pair>> decorations;
-    decorations.append(QSharedPointer<Pair>(new Pair("server", tr("Server"))));
-    decorations.append(QSharedPointer<Pair>(new Pair("client", tr("Client"))));
+    decorations.append(QSharedPointer<Pair>(new Pair("server",
+                                                     tr("Server Side Decoration (SSD)"))));
+    decorations.append(QSharedPointer<Pair>(new Pair("client",
+                                                     tr("Client Side Decoration (CSD)"))));
 
     QString current_decoration = getStr("/labwc_config/core/decoration");
     int decoration_index = -1;
