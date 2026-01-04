@@ -22,7 +22,7 @@
          <property name="title">
           <string>General</string>
          </property>
-         <layout class="QGridLayout" name="other_settings" columnstretch="0,1">
+         <layout class="QGridLayout" name="other_settings" columnstretch="0,0,1">
           <property name="horizontalSpacing">
            <number>16</number>
           </property>
@@ -38,6 +38,13 @@
           </item>
           <item row="0" column="1">
            <widget class="QSpinBox" name="repeatRate"/>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_2">
@@ -82,7 +89,7 @@
          <property name="title">
           <string>Keyboard Layout</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,1">
+         <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,1">
           <property name="horizontalSpacing">
            <number>16</number>
           </property>
@@ -91,6 +98,13 @@
           </property>
           <item row="0" column="0" colspan="2">
            <widget class="QListView" name="layoutView"/>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
           </item>
           <item row="1" column="0" colspan="2">
            <widget class="QComboBox" name="layoutCombo"/>
@@ -124,7 +138,15 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QComboBox" name="layoutGrpSwitcher"/>
+           <widget class="QComboBox" name="layoutGrpSwitcher">
+            <!-- This QComboBox has such long entries, that we prefer to limit its width -->
+            <property name="maximumSize">
+             <size>
+              <height>16777215</height>
+              <width>250</width>
+             </size>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>

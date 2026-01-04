@@ -23,7 +23,7 @@
          <property name="title">
           <string>Cursor</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_cursor" columnstretch="0,1">
+         <layout class="QGridLayout" name="gridLayout_cursor" columnstretch="0,0,1">
           <property name="horizontalSpacing">
            <number>16</number>
           </property>
@@ -46,6 +46,13 @@
              </size>
             </property>
            </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_4">
@@ -73,7 +80,7 @@
          <property name="title">
           <string>Pointer General</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_general" columnstretch="0,1">
+         <layout class="QGridLayout" name="gridLayout_general" columnstretch="0,0,1">
           <property name="horizontalSpacing">
            <number>16</number>
           </property>
@@ -99,6 +106,13 @@
              <string>Natural</string>
             </property>
            </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_leftHanded">
