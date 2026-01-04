@@ -13,11 +13,7 @@
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <layout class="QVBoxLayout" name="verticalLayout_2">
-       <!--
-        #
-        # We use 30px vertical spacing between Group Boxes
-        #
-       -->
+       <!-- /*~ We use 30px vertical spacing between Group Boxes */ -->
        <property name="spacing">
         <number>30</number>
        </property>
@@ -27,16 +23,9 @@
          <property name="title">
           <string>GroupBox1</string>
          </property>
-         <!--
-          #
-          # The left-most column typically contains labels. We want this to be
-          # snug, so stretch all columns except the first one.
-          #
-          # We use spacing of 16px / 8px between widgets in the grid so they do
-          # not look too tight.
-          #
-         -->
-         <layout class="QGridLayout" name="groupBox1_gridLayout" columnstretch="0,1">
+         <!-- /*~ With QGridLayout, the right-most column is stretched to make all the others snug */ -->
+         <layout class="QGridLayout" name="groupBox1_gridLayout" columnstretch="0,0,1">
+          <!-- /*~ QGridLayout spacing of (16, 8) is used to avoid widgets looking too tight */ -->
           <property name="horizontalSpacing">
            <number>16</number>
           </property>
@@ -52,6 +41,18 @@
           </item>
           <item row="0" column="1">
            <widget class="QComboBox" name="comboBox"/>
+          </item>
+          <!--
+           /*~ The QMainDialog can be resized, so a dummy right-most column with a spacer is used
+            * to make sure widgets do not become bigger than they need to be.
+            */
+          -->
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_2">
