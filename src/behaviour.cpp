@@ -136,11 +136,11 @@ void Behaviour::activate()
             tr("Size of corner regions to which all 'Corner' mousebinds contexts apply\n as well "
                "size of border region for which mouse resizing will apply in any direction."));
 
-    /* Resize Minimum Area */
-    settingsAddXmlInt("/labwc_config/resize/resizeMinimumArea", 8);
-    ui->resizeMinimumArea->setValue(getInt("/labwc_config/resize/resizeMinimumArea"));
-    ui->resizeMinimumArea->setToolTip(tr("Treat borders of server-side decorations as \nif they "
-                                         "were at least the indicated thickness"));
+    /* Resize: Minimum Area */
+    settingsAddXmlInt("/labwc_config/resize/minimumArea", 8);
+    ui->resizeMinimumArea->setValue(getInt("/labwc_config/resize/minimumArea"));
+    ui->resizeMinimumArea->setToolTip(tr("Specify the thickness of border grab areas for the\n"
+                                         "purposes of resizing windows"));
 
     // clang-format on
 
@@ -204,7 +204,7 @@ void Behaviour::onApply()
     setBool("/labwc_config/resize/drawContents", ui->drawContents->isChecked());
     setBool("/labwc_config/theme/keepBorder", ui->keepBorder->isChecked());
     setInt("/labwc_config/resize/cornerRange", ui->resizeCornerRange->value());
-    setInt("/labwc_config/resize/resizeMinimumArea", ui->resizeMinimumArea->value());
+    setInt("/labwc_config/resize/minimumArea", ui->resizeMinimumArea->value());
     setStr("/labwc_config/resize/popupShow", DATA(ui->popupShow));
     setInt("/labwc_config/magnifier/width", ui->magnifierWidth->value());
     setInt("/labwc_config/magnifier/height", ui->magnifierHeight->value());
