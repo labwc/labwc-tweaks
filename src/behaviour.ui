@@ -146,19 +146,19 @@
          <property name="title">
           <string>Window Snapping</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2">
-          <item row="0" column="2">
-           <spacer name="horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
+         <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Corner range</string>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>539</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+           </widget>
           </item>
           <item row="0" column="1">
            <widget class="QSpinBox" name="snapCornerRange">
@@ -167,29 +167,29 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_8">
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_9">
             <property name="text">
-             <string>Corner range</string>
+             <string>Notify applications of tiled state </string>
             </property>
            </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="notifyClients"/>
           </item>
           <item row="2" column="0" colspan="2">
            <widget class="QCheckBox" name="topMaximize">
             <property name="text">
-             <string>Maximize on top</string>
+             <string>Maximize when snapping to top edge</string>
             </property>
            </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_9">
-            <property name="text">
-             <string>Notify applications</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QComboBox" name="notifyClients"/>
           </item>
          </layout>
         </widget>
@@ -199,7 +199,13 @@
          <property name="title">
           <string>Resistance</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout">
+         <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="label_6">
             <property name="text">
@@ -222,12 +228,6 @@
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>398</width>
-              <height>20</height>
-             </size>
-            </property>
            </spacer>
           </item>
           <item row="1" column="0">
@@ -247,19 +247,6 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <spacer name="horizontalSpacer_15">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>398</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_15">
             <property name="text">
@@ -273,19 +260,6 @@
              <string> px</string>
             </property>
            </widget>
-          </item>
-          <item row="2" column="2">
-           <spacer name="horizontalSpacer_16">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>398</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_16">
@@ -306,19 +280,6 @@
              <number>10</number>
             </property>
            </widget>
-          </item>
-          <item row="3" column="2">
-           <spacer name="horizontalSpacer_17">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>398</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
