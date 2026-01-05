@@ -13,9 +13,9 @@
      </property>
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <layout class="QVBoxLayout" name="verticalLayout_2">
-       <!-- /*~ We use 30px vertical spacing between Group Boxes */ -->
+       <!-- /*~ We use 9px vertical spacing between Group Boxes */ -->
        <property name="spacing">
-        <number>30</number>
+        <number>9</number>
        </property>
        <!-- Group Box 1 -->
        <item>

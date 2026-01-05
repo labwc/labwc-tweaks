@@ -14,7 +14,7 @@
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="spacing">
-        <number>30</number>
+        <number>9</number>
        </property>
        <!-- Group Box - Cursor -->
        <item>
