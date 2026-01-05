@@ -111,7 +111,7 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <!-- Indent checkbox with logic on parent -->
+           <!-- Indent checkbox with logic on parent by 8 pixels -->
            <spacer name="horizontalSpacer_followMouseRequiresMovement">
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
@@ -296,18 +296,17 @@
           <property name="verticalSpacing">
            <number>8</number>
           </property>
-
           <item row="0" column="0">
-           <widget class="QCheckBox" name="drawContents">
+           <widget class="QLabel" name="label_22">
             <property name="text">
-             <string>Draw contents</string>
+             <string>Corner range</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QCheckBox" name="keepBorder">
-            <property name="text">
-             <string>Keep border</string>
+           <widget class="QSpinBox" name="resizeCornerRange">
+            <property name="suffix">
+             <string> px</string>
             </property>
            </widget>
           </item>
@@ -316,103 +315,45 @@
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="4">
-           <spacer name="horizontalSpacer_9">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_22">
+           <widget class="QLabel" name="label_23">
             <property name="text">
-             <string>Corner range</string>
+             <string>Grab thickness</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSpinBox" name="resizeCornerRange">
-            <property name="suffix">
-             <string> px</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <spacer name="horizontalSpacer_10">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_23">
-            <property name="text">
-             <string>Minimum area</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
            <widget class="QSpinBox" name="resizeMinimumArea">
             <property name="suffix">
              <string> px</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="3">
-           <spacer name="horizontalSpacer_11">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="3" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="label_21">
             <property name="text">
              <string>Show popup</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="2" column="1">
            <widget class="QComboBox" name="popupShow"/>
           </item>
-          <item row="3" column="3" colspan="2">
-           <spacer name="horizontalSpacer_12">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
+          <item row="3" column="0" colspan="2">
+           <widget class="QCheckBox" name="drawContents">
+            <property name="text">
+             <string>Draw contents</string>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="QCheckBox" name="keepBorder">
+            <property name="text">
+             <string>Keep border</string>
             </property>
-           </spacer>
+           </widget>
           </item>
 
          </layout>
