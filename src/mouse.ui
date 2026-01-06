@@ -310,6 +310,32 @@
          </layout>
         </widget>
        </item>
+       <!-- Group Box - Touch Screen -->
+       <item>
+        <widget class="QGroupBox" name="groupBox_touchscreen">
+         <property name="title">
+          <string>Touch screen</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_touchscreen" columnstretch="0,0,0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QLabel" name="label_calibrationMatrix">
+            <property name="text">
+             <string>Rotation</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="4" alignment="Qt::AlignmentFlag::AlignLeft">
+           <widget class="QComboBox" name="calibrationMatrix"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
