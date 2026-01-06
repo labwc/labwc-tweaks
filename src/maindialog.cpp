@@ -11,6 +11,7 @@
 #include "behaviour.h"
 #include "mouse.h"
 #include "keyboard.h"
+#include "touchscreen.h"
 #include "template.h"
 
 #include <QDir>
@@ -56,6 +57,10 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     item3->setIcon(QIcon::fromTheme("preferences-desktop-keyboard"));
     item3->setText(tr("Keyboard"));
 
+    QListWidgetItem *item4 = new QListWidgetItem(list);
+    item4->setIcon(QIcon::fromTheme("preferences-desktop-touchscreen"));
+    item4->setText(tr("Touchscreen"));
+
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         QListWidgetItem *item99 = new QListWidgetItem(list);
         item99->setIcon(QIcon::fromTheme("preferences-system"));
@@ -87,6 +92,9 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
 
     m_pageKeyboard = new Keyboard();
     stack->addWidget(m_pageKeyboard);
+
+    m_pageTouchscreen = new Touchscreen();
+    stack->addWidget(m_pageTouchscreen);
 
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         m_pageTemplate = new Template();
@@ -133,6 +141,7 @@ void MainDialog::activate()
     m_pageBehaviour->activate();
     m_pageMouse->activate();
     m_pageKeyboard->activate();
+    m_pageTouchscreen->activate();
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         m_pageTemplate->activate();
     }
@@ -144,6 +153,7 @@ void MainDialog::onApply()
     m_pageBehaviour->onApply();
     m_pageMouse->onApply();
     m_pageKeyboard->onApply();
+    m_pageTouchscreen->onApply();
 
     xml_save();
     environmentSave();

@@ -54,6 +54,7 @@ set(PROJECT_SOURCES
     src/behaviour.cpp src/behaviour.h src/behaviour.ui
     src/mouse.cpp src/mouse.h src/mouse.ui
     src/keyboard.cpp src/keyboard.h src/keyboard.ui
+    src/touchscreen.cpp src/touchscreen.h src/touchscreen.ui
     src/template.cpp src/template.h src/template.ui
 )
 set(PROJECT_OTHER_FILES

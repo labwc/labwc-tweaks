@@ -190,26 +190,6 @@ void Mouse::activate()
     /* Scroll Factor */
     settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
     ui->scrollFactor->setValue(getFloat("/labwc_config/libinput/device/scrollFactor"));
-
-    /* Touchscreen Rotation */
-    settingsAddXmlStr("/labwc_config/libinput/device/calibrationMatrix", "");
-    QVector<QSharedPointer<Pair>> calibrationmatrixes;
-    calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("", tr(""))));
-    calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("1 0 0 0 1 0", tr("Normal"))));
-    calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("0 -1 1 1 0 0", tr("Left"))));
-    calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("0 1 0 -1 0 1", tr("Right"))));
-    calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("-1 0 1 0 -1 1", tr("Inverted"))));
-
-    QString current_calibrationmatrix = getStr("/labwc_config/libinput/device/calibrationMatrix");
-    int calibrationmatrix_index = -1;
-    foreach (auto calibrationmatrix, calibrationmatrixes) {
-        ui->calibrationMatrix->addItem(calibrationmatrix.get()->description(),
-                                  QVariant(calibrationmatrix.get()->value()));
-        ++calibrationmatrix_index;
-        if (current_calibrationmatrix == calibrationmatrix.get()->value()) {
-            ui->calibrationMatrix->setCurrentIndex(calibrationmatrix_index);
-        }
-    }
 }
 
 void Mouse::onApply()
@@ -231,7 +211,6 @@ void Mouse::onApply()
     setStr("/labwc_config/libinput/device/scrollMethod", DATA(ui->scrollMethod));
     setStr("/labwc_config/libinput/device/sendEventsMode", DATA(ui->sendEventsMode));
     setFloat("/labwc_config/libinput/device/scrollFactor", ui->scrollFactor->value());
-    setStr("/labwc_config/libinput/device/calibrationMatrix", DATA(ui->calibrationMatrix));
 
     /* ~/.config/labwc/environment */
     setStr("XCURSOR_THEME", TEXT(ui->cursorTheme));
