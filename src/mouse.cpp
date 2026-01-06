@@ -191,9 +191,10 @@ void Mouse::activate()
     settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
     ui->scrollFactor->setValue(getFloat("/labwc_config/libinput/device/scrollFactor"));
 
-    /* Touch Screen Rotation */
-    settingsAddXmlStr("/labwc_config/libinput/device/calibrationMatrix", "twoFinger");
+    /* Touchscreen Rotation */
+    settingsAddXmlStr("/labwc_config/libinput/device/calibrationMatrix", "");
     QVector<QSharedPointer<Pair>> calibrationmatrixes;
+    calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("", tr(""))));
     calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("1 0 0 0 1 0", tr("Normal"))));
     calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("0 -1 1 1 0 0", tr("Left"))));
     calibrationmatrixes.append(QSharedPointer<Pair>(new Pair("0 1 0 -1 0 1", tr("Right"))));
