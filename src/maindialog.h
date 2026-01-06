@@ -8,6 +8,7 @@ class Appearance;
 class Behaviour;
 class Mouse;
 class Keyboard;
+class Touchscreen;
 class Template;
 
 class MainDialog : public QDialog
@@ -27,6 +28,7 @@ private:
     Behaviour *m_pageBehaviour;
     Mouse *m_pageMouse;
     Keyboard *m_pageKeyboard;
+    Touchscreen *m_pageTouchscreen;
     Template *m_pageTemplate;
 };
 #endif // MAINDIALOG_H
