@@ -111,7 +111,6 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <!-- Indent checkbox with logic on parent by 8 pixels -->
            <spacer name="horizontalSpacer_followMouseRequiresMovement">
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>

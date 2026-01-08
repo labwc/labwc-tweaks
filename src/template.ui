@@ -17,14 +17,14 @@
        <property name="spacing">
         <number>9</number>
        </property>
-       <!-- Group Box 1 -->
+       <!-- Group Box 0 -->
        <item>
-        <widget class="QGroupBox" name="groupBox1">
+        <widget class="QGroupBox" name="groupBox0">
          <property name="title">
-          <string>GroupBox1</string>
+          <string>GroupBox0</string>
          </property>
          <!-- /*~ With QGridLayout, the right-most column is stretched to make all the others snug */ -->
-         <layout class="QGridLayout" name="groupBox1_gridLayout" columnstretch="0,0,1">
+         <layout class="QGridLayout" name="groupBox0_gridLayout" columnstretch="0,0,1">
           <!-- /*~ QGridLayout spacing of (16, 8) is used to avoid widgets looking too tight */ -->
           <property name="horizontalSpacing">
            <number>16</number>
@@ -43,8 +43,9 @@
            <widget class="QComboBox" name="comboBox"/>
           </item>
           <!--
-           /*~ The QMainDialog can be resized, so a dummy right-most column with a spacer is used
-            * to make sure widgets do not become bigger than they need to be.
+           /*~ The QMainDialog can be resized, so a dummy right-most column
+            * with a spacer is used to make sure widgets do not become bigger
+            * than they need to be.
             */
           -->
           <item row="0" column="2">
@@ -55,28 +56,79 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Checkbox Test</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="checkBox">
-            <property name="text">
-             <string>Enable in special situation</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
            <widget class="QLabel" name="label_3">
             <property name="text">
              <string>ComboBox Test2</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="1" column="1">
            <widget class="QComboBox" name="comboBox_2"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <!-- Group Box 1 -->
+       <item>
+        <widget class="QGroupBox" name="groupBox1">
+         <property name="title">
+          <string>GroupBox1</string>
+         </property>
+         <layout class="QGridLayout" name="groupBox1_gridLayout" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>Enable something special</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <!-- /*~ Indent checkbox by 8px if state depends on parent */ -->
+           <spacer name="horizontalSpacer_for_child_checkBox">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>1</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="text">
+             <string>Indented checkbox (state depends on parent)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="text">
+             <string>QCheckBox3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="text">
+             <string>QCheckBox4</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
