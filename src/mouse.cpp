@@ -107,9 +107,7 @@ void Mouse::activate()
     settingsAddXmlBoo("/labwc_config/libinput/device/dragLock", false);
     ui->dragLock->setChecked(getBool("/labwc_config/libinput/device/dragLock"));
     ui->dragLock->setEnabled(ui->tapAndDrag->isChecked());
-    ui->label_dragLock->setEnabled(ui->tapAndDrag->isChecked());
     connect(ui->tapAndDrag, &QCheckBox::toggled, ui->dragLock, &QWidget::setEnabled);
-    connect(ui->tapAndDrag, &QCheckBox::toggled, ui->label_dragLock, &QWidget::setEnabled);
 
     /*
      * Three Finger Drag
