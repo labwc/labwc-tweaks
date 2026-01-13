@@ -122,13 +122,6 @@ void Behaviour::activate()
     ui->drawContents->setToolTip(tr("Application redraws its contents while resizing.\nIf "
                                     "disabled, an outlined rectangle is shown"));
 
-    /* Keep Border (under 'theme') */
-    settingsAddXmlBoo("/labwc_config/theme/keepBorder", true);
-    ui->keepBorder->setChecked(getBool("/labwc_config/theme/keepBorder"));
-    ui->keepBorder->setToolTip(
-            tr("Even when disabling server side decorations via ToggleDecorations,\nkeep a small "
-               "border (and resize area) around the window"));
-
     /* Resize: Corner Range */
     settingsAddXmlInt("/labwc_config/resize/cornerRange", 8);
     ui->resizeCornerRange->setValue(getInt("/labwc_config/resize/cornerRange"));
@@ -202,7 +195,6 @@ void Behaviour::onApply()
     setInt("/labwc_config/resistance/unSnapTreshold", ui->unSnapTreshold->value());
     setInt("/labwc_config/resistance/unMaximizeTreshold", ui->unMaximizeTreshold->value());
     setBool("/labwc_config/resize/drawContents", ui->drawContents->isChecked());
-    setBool("/labwc_config/theme/keepBorder", ui->keepBorder->isChecked());
     setInt("/labwc_config/resize/cornerRange", ui->resizeCornerRange->value());
     setInt("/labwc_config/resize/minimumArea", ui->resizeMinimumArea->value());
     setStr("/labwc_config/resize/popupShow", DATA(ui->popupShow));
