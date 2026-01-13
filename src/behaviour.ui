@@ -354,7 +354,6 @@
             </property>
            </widget>
           </item>
-
          </layout>
         </widget>
        </item>
@@ -363,7 +362,13 @@
          <property name="title">
           <string>Magnifier</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_3">
+         <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,0,1">
+          <property name="horizontalSpacing">
+           <number>16</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="label_1">
             <property name="text">
@@ -388,13 +393,20 @@
            </widget>
           </item>
           <item row="0" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
            <widget class="QLabel" name="label_2">
             <property name="text">
              <string>Height</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="3">
+          <item row="1" column="1">
            <widget class="QSpinBox" name="magnifierHeight">
             <property name="suffix">
              <string> px</string>
@@ -410,27 +422,14 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="4">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>248</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="label_3">
             <property name="text">
              <string>Initial scale</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="2" column="1">
            <widget class="QDoubleSpinBox" name="initScale">
             <property name="decimals">
              <number>1</number>
@@ -443,14 +442,14 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
+          <item row="3" column="0">
            <widget class="QLabel" name="label_4">
             <property name="text">
              <string>Increment</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="3">
+          <item row="3" column="1">
            <widget class="QDoubleSpinBox" name="increment">
             <property name="maximum">
              <double>1.000000000000000</double>
@@ -460,23 +459,10 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="4">
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>248</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="2" column="0" colspan="2">
+          <item row="4" column="0" colspan="2">
            <widget class="QCheckBox" name="useFilter">
             <property name="text">
-             <string>Use filter</string>
+             <string>Use bilinear filter</string>
             </property>
            </widget>
           </item>
@@ -487,12 +473,6 @@
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Orientation::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
          </property>
         </spacer>
        </item>
