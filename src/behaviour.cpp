@@ -56,6 +56,10 @@ void Behaviour::activate()
     settingsAddXmlBoo("/labwc_config/focus/raiseOnFocus", false);
     ui->raiseOnFocus->setChecked(getBool("/labwc_config/focus/raiseOnFocus"));
     ui->raiseOnFocus->setToolTip(tr("Raise window to front when focused"));
+    ui->raiseOnFocus->setEnabled(ui->followMouse->isChecked());
+    connect(ui->followMouse, &QCheckBox::toggled, ui->raiseOnFocus,
+            &QWidget::setEnabled);
+
 
     /* Gap (Core) */
     settingsAddXmlInt("/labwc_config/core/gap", 0);
