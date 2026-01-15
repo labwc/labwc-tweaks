@@ -130,7 +130,20 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="2">
+          <item row="2" column="0">
+           <spacer name="horizontalSpacer_followMouseRequiresMovement">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>1</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="1" colspan="2">
            <widget class="QCheckBox" name="raiseOnFocus">
             <property name="text">
              <string>Raise on focus</string>
