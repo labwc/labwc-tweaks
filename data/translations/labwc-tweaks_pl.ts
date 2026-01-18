@@ -6,7 +6,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Promień górnych narożników dekoracji po stronie serwera</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation>Renderuj cienie za kafelkowymi oknami</translation>
+        <translation>Renderuj cienie za oknami kafelkowymi</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
@@ -26,17 +26,17 @@
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoracja po stronie serwera (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoracja po stronie klienta (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż dekoracje po stronie serwera w zmaksymalizowanych oknach</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation>Automatyczne</translation>
+        <translation>Automatycznie</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
@@ -127,41 +127,46 @@
         <location filename="../../src/behaviour.cpp" line="135"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ grubość obszarów obramowania w celu
+zmiany rozmiaru okien</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>Podnieś okno do przodu po uzyskaniu fokusu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="74"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksymalizuj zamiast przypinać do górnej krawędzi</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Przyciąganie okien może wywołać odpowiednie zdarzenia
+kafelkowania dla natywnych aplikacji Wayland</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Ograniczaj interaktywne ruchy i zmiany rozmiaru
+okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru
+okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="117"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednowymiarowy ruch kursora wymagany do przesunięcia
+okna zmaksymalizowanego w pionie lub poziomie</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="122"/>
@@ -214,227 +219,227 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/keyboard.cpp" line="25"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="26"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="27"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Oba klawisze Shift razem</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="28"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Oba klawisze Alt razem</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="29"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Oba klawisze Ctrl razem</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Alt (podczas wciśnięcia)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Alt (podczas wciśnięcia)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Win (podczas wciśnięcia)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Win (podczas wciśnięcia)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dowolny Alt (podczas wciśnięcia)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu (podczas wciśnięcia), Shift+Menu dla menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (podczas wciśnięcia), Alt+Caps Lock dla pierwotnego działania Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="41"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Ctrl (podczas wciśnięcia)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="43"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock do pierwszego układu; Shift+Caps Lock do drugiego układu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Win do pierwszego układu; prawy Win/Menu do drugiego układu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="50"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Ctrl do pierwszego układu; prawy Ctrl do drugiego układu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="52"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Oba klawisze Alt razem; AltGr sam wybiera trzeci poziom</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Ctrl+lewy Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Ctrl+prawy Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="59"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Ctrl+lewy Shift wybiera poprzedni układ, prawy Ctrl+prawy Shift wybiera następny układ</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="61"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Alt+lewy Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="63"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Alt+prawy Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Ctrl+lewy Alt wybiera poprzedni układ, prawy Ctrl+prawy Alt wybiera następny układ</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Alt+lewy Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Alt+prawy Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="72"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Alt+lewy Shift wybiera poprzedni układ, prawy Alt+prawy Shift wybiera następny układ</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="74"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Spacja</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="76"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+Spacja</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Spacja</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+lewy Win do pierwszego układu; Ctrl+Menu do drugiego układu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy Ctrl+lewy Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="105"/>
@@ -459,7 +464,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/keyboard.cpp" line="127"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Kombinacja klawiszy do przełączania układu klawiatury</translation>
     </message>
 </context>
 <context>
@@ -487,7 +492,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/maindialog.cpp" line="62"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran dotykowy</translation>
     </message>
 </context>
 <context>
@@ -572,22 +577,22 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwykły</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Odwrócony</translation>
     </message>
 </context>
 <context>
@@ -595,22 +600,22 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Compositor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompozytor</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikona</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Cienie okien</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
@@ -625,7 +630,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished">Pasek tytułu</translation>
+        <translation>Pasek tytułu</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -635,17 +640,17 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaawansowane</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
         <source>Decoration mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryb dekoracji</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="133"/>
         <source>Maximized decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekoracja zmaksymalizowana</translation>
     </message>
 </context>
 <context>
@@ -673,12 +678,12 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmieszczenie okien</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Zasady</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -697,7 +702,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokus</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="146"/>
@@ -713,17 +718,17 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="179"/>
         <source>Notify applications of tiled state </source>
-        <translation type="unfinished"></translation>
+        <translation>Powiadom aplikacje o stanie kafelkowym </translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksymalizuj po przyciągnięciu do górnej krawędzi</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="458"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj filtra dwuliniowego</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="199"/>
@@ -758,7 +763,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="322"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Grubość chwytu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="346"/>
@@ -788,7 +793,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="421"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala początkowa</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="441"/>
@@ -831,7 +836,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Układ klawiatury</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
@@ -846,7 +851,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Przełącznik układu</translation>
     </message>
 </context>
 <context>
@@ -854,97 +859,97 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Przewijanie naturalne</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Prędkość wskaźnika</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="108"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil przyspieszenia</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Stuknij, aby kliknąć</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="193"/>
         <source>Tap button map</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa przycisków stukania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">Kursor</translation>
+        <translation>Kursor</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>Wskaźnik ogólny</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryb leworęczny</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Send events</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyślij zdarzenia</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Stuknij i przeciągnij</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="266"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokada przeciągania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Przeciąganie trzema palcami</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulacja środkowego przycisku</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="294"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłącz podczas pisania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="203"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda klikania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="213"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda przewijania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="118"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Współczynnik przewijania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="162"/>
@@ -957,12 +962,12 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran dotykowy</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrót</translation>
     </message>
 </context>
 </TS>
