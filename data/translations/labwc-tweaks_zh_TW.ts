@@ -6,47 +6,47 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>伺服器端邊裝飾頂端圓角半徑</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>渲染視窗後方的投放陰影</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>渲染平鋪視窗後方的投放陰影</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>指定 xdg-shell 視窗的邊飾</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>伺服器端的邊飾 (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>用戶端的邊飾 (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示伺服器端邊飾於最大化視窗</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>標題列</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished">無</translation>
+        <translation>無</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>新建視窗的放置原則</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
@@ -79,17 +79,17 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>焦點被置於滑鼠游標下的視窗</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>如果啟用跟隨滑鼠(followMouse)，則需要游標移動</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="64"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>當使用移動動作時，視窗和輸出邊緣之間的距離</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
@@ -100,74 +100,80 @@
         <location filename="../../src/behaviour.cpp" line="81"/>
         <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>總是</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="82"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>僅在區域</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>僅在邊緣</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="84"/>
         <location filename="../../src/behaviour.cpp" line="145"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>永不</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="112"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>用於平鋪或最大化視窗進行移動，游標移動是必須的</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="135"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
-        <translation type="unfinished"></translation>
+        <translation>用於調整視窗大小的目的
+指定邊框抓取區域的厚度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>當處於焦點時，將視窗提升至前方</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="74"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>用最大化取代鋪放於頂端邊緣</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
-        <translation type="unfinished"></translation>
+        <translation>鋪放視窗可以觸發相應的平鋪事件
+用於原生 Wayland 應用程式</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation type="unfinished"></translation>
+        <translation>抗拒交互移動和調整視窗大小
+ 跨越螢幕邊緣</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation type="unfinished"></translation>
+        <translation>抗拒交互移動和調整視窗大小
+ 跨越任何其他視窗的邊緣</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="117"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>游標一維移動是必須的
+用於垂直或水平最大化視窗進行移動</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="122"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
-        <translation type="unfinished"></translation>
+        <translation>應用程式在調整大小時重繪其內容。
+如果停用，則會顯示一個框線矩形</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="129"/>

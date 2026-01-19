@@ -46,7 +46,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>없음</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>자동</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>중심</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>커서</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
@@ -100,7 +100,7 @@
         <location filename="../../src/behaviour.cpp" line="81"/>
         <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>항상</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="82"/>
@@ -628,7 +628,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
         <source>Corner radius</source>
-        <translation>모서리 반지름</translation>
+        <translation>모서리 반경</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
@@ -834,12 +834,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">추가</translation>
+        <translation>추가하기</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">제거</translation>
+        <translation>제거하기</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
