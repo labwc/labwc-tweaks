@@ -138,15 +138,7 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QComboBox" name="layoutGrpSwitcher">
-            <!-- This QComboBox has such long entries, that we prefer to limit its width -->
-            <property name="maximumSize">
-             <size>
-              <height>16777215</height>
-              <width>250</width>
-             </size>
-            </property>
-           </widget>
+           <widget class="QPushButton" name="layoutGrpSwitcher"/>
           </item>
          </layout>
         </widget>

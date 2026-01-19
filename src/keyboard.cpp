@@ -1,3 +1,9 @@
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QHeaderView>
+#include <QStandardItemModel>
+#include <QPushButton>
+#include <QTableView>
 #include "keyboard.h"
 #include "evdev-lst-layouts.h"
 #include "environment.h"
@@ -27,7 +33,6 @@ void Keyboard::getGrpToggleOptions(QVector<QSharedPointer<Pair>> &combo)
     combo.append(QSharedPointer<Pair>(new Pair("grp:shifts_toggle", tr("Both Shifts together"))));
     combo.append(QSharedPointer<Pair>(new Pair("grp:alts_toggle", tr("Both Alts together"))));
     combo.append(QSharedPointer<Pair>(new Pair("grp:ctrls_toggle", tr("Both Ctrls together"))));
-    // --- separator after 6 items ---
     combo.append(QSharedPointer<Pair>(new Pair("grp:switch", tr("Right Alt (while pressed)"))));
     combo.append(QSharedPointer<Pair>(new Pair("grp:lswitch", tr("Left Alt (while pressed)"))));
     combo.append(QSharedPointer<Pair>(new Pair("grp:lwin_switch", tr("Left Win (while pressed)"))));
@@ -127,17 +132,82 @@ void Keyboard::activate()
     ui->layoutGrpSwitcher->setToolTip(tr("Key combination to switch keyboard layout"));
     QVector<QSharedPointer<Pair>> combo;
     getGrpToggleOptions(combo);
+
     QString current = getStr("XKB_DEFAULT_OPTIONS");
-    int index = -1;
+    ui->layoutGrpSwitcher->setText(current);
+
+    // QComboBoxes with longs strings are ellided with some themes (like Kvantum and Breeze) when
+    // the drop down menu is opened. The elliding can be avoided, but then the text is just cut off
+    // instead. We could of course just set the QComboBox width to the widest item, but that screws
+    // up the layout quite badly.
+    //
+    // So, instead we use a QPushButton to open a QDialog with a QTableView. For this with need to
+    // build a model with two columns:
+    QStandardItemModel *model = new QStandardItemModel(this);
+    model->setColumnCount(2);
+    model->setHorizontalHeaderLabels({ tr("Key"), tr("Description") });
+    model->setHeaderData(0, Qt::Horizontal, Qt::AlignLeft, Qt::TextAlignmentRole);
+    model->setHeaderData(1, Qt::Horizontal, Qt::AlignLeft, Qt::TextAlignmentRole);
+    auto addItem = [&](const QString &key, const QString &text) {
+        QStandardItem *keyItem = new QStandardItem(key);
+        QStandardItem *textItem = new QStandardItem(text);
+        keyItem->setData(key, Qt::UserRole);
+        model->appendRow({ keyItem, textItem });
+    };
     foreach (auto policy, combo) {
-        ui->layoutGrpSwitcher->addItem(policy.get()->description(),
-                                       QVariant(policy.get()->value()));
-        ++index;
-        if (current == policy.get()->value()) {
-            ui->layoutGrpSwitcher->setCurrentIndex(index);
-        }
+        addItem(policy.get()->value(), policy.get()->description());
     }
-    ui->layoutGrpSwitcher->insertSeparator(6);
+
+    // The lambda parameters must match the signal: clicked(bool) vs [](bool) { ... }
+    connect(ui->layoutGrpSwitcher, &QPushButton::clicked, this, [this, model, current](bool) {
+        QDialog dialog(this);
+        dialog.setWindowTitle(tr("Select key combination"));
+
+        QVBoxLayout layout(&dialog);
+
+        QTableView view;
+        view.setModel(model);
+        view.setSelectionBehavior(QAbstractItemView::SelectRows);
+        view.setSelectionMode(QAbstractItemView::SingleSelection);
+        view.setEditTriggers(QAbstractItemView::NoEditTriggers);
+        view.setTextElideMode(Qt::ElideNone);
+        view.resizeColumnsToContents();
+        view.horizontalHeader()->setStretchLastSection(true);
+        view.verticalHeader()->hide();
+        view.horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+
+        // Restore selection when opening dialog
+        for (int row = 0; row < model->rowCount(); ++row) {
+            if (model->item(row, 0)->text() == current) {
+                QModelIndex idx = model->index(row, 0);
+                view.setCurrentIndex(idx);
+                view.scrollTo(idx, QAbstractItemView::PositionAtCenter);
+            }
+        }
+
+        layout.addWidget(&view);
+
+        QDialogButtonBox buttons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+        layout.addWidget(&buttons);
+
+        // Set sensible dialog size
+        dialog.setMinimumWidth(500);
+        dialog.setMinimumHeight(400);
+        dialog.adjustSize();
+
+        connect(&buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+        connect(&buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+        connect(&view, &QTableView::doubleClicked, &dialog, &QDialog::accept);
+
+        if (dialog.exec() == QDialog::Accepted) {
+            QModelIndex idx = view.currentIndex();
+            if (idx.isValid()) {
+                const int row = idx.row();
+                const QString key = model->item(row, 0)->text();
+                ui->layoutGrpSwitcher->setText(key);
+            }
+        }
+    });
 }
 
 void Keyboard::addSelectedLayout(void)
@@ -173,5 +243,5 @@ void Keyboard::onApply()
     setInt("/labwc_config/keyboard/repeatDelay", ui->repeatDelay->value());
     setBool("/labwc_config/keyboard/numlock", ui->numlock->isChecked());
 
-    setStr("XKB_DEFAULT_OPTIONS", DATA(ui->layoutGrpSwitcher));
+    setStr("XKB_DEFAULT_OPTIONS", ui->layoutGrpSwitcher->text());
 }
