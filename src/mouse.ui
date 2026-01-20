@@ -173,7 +173,7 @@
             <item row="0" column="0">
              <widget class="QLabel" name="label_sendEventsMode">
               <property name="text">
-               <string>Send events</string>
+               <string>Status</string>
               </property>
              </widget>
             </item>
