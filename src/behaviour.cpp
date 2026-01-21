@@ -75,7 +75,7 @@ void Behaviour::activate()
     /* Show Overlay */
     settingsAddXmlBoo("/labwc_config/snapping/showOverlay", true);
     ui->showOverlay->setChecked(getBool("/labwc_config/snapping/showOverlay"));
-    ui->showOverlay->setToolTip(tr("Show an overlay when snapping to a window or an edge"));
+    ui->showOverlay->setToolTip(tr("Show an overlay when snapping a window to an output edge"));
 
     /* Maximize On Top */
     settingsAddXmlBoo("/labwc_config/snapping/topMaximize", true);
