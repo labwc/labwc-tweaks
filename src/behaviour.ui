@@ -203,6 +203,13 @@
             </property>
            </widget>
           </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QCheckBox" name="showOverlay">
+            <property name="text">
+             <string>Show overlay</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
