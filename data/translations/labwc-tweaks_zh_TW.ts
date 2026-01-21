@@ -179,38 +179,39 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.cpp" line="129"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>角位區域的大小，在此全部“角位”滑鼠標綁定內文均會套用
+ 以及邊框區域的大小，用於游標調整大小時將會套用於任何方向。</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="143"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation type="unfinished"></translation>
+        <translation>當要調整大小或移動時，在視窗頂部顯示小型指示器</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="147"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>非像素</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="163"/>
         <location filename="../../src/behaviour.cpp" line="167"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>用於全螢幕放大鏡設定至 -1</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Initial number of times by which magnified image is scaled</source>
-        <translation type="unfinished"></translation>
+        <translation>放大圖像的初始縮放倍數</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="175"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>於每次叫用 &apos;ZoomIn&apos;(拉近放大) 或 &apos;ZoomOut&apos;(拉遠縮小) 時的變化步驟</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="179"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>對放大圖像套用雙線性過濾器</translation>
     </message>
 </context>
 <context>
@@ -218,252 +219,252 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="25"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="26"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="27"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>兩鍵 Shifts 同時</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="28"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>兩鍵 Alts 同時</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="29"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>兩鍵 Ctrls 同時</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Alt (當按下時)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Alt (當按下時)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Win (當按下時)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Win (當按下時)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>任何 Win (當按下時)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu(當按下時)，Shift+Menu 用於選單</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (當按下時)， Alt+Caps Lock 用於原始 Caps Lock (大寫鎖定)動作</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="41"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Ctrl (當按下時)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="43"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (大寫鎖定)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock 至第一佈置； Shift+Caps Lock 至第二佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Win 至第一佈置； 右 Win/Menu 至第二佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="50"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Ctrl 至第一佈置；右 Ctrl 至第二佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="52"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>兩鍵 Alt 同時； AltGr 單獨選擇第三層級</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Ctrl+左 Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Ctrl+右 Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="59"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Ctrl+左 Shift 選擇前一個佈置，右 Ctrl + 右 Shift 選擇下一個佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="61"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Alt+左 Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="63"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Alt+右 Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Ctrl+左 Alt 選擇前一個佈置，右 Ctrl + 右 Alt 選擇下一個佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Alt+左 Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Alt+右 Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="72"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Alt+左 Shift 選擇前一個佈置，右 Alt + 右 Shift 選擇下一個佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu 選單</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="74"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+空白</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="76"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+空白</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+空白</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>右 Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock (滾動鎖定鍵)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+左 Win 至第一佈置， Ctrl+Menu 至第二佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>左 Ctrl+左 Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="105"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished">選擇配置進行添加…</translation>
+        <translation>選擇佈置進行添加…</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="113"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>每秒重複按鍵的速率</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>在重複按鍵前的延遲</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>識別新設鍵盤時啟用 Num Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="127"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>切換鍵盤佈置的組合鍵</translation>
     </message>
 </context>
 <context>
@@ -486,12 +487,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="58"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>鍵盤</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="62"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>觸控螢幕</translation>
     </message>
 </context>
 <context>
@@ -509,12 +510,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>左-右-中</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>左-中-右</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
@@ -576,22 +577,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>正常</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>顛倒</translation>
     </message>
 </context>
 <context>
@@ -599,37 +600,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>主題</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Compositor</source>
-        <translation type="unfinished"></translation>
+        <translation>合成器</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>圖示</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>視窗投放陰影</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用陰影</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用於在平鋪視窗</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>標題列</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -639,17 +640,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>進階</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
         <source>Decoration mode</source>
-        <translation type="unfinished"></translation>
+        <translation>裝飾模式</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="133"/>
         <source>Maximized decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>最大化裝飾</translation>
     </message>
 </context>
 <context>
@@ -657,32 +658,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>焦點跟隨滑鼠</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>需要移動</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="136"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>提昇於焦點</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>間隙</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>視窗放置</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>原則</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -696,108 +697,108 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="375"/>
         <location filename="../../src/behaviour.ui" line="405"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>焦點</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="146"/>
         <source>Window Snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>視窗鋪放</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="158"/>
         <location filename="../../src/behaviour.ui" line="301"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>角端範圍</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="179"/>
         <source>Notify applications of tiled state </source>
-        <translation type="unfinished"></translation>
+        <translation>通知應用程式平鋪狀態 </translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>當鋪放至頂端邊緣時進行最大化</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="458"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>使用雙線性過濾器</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="199"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>阻抗</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="211"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>螢幕邊緣強度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="235"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>視窗邊緣強度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="252"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>取消鋪放的閾值</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="266"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>取消最大化的閾值</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="289"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>調整大小</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="322"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>抓取厚度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="346"/>
         <source>Draw contents</source>
-        <translation type="unfinished"></translation>
+        <translation>繪製內容</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="336"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示彈出視窗</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="356"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>放大鏡</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="368"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="398"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>高度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="421"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>初始量度</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="441"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>增量</translation>
     </message>
 </context>
 <context>
@@ -805,52 +806,52 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>通則</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>重複率</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>重複延遲</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Num lock (數字鎖定鍵)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>於啟動時即為啟用</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>鍵盤佈置</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">增加</translation>
+        <translation>添加</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">移除</translation>
+        <translation>移除</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>佈置切換</translation>
     </message>
 </context>
 <context>
@@ -858,97 +859,97 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>自然捲動</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>滑鼠指標速度</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="108"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>游標加速度設定檔</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>觸滑即可點按</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="193"/>
         <source>Tap button map</source>
-        <translation type="unfinished"></translation>
+        <translation>觸滑按鈕測圖</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">游標</translation>
+        <translation>游標</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>主題</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>大小</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>滑鼠指標通則</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>左撇子模式</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Send events</source>
-        <translation type="unfinished"></translation>
+        <translation>發送事件</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>觸滑並拖放</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="266"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>拖放鎖定</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>三指拖放</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>中鍵模擬</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="294"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>當打字輸入時停用</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="203"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>點按方式</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="213"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>捲動方式</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="118"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>捲動係數</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="162"/>
@@ -961,12 +962,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>觸控螢幕</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>旋轉</translation>
     </message>
 </context>
 </TS>
