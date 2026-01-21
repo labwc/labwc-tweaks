@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Uute akende paigutuse reeglid</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
@@ -79,12 +79,12 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiirekursori all olev aken saab fookuse</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui „followMouse“ meetod on kasutusel, siis eeldab kursori liikumist</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="64"/>
@@ -132,7 +132,7 @@ purposes of resizing windows</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui fookus on aknal, siis tõsta ta esiplaanile</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="74"/>
@@ -212,252 +212,252 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="25"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Suurtähtede lukustus (Caps Lock)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="26"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Suurtähtede lukustus (Caps Lock)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="27"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõlemad Shiftid korraga</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="28"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõlemad Altid korraga</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="29"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõlemad Ctrlid korraga</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Alt (vajutamisel)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Alt (vajutamisel)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Win (vajutamisel)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Win (vajutamisel)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Iga Win (vajutamisel)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menüüklahv (vajutamisel), Shift+Menüüklahv menüü jaoks</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurtähtede lukustus (Caps Lock) (vajutamisel), Alt+Suurtähtede lukustus algse suurtähtede lukustamise jaoks</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="41"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Ctrl (vajutamisel)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="43"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurtähtede lukustus (Caps Lock)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurtähtede lukustus (Caps Lock) esimesele paigutusele, Shift+Suurtähtede lukustus teisele paigutusele</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Win esimesele paigutusele, Parem Win/Menüüklahv teisele paigutusele</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="50"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Ctrl esimesele paigutusele, Parem Ctrl teisele paigutusele</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="52"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõlemad Altid koos; AltGr üksi valib kolmanda taseme</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Ctrl+Left Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Ctrl+Right Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="59"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Ctrl+Vasak Shift valib eelmise paigutuse, Parem Ctrl + Parem Shift valib järgmise paigutuse</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="61"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Alt+Vasak Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="63"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Alt+Parem Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Ctrl+Vasak Alt valib eelmise paigutuse, Parem Ctrl + Parem Alt valib järgmise paigutuse</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Alt+Vasak Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Alt+Parem Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="72"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Alt+Vasak Shift valib eelmise paigutuse, Parem Alt + Parem Shift valib järgmise paigutuse</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menüü</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="74"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Tühik</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="76"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+Tühik</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Tühik</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Parem Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerimislukk (Scroll Lock)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Vasak Win esimesele paigutusele; Ctrl+Menüü teisele paigutusele</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasak Ctrl+Vasak Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="105"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished">Vali lisatav paigutus...</translation>
+        <translation>Vali lisatav paigutus...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="113"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Klahvivajutuste kordusi sekundis</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivitus enne klahvivajutuste kordamist</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Uue klahvistiku tuvastamisel võta numbrilukustus kasutusele</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="127"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Klahvikombinatsioon klahvistiku paigutuse vahetamiseks</translation>
     </message>
 </context>
 <context>
@@ -480,12 +480,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="58"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Klahvistik</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="62"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Puuteekraan</translation>
     </message>
 </context>
 <context>
@@ -493,33 +493,33 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Lineaarne</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohenduv</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>vasak-parem-keskmine</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>vasak-keskmine-parem</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Puudub</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuppude ala</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
@@ -570,22 +570,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Tavaline</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasakul</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Paremal</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Pööratud</translation>
     </message>
 </context>
 <context>
@@ -593,37 +593,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Kujundus</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Compositor</source>
-        <translation type="unfinished"></translation>
+        <translation>Komposiitor</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikoon</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita akende varjutust</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta varjutamist</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta paanitud akendel</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiitliriba</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -799,52 +799,52 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Üldist</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Korduse sagedus</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivitus kordamisel</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>NumLock ehk numbrilukk</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Lülita käivitamisel sisse</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Klahvistiku paigutus</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">Lisa</translation>
+        <translation>Lisa</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">Eemalda</translation>
+        <translation>Eemalda</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Paigutuse vahetamine</translation>
     </message>
 </context>
 <context>
@@ -852,22 +852,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Loomulik kerimine</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursori kiirus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="108"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiirendusprofiil</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Klõpsamiseks puuduta</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="193"/>
@@ -877,7 +877,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">Kursori juures</translation>
+        <translation>Kursor</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
@@ -955,12 +955,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Puuteekraan</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Pööramine</translation>
     </message>
 </context>
 </TS>
