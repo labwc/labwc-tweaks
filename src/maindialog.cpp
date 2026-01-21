@@ -12,6 +12,7 @@
 #include "mouse.h"
 #include "keyboard.h"
 #include "touchscreen.h"
+#include "about.h"
 #include "template.h"
 
 #include <QDir>
@@ -61,6 +62,10 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     item4->setIcon(QIcon::fromTheme("preferences-desktop-touchscreen"));
     item4->setText(tr("Touchscreen"));
 
+    QListWidgetItem *item5 = new QListWidgetItem(list);
+    item5->setIcon(QIcon::fromTheme("labwc"));
+    item5->setText(tr("About"));
+
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         QListWidgetItem *item99 = new QListWidgetItem(list);
         item99->setIcon(QIcon::fromTheme("preferences-system"));
@@ -95,6 +100,9 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
 
     m_pageTouchscreen = new Touchscreen();
     stack->addWidget(m_pageTouchscreen);
+
+    m_pageAbout = new About();
+    stack->addWidget(m_pageAbout);
 
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         m_pageTemplate = new Template();

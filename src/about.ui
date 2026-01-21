@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pageAbout</class>
+ <widget class="QWidget" name="pageAbout">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>472</width>
+    <height>328</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>390</width>
+     <height>238</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="versionCaption">
+        <property name="text">
+         <string>Labwc Version</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="versionValue">
+        <property name="text">
+         <string notr="true">0.9.3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="xwaylandCaption">
+        <property name="text">
+         <string>Xwayland Support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="xwaylandValue">
+        <property name="text">
+         <string notr="true">Yes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="nlsCaption">
+        <property name="text">
+         <string>NLS</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="nlsValue">
+        <property name="text">
+         <string notr="true">Yes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="svgCaption">
+        <property name="text">
+         <string>SVG Icon Support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="svgValue">
+        <property name="text">
+         <string notr="true">Yes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="libsfdoCaption">
+        <property name="text">
+         <string>libsfdo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="libsfdoValue">
+        <property name="text">
+         <string notr="true">Yes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="env_curCaption">
+        <property name="text">
+         <string>XDG_CURRENT_DESKTOP </string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="env_curValue">
+        <property name="text">
+         <string notr="true"> LXQt:labwc:wlroots</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>78</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
