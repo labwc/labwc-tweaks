@@ -73,8 +73,8 @@ void Behaviour::activate()
     ui->snapCornerRange->setToolTip(tr(""));
 
     /* Show Overlay */
-    settingsAddXmlBoo("/labwc_config/snapping/showOverlay", true);
-    ui->showOverlay->setChecked(getBool("/labwc_config/snapping/showOverlay"));
+    settingsAddXmlBoo("/labwc_config/snapping/overlay/enabled", true);
+    ui->showOverlay->setChecked(getBool("/labwc_config/snapping/overlay/enabled"));
     ui->showOverlay->setToolTip(tr("Show an overlay when snapping a window to an output edge"));
 
     /* Maximize On Top */
@@ -197,7 +197,7 @@ void Behaviour::onApply()
     setBool("/labwc_config/focus/raiseOnFocus", ui->raiseOnFocus->isChecked());
     setInt("/labwc_config/core/gap", ui->gap->value());
     setInt("/labwc_config/snapping/cornerRange", ui->snapCornerRange->value());
-    setBool("/labwc_config/snapping/showOverlay", ui->showOverlay->isChecked());
+    setBool("/labwc_config/snapping/overlay/enabled", ui->showOverlay->isChecked());
     setBool("/labwc_config/snapping/topMaximize", ui->topMaximize->isChecked());
     setStr("/labwc_config/snapping/notifyClient", DATA(ui->notifyClients));
     setInt("/labwc_config/resistance/screenEdgeStrength", ui->screenEdgeStrength->value());
