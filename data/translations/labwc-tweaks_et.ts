@@ -41,12 +41,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tiitliriba</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Puudub</translation>
     </message>
 </context>
 <context>
@@ -87,44 +87,49 @@
         <translation>Kui „followMouse“ meetod on kasutusel, siis eeldab kursori liikumist</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="64"/>
+        <location filename="../../src/behaviour.cpp" line="68"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="69"/>
+        <location filename="../../src/behaviour.cpp" line="73"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="81"/>
-        <location filename="../../src/behaviour.cpp" line="146"/>
+        <location filename="../../src/behaviour.cpp" line="78"/>
+        <source>Show an overlay when snapping a window to an output edge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="90"/>
+        <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="82"/>
+        <location filename="../../src/behaviour.cpp" line="91"/>
         <source>Only on regions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Only on edges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="84"/>
-        <location filename="../../src/behaviour.cpp" line="145"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
+        <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="112"/>
+        <location filename="../../src/behaviour.cpp" line="121"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="135"/>
+        <location filename="../../src/behaviour.cpp" line="144"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation type="unfinished"></translation>
@@ -135,74 +140,74 @@ purposes of resizing windows</source>
         <translation>Kui fookus on aknal, siis tõsta ta esiplaanile</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="74"/>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="87"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="102"/>
+        <location filename="../../src/behaviour.cpp" line="111"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="107"/>
+        <location filename="../../src/behaviour.cpp" line="116"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="117"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="122"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="129"/>
+        <location filename="../../src/behaviour.cpp" line="138"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="143"/>
+        <location filename="../../src/behaviour.cpp" line="152"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="147"/>
+        <location filename="../../src/behaviour.cpp" line="156"/>
         <source>Nonpixel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="163"/>
-        <location filename="../../src/behaviour.cpp" line="167"/>
+        <location filename="../../src/behaviour.cpp" line="172"/>
+        <location filename="../../src/behaviour.cpp" line="176"/>
         <source>For full screen magnifier set to -1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="171"/>
+        <location filename="../../src/behaviour.cpp" line="180"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="175"/>
+        <location filename="../../src/behaviour.cpp" line="184"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="179"/>
+        <location filename="../../src/behaviour.cpp" line="188"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation type="unfinished"></translation>
     </message>
@@ -210,254 +215,269 @@ If disabled, an outlined rectangle is shown</source>
 <context>
     <name>Keyboard</name>
     <message>
-        <location filename="../../src/keyboard.cpp" line="25"/>
+        <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
         <translation>Shift+Suurtähtede lukustus (Caps Lock)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="26"/>
+        <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
         <translation>Alt+Suurtähtede lukustus (Caps Lock)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="27"/>
+        <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
         <translation>Mõlemad Shiftid korraga</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="28"/>
+        <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
         <translation>Mõlemad Altid korraga</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="29"/>
+        <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
         <translation>Mõlemad Ctrlid korraga</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="31"/>
+        <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
         <translation>Parem Alt (vajutamisel)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="32"/>
+        <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
         <translation>Vasak Alt (vajutamisel)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="33"/>
+        <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
         <translation>Vasak Win (vajutamisel)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="34"/>
+        <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
         <translation>Parem Win (vajutamisel)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="35"/>
+        <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
         <translation>Iga Win (vajutamisel)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="37"/>
+        <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
         <translation>Menüüklahv (vajutamisel), Shift+Menüüklahv menüü jaoks</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="39"/>
+        <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
         <translation>Suurtähtede lukustus (Caps Lock) (vajutamisel), Alt+Suurtähtede lukustus algse suurtähtede lukustamise jaoks</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="41"/>
+        <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
         <translation>Parem Ctrl (vajutamisel)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="42"/>
+        <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
         <translation>Parem Alt</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="43"/>
+        <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
         <translation>Vasak Alt</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="44"/>
+        <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
         <translation>Suurtähtede lukustus (Caps Lock)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="46"/>
+        <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
         <translation>Suurtähtede lukustus (Caps Lock) esimesele paigutusele, Shift+Suurtähtede lukustus teisele paigutusele</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="48"/>
+        <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
         <translation>Vasak Win esimesele paigutusele, Parem Win/Menüüklahv teisele paigutusele</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="50"/>
+        <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
         <translation>Vasak Ctrl esimesele paigutusele, Parem Ctrl teisele paigutusele</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="52"/>
+        <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
         <translation>Mõlemad Altid koos; AltGr üksi valib kolmanda taseme</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="53"/>
+        <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
         <translation>Ctrl+Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="55"/>
+        <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
         <translation>Vasak Ctrl+Left Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="57"/>
+        <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
         <translation>Parem Ctrl+Right Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="59"/>
+        <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
         <translation>Vasak Ctrl+Vasak Shift valib eelmise paigutuse, Parem Ctrl + Parem Shift valib järgmise paigutuse</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="60"/>
+        <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
         <translation>Alt+Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="61"/>
+        <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
         <translation>Vasak Alt+Vasak Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="63"/>
+        <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
         <translation>Parem Alt+Parem Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="65"/>
+        <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
         <translation>Vasak Ctrl+Vasak Alt valib eelmise paigutuse, Parem Ctrl + Parem Alt valib järgmise paigutuse</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="66"/>
+        <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
         <translation>Alt+Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="68"/>
+        <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
         <translation>Vasak Alt+Vasak Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="70"/>
+        <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
         <translation>Parem Alt+Parem Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="72"/>
+        <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
         <translation>Vasak Alt+Vasak Shift valib eelmise paigutuse, Parem Alt + Parem Shift valib järgmise paigutuse</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="73"/>
+        <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
         <translation>Menüü</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="74"/>
+        <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
         <translation>Vasak Win</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="75"/>
+        <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
         <translation>Alt+Tühik</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="76"/>
+        <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
         <translation>Win+Tühik</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="77"/>
+        <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
         <translation>Ctrl+Tühik</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="78"/>
+        <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
         <translation>Parem Win</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="79"/>
+        <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
         <translation>Vasak Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="80"/>
+        <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
         <translation>Parem Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="81"/>
+        <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
         <translation>Vasak Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="82"/>
+        <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
         <translation>Parem Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="83"/>
+        <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
         <translation>Kerimislukk (Scroll Lock)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="85"/>
+        <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
         <translation>Ctrl+Vasak Win esimesele paigutusele; Ctrl+Menüü teisele paigutusele</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="86"/>
+        <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
         <translation>Vasak Ctrl+Vasak Win</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="105"/>
+        <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
         <translation>Vali lisatav paigutus...</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="113"/>
+        <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
         <translation>Klahvivajutuste kordusi sekundis</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="118"/>
+        <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
         <translation>Viivitus enne klahvivajutuste kordamist</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="123"/>
+        <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
         <translation>Uue klahvistiku tuvastamisel võta numbrilukustus kasutusele</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="127"/>
+        <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
         <translation>Klahvikombinatsioon klahvistiku paigutuse vahetamiseks</translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="148"/>
+        <source>Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="148"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="164"/>
+        <source>Select key combination</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -597,13 +617,13 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
-        <source>Compositor</source>
-        <translation>Komposiitor</translation>
+        <source>Labwc theme</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
-        <source>Icon</source>
-        <translation>Ikoon</translation>
+        <source>Icon theme</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -659,7 +679,7 @@ If disabled, an outlined rectangle is shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="136"/>
+        <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
         <translation type="unfinished"></translation>
     </message>
@@ -680,15 +700,15 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="165"/>
-        <location filename="../../src/behaviour.ui" line="218"/>
-        <location filename="../../src/behaviour.ui" line="242"/>
-        <location filename="../../src/behaviour.ui" line="259"/>
-        <location filename="../../src/behaviour.ui" line="273"/>
-        <location filename="../../src/behaviour.ui" line="308"/>
-        <location filename="../../src/behaviour.ui" line="329"/>
-        <location filename="../../src/behaviour.ui" line="375"/>
-        <location filename="../../src/behaviour.ui" line="405"/>
+        <location filename="../../src/behaviour.ui" line="178"/>
+        <location filename="../../src/behaviour.ui" line="238"/>
+        <location filename="../../src/behaviour.ui" line="262"/>
+        <location filename="../../src/behaviour.ui" line="279"/>
+        <location filename="../../src/behaviour.ui" line="293"/>
+        <location filename="../../src/behaviour.ui" line="328"/>
+        <location filename="../../src/behaviour.ui" line="349"/>
+        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="425"/>
         <source> px</source>
         <translation type="unfinished"></translation>
     </message>
@@ -698,98 +718,103 @@ If disabled, an outlined rectangle is shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="146"/>
+        <location filename="../../src/behaviour.ui" line="159"/>
         <source>Window Snapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="158"/>
-        <location filename="../../src/behaviour.ui" line="301"/>
+        <location filename="../../src/behaviour.ui" line="171"/>
+        <location filename="../../src/behaviour.ui" line="321"/>
         <source>Corner range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="179"/>
+        <location filename="../../src/behaviour.ui" line="192"/>
         <source>Notify applications of tiled state </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="189"/>
+        <location filename="../../src/behaviour.ui" line="202"/>
         <source>Maximize when snapping to top edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="458"/>
+        <location filename="../../src/behaviour.ui" line="209"/>
+        <source>Show overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="478"/>
         <source>Use bilinear filter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="199"/>
+        <location filename="../../src/behaviour.ui" line="219"/>
         <source>Resistance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="211"/>
+        <location filename="../../src/behaviour.ui" line="231"/>
         <source>Screen edge strength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="235"/>
+        <location filename="../../src/behaviour.ui" line="255"/>
         <source>Window edge strength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="252"/>
+        <location filename="../../src/behaviour.ui" line="272"/>
         <source>Threshold to unsnap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="266"/>
+        <location filename="../../src/behaviour.ui" line="286"/>
         <source>Threshold to unmaximize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="289"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
         <source>Resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="322"/>
+        <location filename="../../src/behaviour.ui" line="342"/>
         <source>Grab thickness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="346"/>
+        <location filename="../../src/behaviour.ui" line="366"/>
         <source>Draw contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="336"/>
+        <location filename="../../src/behaviour.ui" line="356"/>
         <source>Show popup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="376"/>
         <source>Magnifier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="368"/>
+        <location filename="../../src/behaviour.ui" line="388"/>
         <source>Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="398"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="421"/>
+        <location filename="../../src/behaviour.ui" line="441"/>
         <source>Initial scale</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="461"/>
         <source>Increment</source>
         <translation type="unfinished"></translation>
     </message>
@@ -865,6 +890,11 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Kiirendusprofiil</translation>
     </message>
     <message>
+        <location filename="../../src/mouse.ui" line="176"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
         <translation>Klõpsamiseks puuduta</translation>
@@ -882,7 +912,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kujundus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
@@ -897,11 +927,6 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mouse.ui" line="176"/>
-        <source>Send events</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

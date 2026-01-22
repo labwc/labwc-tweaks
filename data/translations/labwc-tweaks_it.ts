@@ -87,44 +87,49 @@
         <translation>Richiede un movimento del cursore se &apos;segue il mouse&apos; è abilitato</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="64"/>
+        <location filename="../../src/behaviour.cpp" line="68"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation>Distanza tra i bordi di finestre e schermi quando si usano azioni di movimento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="69"/>
+        <location filename="../../src/behaviour.cpp" line="73"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="81"/>
-        <location filename="../../src/behaviour.cpp" line="146"/>
+        <location filename="../../src/behaviour.cpp" line="78"/>
+        <source>Show an overlay when snapping a window to an output edge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="90"/>
+        <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
         <translation>Sempre</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="82"/>
+        <location filename="../../src/behaviour.cpp" line="91"/>
         <source>Only on regions</source>
         <translation>Solo alle regioni</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Only on edges</source>
         <translation>Solo ai bordi</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="84"/>
-        <location filename="../../src/behaviour.cpp" line="145"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
+        <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
         <translation>Mai</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="112"/>
+        <location filename="../../src/behaviour.cpp" line="121"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation>Movimento del cursore richiesto per spostare una finestra massimizzata o aggianciata</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="135"/>
+        <location filename="../../src/behaviour.cpp" line="144"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation>Specifica lo spessore delle aree di cattura del bordo
@@ -136,80 +141,80 @@ per ridimensionare le finestre</translation>
         <translation>Alza la finestra se riceve focus</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="74"/>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation>Massimizza invece di agganciare al bordo superiore</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="87"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation>L&apos;aggancio delle finestre può attivare i corrispondenti
 eventi di affiancamento per le applicazioni Wayland native</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="102"/>
+        <location filename="../../src/behaviour.cpp" line="111"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation>Impedisci spostamenti interattivi e ridimensionamenti
  di una finestra oltre i bordi dello schermo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="107"/>
+        <location filename="../../src/behaviour.cpp" line="116"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation>Impedisci spostamenti e ridimensionamenti interattivi 
 di una finestra oltre i bordi di qualsiasi altra finestra</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="117"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation>Movimento unidimensionale del cursore richiesto per spostare 
 una finestra massimizzata verticalmente o orizzontalmente</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="122"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation>L&apos;applicazione ridisegna il suo contenuto durante il ridimensionamento.
 Se disabilitato, viene visualizzato un rettangolo contornato</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="129"/>
+        <location filename="../../src/behaviour.cpp" line="138"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation>Dimensioni delle regioni angolari a cui si applicano tutti le azioni del mouse
 e dimensioni della regione del bordo per cui si applicherà il ridimensionamento del mouse in qualsiasi direzione.</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="143"/>
+        <location filename="../../src/behaviour.cpp" line="152"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation>Mostra un piccolo indicatore sopra la finestra durante il ridimensionamento o lo spostamento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="147"/>
+        <location filename="../../src/behaviour.cpp" line="156"/>
         <source>Nonpixel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="163"/>
-        <location filename="../../src/behaviour.cpp" line="167"/>
+        <location filename="../../src/behaviour.cpp" line="172"/>
+        <location filename="../../src/behaviour.cpp" line="176"/>
         <source>For full screen magnifier set to -1</source>
         <translation>Per la lente d&apos;ingrandimento a schermo intero impostare su -1</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="171"/>
+        <location filename="../../src/behaviour.cpp" line="180"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation>Numero iniziale di volte per cui l&apos;immagine ingrandita viene ingrandito</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="175"/>
+        <location filename="../../src/behaviour.cpp" line="184"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation type="unfinished">Gradi di cambiamento per ogni azione di  &apos;ZoomIn&apos; o &apos;ZoomOut&apos;</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="179"/>
+        <location filename="../../src/behaviour.cpp" line="188"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation>Applica un filtro bilineare all&apos;immagie ingrandita</translation>
     </message>
@@ -217,255 +222,270 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
 <context>
     <name>Keyboard</name>
     <message>
-        <location filename="../../src/keyboard.cpp" line="25"/>
+        <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
         <translation>Maiusc+Blocco Maiuscole</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="26"/>
+        <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
         <translation>Alt+Blocco Maiuscole</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="27"/>
+        <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
         <translation>Entrambi Maiusc insieme</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="28"/>
+        <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
         <translation>Entrambi Alt insieme</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="29"/>
+        <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
         <translation>Entrambi Ctrl insieme</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="31"/>
+        <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
         <translation>Alt destro (mentre premuto)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="32"/>
+        <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
         <translation>Alt sinistro (mentre premuto)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="33"/>
+        <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
         <translation>Win sinistro (mentre premuto)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="34"/>
+        <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
         <translation>Win destro (mentre premuto)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="35"/>
+        <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
         <translation>Qualsiasi win (mentre premuto)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="37"/>
+        <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
         <translation>Menu (mentre premuto), Maiusc+Menu per menu</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="39"/>
+        <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
         <translation>Blocco maiusc (mentre premuto), Alt+Blocco maiusc per l&apos;originale azione</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="41"/>
+        <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
         <translation>Ctrl destro (mentre premuto)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="42"/>
+        <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
         <translation>Alt destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="43"/>
+        <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
         <translation>Alt sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="44"/>
+        <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
         <translation>Blocco maiuscole</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="46"/>
+        <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
         <translation>Blocco maiuscole per il primo layout; Maiusc+Blocco maiuscole per il secondo layout</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="48"/>
+        <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
         <translation>Tasto Win sinistro per il primo layout; Tasto Win/Menu destro per il secondo layout</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="50"/>
+        <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
         <translation>Ctrl sinistro per il primo layout; Ctrl destro per il secondo layout</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="52"/>
+        <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
         <translation>Entrambi Alt insieme; AltGr da solo sceglie il terzo livello</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="53"/>
+        <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
         <translation>Ctrl+Maiusc</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="55"/>
+        <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
         <translation>Ctrl sinistro+Maiusc sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="57"/>
+        <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
         <translation>Ctrl destro+Maiusc destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="59"/>
+        <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
         <translation>Ctrl sinistro+Maiusc sinistro seleziona il layout precedente, Ctrl destro+Maiusc destro seleziona il layout successivo</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="60"/>
+        <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
         <translation>Alt+Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="61"/>
+        <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
         <translation>Alt sinistro+Ctrl sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="63"/>
+        <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
         <translation>Alt destro+Ctrl destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="65"/>
+        <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
         <translation>Ctrl sinistro+Alt sinistro sceglie il layout precedente, Ctrl destro+Alt destro sceglie il layout successivo</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="66"/>
+        <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
         <translation>Alt+Maiusc</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="68"/>
+        <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
         <translation>Alt sinistro+Maiusc sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="70"/>
+        <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
         <translation>Alt destro+Maiusc destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="72"/>
+        <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
         <translation>Alt sinistro+Maiusc sinistro sceglie il layout precedente, Alt destro+Maiusc destro sceglie il layout successivo</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="73"/>
+        <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
         <translation>Menu</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="74"/>
+        <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
         <translation>Win sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="75"/>
+        <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
         <translation>Alt+spazio</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="76"/>
+        <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
         <translation>Win+spazio</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="77"/>
+        <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
         <translation>Ctrl+spazio</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="78"/>
+        <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
         <translation>Win destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="79"/>
+        <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
         <translation>Maiusc sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="80"/>
+        <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
         <translation>Maiusc destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="81"/>
+        <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
         <translation>Ctrl sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="82"/>
+        <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
         <translation>Ctrl destro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="83"/>
+        <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
         <translation>Blocco scorrimento</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="85"/>
+        <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
         <translation>Ctrl+Win sinistro per il primo layout; Ctrl+Menu per il secondo layout</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="86"/>
+        <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
         <translation>Ctrl sinistro+Win sinistro</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="105"/>
+        <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
         <translation>Seleziona mappatura da aggiungere...</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="113"/>
+        <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
         <translation>Frequenza con cui le pressioni dei tasti vengono ripetute al secondo</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="118"/>
+        <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
         <translation>Ritardo prima che le pressioni dei tasti vengano ripetute</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="123"/>
+        <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
         <translation>Attiva Num Lock quando viene connesso una tastiera nuova</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="127"/>
+        <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
         <translation>Combinazione di tasti per cambiare
  la mappatura della tastiera</translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="148"/>
+        <source>Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="148"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="164"/>
+        <source>Select key combination</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -605,13 +625,13 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
-        <source>Compositor</source>
-        <translation>Compositore</translation>
+        <source>Labwc theme</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
-        <source>Icon</source>
-        <translation>Icone</translation>
+        <source>Icon theme</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -667,7 +687,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Richiede movimento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="136"/>
+        <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
         <translation>Alza quando riceve focus</translation>
     </message>
@@ -688,15 +708,15 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="165"/>
-        <location filename="../../src/behaviour.ui" line="218"/>
-        <location filename="../../src/behaviour.ui" line="242"/>
-        <location filename="../../src/behaviour.ui" line="259"/>
-        <location filename="../../src/behaviour.ui" line="273"/>
-        <location filename="../../src/behaviour.ui" line="308"/>
-        <location filename="../../src/behaviour.ui" line="329"/>
-        <location filename="../../src/behaviour.ui" line="375"/>
-        <location filename="../../src/behaviour.ui" line="405"/>
+        <location filename="../../src/behaviour.ui" line="178"/>
+        <location filename="../../src/behaviour.ui" line="238"/>
+        <location filename="../../src/behaviour.ui" line="262"/>
+        <location filename="../../src/behaviour.ui" line="279"/>
+        <location filename="../../src/behaviour.ui" line="293"/>
+        <location filename="../../src/behaviour.ui" line="328"/>
+        <location filename="../../src/behaviour.ui" line="349"/>
+        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="425"/>
         <source> px</source>
         <translation> px</translation>
     </message>
@@ -706,98 +726,103 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Focus</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="146"/>
+        <location filename="../../src/behaviour.ui" line="159"/>
         <source>Window Snapping</source>
         <translation>Aggancio delle finestre</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="158"/>
-        <location filename="../../src/behaviour.ui" line="301"/>
+        <location filename="../../src/behaviour.ui" line="171"/>
+        <location filename="../../src/behaviour.ui" line="321"/>
         <source>Corner range</source>
         <translation>Area dell’angolo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="179"/>
+        <location filename="../../src/behaviour.ui" line="192"/>
         <source>Notify applications of tiled state </source>
         <translation>Notifica applicazioni dello stato affiancato </translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="189"/>
+        <location filename="../../src/behaviour.ui" line="202"/>
         <source>Maximize when snapping to top edge</source>
         <translation>Massimizza se aggancia al bordo superiore</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="458"/>
+        <location filename="../../src/behaviour.ui" line="209"/>
+        <source>Show overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="478"/>
         <source>Use bilinear filter</source>
         <translation>Usa filtro bilineare</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="199"/>
+        <location filename="../../src/behaviour.ui" line="219"/>
         <source>Resistance</source>
         <translation>Resistenze</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="211"/>
+        <location filename="../../src/behaviour.ui" line="231"/>
         <source>Screen edge strength</source>
         <translation>Resistenza al bordo dello schermo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="235"/>
+        <location filename="../../src/behaviour.ui" line="255"/>
         <source>Window edge strength</source>
         <translation>Resistenza al bordo della finestra</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="252"/>
+        <location filename="../../src/behaviour.ui" line="272"/>
         <source>Threshold to unsnap</source>
         <translation>Soglia per sganciare</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="266"/>
+        <location filename="../../src/behaviour.ui" line="286"/>
         <source>Threshold to unmaximize</source>
         <translation>Soglia per de-massimizzare</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="289"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
         <source>Resize</source>
         <translation>Ridimensionamento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="322"/>
+        <location filename="../../src/behaviour.ui" line="342"/>
         <source>Grab thickness</source>
         <translation>Spessore di presa</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="346"/>
+        <location filename="../../src/behaviour.ui" line="366"/>
         <source>Draw contents</source>
         <translation>Disegna contenuto</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="336"/>
+        <location filename="../../src/behaviour.ui" line="356"/>
         <source>Show popup</source>
         <translation>Mostra pop-up</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="376"/>
         <source>Magnifier</source>
         <translation>Lente di ingrandimento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="368"/>
+        <location filename="../../src/behaviour.ui" line="388"/>
         <source>Width</source>
         <translation>Larghezza</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="398"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Height</source>
         <translation>Altezza</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="421"/>
+        <location filename="../../src/behaviour.ui" line="441"/>
         <source>Initial scale</source>
         <translation>Scala iniziale</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="461"/>
         <source>Increment</source>
         <translation>Incremento</translation>
     </message>
@@ -873,6 +898,11 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Profilo di accelerazione</translation>
     </message>
     <message>
+        <location filename="../../src/mouse.ui" line="176"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
         <translation>Tocco per click</translation>
@@ -906,11 +936,6 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
         <translation>Mancino</translation>
-    </message>
-    <message>
-        <location filename="../../src/mouse.ui" line="176"/>
-        <source>Send events</source>
-        <translation>Invia eventi</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
