@@ -87,44 +87,49 @@
         <translation>如果啟用跟隨滑鼠(followMouse)，則需要游標移動</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="64"/>
+        <location filename="../../src/behaviour.cpp" line="68"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation>當使用移動動作時，視窗和輸出邊緣之間的距離</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="69"/>
+        <location filename="../../src/behaviour.cpp" line="73"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="81"/>
-        <location filename="../../src/behaviour.cpp" line="146"/>
+        <location filename="../../src/behaviour.cpp" line="78"/>
+        <source>Show an overlay when snapping a window to an output edge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="90"/>
+        <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
         <translation>總是</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="82"/>
+        <location filename="../../src/behaviour.cpp" line="91"/>
         <source>Only on regions</source>
         <translation>僅在區域</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Only on edges</source>
         <translation>僅在邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="84"/>
-        <location filename="../../src/behaviour.cpp" line="145"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
+        <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
         <translation>永不</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="112"/>
+        <location filename="../../src/behaviour.cpp" line="121"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation>用於平鋪或最大化視窗進行移動，游標移動是必須的</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="135"/>
+        <location filename="../../src/behaviour.cpp" line="144"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation>用於調整視窗大小的目的
@@ -136,80 +141,80 @@ purposes of resizing windows</source>
         <translation>當處於焦點時，將視窗提升至前方</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="74"/>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation>用最大化取代鋪放於頂端邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="87"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation>鋪放視窗可以觸發相應的平鋪事件
 用於原生 Wayland 應用程式</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="102"/>
+        <location filename="../../src/behaviour.cpp" line="111"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation>抗拒交互移動和調整視窗大小
  跨越螢幕邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="107"/>
+        <location filename="../../src/behaviour.cpp" line="116"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation>抗拒交互移動和調整視窗大小
  跨越任何其他視窗的邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="117"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation>游標一維移動是必須的
 用於垂直或水平最大化視窗進行移動</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="122"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation>應用程式在調整大小時重繪其內容。
 如果停用，則會顯示一個框線矩形</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="129"/>
+        <location filename="../../src/behaviour.cpp" line="138"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation>角位區域的大小，在此全部“角位”滑鼠標綁定內文均會套用
  以及邊框區域的大小，用於游標調整大小時將會套用於任何方向。</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="143"/>
+        <location filename="../../src/behaviour.cpp" line="152"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation>當要調整大小或移動時，在視窗頂部顯示小型指示器</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="147"/>
+        <location filename="../../src/behaviour.cpp" line="156"/>
         <source>Nonpixel</source>
         <translation>非像素</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="163"/>
-        <location filename="../../src/behaviour.cpp" line="167"/>
+        <location filename="../../src/behaviour.cpp" line="172"/>
+        <location filename="../../src/behaviour.cpp" line="176"/>
         <source>For full screen magnifier set to -1</source>
         <translation>用於全螢幕放大鏡設定至 -1</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="171"/>
+        <location filename="../../src/behaviour.cpp" line="180"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation>放大圖像的初始縮放倍數</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="175"/>
+        <location filename="../../src/behaviour.cpp" line="184"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation>於每次叫用 &apos;ZoomIn&apos;(拉近放大) 或 &apos;ZoomOut&apos;(拉遠縮小) 時的變化步驟</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="179"/>
+        <location filename="../../src/behaviour.cpp" line="188"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation>對放大圖像套用雙線性過濾器</translation>
     </message>
@@ -217,254 +222,269 @@ If disabled, an outlined rectangle is shown</source>
 <context>
     <name>Keyboard</name>
     <message>
-        <location filename="../../src/keyboard.cpp" line="25"/>
+        <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
         <translation>Shift+Caps Lock</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="26"/>
+        <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
         <translation>Alt+Caps Lock</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="27"/>
+        <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
         <translation>兩鍵 Shifts 同時</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="28"/>
+        <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
         <translation>兩鍵 Alts 同時</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="29"/>
+        <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
         <translation>兩鍵 Ctrls 同時</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="31"/>
+        <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
         <translation>右 Alt (當按下時)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="32"/>
+        <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
         <translation>左 Alt (當按下時)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="33"/>
+        <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
         <translation>左 Win (當按下時)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="34"/>
+        <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
         <translation>右 Win (當按下時)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="35"/>
+        <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
         <translation>任何 Win (當按下時)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="37"/>
+        <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
         <translation>Menu(當按下時)，Shift+Menu 用於選單</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="39"/>
+        <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
         <translation>Caps Lock (當按下時)， Alt+Caps Lock 用於原始 Caps Lock (大寫鎖定)動作</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="41"/>
+        <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
         <translation>右 Ctrl (當按下時)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="42"/>
+        <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
         <translation>右 Alt</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="43"/>
+        <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
         <translation>左 Alt</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="44"/>
+        <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
         <translation>Caps Lock (大寫鎖定)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="46"/>
+        <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
         <translation>Caps Lock 至第一佈置； Shift+Caps Lock 至第二佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="48"/>
+        <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
         <translation>左 Win 至第一佈置； 右 Win/Menu 至第二佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="50"/>
+        <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
         <translation>左 Ctrl 至第一佈置；右 Ctrl 至第二佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="52"/>
+        <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
         <translation>兩鍵 Alt 同時； AltGr 單獨選擇第三層級</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="53"/>
+        <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
         <translation>Ctrl+Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="55"/>
+        <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
         <translation>左 Ctrl+左 Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="57"/>
+        <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
         <translation>右 Ctrl+右 Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="59"/>
+        <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
         <translation>左 Ctrl+左 Shift 選擇前一個佈置，右 Ctrl + 右 Shift 選擇下一個佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="60"/>
+        <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
         <translation>Alt+Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="61"/>
+        <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
         <translation>左 Alt+左 Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="63"/>
+        <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
         <translation>右 Alt+右 Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="65"/>
+        <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
         <translation>左 Ctrl+左 Alt 選擇前一個佈置，右 Ctrl + 右 Alt 選擇下一個佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="66"/>
+        <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
         <translation>Alt+Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="68"/>
+        <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
         <translation>左 Alt+左 Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="70"/>
+        <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
         <translation>右 Alt+右 Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="72"/>
+        <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
         <translation>左 Alt+左 Shift 選擇前一個佈置，右 Alt + 右 Shift 選擇下一個佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="73"/>
+        <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
         <translation>Menu 選單</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="74"/>
+        <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
         <translation>左 Win</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="75"/>
+        <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
         <translation>Alt+空白</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="76"/>
+        <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
         <translation>Win+空白</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="77"/>
+        <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
         <translation>Ctrl+空白</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="78"/>
+        <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
         <translation>右 Win</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="79"/>
+        <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
         <translation>左 Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="80"/>
+        <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
         <translation>右 Shift</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="81"/>
+        <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
         <translation>左 Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="82"/>
+        <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
         <translation>右 Ctrl</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="83"/>
+        <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
         <translation>Scroll Lock (滾動鎖定鍵)</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="85"/>
+        <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
         <translation>Ctrl+左 Win 至第一佈置， Ctrl+Menu 至第二佈置</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="86"/>
+        <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
         <translation>左 Ctrl+左 Win</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="105"/>
+        <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
         <translation>選擇佈置進行添加…</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="113"/>
+        <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
         <translation>每秒重複按鍵的速率</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="118"/>
+        <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
         <translation>在重複按鍵前的延遲</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="123"/>
+        <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
         <translation>識別新設鍵盤時啟用 Num Lock</translation>
     </message>
     <message>
-        <location filename="../../src/keyboard.cpp" line="127"/>
+        <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
         <translation>切換鍵盤佈置的組合鍵</translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="148"/>
+        <source>Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="148"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/keyboard.cpp" line="164"/>
+        <source>Select key combination</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -604,13 +624,13 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
-        <source>Compositor</source>
-        <translation>合成器</translation>
+        <source>Labwc theme</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
-        <source>Icon</source>
-        <translation>圖示</translation>
+        <source>Icon theme</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -666,7 +686,7 @@ If disabled, an outlined rectangle is shown</source>
         <translation>需要移動</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="136"/>
+        <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
         <translation>提昇於焦點</translation>
     </message>
@@ -687,15 +707,15 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="165"/>
-        <location filename="../../src/behaviour.ui" line="218"/>
-        <location filename="../../src/behaviour.ui" line="242"/>
-        <location filename="../../src/behaviour.ui" line="259"/>
-        <location filename="../../src/behaviour.ui" line="273"/>
-        <location filename="../../src/behaviour.ui" line="308"/>
-        <location filename="../../src/behaviour.ui" line="329"/>
-        <location filename="../../src/behaviour.ui" line="375"/>
-        <location filename="../../src/behaviour.ui" line="405"/>
+        <location filename="../../src/behaviour.ui" line="178"/>
+        <location filename="../../src/behaviour.ui" line="238"/>
+        <location filename="../../src/behaviour.ui" line="262"/>
+        <location filename="../../src/behaviour.ui" line="279"/>
+        <location filename="../../src/behaviour.ui" line="293"/>
+        <location filename="../../src/behaviour.ui" line="328"/>
+        <location filename="../../src/behaviour.ui" line="349"/>
+        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="425"/>
         <source> px</source>
         <translation> px</translation>
     </message>
@@ -705,98 +725,103 @@ If disabled, an outlined rectangle is shown</source>
         <translation>焦點</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="146"/>
+        <location filename="../../src/behaviour.ui" line="159"/>
         <source>Window Snapping</source>
         <translation>視窗鋪放</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="158"/>
-        <location filename="../../src/behaviour.ui" line="301"/>
+        <location filename="../../src/behaviour.ui" line="171"/>
+        <location filename="../../src/behaviour.ui" line="321"/>
         <source>Corner range</source>
         <translation>角端範圍</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="179"/>
+        <location filename="../../src/behaviour.ui" line="192"/>
         <source>Notify applications of tiled state </source>
         <translation>通知應用程式平鋪狀態 </translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="189"/>
+        <location filename="../../src/behaviour.ui" line="202"/>
         <source>Maximize when snapping to top edge</source>
         <translation>當鋪放至頂端邊緣時進行最大化</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="458"/>
+        <location filename="../../src/behaviour.ui" line="209"/>
+        <source>Show overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="478"/>
         <source>Use bilinear filter</source>
         <translation>使用雙線性過濾器</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="199"/>
+        <location filename="../../src/behaviour.ui" line="219"/>
         <source>Resistance</source>
         <translation>阻抗</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="211"/>
+        <location filename="../../src/behaviour.ui" line="231"/>
         <source>Screen edge strength</source>
         <translation>螢幕邊緣強度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="235"/>
+        <location filename="../../src/behaviour.ui" line="255"/>
         <source>Window edge strength</source>
         <translation>視窗邊緣強度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="252"/>
+        <location filename="../../src/behaviour.ui" line="272"/>
         <source>Threshold to unsnap</source>
         <translation>取消鋪放的閾值</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="266"/>
+        <location filename="../../src/behaviour.ui" line="286"/>
         <source>Threshold to unmaximize</source>
         <translation>取消最大化的閾值</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="289"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
         <source>Resize</source>
         <translation>調整大小</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="322"/>
+        <location filename="../../src/behaviour.ui" line="342"/>
         <source>Grab thickness</source>
         <translation>抓取厚度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="346"/>
+        <location filename="../../src/behaviour.ui" line="366"/>
         <source>Draw contents</source>
         <translation>繪製內容</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="336"/>
+        <location filename="../../src/behaviour.ui" line="356"/>
         <source>Show popup</source>
         <translation>顯示彈出視窗</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="376"/>
         <source>Magnifier</source>
         <translation>放大鏡</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="368"/>
+        <location filename="../../src/behaviour.ui" line="388"/>
         <source>Width</source>
         <translation>寬度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="398"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Height</source>
         <translation>高度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="421"/>
+        <location filename="../../src/behaviour.ui" line="441"/>
         <source>Initial scale</source>
         <translation>初始量度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="461"/>
         <source>Increment</source>
         <translation>增量</translation>
     </message>
@@ -872,6 +897,11 @@ If disabled, an outlined rectangle is shown</source>
         <translation>游標加速度設定檔</translation>
     </message>
     <message>
+        <location filename="../../src/mouse.ui" line="176"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
         <translation>觸滑即可點按</translation>
@@ -905,11 +935,6 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
         <translation>左撇子模式</translation>
-    </message>
-    <message>
-        <location filename="../../src/mouse.ui" line="176"/>
-        <source>Send events</source>
-        <translation>發送事件</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
