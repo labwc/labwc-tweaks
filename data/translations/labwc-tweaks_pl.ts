@@ -36,7 +36,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation>Pokaż dekoracje po stronie serwera w&#xa0;zmaksymalizowanych oknach</translation>
+        <translation>Pokaż dekoracje po stronie serwera w zmaksymalizowanych oknach</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż nakładkę podczas przyciągania okna do krawędzi wyjściowej</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="90"/>
@@ -156,14 +156,14 @@ kafelkowania dla natywnych aplikacji Wayland</translation>
         <location filename="../../src/behaviour.cpp" line="111"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation>Ograniczaj interaktywne ruchy i&#xa0;zmiany rozmiaru
+        <translation>Ograniczaj interaktywne ruchy i zmiany rozmiaru
 okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="116"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation>Zapobiegaj interaktywnym ruchom i&#xa0;zmianom rozmiaru
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru
 okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
@@ -474,17 +474,17 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Klawisz</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz kombinację klawiszy</translation>
     </message>
 </context>
 <context>
@@ -625,12 +625,12 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motyw ikon</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -748,7 +748,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="209"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż nakładkę</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
@@ -899,7 +899,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Stan</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>

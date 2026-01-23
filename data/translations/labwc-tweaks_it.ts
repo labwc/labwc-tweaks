@@ -99,7 +99,8 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra una sovrapposizione quando aggancia
+una finestra a un bordo dello schermo</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="90"/>
@@ -211,7 +212,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/behaviour.cpp" line="184"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished">Gradi di cambiamento per ogni azione di  &apos;ZoomIn&apos; o &apos;ZoomOut&apos;</translation>
+        <translation type="unfinished">Gradi di cambiamento per ogni azione di &apos;ZoomIn&apos; o &apos;ZoomOut&apos;</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="188"/>
@@ -475,17 +476,17 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiave</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Descrizione</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona la combinazione di tasti</translation>
     </message>
 </context>
 <context>
@@ -626,12 +627,12 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema icone</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -749,7 +750,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/behaviour.ui" line="209"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra sovrapposizione</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
@@ -900,7 +901,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Stato</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
