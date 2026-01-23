@@ -73,7 +73,8 @@ Setting::Setting(QString name, enum settingFileType fileType, enum settingValueT
         switch (m_valueType) {
         case LAB_VALUE_TYPE_STRING: {
             QString value = QString(environmentGet(m_name));
-            if (!value.isNull() && (value != m_value.toString())) {
+            if (!value.isNull()
+                && QString::compare(value, m_value.toString(), Qt::CaseInsensitive)) {
                 m_valueOrigin = LAB_VALUE_ORIGIN_USER_OVERRIDE;
                 m_value = value;
                 info("from environment file use {}={}", m_name.toStdString(), value.toStdString());
