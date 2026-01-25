@@ -150,6 +150,8 @@ void MainDialog::activate()
     m_pageMouse->activate();
     m_pageKeyboard->activate();
     m_pageTouchscreen->activate();
+    m_pageAbout->loadLabwcVersion();
+    m_pageAbout->getEnv();
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
         m_pageTemplate->activate();
     }

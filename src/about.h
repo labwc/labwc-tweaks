@@ -16,8 +16,9 @@ public:
     About(QWidget *parent = nullptr);
     ~About();
 
-    void activate();
     void onApply();
+    void loadLabwcVersion();
+    void getEnv();
 
 private:
     Ui::pageAbout *ui;
