@@ -1,15 +1,6 @@
-/*~
- * This is a page template. It will not show when running the application normally, but can be
- * invoked by settings LABWC_TWEAKS_SHOW_TEMPLATE=1. It is intended as a starting point for
- * developers who wish to create pages.
- *
- * By page we mean list-stack pair.
- *
- * In addition to the constructor/destructor we require two methods: activate() and onApply().
- * That's it.
- */
 #include "about.h"
-#include <QStringList>
+#include <QProcess>
+#include <QDebug>
 #include "./ui_about.h"
 
 About::About(QWidget *parent) : QWidget(parent), ui(new Ui::pageAbout)
@@ -22,8 +13,52 @@ About::~About()
     delete ui;
 }
 
+void About::loadLabwcVersion()
+{
+    QString version = QString::fromUtf8(qgetenv("LABWC_VER"));
+    if (version.isEmpty())
+        version = "Unknown";
+    ui->versionValue->setText(version);
+
+    // Features
+    QProcess proc;
+    proc.start("labwc", {"-v"});
+    proc.waitForFinished();
+
+    QString out = proc.readAllStandardOutput().trimmed();
+
+    if (out.isEmpty())
+        out = proc.readAllStandardError().trimmed();
+
+    ui->xwaylandValue->setText(out.contains("+xwayland") ? "✔" : "✘");
+    ui->nlsValue->setText(out.contains("+nls") ? "✔" : "✘");
+    ui->rsvgValue->setText(out.contains("+rsvg") ? "✔" : "✘");
+    ui->libsfdoValue->setText(out.contains("+libsfdo") ? "✔" : "✘");
+}
+
+void About::getEnv()
+{
+    QString desktop = QString::fromUtf8(qgetenv("XDG_CURRENT_DESKTOP"));
+    if (desktop.isEmpty())
+        desktop = "Unknown";
+
+    ui->desktopValue->setText(desktop);
+
+    QString pid = QString::fromUtf8(qgetenv("LABWC_PID"));
+    if (pid.isEmpty())
+        pid = "Unknown";
+
+    ui->pidValue->setText(pid);
+
+    QString display = QString::fromUtf8(qgetenv("WAYLAND_DISPLAY"));
+    if (display.isEmpty())
+        display = "Unknown";
+
+    ui->displayValue->setText(display);
+}
 
 void About::onApply()
 {
     // No-op
 }
+
