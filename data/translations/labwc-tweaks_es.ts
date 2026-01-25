@@ -6,12 +6,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Radio de las esquinas superiores de la decoración del lado del servidor</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Renderizar sombras detrás de las ventanas</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
