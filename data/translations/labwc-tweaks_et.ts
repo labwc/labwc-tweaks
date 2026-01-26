@@ -41,12 +41,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished">Tiitliriba</translation>
+        <translation>Tiitliriba</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished">Puudub</translation>
+        <translation>Puudub</translation>
     </message>
 </context>
 <context>
@@ -99,29 +99,29 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui naksad aknaga ekraani või väljundi äärde, siis näita ülekatet</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="90"/>
         <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Alati</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="91"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaid alade puhul</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaid äärte puhul</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitte kunagi</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="121"/>
@@ -467,17 +467,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Klahv</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjeldus</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Vali klahvikombinatsioon</translation>
     </message>
 </context>
 <context>
@@ -618,12 +618,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Labwc kujundus</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikoonistiil</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -741,7 +741,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="209"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita ülekatet</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
@@ -892,7 +892,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Olek</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
@@ -912,12 +912,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished">Kujundus</translation>
+        <translation>Kujundus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
@@ -927,7 +927,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Töörežiim vasaku käe jaoks</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
