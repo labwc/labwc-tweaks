@@ -136,14 +136,14 @@
       <item row="2" column="0">
        <widget class="QLabel" name="displayCaption">
         <property name="text">
-         <string>Wayland display</string>
+         <string notr="true">Wayland display</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="pidCaption">
         <property name="text">
-         <string>Labwc PID</string>
+         <string notr="true">Labwc PID</string>
         </property>
        </widget>
       </item>
@@ -157,7 +157,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="desktopCaption">
         <property name="text">
-         <string>XDG_CURRENT_DESKTOP</string>
+         <string notr="true">XDG_CURRENT_DESKTOP</string>
         </property>
        </widget>
       </item>
@@ -202,7 +202,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="link">
           <property name="text">
-           <string notr="true">Development</string>
+           <string>Development</string>
           </property>
          </widget>
         </item>
