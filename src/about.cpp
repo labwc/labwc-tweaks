@@ -14,7 +14,7 @@ About::~About()
     delete ui;
 }
 
-void About::loadLabwcVersion()
+void About::loadInfo()
 {
     QString version = QString::fromUtf8(qgetenv("LABWC_VER"));
     if (version.isEmpty())
@@ -44,6 +44,20 @@ void About::loadLabwcVersion()
     ui->nlsValue->setText(out.contains("+nls") ? "✔" : "✘");
     ui->rsvgValue->setText(out.contains("+rsvg") ? "✔" : "✘");
     ui->libsfdoValue->setText(out.contains("+libsfdo") ? "✔" : "✘");
+
+    QString labwcLink = QStringLiteral("<a href=\"https://labwc.github.io/\">labwc.github.io</a>");
+    ui->labwcLinkValue->setText(labwcLink);
+    ui->labwcLinkValue->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ui->labwcLinkValue->setOpenExternalLinks(true);
+
+    QString labwcTweaksVersion = QStringLiteral("0.0.1");
+    ui->labwcTweaksVersionValue->setText(labwcTweaksVersion);
+
+
+    QString labwcTweaksLink = QStringLiteral("<a href=\"https://github.com/labwc/labwc-tweaks/\">github.com/labwc/labwc-tweaks</a>");
+    ui->labwcTweaksLinkValue->setText(labwcTweaksLink);
+    ui->labwcTweaksLinkValue->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ui->labwcTweaksLinkValue->setOpenExternalLinks(true);
 }
 
 void About::getEnv()
@@ -66,6 +80,7 @@ void About::getEnv()
 
     ui->displayValue->setText(display);
 }
+
 
 void About::onApply()
 {
