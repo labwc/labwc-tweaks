@@ -17,7 +17,7 @@ public:
     ~About();
 
     void onApply();
-    void loadLabwcVersion();
+    void loadInfo();
     void getEnv();
 
 private:
