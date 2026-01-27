@@ -53,7 +53,6 @@ void About::loadInfo()
     QString labwcTweaksVersion = QStringLiteral("0.0.1");
     ui->labwcTweaksVersionValue->setText(labwcTweaksVersion);
 
-
     QString labwcTweaksLink = QStringLiteral("<a href=\"https://github.com/labwc/labwc-tweaks/\">github.com/labwc/labwc-tweaks</a>");
     ui->labwcTweaksLinkValue->setText(labwcTweaksLink);
     ui->labwcTweaksLinkValue->setTextInteractionFlags(Qt::TextBrowserInteraction);
@@ -81,9 +80,7 @@ void About::getEnv()
     ui->displayValue->setText(display);
 }
 
-
 void About::onApply()
 {
     // No-op
 }
-
