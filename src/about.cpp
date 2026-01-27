@@ -1,6 +1,7 @@
 #include "about.h"
 #include <QProcess>
 #include <QDebug>
+#include <QFile>
 #include "./ui_about.h"
 
 About::About(QWidget *parent) : QWidget(parent), ui(new Ui::pageAbout)
@@ -21,9 +22,18 @@ void About::loadLabwcVersion()
     ui->versionValue->setText(version);
 
     // Features
+    QString pid = QString::fromUtf8(qgetenv("LABWC_PID"));
+    QString exePath = QString("/proc/%1/exe").arg(pid);
+
     QProcess proc;
-    proc.start("labwc", {"-v"});
+    proc.start(exePath, {"-v"});
     proc.waitForFinished();
+
+    // Fallback
+    if (exePath.isEmpty() || !QFile::exists(exePath)) {
+        proc.start("labwc", {"-v"});
+        proc.waitForFinished();
+    }
 
     QString out = proc.readAllStandardOutput().trimmed();
 
