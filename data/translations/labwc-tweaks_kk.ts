@@ -99,7 +99,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Терезені экран жиегіне жабыстырғанда көмекші қабатты көрсету</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="90"/>
@@ -474,17 +474,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Перне</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Сипаттамасы</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Пернелер жарлығын таңдаңыз</translation>
     </message>
 </context>
 <context>
@@ -625,12 +625,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Labwc темасы</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Таңбашалар темасы</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -748,7 +748,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="209"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Қосымша қабатты көрсету</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
@@ -899,7 +899,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Күйі</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
