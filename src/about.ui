@@ -21,7 +21,7 @@
        <item>
         <widget class="QGroupBox" name="labwcGroupBox">
          <property name="title">
-          <string>Labwc</string>
+          <string notr="true">Labwc</string>
          </property>
          <!-- /*~ With QGridLayout, the right-most column is stretched to make all the others snug */ -->
        <layout class="QGridLayout" name="labwcGrid">
@@ -168,7 +168,7 @@
        <item>
         <widget class="QGroupBox" name="labwTweaksGroupBox">
          <property name="title">
-          <string>Labwc Tweaks</string>
+          <string notr="true">Labwc Tweaks</string>
          </property>
          <layout class="QGridLayout" name="labwcTweaksLayout">
           <item row="0" column="0">

@@ -490,29 +490,34 @@ If disabled, an outlined rectangle is shown</source>
 <context>
     <name>MainDialog</name>
     <message>
-        <location filename="../../src/maindialog.cpp" line="46"/>
+        <location filename="../../src/maindialog.cpp" line="47"/>
         <source>Appearance</source>
         <translation>Сыртқы түрі</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="50"/>
+        <location filename="../../src/maindialog.cpp" line="51"/>
         <source>Behaviour</source>
         <translation>Мінез-құлығы</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="54"/>
+        <location filename="../../src/maindialog.cpp" line="55"/>
         <source>Mouse &amp; Touchpad</source>
         <translation>Тышқан және тачпад</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="58"/>
+        <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
         <translation>Пернетақта</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="62"/>
+        <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
         <translation>Сенсорлы экран</translation>
+    </message>
+    <message>
+        <location filename="../../src/maindialog.cpp" line="67"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -613,6 +618,55 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
         <translation>Терістелген</translation>
+    </message>
+</context>
+<context>
+    <name>pageAbout</name>
+    <message>
+        <location filename="../../src/about.ui" line="31"/>
+        <location filename="../../src/about.ui" line="177"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="45"/>
+        <source>XWayland support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="59"/>
+        <source>Native language support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="73"/>
+        <source>SVG icon support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="87"/>
+        <source>Icon support with libsfdo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="101"/>
+        <source>Website</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="119"/>
+        <source>Environment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="191"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="205"/>
+        <source>Development</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
