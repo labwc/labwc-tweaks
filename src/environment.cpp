@@ -8,6 +8,7 @@
 #include <cstring>
 #include <vector>
 #include <memory>
+#include <unistd.h>
 #include "log.h"
 
 class Line
