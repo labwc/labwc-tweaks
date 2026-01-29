@@ -519,7 +519,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni</translation>
     </message>
 </context>
 <context>
@@ -628,47 +628,47 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="177"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto lingua madre</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto icone SVG</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Supporto icone con libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Sito web</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="119"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambiente</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="191"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Lizenze</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="205"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Sviluppo</translation>
     </message>
 </context>
 <context>
