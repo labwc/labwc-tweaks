@@ -36,7 +36,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation>Pokaż dekoracje po stronie serwera w&#xa0;zmaksymalizowanych oknach</translation>
+        <translation>Pokaż dekoracje po stronie serwera w zmaksymalizowanych oknach</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -156,14 +156,14 @@ kafelkowania dla natywnych aplikacji Wayland</translation>
         <location filename="../../src/behaviour.cpp" line="111"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation>Ograniczaj interaktywne ruchy i&#xa0;zmiany rozmiaru
+        <translation>Ograniczaj interaktywne ruchy i zmiany rozmiaru
 okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="116"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation>Zapobiegaj interaktywnym ruchom i&#xa0;zmianom rozmiaru
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru
 okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
@@ -517,7 +517,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacje</translation>
     </message>
 </context>
 <context>
@@ -626,47 +626,47 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="177"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>Obsługa XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Obsługa języka natywnego</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>Obsługa ikon SVG</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Obsługa ikon z libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Strona internetowa</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="119"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Środowisko</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="191"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencje</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="205"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozwój</translation>
     </message>
 </context>
 <context>
