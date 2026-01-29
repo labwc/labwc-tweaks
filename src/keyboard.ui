@@ -100,7 +100,7 @@
            <widget class="QListView" name="layoutView"/>
           </item>
           <item row="0" column="2">
-           <spacer name="horizontalSpacer">
+           <spacer name="horizontalSpacer_1">
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>

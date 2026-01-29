@@ -96,7 +96,7 @@
          </widget>
         </item>
         <item row="5" column="0">
-         <widget class="QLabel" name="link">
+         <widget class="QLabel" name="web">
           <property name="text">
            <string>Website</string>
           </property>
@@ -200,7 +200,7 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="link">
+         <widget class="QLabel" name="development">
           <property name="text">
            <string>Development</string>
           </property>
