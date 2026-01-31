@@ -644,22 +644,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Veebisait</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="119"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskkond</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="191"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Litsentsid</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="205"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Arendus</translation>
     </message>
 </context>
 <context>
