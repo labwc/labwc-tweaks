@@ -63,7 +63,7 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
     item4->setText(tr("Touchscreen"));
 
     QListWidgetItem *item5 = new QListWidgetItem(list);
-    item5->setIcon(QIcon::fromTheme("labwc"));
+    item5->setIcon(QIcon::fromTheme("help-about"));
     item5->setText(tr("About"));
 
     if (!qgetenv("LABWC_TWEAKS_SHOW_TEMPLATE").isEmpty()) {
