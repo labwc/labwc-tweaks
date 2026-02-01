@@ -75,11 +75,7 @@ void About::getEnv()
     ui->pidValue->setText(pid);
 
     QString confdir = QString::fromUtf8(qgetenv("LABWC_CONFIG_DIR"));
-    QString home = QDir::homePath();
-
-    if (confdir.startsWith(home)) {
-        confdir.replace(0, home.length(), "~");
-    }
+    confdir.replace(QDir::homePath(), "~");
 
     if (confdir.isEmpty())
         confdir = "~/.config/labwc/";
