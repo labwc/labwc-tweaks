@@ -18,6 +18,11 @@
 
 # Getting Started
 
+### Usage
+
+Use environment variable `LABWC_CONFIG_DIR` to specify a non-standard location
+for configuration files.
+
 ### dependencies
 
 Runtime:
