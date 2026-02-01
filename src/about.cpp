@@ -2,6 +2,7 @@
 #include <QProcess>
 #include <QDebug>
 #include <QFile>
+#include <QDir>
 #include "./ui_about.h"
 
 About::About(QWidget *parent) : QWidget(parent), ui(new Ui::pageAbout)
@@ -72,6 +73,18 @@ void About::getEnv()
         pid = "Unknown";
 
     ui->pidValue->setText(pid);
+
+    QString confdir = QString::fromUtf8(qgetenv("LABWC_CONFIG_DIR"));
+    QString home = QDir::homePath();
+
+    if (confdir.startsWith(home)) {
+        confdir.replace(0, home.length(), "~");
+    }
+
+    if (confdir.isEmpty())
+        confdir = "~/.config/labwc/";
+
+    ui->configdirValue->setText(confdir);
 
     QString display = QString::fromUtf8(qgetenv("WAYLAND_DISPLAY"));
     if (display.isEmpty())

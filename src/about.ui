@@ -119,35 +119,7 @@
           <string>Environment</string>
          </property>
          <layout class="QGridLayout" name="environmentGrid">
-      <item row="1" column="1">
-       <widget class="QLabel" name="pidValue">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="displayValue">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="displayCaption">
-        <property name="text">
-         <string notr="true">Wayland display</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="pidCaption">
-        <property name="text">
-         <string notr="true">Labwc PID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
+         <item row="0" column="1">
        <widget class="QLabel" name="desktopValue">
         <property name="text">
          <string/>
@@ -158,6 +130,48 @@
        <widget class="QLabel" name="desktopCaption">
         <property name="text">
          <string notr="true">XDG_CURRENT_DESKTOP</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="pidCaption">
+        <property name="text">
+         <string notr="true">Labwc PID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="pidValue">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="configdirValue">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="configdirCaption">
+        <property name="text">
+         <string notr="true">LABWC_CONFIG_DIR</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="displayValue">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="displayCaption">
+        <property name="text">
+         <string notr="true">Wayland display</string>
         </property>
        </widget>
       </item>
