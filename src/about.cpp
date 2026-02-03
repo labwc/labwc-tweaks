@@ -27,12 +27,12 @@ void About::loadInfo()
     QString exePath = QString("/proc/%1/exe").arg(pid);
 
     QProcess proc;
-    proc.start(exePath, {"-v"});
+    proc.start(exePath, { "-v" });
     proc.waitForFinished();
 
     // Fallback
     if (exePath.isEmpty() || !QFile::exists(exePath)) {
-        proc.start("labwc", {"-v"});
+        proc.start("labwc", { "-v" });
         proc.waitForFinished();
     }
 
@@ -54,7 +54,8 @@ void About::loadInfo()
     QString labwcTweaksVersion = QStringLiteral("0.1.0");
     ui->labwcTweaksVersionValue->setText(labwcTweaksVersion);
 
-    QString labwcTweaksLink = QStringLiteral("<a href=\"https://github.com/labwc/labwc-tweaks/\">github.com/labwc/labwc-tweaks</a>");
+    QString labwcTweaksLink = QStringLiteral(
+            "<a href=\"https://github.com/labwc/labwc-tweaks/\">github.com/labwc/labwc-tweaks</a>");
     ui->labwcTweaksLinkValue->setText(labwcTweaksLink);
     ui->labwcTweaksLinkValue->setTextInteractionFlags(Qt::TextBrowserInteraction);
     ui->labwcTweaksLinkValue->setOpenExternalLinks(true);
