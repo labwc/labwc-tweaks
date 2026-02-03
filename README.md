@@ -1,29 +1,23 @@
-[![CI]](https://github.com/labwc/labwc-tweaks/actions/workflows/build.yml)
-<br />
-<div align="center">
-  <h3 align="center">labwc-tweaks</h3>
+## ℹ️ Overview
 
-  <p align="center">
-    A GUI settings application for labwc
-  </p>
-</div>
+`labwc-tweaks` is a GUI settings application for `labwc`.
 
-# About the Project
+It manages settings in `rc.xml` and `environment`.
+
+Obligatory screenshot:
 
 <img src="data/screenshot.png"/>
 
-### Description
-
-1. GUI for managing settings in `~/.config/labwc{rc.xml,environment}`
-
-# Getting Started
+## 🚀 Usage instructions
 
 ### Usage
 
 Use environment variable `LABWC_CONFIG_DIR` to specify a non-standard location
 for configuration files.
 
-### dependencies
+## ⬇️ Build instructions
+
+### Dependencies
 
 Runtime:
 
@@ -37,7 +31,7 @@ Build:
 - Qt Linguist Tools
 - Git (optional, to pull latest VCS checkouts)
 
-### build
+### Build
 
 `CMAKE_BUILD_TYPE` is usually set to `Release`, though `None` might be a valid [alternative].<br>
 `CMAKE_INSTALL_PREFIX` has to be set to `/usr` on most operating systems.
@@ -47,13 +41,13 @@ cmake -B build -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr -W no-de
 cmake --build build --verbose
 ```
 
-### test
+### Test
 
 ```bash
 ctest --verbose --force-new-ctest-process --test-dir build
 ```
 
-### install
+### Install
 
 Using `sudo make install` is discouraged, instead use the system package manager where possible.
 
@@ -66,17 +60,17 @@ DESTDIR="$(pwd)/package" cmake --install build
 
 If you find it a useful tool and want to expand its scope, feel free.
 
-### packages
+## Packages
 
 [![Packaging status]](https://repology.org/project/labwc-tweaks/versions)
 
-### translations
+## Translations
 
 For contributing translations the [LXQt Weblate] platform can be used.
 
 [![Translation status]](https://translate.lxqt-project.org/widgets/labwc/)
 
-### licenses
+## Licenses
 
 - labwc-tweaks is licensed under the [GPL-2.0-only] license
 - LXQt build tools cmake modules are licensed under the [BSD-3-Clause] license.
