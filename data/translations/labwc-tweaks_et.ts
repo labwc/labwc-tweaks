@@ -510,7 +510,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakenduse teave</translation>
     </message>
 </context>
 <context>
@@ -549,17 +549,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>Klõpsimise sõrm</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaks sõrme</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Äär</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="173"/>
@@ -619,7 +619,7 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="177"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versioon</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
