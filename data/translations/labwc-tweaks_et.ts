@@ -564,12 +564,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="173"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutusel</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="175"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Välise hiire puhul lülita välja</translation>
     </message>
 </context>
 <context>
@@ -1026,7 +1026,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="162"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Puuteplaat</translation>
     </message>
 </context>
 <context>
