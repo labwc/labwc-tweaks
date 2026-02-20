@@ -46,7 +46,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Χωρίς</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Πολιτική τοποθέτησης για νέα παράθυρα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Η εστίαση δίνεται στο παράθυρο κάτω από τον δείκτη του ποντικιού</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
