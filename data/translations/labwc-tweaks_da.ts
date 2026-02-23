@@ -59,7 +59,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisk</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Markør</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
@@ -105,7 +105,7 @@
         <location filename="../../src/behaviour.cpp" line="90"/>
         <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Altid</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="91"/>
@@ -121,7 +121,7 @@
         <location filename="../../src/behaviour.cpp" line="93"/>
         <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Aldrig</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="121"/>
