@@ -624,22 +624,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>XWaylandi tugi</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Keeltetugi</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG-ikoonide tugi</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikoonitugi libsfdo abil</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
@@ -707,7 +707,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisaseadistused</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
@@ -725,17 +725,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Fookus järgib hiirt</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>Eeldab liikumist</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Fookuse korral tõsta esiplaanile</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
@@ -745,12 +745,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>Akende asetamine</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Reeglid</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -764,12 +764,12 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="395"/>
         <location filename="../../src/behaviour.ui" line="425"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> pix</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Fookus</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="159"/>
@@ -780,12 +780,12 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="171"/>
         <location filename="../../src/behaviour.ui" line="321"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>Nurgaraadius</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="192"/>
         <source>Notify applications of tiled state </source>
-        <translation type="unfinished"></translation>
+        <translation>Teavita rakendusi paanitud olekust </translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="202"/>
@@ -845,27 +845,27 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="356"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita hüpikakent</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="376"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Suurendusklaas</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="388"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Laius</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="418"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõrgus</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="441"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Algne mõõtkava</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="461"/>
@@ -991,37 +991,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="266"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohistamise lukustus</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolme sõrmega lohistamine</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskmise hiirenupu emulatsioon</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="294"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjutamisel lülita välja</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="203"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>Klõpsimise meetod</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="213"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerimise meetod</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="118"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerimise faktor</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="162"/>
