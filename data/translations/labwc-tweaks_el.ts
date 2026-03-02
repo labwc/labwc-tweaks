@@ -442,7 +442,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished">Επιλογή της διάταξης για προσθήκη...</translation>
+        <translation>Επιλογή της διάταξης για προσθήκη...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
@@ -913,12 +913,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">Προσθήκη</translation>
+        <translation>Προσθήκη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">Αφαίρεση</translation>
+        <translation>Αφαίρεση</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
@@ -961,7 +961,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">Δρομέας</translation>
+        <translation>Δρομέας</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>

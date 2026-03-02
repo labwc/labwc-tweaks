@@ -21,7 +21,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angiv dekorationer for xdg-shell-vinduer</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
