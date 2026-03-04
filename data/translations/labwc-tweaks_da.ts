@@ -41,12 +41,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Titellinje</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Placeringspolitik for nye vinduer</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrer</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
@@ -217,137 +217,137 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Skift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Begge Skift-taster samtidigt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Begge Alt-taster samtidigt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Begge Ctrl-taster samtidigt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Alt (mens knappen trykkes ned)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Alt (mens knappen trykkes ned)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Supertast (mens knappen trykkes ned)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Supertast (mens knappen trykkes ned)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Supertaster (mens knappen trykkes ned)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu (mens knappen trykkes ned), Skift+Menu for Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (mens knappen trykkes ned), Alt+Caps Lock for oprindelig Caps Lock handling</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Ctrl (mens knappen trykkes ned)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock til første layout; Skift+Caps Lock til andet layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Supertast til første layout; Højre Super/Menu til andet layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Ctrl til første layout; Højre Ctrl til andet layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Begge Alt sammen; AltGr alene udvælger tredje niveau</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Ctrl+Venstre Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Ctrl+Højre Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Ctrl+Left Skift vælger forrige layout, Højre Ctrl + Højre Skift vælger næste layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Alt+Venstre Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Alt+Højre Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
