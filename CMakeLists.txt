@@ -45,6 +45,7 @@ set(PROJECT_SOURCES
     src/setting.cpp src/setting.h
     src/settings.cpp src/settings.h
     src/xml.cpp src/xml.h
+    src/xml-prettify.cpp src/xml-prettify.h
     src/find-themes.cpp src/find-themes.h
     src/pair.h
     src/parse-bool.cpp src/parse-bool.h
@@ -91,12 +92,12 @@ lxqt_translate_desktop(PROJECT_DESKTOP_FILES
 #===================================================================================================
 include(CTest)
 
-add_executable(t1000 tests/t1000-add-xpath-node.cpp tests/tap.cpp src/xml.cpp src/parse-bool.cpp src/nodename.cpp)
+add_executable(t1000 tests/t1000-add-xpath-node.cpp tests/tap.cpp src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)
 target_link_libraries(t1000 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1000 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1000 t1000)
 
-add_executable(t1001 tests/t1001-nodenames.cpp tests/tap.cpp src/parse-bool.cpp src/nodename.cpp)
+add_executable(t1001 tests/t1001-nodenames.cpp tests/tap.cpp src/parse-bool.cpp src/nodename.cpp src/xml-prettify.cpp)
 target_link_libraries(t1001 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1001 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1001 t1001)

@@ -18,6 +18,7 @@
 #include "nodename.h"
 #include "parse-bool.h"
 #include "xml.h"
+#include "xml-prettify.h"
 
 enum xml_mode {
     XML_MODE_SETTING = 0,
@@ -211,14 +212,20 @@ bool xml_init(const char *filename)
     return success;
 }
 
+static void save(const char *filename)
+{
+    xmlSaveFormatFile(filename, ctx.doc, 1);
+    xml_prettify(filename);
+}
+
 void xml_save(void)
 {
-    xmlSaveFormatFile(ctx.filename, ctx.doc, 1);
+    save(ctx.filename);
 }
 
 void xml_save_as(const char *filename)
 {
-    xmlSaveFormatFile(filename, ctx.doc, 1);
+    save(filename);
 }
 
 void xml_finish(void)
