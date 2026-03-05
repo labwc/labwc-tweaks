@@ -36,6 +36,8 @@ void test(const char *filename, const char *expect)
 
 int main(int argc, char **argv)
 {
+	setenv("LABWC_TWEAKS_NO_PRETTIFY", "1", 1);
+
 	char in[] = "/tmp/t1000-expect_XXXXXX";
 	char out[] = "/tmp/t1000-actual";
 
