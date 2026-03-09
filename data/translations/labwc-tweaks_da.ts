@@ -352,132 +352,132 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Ctrl+Venstre Alt vælger forrige layout, Højre Ctrl + Højre Alt vælger næste layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Alt+Venstre Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Alt+Højre Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Alt+Venstre Skift vælger forrige layout, Højre Alt + Højre Skift vælger næste layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Supertast</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Mellemrum</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Supertast+Mellemrum</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Mellemrum</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Supertast</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Skift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Venstre Supertast til første layout; Ctrl+Menu til andet layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre Ctrl+Venstre Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg layout for at tilføje...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Gentagelseshastighed for tastetryk pr. sekund</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Forsinkelse før gentagne tastetryk</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivér Num Lock, når et nyt tastatur genkendes</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Tastekombination til at skifte tastaturlayout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Tast</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Beskrivelse</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg tastekombination</translation>
     </message>
 </context>
 <context>
@@ -500,17 +500,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Tastatur</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Berøringsfølsom skærm</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
 </context>
 <context>
@@ -518,58 +518,58 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Flad</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Adaptiv</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>venstre-højre-midterste</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>venstre-midterste-højre</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Knapområde</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>Klikfinger</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Tofinger</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Kant</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="173"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiveret</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="175"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Deaktiver med ekstern mus</translation>
     </message>
 </context>
 <context>
@@ -577,12 +577,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/main.cpp" line="56"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Fejl ved indlæsning </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="58"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Kør labwc-tweaks fra en terminal for at se fejlmeddelelser</translation>
     </message>
 </context>
 <context>
@@ -595,22 +595,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Venstre</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Højre</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Omvendt</translation>
     </message>
 </context>
 <context>
@@ -619,47 +619,47 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="177"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>Understøttelse af XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Understøttelse af modersmål</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>Understøttelse af SVG-ikoner</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikonunderstøttelse med libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjemmeside</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="119"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Miljø</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="191"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenser</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="205"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Udvikling</translation>
     </message>
 </context>
 <context>
@@ -667,27 +667,27 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Labwc tema</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikontema</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinduesslagskygger</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivér skygger</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
@@ -697,7 +697,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Titellinje</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -725,12 +725,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokus følger musen</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>Kræver bevægelse</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
@@ -893,22 +893,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Num lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivèr ved opstart</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Tastaturlayout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
@@ -946,7 +946,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilstand</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
@@ -961,17 +961,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Markør</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Størrelse</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
