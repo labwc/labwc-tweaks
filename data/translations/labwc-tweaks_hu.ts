@@ -442,7 +442,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished">Válassz hozzáadandó elrendezést...</translation>
+        <translation>Válasszon hozzáadandó elrendezést...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
@@ -582,7 +582,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/main.cpp" line="58"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation>Futtasd a labwc-tweaks parancsot a terminálból a hibaüzenetek megtekintéséhez</translation>
+        <translation>Futtassa a labwc-tweaks parancsot a terminálból a hibaüzenetek megtekintéséhez</translation>
     </message>
 </context>
 <context>
@@ -913,12 +913,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">Hozzáadás</translation>
+        <translation>Hozzáadás</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">Eltávolítás</translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
@@ -961,7 +961,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">Mutató</translation>
+        <translation>Mutató</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
