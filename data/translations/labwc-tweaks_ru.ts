@@ -379,12 +379,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation>Левый Alt+Левый Shift выбирает предыдущую раскладку, Правый Alt + Правый Shift выбирает следующую раскладку</translation>
+        <translation>Левый Alt + Левый Shift выбирает предыдущую раскладку, Правый Alt + Правый Shift выбирает следующую раскладку</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation>Menu</translation>
+        <translation>Меню</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
