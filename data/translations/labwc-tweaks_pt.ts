@@ -961,7 +961,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">Cursor</translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
