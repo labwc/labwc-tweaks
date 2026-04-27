@@ -6,7 +6,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosah dekorování na straně serveru pro horní rohy</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
@@ -21,22 +21,22 @@
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Určete dekorování pro okna xdg-shell</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekorování na straně grafického serveru (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dekorování na straně aplikace (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazovat dekorování ze strany grafického serveru na maximalizovaných oknech</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádné</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Zásada umisťování pro nová okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
@@ -74,22 +74,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurzor</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaměření je dáno oknu pod ukazatelem myši</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokud je zapnuté followMouse, vyžaduje pohyb kurzoru</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="68"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzdálenost mezi okny a okraji výstupu při používání akcí přesouvání</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="73"/>
@@ -99,29 +99,29 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Při přichytávání okna k okraji výstupu zobrazit překryvnou vrstvu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="90"/>
         <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Vždy</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="91"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>Pouze na oblastech</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Pouze na okrajích</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikdy</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="121"/>
@@ -137,18 +137,19 @@ purposes of resizing windows</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>Při zaměření přenést okno do popředí</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximalizovat namísto přichycení na horní hraně</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="87"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Přichytávání oken může vyvolat odpovídající
+události dlaždicování pro nativní Wayland aplikace</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="111"/>
@@ -194,22 +195,22 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.cpp" line="172"/>
         <location filename="../../src/behaviour.cpp" line="176"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>Pro zvětšovací lupu pro celou obrazovku nastavte na -1</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="180"/>
         <source>Initial number of times by which magnified image is scaled</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční násobek o který je obrázek zvětšen</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="184"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost kroků změny při každém zavolání „Přiblížit“ nebo „Oddálit“</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="188"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>Na zvětšený obrázek použít bilineární filtr</translation>
     </message>
 </context>
 <context>
@@ -217,117 +218,117 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Obě klávesy Shift naráz</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Obě klávesy Alt naráz</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Obě klávesy Ctrl naráz</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Alt (po dobu stisknutí)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Alt (po dobu stisknutí)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Levé Win (po dobu stisknutí)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravé Win (po dobu stisknutí)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Jedno nebo druhé Win (po dobu stisknutí)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Klávesa Menu (po dobu stisknutí), Shift+Menu pro nabídku</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (po dobu stisknutí), Alt + Caps Lock pro původní akci Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Ctrl (po dobu stisknutí)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock pro první rozložení; Shift + Caps Lock pro druhé rozložení</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Levé Win pro první rozložení; Pravé Win/Menu pro druhé rozložení</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Ctrl pro první rozložení; Pravý Ctrl pro druhé rozložení</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Obě klávesy alt dohromady; AltGr samotné zvolí třetí úroveň</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Ctrl + Levý Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Ctrl + Pravý Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="64"/>
@@ -337,17 +338,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Alt + Levý Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Alt + Pravý Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
@@ -357,17 +358,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Alt + Levý Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Alt + Pravý Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
@@ -377,107 +378,107 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Nabídka</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Levé Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Mezerník</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+Mezerník</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Mezerník</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravé Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravý Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl + Levé Win pro první rozložení; Ctrl+Menu pro druhé rozložení</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Levý Ctrl + Levý Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte rozložení které přidat…</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Četnost (v sekundách) se kterou jsou stisky kláves opakovány</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodleva před opakováním stisků kláves</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Při rozpoznání nové klávesnice zapnout Num Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Kombinace kláves pro přepínání rozložení klávesnice</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Klávesa</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte kombinaci kláves</translation>
     </message>
 </context>
 <context>
@@ -500,17 +501,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Klávesnice</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Dotyková obrazovka</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O aplikaci</translation>
     </message>
 </context>
 <context>
@@ -518,12 +519,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Ploché</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Přizpůsobivé</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
@@ -539,12 +540,12 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádné</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Oblast tlačítek</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
@@ -554,12 +555,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvěma prsty</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Hrana</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="173"/>
@@ -569,7 +570,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="175"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout připojením externí myši</translation>
     </message>
 </context>
 <context>
@@ -577,12 +578,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/main.cpp" line="56"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba při načítání </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="58"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pro zobrazení chybových hlášek spusťte labwc-tweaks z terminálu</translation>
     </message>
 </context>
 <context>
@@ -595,22 +596,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normální</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Levé</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Pravé</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Prohozené</translation>
     </message>
 </context>
 <context>
@@ -619,47 +620,47 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="177"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Verze</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpora XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpora přirozeného jazyka</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikona SVG ikon</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpora ikon pomocí libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Webové stránky</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="119"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Prostředí</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="191"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="205"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Vývoj</translation>
     </message>
 </context>
 <context>
@@ -667,17 +668,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motiv vzhledu</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motiv vzhledu labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motiv vzhledu ikon</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -687,12 +688,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Vykreslovat stíny</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnout na dlaždicových oknech</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
@@ -707,7 +708,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokročilé</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
@@ -725,32 +726,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaměření následuje myš</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžaduje pohyb</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Při zaměření vyzdvihnout</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>Mezera</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>Umístění okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Zásada</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -769,18 +770,18 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaměření</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="159"/>
         <source>Window Snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>Přichytávání okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="171"/>
         <location filename="../../src/behaviour.ui" line="321"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozsah rohů</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="192"/>
@@ -790,52 +791,52 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="202"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximalizovat při přichycení k horní hraně</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="209"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit překryv</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít bilineární filtr</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="219"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpor</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="231"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Síla okraje obrazovky</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="255"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Síla okraje okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="272"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>Práh pro odpoutání</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="286"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Práh pro zrušení maximalizace</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="309"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Změnit velikost</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="342"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Tloušťka posuvníku</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="366"/>
@@ -845,32 +846,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="356"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit vyskakovací</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="376"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvětšovací lupa</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="388"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Šířka</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="418"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Výška</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="441"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční měřítko</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="461"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>Přírůstek</translation>
     </message>
 </context>
 <context>
@@ -878,52 +879,52 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Obecné</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Rychlost opakování</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Prodleva opakování</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Num lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnout při spuštění</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozložení klávesnice</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">Přidat</translation>
+        <translation>Přidat</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">Odebrat</translation>
+        <translation>Odebrat</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepnutí rozložení</translation>
     </message>
 </context>
 <context>
@@ -931,102 +932,102 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Přirozené posouvání</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Rychlost ukazatele</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="108"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil zrychlování</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknutí klepnutím</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="193"/>
         <source>Tap button map</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa tlačítek klepnutí</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurzor</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Motiv vzhledu</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukazatel – obecné</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim pro leváky</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Klepnout a přetáhnout</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="266"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Zámek přetahování</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Přetahování třemi prsty</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulace prostředního tlačítka</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="294"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout při psaní</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="203"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda kliknutí</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="213"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda posouvání</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="118"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Krok posouvání</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="162"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Touchpad</translation>
     </message>
 </context>
 <context>
@@ -1034,12 +1035,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Dotyková obrazovka</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Otočení</translation>
     </message>
 </context>
 </TS>

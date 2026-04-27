@@ -913,12 +913,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">أضف</translation>
+        <translation>أضف</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">احذف</translation>
+        <translation>احذف</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
