@@ -6,7 +6,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>სერვერის მხრის დეკორაციული ზედა კუთხეების რადიუსი</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>სათაურის ზოლი</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>არცერთი</translation>
     </message>
 </context>
 <context>
@@ -59,22 +59,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>ავტომატური</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>კასკადი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>ცენტრი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>კურსორი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
@@ -105,23 +105,23 @@
         <location filename="../../src/behaviour.cpp" line="90"/>
         <location filename="../../src/behaviour.cpp" line="155"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>ყოველთვის</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="91"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>მხოლოდ რეგიონებზე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="92"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>მხოლოდ წიბოებზე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <location filename="../../src/behaviour.cpp" line="154"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>არასდროს</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="121"/>
@@ -188,7 +188,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="156"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>არაპიქსელი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="172"/>
@@ -217,127 +217,127 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>ორივე Shift ღილაკი ერთად</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>ორივე Alt ღილაკი ერთად</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>ორივე Ctrl ღილაკი ერთად</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Alt (სანამ დაჭერილია)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Alt (სანამ დაჭერილია)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Win (სანამ დაჭერილია)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Win (სანამ დაჭერილია)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>ნებისმიერი Win (სანამ გიჭირავთ)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>მენიუ (სანამ გიჭირავთ, Shift+მენიუ მენიუსთვის</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (როცა დაჭერილია), Alt+Caps Lock ორიგინალი Caps Lock-ის ქმედებისთვის</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Ctrl (სანამ დაჭერილია)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock პირველი განლაგებისთვის; Shift+Caps Lock მეორე განლაგებისთვის</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Win პირველ განლაგებაზე. მარჯვენა Win/Menu მეორე განლაგებაზე</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Ctrl პირველ განლაგებაზე; მარჯვენა Ctrl მეორე განლაგებაზე</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>ორივე Alt ერთად ან AltGr აირჩევს მესამე დონეს</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Ctrl+მარცხენა Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Ctrl+მარჯვენა Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Ctrl+მარცხენა Shift აირჩევს წინა განლაგებას, მარჯვენა Ctrl + მარჯვენა Shift კი შემდეგს</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
@@ -347,97 +347,97 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Alt+მარჯვენა Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Ctrl+მარცხენა Alt ირჩევს წინა განლაგებას, მარჯვენა Ctrl + მარჯვენა Alt კი შემდეგს</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Alt+მარცხენა Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Alt+მარჯვენა Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Alt+მარცხენა Shift აირჩევს წინა განლაგებას, მარჯვენა Alt + მარჯვენა Shift კი შემდეგს</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>მენიუ</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+ჰარე</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+ჰარე</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+ჰარე</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Left Win პირველი განლაგებისთვის; Ctrl+Menu მეორე განლაგებისთვის</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Ctrl+მარცხენა Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
@@ -467,12 +467,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>გასაღები</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>აღწერა</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
@@ -500,17 +500,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>კლავიატურა</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>სენსორული ეკრანი</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>შესახებ</translation>
     </message>
 </context>
 <context>
@@ -518,53 +518,53 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>ბრტყელი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>შეგუებადი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა-მარჯვენა-შუა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა-შუა-მარჯვენა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>არცერთი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ღილაკის არე</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>თითით წკაპი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>ორი თითი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>წიბო</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="173"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩართულია</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="175"/>
@@ -577,7 +577,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/main.cpp" line="56"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>ჩატვირთვის შეცდომა </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="58"/>
@@ -595,22 +595,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>ნორმალური</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>მარჯვენა</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>შებრუნებულია</translation>
     </message>
 </context>
 <context>
@@ -619,12 +619,12 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="177"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>ვერსია</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>XWayland-ის მხარდაჭერა</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -644,22 +644,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>ვებგვერდი</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="119"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>გარემო</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="191"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>ლიცენზიები</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="205"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>შემუშავება</translation>
     </message>
 </context>
 <context>
@@ -667,17 +667,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>თემა</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Labwc-ის თემა</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>ხატულების თემა</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
@@ -687,7 +687,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩრდილების ჩართვა</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
@@ -697,7 +697,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>სათაურის ზოლი</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -707,17 +707,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>დამატებით</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
         <source>Decoration mode</source>
-        <translation type="unfinished"></translation>
+        <translation>დეკორაციის რეჟიმი</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="133"/>
         <source>Maximized decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>მთელ ეკრანზე გაშლილი დეკორაცია</translation>
     </message>
 </context>
 <context>
@@ -725,32 +725,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>ფოკუსი მიყვება თაგუნას</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>სჭირდება გადაადგილება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>ამოწევა ფოკუსის მიღებისას</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>შუალედი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>ფანჯრის მდებარეობა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>პოლიტიკა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -764,23 +764,23 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="395"/>
         <location filename="../../src/behaviour.ui" line="425"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> პქს</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>ფოკუსი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="159"/>
         <source>Window Snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>ფანჯრის მიმაგრება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="171"/>
         <location filename="../../src/behaviour.ui" line="321"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>კუთხის შუალედი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="192"/>
@@ -795,7 +795,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="209"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>გადალაგების ჩვენება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
@@ -805,22 +805,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="219"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>წინაღობა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="231"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>ეკრანის წიბოს სიძლიერე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="255"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>ფანჯრის წიბოს სიძლიერე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="272"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>ზღვარი მიბმის გასაუქმებლად</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="286"/>
@@ -830,47 +830,47 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="309"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>ზომის შეცვლა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="342"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩაჭერის სისქე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="366"/>
         <source>Draw contents</source>
-        <translation type="unfinished"></translation>
+        <translation>შემცველობის დახატვა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="356"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>მხტუნავის ჩვენება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="376"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>გამადიდებელი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="388"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>სიგანე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="418"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>სიმაღლე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="441"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>საწყისი მასშტაბი</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="461"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>გაზრდა</translation>
     </message>
 </context>
 <context>
@@ -878,37 +878,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>ზოგადი</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>გამეორების სიჩქარე</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>გამეორების დაყოვნება</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> მწმ</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Num Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>გაშვებისას ჩართვა</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>კლავიატურის განლაგება</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
@@ -923,7 +923,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>განლაგების გადართვა</translation>
     </message>
 </context>
 <context>
@@ -931,27 +931,27 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>ბუნებრივი გადახვევა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>მაჩვენებლის სიჩქარე</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="108"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>აჩქარების პროფილი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="176"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>სტატუსი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="233"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>დატყაპუნება დასაწკაპუნებლად</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="193"/>
@@ -961,37 +961,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>კურსორი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>თემა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>ზომა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>ზოგადი მაჩვენებლები</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="151"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>ცაცია</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="243"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>დატყაპუნება და გადათრევა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="266"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>გადათრევის დაბლოკვა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
@@ -1006,27 +1006,27 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="294"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>კრეფისას გამორთვა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="203"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>დაწკაპუნების მეთოდი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="213"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>გადახვევის მეთოდი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="118"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>გადახვევის კოეფიციენტი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="162"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>თაჩპედი</translation>
     </message>
 </context>
 <context>
@@ -1034,12 +1034,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>სენსორული ეკრანი</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>შემობრუნება</translation>
     </message>
 </context>
 </TS>
