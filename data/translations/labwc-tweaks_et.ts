@@ -11,12 +11,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista varjutus akende taha</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista varjutus paanitud akende taha</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
@@ -132,7 +132,8 @@
         <location filename="../../src/behaviour.cpp" line="144"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Akende suuruse muutmise kontekstis
+kirjelda akende äärtest haaramise ala laius</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
@@ -183,7 +184,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="152"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Akna suuruse või asukoha muutmisel näita akna ülaosas väikest märki</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="156"/>
