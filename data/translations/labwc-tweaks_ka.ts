@@ -11,32 +11,32 @@
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩრდილების რენდერი ფანჯრებს მიღმა</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩრდილების დახატვა მიმაგრებული ფანჯრების მიღმა</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>დეკორაციების მითითება xdg-shell-ის ფანჯრებისთვის</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>სერვერის მხრის დეკორაცია (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>კლიენტის მხრის დეკორაცია (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>სერვერის მხრის დეკორაციების ჩვენება გადიდებულ ფანჯრებზე</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>ახალი ფანრების მოთავსების პოლიტიკა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
@@ -79,17 +79,17 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>ფოკუსი ეძლევა თაგუნას კურსორის ქვეშ არსებულ ფანჯარას</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>თუ followMouse ჩართულია, სჭირდება კურსორის გამოძრავება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="68"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>მანძილი ფანჯრებსა და გამოტანის წიბოებს შორის გადატანის ქმედებების გამოყენებისას</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="73"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="78"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>განლაგების ჩვენება ფანჯრის გამოტანის წიბოზე მიმაგრებისას</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="90"/>
@@ -342,7 +342,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>მარცხენა Alt+Left Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
@@ -442,7 +442,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>აირჩიეთ დასამატებელი განლაგება...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
@@ -477,7 +477,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>აირჩიეთ ღილაკების კომბინაცია</translation>
     </message>
 </context>
 <context>
@@ -569,7 +569,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="175"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>გამორთვა გარე თაგუნასთან ერთად</translation>
     </message>
 </context>
 <context>
@@ -629,17 +629,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>ეროვნული ენების მხარდაჭერა</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG ხატულას მხარდაჭერა</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>ხატულას მხარდაჭერა libsfdo-ისთან ერთად</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
@@ -682,7 +682,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>ფანჯარას აქვს ჩრდილები</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
@@ -692,7 +692,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩართვა მიმაგრებული ფანჯრებისთვის</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
@@ -800,7 +800,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="478"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>ორხაზოვანი ფილტრის გამოყენება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="219"/>
@@ -825,7 +825,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="286"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>ზღვარი მთელ ეკრანზე გაშლილობის გაუქმებამდე</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="309"/>
@@ -996,12 +996,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>სამი თითით გადათრევა</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>შუა ღილაკის ემულაცია</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="294"/>
