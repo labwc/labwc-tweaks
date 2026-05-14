@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QFile>
 #include <QDir>
+#include <QRegularExpression>
 #include "./ui_about.h"
 
 About::About(QWidget *parent) : QWidget(parent), ui(new Ui::pageAbout)
@@ -45,6 +46,15 @@ void About::loadInfo()
     ui->nlsValue->setText(out.contains("+nls") ? "✔" : "✘");
     ui->rsvgValue->setText(out.contains("+rsvg") ? "✔" : "✘");
     ui->libsfdoValue->setText(out.contains("+libsfdo") ? "✔" : "✘");
+
+    QRegularExpression re("wlroots-(\\d+\\.\\d+\\.\\d+)");
+    QRegularExpressionMatch match = re.match(out);
+
+    if (match.hasMatch()) {
+        ui->wlrootsVersionValue->setText(match.captured(1));
+    } else {
+        ui->wlrootsVersionValue->setText("not revealed");
+    }
 
     QString labwcLink = QStringLiteral("<a href=\"https://labwc.github.io/\">labwc.github.io</a>");
     ui->labwcLinkValue->setText(labwcLink);
