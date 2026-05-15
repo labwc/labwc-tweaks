@@ -87,50 +87,55 @@
         <translation>Richiede un movimento del cursore se &apos;segue il mouse&apos; è abilitato</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="68"/>
+        <location filename="../../src/behaviour.cpp" line="69"/>
+        <source>Delay before raising the window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation>Distanza tra i bordi di finestre e schermi quando si usano azioni di movimento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="73"/>
+        <location filename="../../src/behaviour.cpp" line="88"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
         <translation>Mostra una sovrapposizione quando aggancia
 una finestra a un bordo dello schermo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="90"/>
-        <location filename="../../src/behaviour.cpp" line="155"/>
+        <location filename="../../src/behaviour.cpp" line="105"/>
+        <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
         <translation>Sempre</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="91"/>
+        <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
         <translation>Solo alle regioni</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="92"/>
+        <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
         <translation>Solo ai bordi</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="93"/>
-        <location filename="../../src/behaviour.cpp" line="154"/>
+        <location filename="../../src/behaviour.cpp" line="108"/>
+        <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
         <translation>Mai</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="121"/>
+        <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation>Movimento del cursore richiesto per spostare una finestra massimizzata o aggianciata</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="144"/>
+        <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation>Specifica lo spessore delle aree di cattura del bordo
@@ -142,80 +147,80 @@ per ridimensionare le finestre</translation>
         <translation>Alza la finestra se riceve focus</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation>Massimizza invece di agganciare al bordo superiore</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="87"/>
+        <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation>L&apos;aggancio delle finestre può attivare i corrispondenti
 eventi di affiancamento per le applicazioni Wayland native</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="111"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation>Impedisci spostamenti interattivi e ridimensionamenti
  di una finestra oltre i bordi dello schermo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="116"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation>Impedisci spostamenti e ridimensionamenti interattivi 
 di una finestra oltre i bordi di qualsiasi altra finestra</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="126"/>
+        <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation>Movimento unidimensionale del cursore richiesto per spostare 
 una finestra massimizzata verticalmente o orizzontalmente</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="131"/>
+        <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation>L&apos;applicazione ridisegna il suo contenuto durante il ridimensionamento.
 Se disabilitato, viene visualizzato un rettangolo contornato</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="138"/>
+        <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation>Dimensioni delle regioni angolari a cui si applicano tutti le azioni del mouse
 e dimensioni della regione del bordo per cui si applicherà il ridimensionamento del mouse in qualsiasi direzione.</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="152"/>
+        <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation>Mostra un piccolo indicatore sopra la finestra durante il ridimensionamento o lo spostamento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="156"/>
+        <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="172"/>
-        <location filename="../../src/behaviour.cpp" line="176"/>
+        <location filename="../../src/behaviour.cpp" line="187"/>
+        <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
         <translation>Per la lente d&apos;ingrandimento a schermo intero impostare su -1</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="180"/>
+        <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation>Numero iniziale di volte per cui l&apos;immagine ingrandita viene ingrandito</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="184"/>
+        <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation type="unfinished">Gradi di cambiamento per ogni azione di &apos;ZoomIn&apos; o &apos;ZoomOut&apos;</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="188"/>
+        <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation>Applica un filtro bilineare all&apos;immagie ingrandita</translation>
     </message>
@@ -546,7 +551,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
-        <location filename="../../src/mouse.cpp" line="152"/>
+        <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
@@ -571,12 +576,17 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Bordo</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="173"/>
+        <location filename="../../src/mouse.cpp" line="152"/>
+        <source>On Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
         <translation>Abilitato</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="175"/>
+        <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
         <translation>Disabilitato con mouse esterno</translation>
     </message>
@@ -626,47 +636,52 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <name>pageAbout</name>
     <message>
         <location filename="../../src/about.ui" line="31"/>
-        <location filename="../../src/about.ui" line="177"/>
+        <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
         <translation>Versione</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
+        <source>Wlroots Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
         <translation>Supporto XWayland</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="59"/>
+        <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
         <translation>Supporto lingua madre</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="73"/>
+        <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
         <translation>Supporto icone SVG</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="87"/>
+        <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
         <translation>Supporto icone con libsfdo</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="101"/>
+        <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
         <translation>Sito web</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="119"/>
+        <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
         <translation>Ambiente</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="191"/>
+        <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
         <translation>Lizenze</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="205"/>
+        <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
         <translation>Sviluppo</translation>
     </message>
@@ -763,15 +778,15 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="178"/>
-        <location filename="../../src/behaviour.ui" line="238"/>
-        <location filename="../../src/behaviour.ui" line="262"/>
-        <location filename="../../src/behaviour.ui" line="279"/>
-        <location filename="../../src/behaviour.ui" line="293"/>
-        <location filename="../../src/behaviour.ui" line="328"/>
-        <location filename="../../src/behaviour.ui" line="349"/>
-        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="208"/>
+        <location filename="../../src/behaviour.ui" line="268"/>
+        <location filename="../../src/behaviour.ui" line="292"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="323"/>
+        <location filename="../../src/behaviour.ui" line="358"/>
+        <location filename="../../src/behaviour.ui" line="379"/>
         <location filename="../../src/behaviour.ui" line="425"/>
+        <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
         <translation> px</translation>
     </message>
@@ -781,103 +796,113 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Focus</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="159"/>
+        <location filename="../../src/behaviour.ui" line="169"/>
+        <source>Delay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="176"/>
+        <source> ms</source>
+        <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
         <translation>Aggancio delle finestre</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="171"/>
-        <location filename="../../src/behaviour.ui" line="321"/>
+        <location filename="../../src/behaviour.ui" line="201"/>
+        <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
         <translation>Area dell’angolo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="192"/>
+        <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
         <translation>Notifica applicazioni dello stato affiancato </translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="202"/>
+        <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
         <translation>Massimizza se aggancia al bordo superiore</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="209"/>
+        <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
         <translation>Mostra sovrapposizione</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="478"/>
+        <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
         <translation>Usa filtro bilineare</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="219"/>
+        <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
         <translation>Resistenze</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="231"/>
+        <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
         <translation>Resistenza al bordo dello schermo</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="255"/>
+        <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
         <translation>Resistenza al bordo della finestra</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="272"/>
+        <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
         <translation>Soglia per sganciare</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="286"/>
+        <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
         <translation>Soglia per de-massimizzare</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
         <translation>Ridimensionamento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="342"/>
+        <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
         <translation>Spessore di presa</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="366"/>
+        <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
         <translation>Disegna contenuto</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
         <translation>Mostra pop-up</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="376"/>
+        <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
         <translation>Lente di ingrandimento</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="388"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
         <translation>Larghezza</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="418"/>
+        <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
         <translation>Altezza</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
         <translation>Scala iniziale</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="461"/>
+        <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
         <translation>Incremento</translation>
     </message>
@@ -938,7 +963,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
 <context>
     <name>pageMouse</name>
     <message>
-        <location filename="../../src/mouse.ui" line="144"/>
+        <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
         <translation>Scroll naturale</translation>
     </message>
@@ -948,22 +973,22 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Velocità puntatore</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="108"/>
+        <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
         <translation>Profilo di accelerazione</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="176"/>
+        <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
         <translation>Stato</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="233"/>
+        <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
         <translation>Tocco per click</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="193"/>
+        <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
         <translation>Mappatura dei pulsanti</translation>
     </message>
@@ -988,52 +1013,52 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
         <translation>Puntatore generali</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="151"/>
+        <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
         <translation>Mancino</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="243"/>
+        <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
         <translation>Tocco e trascina</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="266"/>
+        <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
         <translation>Blocco trascinamento</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="280"/>
+        <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
         <translation>Trascinamento a tre dita</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="287"/>
+        <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
         <translation>Emulazione di pulsante centrale</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="294"/>
+        <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
         <translation>Disabilita durante la digitazione</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="203"/>
+        <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
         <translation>Metodo di click</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="213"/>
+        <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
         <translation>Metodo di scroll</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="118"/>
+        <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
         <translation>Fattore di scroll</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="162"/>
+        <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
         <translation>Touchpad</translation>
     </message>

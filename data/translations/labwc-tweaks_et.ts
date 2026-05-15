@@ -87,49 +87,54 @@
         <translation>Kui „followMouse“ meetod on kasutusel, siis eeldab kursori liikumist</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="68"/>
+        <location filename="../../src/behaviour.cpp" line="69"/>
+        <source>Delay before raising the window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="73"/>
+        <location filename="../../src/behaviour.cpp" line="88"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
         <translation>Kui naksad aknaga ekraani või väljundi äärde, siis näita ülekatet</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="90"/>
-        <location filename="../../src/behaviour.cpp" line="155"/>
+        <location filename="../../src/behaviour.cpp" line="105"/>
+        <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
         <translation>Alati</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="91"/>
+        <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
         <translation>Vaid alade puhul</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="92"/>
+        <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
         <translation>Vaid äärte puhul</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="93"/>
-        <location filename="../../src/behaviour.cpp" line="154"/>
+        <location filename="../../src/behaviour.cpp" line="108"/>
+        <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
         <translation>Mitte kunagi</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="121"/>
+        <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="144"/>
+        <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation>Akende suuruse muutmise kontekstis
@@ -141,74 +146,74 @@ kirjelda akende äärtest haaramise ala laius</translation>
         <translation>Kui fookus on aknal, siis tõsta ta esiplaanile</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="87"/>
+        <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="111"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="116"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="126"/>
+        <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="131"/>
+        <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="138"/>
+        <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="152"/>
+        <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation>Akna suuruse või asukoha muutmisel näita akna ülaosas väikest märki</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="156"/>
+        <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="172"/>
-        <location filename="../../src/behaviour.cpp" line="176"/>
+        <location filename="../../src/behaviour.cpp" line="187"/>
+        <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="180"/>
+        <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="184"/>
+        <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="188"/>
+        <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation type="unfinished"></translation>
     </message>
@@ -538,7 +543,7 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
-        <location filename="../../src/mouse.cpp" line="152"/>
+        <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
         <translation>Puudub</translation>
     </message>
@@ -563,12 +568,17 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Äär</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="173"/>
+        <location filename="../../src/mouse.cpp" line="152"/>
+        <source>On Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
         <translation>Kasutusel</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="175"/>
+        <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
         <translation>Välise hiire puhul lülita välja</translation>
     </message>
@@ -618,47 +628,52 @@ If disabled, an outlined rectangle is shown</source>
     <name>pageAbout</name>
     <message>
         <location filename="../../src/about.ui" line="31"/>
-        <location filename="../../src/about.ui" line="177"/>
+        <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
         <translation>Versioon</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
+        <source>Wlroots Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
         <translation>XWaylandi tugi</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="59"/>
+        <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
         <translation>Keeltetugi</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="73"/>
+        <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
         <translation>SVG-ikoonide tugi</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="87"/>
+        <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
         <translation>Ikoonitugi libsfdo abil</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="101"/>
+        <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
         <translation>Veebisait</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="119"/>
+        <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
         <translation>Keskkond</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="191"/>
+        <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
         <translation>Litsentsid</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="205"/>
+        <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
         <translation>Arendus</translation>
     </message>
@@ -755,15 +770,15 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="178"/>
-        <location filename="../../src/behaviour.ui" line="238"/>
-        <location filename="../../src/behaviour.ui" line="262"/>
-        <location filename="../../src/behaviour.ui" line="279"/>
-        <location filename="../../src/behaviour.ui" line="293"/>
-        <location filename="../../src/behaviour.ui" line="328"/>
-        <location filename="../../src/behaviour.ui" line="349"/>
-        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="208"/>
+        <location filename="../../src/behaviour.ui" line="268"/>
+        <location filename="../../src/behaviour.ui" line="292"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="323"/>
+        <location filename="../../src/behaviour.ui" line="358"/>
+        <location filename="../../src/behaviour.ui" line="379"/>
         <location filename="../../src/behaviour.ui" line="425"/>
+        <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
         <translation> pix</translation>
     </message>
@@ -773,103 +788,113 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Fookus</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="159"/>
+        <location filename="../../src/behaviour.ui" line="169"/>
+        <source>Delay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="176"/>
+        <source> ms</source>
+        <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="171"/>
-        <location filename="../../src/behaviour.ui" line="321"/>
+        <location filename="../../src/behaviour.ui" line="201"/>
+        <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
         <translation>Nurgaraadius</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="192"/>
+        <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
         <translation>Teavita rakendusi paanitud olekust </translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="202"/>
+        <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="209"/>
+        <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
         <translation>Näita ülekatet</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="478"/>
+        <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="219"/>
+        <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="231"/>
+        <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="255"/>
+        <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="272"/>
+        <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="286"/>
+        <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="342"/>
+        <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="366"/>
+        <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
         <translation>Näita hüpikakent</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="376"/>
+        <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
         <translation>Suurendusklaas</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="388"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
         <translation>Laius</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="418"/>
+        <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
         <translation>Kõrgus</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
         <translation>Algne mõõtkava</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="461"/>
+        <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
         <translation type="unfinished"></translation>
     </message>
@@ -930,7 +955,7 @@ If disabled, an outlined rectangle is shown</source>
 <context>
     <name>pageMouse</name>
     <message>
-        <location filename="../../src/mouse.ui" line="144"/>
+        <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
         <translation>Loomulik kerimine</translation>
     </message>
@@ -940,22 +965,22 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Kursori kiirus</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="108"/>
+        <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
         <translation>Kiirendusprofiil</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="176"/>
+        <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
         <translation>Olek</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="233"/>
+        <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
         <translation>Klõpsamiseks puuduta</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="193"/>
+        <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
         <translation type="unfinished"></translation>
     </message>
@@ -980,52 +1005,52 @@ If disabled, an outlined rectangle is shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="151"/>
+        <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
         <translation>Töörežiim vasaku käe jaoks</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="243"/>
+        <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="266"/>
+        <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
         <translation>Lohistamise lukustus</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="280"/>
+        <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
         <translation>Kolme sõrmega lohistamine</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="287"/>
+        <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
         <translation>Keskmise hiirenupu emulatsioon</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="294"/>
+        <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
         <translation>Kirjutamisel lülita välja</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="203"/>
+        <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
         <translation>Klõpsimise meetod</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="213"/>
+        <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
         <translation>Kerimise meetod</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="118"/>
+        <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
         <translation>Kerimise faktor</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="162"/>
+        <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
         <translation>Puuteplaat</translation>
     </message>

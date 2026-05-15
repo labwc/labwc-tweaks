@@ -87,49 +87,54 @@
         <translation>Требуется движение курсора, если включено следование за мышью</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="68"/>
+        <location filename="../../src/behaviour.cpp" line="69"/>
+        <source>Delay before raising the window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation>Расстояние между окнами и краями вывода при использовании действий перемещения</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="73"/>
+        <location filename="../../src/behaviour.cpp" line="88"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
         <translation>Показывать наложение при прикреплении окна к краю вывода</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="90"/>
-        <location filename="../../src/behaviour.cpp" line="155"/>
+        <location filename="../../src/behaviour.cpp" line="105"/>
+        <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
         <translation>Всегда</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="91"/>
+        <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
         <translation>Только на областях</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="92"/>
+        <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
         <translation>Только на краях</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="93"/>
-        <location filename="../../src/behaviour.cpp" line="154"/>
+        <location filename="../../src/behaviour.cpp" line="108"/>
+        <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
         <translation>Никогда</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="121"/>
+        <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation>Для перемещения прикреплённого или распахнутого окна требуется движение курсора</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="144"/>
+        <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation>Задаёт толщину областей захвата границы
@@ -141,80 +146,80 @@ purposes of resizing windows</source>
         <translation>Поднимать окно на передний план при фокусе</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation>Распахивать вместо прикрепления к верхнему краю</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="87"/>
+        <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation>Прикрепление окон может вызывать соответствующие
 события прикрепления для нативных приложений Wayland</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="111"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation>Сопротивляться интерактивному перемещению и изменению размера окна
  через края экрана</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="116"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation>Сопротивляться интерактивному перемещению и изменению размера окна
  через края любого другого окна</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="126"/>
+        <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation>Для перемещения окна, распахнутого по вертикали или горизонтали,
 требуется одномерное движение курсора</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="131"/>
+        <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation>Приложение перерисовывает своё содержимое во время изменения размера.
 Если отключено, отображается прямоугольный контур</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="138"/>
+        <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation>Размер угловых областей, к которым применяются все контексты привязки мыши «Угол»,
 а также размер области границы, для которой изменение размера мышью будет применяться в любом направлении.</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="152"/>
+        <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation>Показывать небольшой индикатор поверх окна при изменении размера или перемещении</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="156"/>
+        <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
         <translation>Непиксельный</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="172"/>
-        <location filename="../../src/behaviour.cpp" line="176"/>
+        <location filename="../../src/behaviour.cpp" line="187"/>
+        <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
         <translation>Для полноэкранного увеличения установите «-1»</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="180"/>
+        <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation>Начальная кратность увеличения изображения</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="184"/>
+        <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation>Шаг изменения при каждом вызове «ZoomIn» или «ZoomOut»</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="188"/>
+        <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation>Применять билинейный фильтр к увеличенному изображению</translation>
     </message>
@@ -544,7 +549,7 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
-        <location filename="../../src/mouse.cpp" line="152"/>
+        <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
         <translation>Нет</translation>
     </message>
@@ -569,12 +574,17 @@ If disabled, an outlined rectangle is shown</source>
         <translation>По краю</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="173"/>
+        <location filename="../../src/mouse.cpp" line="152"/>
+        <source>On Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
         <translation>Включено</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="175"/>
+        <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
         <translation>Отключать при подключении внешней мыши</translation>
     </message>
@@ -624,47 +634,52 @@ If disabled, an outlined rectangle is shown</source>
     <name>pageAbout</name>
     <message>
         <location filename="../../src/about.ui" line="31"/>
-        <location filename="../../src/about.ui" line="177"/>
+        <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
         <translation>Версия</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
+        <source>Wlroots Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
         <translation>Поддержка XWayland</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="59"/>
+        <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
         <translation>Поддержка национальных языков</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="73"/>
+        <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
         <translation>Поддержка значков SVG</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="87"/>
+        <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
         <translation>Поддержка значков через libsfdo</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="101"/>
+        <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
         <translation>Веб-сайт</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="119"/>
+        <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
         <translation>Окружение</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="191"/>
+        <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
         <translation>Лицензии</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="205"/>
+        <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
         <translation>Разработка</translation>
     </message>
@@ -761,15 +776,15 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="178"/>
-        <location filename="../../src/behaviour.ui" line="238"/>
-        <location filename="../../src/behaviour.ui" line="262"/>
-        <location filename="../../src/behaviour.ui" line="279"/>
-        <location filename="../../src/behaviour.ui" line="293"/>
-        <location filename="../../src/behaviour.ui" line="328"/>
-        <location filename="../../src/behaviour.ui" line="349"/>
-        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="208"/>
+        <location filename="../../src/behaviour.ui" line="268"/>
+        <location filename="../../src/behaviour.ui" line="292"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="323"/>
+        <location filename="../../src/behaviour.ui" line="358"/>
+        <location filename="../../src/behaviour.ui" line="379"/>
         <location filename="../../src/behaviour.ui" line="425"/>
+        <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
         <translation> пкс</translation>
     </message>
@@ -779,103 +794,113 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Фокус</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="159"/>
+        <location filename="../../src/behaviour.ui" line="169"/>
+        <source>Delay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="176"/>
+        <source> ms</source>
+        <translation type="unfinished"> мс</translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
         <translation>Прикрепление окон</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="171"/>
-        <location filename="../../src/behaviour.ui" line="321"/>
+        <location filename="../../src/behaviour.ui" line="201"/>
+        <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
         <translation>Диапазон углов</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="192"/>
+        <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
         <translation>Уведомлять приложения о состоянии прикрепления </translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="202"/>
+        <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
         <translation>Распахивать при прикреплении к верхнему краю</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="209"/>
+        <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
         <translation>Показывать наложение</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="478"/>
+        <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
         <translation>Использовать билинейный фильтр</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="219"/>
+        <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
         <translation>Сопротивление</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="231"/>
+        <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
         <translation>Сила притяжения к краю экрана</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="255"/>
+        <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
         <translation>Сила притяжения к краю окна</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="272"/>
+        <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
         <translation>Порог для открепления</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="286"/>
+        <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
         <translation>Порог для сворачивания из распахнутого</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
         <translation>Изменение размера</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="342"/>
+        <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
         <translation>Толщина захвата</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="366"/>
+        <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
         <translation>Рисовать содержимое</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
         <translation>Показывать всплывающее окно</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="376"/>
+        <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
         <translation>Экранная лупа</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="388"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
         <translation>Ширина</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="418"/>
+        <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
         <translation>Высота</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
         <translation>Начальный масштаб</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="461"/>
+        <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
         <translation>Приращение</translation>
     </message>
@@ -936,7 +961,7 @@ If disabled, an outlined rectangle is shown</source>
 <context>
     <name>pageMouse</name>
     <message>
-        <location filename="../../src/mouse.ui" line="144"/>
+        <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
         <translation>Естественная прокрутка</translation>
     </message>
@@ -946,22 +971,22 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Скорость указателя</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="108"/>
+        <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
         <translation>Профиль ускорения</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="176"/>
+        <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
         <translation>Состояние</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="233"/>
+        <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
         <translation>Нажатие для щелчка</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="193"/>
+        <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
         <translation>Соответствие кнопок нажатиям</translation>
     </message>
@@ -986,52 +1011,52 @@ If disabled, an outlined rectangle is shown</source>
         <translation>Указатель: общие</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="151"/>
+        <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
         <translation>Режим для левшей</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="243"/>
+        <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
         <translation>Нажать и перетащить</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="266"/>
+        <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
         <translation>Блокировка перетаскивания</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="280"/>
+        <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
         <translation>Перетаскивание тремя пальцами</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="287"/>
+        <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
         <translation>Эмуляция средней кнопки</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="294"/>
+        <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
         <translation>Отключать при вводе</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="203"/>
+        <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
         <translation>Метод щелчка</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="213"/>
+        <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
         <translation>Метод прокрутки</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="118"/>
+        <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
         <translation>Коэффициент прокрутки</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="162"/>
+        <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
         <translation>Сенсорная панель</translation>
     </message>
