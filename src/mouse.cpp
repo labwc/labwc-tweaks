@@ -149,6 +149,7 @@ void Mouse::activate()
     QVector<QSharedPointer<Pair>> scrollmethods;
     scrollmethods.append(QSharedPointer<Pair>(new Pair("twoFinger", tr("Two Finger"))));
     scrollmethods.append(QSharedPointer<Pair>(new Pair("edge", tr("Edge"))));
+    scrollmethods.append(QSharedPointer<Pair>(new Pair("onbutton", tr("On Button"))));
     scrollmethods.append(QSharedPointer<Pair>(new Pair("none", tr("None"))));
 
     QString current_scrollmethod = getStr("/labwc_config/libinput/device/scrollMethod");
