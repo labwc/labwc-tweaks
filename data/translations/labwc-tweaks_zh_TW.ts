@@ -87,49 +87,54 @@
         <translation>如果啟用跟隨滑鼠(followMouse)，則需要游標移動</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="68"/>
+        <location filename="../../src/behaviour.cpp" line="69"/>
+        <source>Delay before raising the window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
         <translation>當使用移動動作時，視窗和輸出邊緣之間的距離</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="73"/>
+        <location filename="../../src/behaviour.cpp" line="88"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="78"/>
+        <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
         <translation>當將視窗鋪放到輸出邊緣時顯示覆蓋</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="90"/>
-        <location filename="../../src/behaviour.cpp" line="155"/>
+        <location filename="../../src/behaviour.cpp" line="105"/>
+        <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
         <translation>總是</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="91"/>
+        <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
         <translation>僅在區域</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="92"/>
+        <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
         <translation>僅在邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="93"/>
-        <location filename="../../src/behaviour.cpp" line="154"/>
+        <location filename="../../src/behaviour.cpp" line="108"/>
+        <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
         <translation>永不</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="121"/>
+        <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
         <translation>用於平鋪或最大化視窗進行移動，游標移動是必須的</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="144"/>
+        <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
         <translation>用於調整視窗大小的目的
@@ -141,80 +146,80 @@ purposes of resizing windows</source>
         <translation>當處於焦點時，將視窗提升至前方</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="83"/>
+        <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
         <translation>用最大化取代鋪放於頂端邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="87"/>
+        <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
         <translation>鋪放視窗可以觸發相應的平鋪事件
 用於原生 Wayland 應用程式</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="111"/>
+        <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
         <translation>抗拒交互移動和調整視窗大小
  跨越螢幕邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="116"/>
+        <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
         <translation>抗拒交互移動和調整視窗大小
  跨越任何其他視窗的邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="126"/>
+        <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
         <translation>游標一維移動是必須的
 用於垂直或水平最大化視窗進行移動</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="131"/>
+        <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
         <translation>應用程式在調整大小時重繪其內容。
 如果停用，則會顯示一個框線矩形</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="138"/>
+        <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
         <translation>角位區域的大小，在此全部“角位”滑鼠標綁定內文均會套用
  以及邊框區域的大小，用於游標調整大小時將會套用於任何方向。</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="152"/>
+        <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
         <translation>當要調整大小或移動時，在視窗頂部顯示小型指示器</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="156"/>
+        <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
         <translation>非像素</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="172"/>
-        <location filename="../../src/behaviour.cpp" line="176"/>
+        <location filename="../../src/behaviour.cpp" line="187"/>
+        <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
         <translation>用於全螢幕放大鏡設定至 -1</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="180"/>
+        <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
         <translation>放大圖像的初始縮放倍數</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="184"/>
+        <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
         <translation>於每次叫用 &apos;ZoomIn&apos;(拉近放大) 或 &apos;ZoomOut&apos;(拉遠縮小) 時的變化步驟</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.cpp" line="188"/>
+        <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
         <translation>對放大圖像套用雙線性過濾器</translation>
     </message>
@@ -544,7 +549,7 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
-        <location filename="../../src/mouse.cpp" line="152"/>
+        <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
         <translation>無</translation>
     </message>
@@ -569,12 +574,17 @@ If disabled, an outlined rectangle is shown</source>
         <translation>邊緣</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="173"/>
+        <location filename="../../src/mouse.cpp" line="152"/>
+        <source>On Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
         <translation>已經啟用</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="175"/>
+        <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
         <translation>停用外接滑鼠使用</translation>
     </message>
@@ -624,47 +634,52 @@ If disabled, an outlined rectangle is shown</source>
     <name>pageAbout</name>
     <message>
         <location filename="../../src/about.ui" line="31"/>
-        <location filename="../../src/about.ui" line="177"/>
+        <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
+        <source>Wlroots Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
         <translation>XWayland 支援</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="59"/>
+        <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
         <translation>本地語文支援</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="73"/>
+        <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
         <translation>SVG 圖示支援</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="87"/>
+        <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
         <translation>圖示支持使用 libsfdo</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="101"/>
+        <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
         <translation>網站</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="119"/>
+        <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
         <translation>環境</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="191"/>
+        <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
         <translation>授權</translation>
     </message>
     <message>
-        <location filename="../../src/about.ui" line="205"/>
+        <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
         <translation>開發</translation>
     </message>
@@ -761,15 +776,15 @@ If disabled, an outlined rectangle is shown</source>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
-        <location filename="../../src/behaviour.ui" line="178"/>
-        <location filename="../../src/behaviour.ui" line="238"/>
-        <location filename="../../src/behaviour.ui" line="262"/>
-        <location filename="../../src/behaviour.ui" line="279"/>
-        <location filename="../../src/behaviour.ui" line="293"/>
-        <location filename="../../src/behaviour.ui" line="328"/>
-        <location filename="../../src/behaviour.ui" line="349"/>
-        <location filename="../../src/behaviour.ui" line="395"/>
+        <location filename="../../src/behaviour.ui" line="208"/>
+        <location filename="../../src/behaviour.ui" line="268"/>
+        <location filename="../../src/behaviour.ui" line="292"/>
+        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="323"/>
+        <location filename="../../src/behaviour.ui" line="358"/>
+        <location filename="../../src/behaviour.ui" line="379"/>
         <location filename="../../src/behaviour.ui" line="425"/>
+        <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
         <translation> px</translation>
     </message>
@@ -779,103 +794,113 @@ If disabled, an outlined rectangle is shown</source>
         <translation>焦點</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="159"/>
+        <location filename="../../src/behaviour.ui" line="169"/>
+        <source>Delay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="176"/>
+        <source> ms</source>
+        <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+        <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
         <translation>視窗鋪放</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="171"/>
-        <location filename="../../src/behaviour.ui" line="321"/>
+        <location filename="../../src/behaviour.ui" line="201"/>
+        <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
         <translation>角端範圍</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="192"/>
+        <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
         <translation>通知應用程式平鋪狀態 </translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="202"/>
+        <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
         <translation>當鋪放至頂端邊緣時進行最大化</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="209"/>
+        <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
         <translation>顯示覆蓋</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="478"/>
+        <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
         <translation>使用雙線性過濾器</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="219"/>
+        <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
         <translation>阻抗</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="231"/>
+        <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
         <translation>螢幕邊緣強度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="255"/>
+        <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
         <translation>視窗邊緣強度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="272"/>
+        <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
         <translation>取消鋪放的閾值</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="286"/>
+        <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
         <translation>取消最大化的閾值</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="309"/>
+        <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
         <translation>調整大小</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="342"/>
+        <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
         <translation>抓取厚度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="366"/>
+        <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
         <translation>繪製內容</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="356"/>
+        <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
         <translation>顯示彈出視窗</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="376"/>
+        <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
         <translation>放大鏡</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="388"/>
+        <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
         <translation>寬度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="418"/>
+        <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
         <translation>高度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="441"/>
+        <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
         <translation>初始量度</translation>
     </message>
     <message>
-        <location filename="../../src/behaviour.ui" line="461"/>
+        <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
         <translation>增量</translation>
     </message>
@@ -936,7 +961,7 @@ If disabled, an outlined rectangle is shown</source>
 <context>
     <name>pageMouse</name>
     <message>
-        <location filename="../../src/mouse.ui" line="144"/>
+        <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
         <translation>自然捲動</translation>
     </message>
@@ -946,22 +971,22 @@ If disabled, an outlined rectangle is shown</source>
         <translation>滑鼠指標速度</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="108"/>
+        <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
         <translation>游標加速度設定檔</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="176"/>
+        <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
         <translation>狀態</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="233"/>
+        <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
         <translation>觸滑即可點按</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="193"/>
+        <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
         <translation>觸滑按鈕測圖</translation>
     </message>
@@ -986,52 +1011,52 @@ If disabled, an outlined rectangle is shown</source>
         <translation>滑鼠指標通則</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="151"/>
+        <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
         <translation>左撇子模式</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="243"/>
+        <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
         <translation>觸滑並拖放</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="266"/>
+        <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
         <translation>拖放鎖定</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="280"/>
+        <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
         <translation>三指拖放</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="287"/>
+        <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
         <translation>中鍵模擬</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="294"/>
+        <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
         <translation>當打字輸入時停用</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="203"/>
+        <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
         <translation>點按方式</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="213"/>
+        <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
         <translation>捲動方式</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="118"/>
+        <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
         <translation>捲動係數</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="162"/>
+        <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
         <translation>觸控板</translation>
     </message>
