@@ -60,6 +60,21 @@ void Behaviour::activate()
     connect(ui->followMouse, &QCheckBox::toggled, ui->raiseOnFocus,
             &QWidget::setEnabled);
 
+    /* Raise on Focus Delay */
+    settingsAddXmlInt("/labwc_config/focus/raiseOnFocusDelay", 0);
+    ui->raiseOnFocusDelay->setValue(getInt("/labwc_config/focus/raiseOnFocusDelay"));
+    ui->delayLabel->setEnabled(ui->followMouse->isChecked());
+    ui->raiseOnFocusDelay->setEnabled(ui->followMouse->isChecked());
+    ui->raiseOnFocusDelay->setToolTip(
+                           tr("Delay before raising the window"));
+    // Update delay controls based on both conditions
+    auto updateDelayControls = [this]() {
+        bool enabled = ui->followMouse->isChecked() && ui->raiseOnFocus->isChecked();
+        ui->delayLabel->setEnabled(enabled);
+        ui->raiseOnFocusDelay->setEnabled(enabled);
+    };
+    connect(ui->followMouse, &QCheckBox::toggled, this, updateDelayControls);
+    connect(ui->raiseOnFocus, &QCheckBox::toggled, this, updateDelayControls);
 
     /* Gap (Core) */
     settingsAddXmlInt("/labwc_config/core/gap", 0);
@@ -195,6 +210,7 @@ void Behaviour::onApply()
     setBool("/labwc_config/focus/followMouseRequiresMovement",
             ui->followMouseRequiresMovement->isChecked());
     setBool("/labwc_config/focus/raiseOnFocus", ui->raiseOnFocus->isChecked());
+    setInt("/labwc_config/focus/raiseOnFocusDelay", ui->raiseOnFocusDelay->value());
     setInt("/labwc_config/core/gap", ui->gap->value());
     setInt("/labwc_config/snapping/cornerRange", ui->snapCornerRange->value());
     setBool("/labwc_config/snapping/overlay/enabled", ui->showOverlay->isChecked());
