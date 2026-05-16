@@ -89,7 +89,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritardo prima di alzare la finestra</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
@@ -578,7 +578,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsante</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
@@ -643,7 +643,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione wlroots</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -798,7 +798,7 @@ e dimensioni della regione del bordo per cui si applicherà il ridimensionamento
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritardo</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>

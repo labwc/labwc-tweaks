@@ -36,7 +36,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation>Pokaż dekoracje po stronie serwera w&#xa0;zmaksymalizowanych oknach</translation>
+        <translation>Pokaż dekoracje po stronie serwera w zmaksymalizowanych oknach</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Opóźnienie przed podniesieniem okna</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
@@ -161,14 +161,14 @@ kafelkowania dla natywnych aplikacji Wayland</translation>
         <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation>Ograniczaj interaktywne ruchy i&#xa0;zmiany rozmiaru
+        <translation>Ograniczaj interaktywne ruchy i zmiany rozmiaru
 okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation>Zapobiegaj interaktywnym ruchom i&#xa0;zmianom rozmiaru
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru
 okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
@@ -576,7 +576,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Na przycisku</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
@@ -641,7 +641,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja wlroots</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -796,12 +796,12 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Opóźnienie</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
         <source> ms</source>
-        <translation type="unfinished"> ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
