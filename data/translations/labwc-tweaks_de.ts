@@ -64,7 +64,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cascade</source>
-        <translation>Kaskade</translation>
+        <translation>Kaskadieren</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzögerung vor dem Aufziehen des Fensters</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation>Overlay anzeigen beim Andocken eines Fensters an einen Bildschirmrand</translation>
+        <translation>Beim Ausrichten eines Fensters am Bildschirmrand ein Overlay anzeigen</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="105"/>
@@ -184,7 +184,7 @@ Wenn deaktiviert, wird ein umrissenes Rechteck angezeigt</translation>
         <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation>Größe der Eckbereiche, auf die alle &apos;Corner&apos;-Mausbindungs-Kontexte angewandt werden,
+        <translation>Größe der Eckbereiche, auf die alle »Corner«-Mausbindungs-Kontexte angewandt werden,
 sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtung angewandt wird.</translation>
     </message>
     <message>
@@ -211,7 +211,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation>Schritte für Änderungen bei jedem Aufruf von &apos;ZoomIn&apos; oder &apos;ZoomOut&apos;</translation>
+        <translation>Schritte für Änderungen bei jedem Aufruf von »ZoomIn« oder »ZoomOut«</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="203"/>
@@ -449,7 +449,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation>Belegung zum Hinzufügen auswählen...</translation>
+        <translation>Belegung zum Hinzufügen auswählen ...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
@@ -502,7 +502,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/maindialog.cpp" line="55"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation>Maus &amp; Touchpad</translation>
+        <translation>Maus und Touchpad</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
@@ -571,7 +571,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Auf Taste</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
@@ -636,7 +636,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wlroots-Version</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -651,12 +651,12 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
-        <translation>SVG-Icon-Unterstützung</translation>
+        <translation>SVG-Symbolunterstützung</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
-        <translation>Icon-Unterstützung mit libsfdo</translation>
+        <translation>Symbolunterstützung mit libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="115"/>
@@ -791,12 +791,12 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzögerung</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
         <source> ms</source>
-        <translation type="unfinished"> ms</translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
@@ -817,7 +817,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
-        <translation>Maximieren beim Andocken an oberen Rand</translation>
+        <translation>Beim Andocken an oberen Rand maximieren</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="239"/>
@@ -837,12 +837,12 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
-        <translation>Bildschirmrand-Stärke</translation>
+        <translation>Bildschirmrandstärke</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
-        <translation>Fensterrand-Stärke</translation>
+        <translation>Fensterrandstärke</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="302"/>
@@ -978,7 +978,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
-        <translation>Tippen zum Klicken</translation>
+        <translation>Zum Klicken tippen</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="186"/>
@@ -1018,7 +1018,7 @@ sowie Größe des Randbereichs, in dem die Mausgrößenänderung in jede Richtun
     <message>
         <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
-        <translation>Zieh-Sperre</translation>
+        <translation>Ziehsperre</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="273"/>
