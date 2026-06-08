@@ -10,6 +10,7 @@ list(APPEND PROJECT_KEYWORDS   "labwc;wayland;compositor")
 set(PROJECT_AUTHOR_NAME        "Labwc Team")
 set(PROJECT_COPYRIGHT_YEAR     "2024")  # TODO: from git
 set(PROJECT_DESCRIPTION        "Labwc Wayland compositor settings")
+set(PROJECT_DESCRIPTION_LONG   "labwc-tweaks is a Qt configuration tool for Labwc. This application allows you to configure Labwc's appearance and behavior, including mouse and keyboard input.")
 set(PROJECT_ORGANIZATION_NAME  "labwc")
 set(PROJECT_ORGANIZATION_URL   "${PROJECT_ORGANIZATION_NAME}.github.io")
 set(PROJECT_ORGANIZATION_ID    "io.github.${PROJECT_ORGANIZATION_NAME}")
