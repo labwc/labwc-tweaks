@@ -43,6 +43,7 @@ jobs:
             libxml2
             qt6-base
             qt6-tools
+            appstream
           )
           pacman -S --noconfirm ${packages[@]}
 
@@ -54,7 +55,8 @@ jobs:
           apt-get install -y cmake clang g++ gcc git \
             libglib2.0 libgl1-mesa-dev libxml2-dev pkg-config \
             qt6-base-dev  qt6-l10n-tools \
-            qt6-tools-dev qt6-tools-dev-tools
+            qt6-tools-dev qt6-tools-dev-tools \
+            appstream
 
       # These builds are executed on all runners
       - name: Build with gcc
@@ -80,3 +82,4 @@ jobs:
       - name: Run tests
         run: |
           ctest --verbose --force-new-ctest-process --test-dir build-gcc
+          appstreamcli validate --pedantic --explain build-gcc/labwc_tweaks.appdata.xml
