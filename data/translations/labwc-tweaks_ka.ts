@@ -142,7 +142,7 @@ purposes of resizing windows</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>ფოკუსის მქონე ფანჯრის წინ გამოტანა</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="98"/>
@@ -457,7 +457,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>დაყოვნება, სანამ ღილაკის დაჭერა გამეორდება</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="128"/>
@@ -467,7 +467,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>ღილაკების კომბინაცია კლავიატურის განლაგების გადასართავად</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
@@ -569,7 +569,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩართვის ღილაკი</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
@@ -634,7 +634,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wlroots-ის ვერსია</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -789,7 +789,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>დაყოვნება</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
