@@ -79,7 +79,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokus gives til vinduet under musemarkøren</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
@@ -214,7 +214,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>Anvend et bilineært filter på det forstørrede billede</translation>
     </message>
 </context>
 <context>
