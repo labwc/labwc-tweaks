@@ -89,7 +89,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivitus enne akna tõstmist</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
@@ -570,7 +570,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Nupul</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
@@ -635,7 +635,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wlrootsi versioon</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -790,12 +790,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivitus</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
         <source> ms</source>
-        <translation type="unfinished"> ms</translation>
+        <translation> msek</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
@@ -816,7 +816,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksimeeri äärest kinninaksamisel</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="239"/>
@@ -826,7 +826,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta bilineaarset filtrit</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="249"/>
@@ -861,7 +861,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Haaratava ala paksus</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="396"/>
@@ -1002,7 +1002,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursori üldseadistused</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
