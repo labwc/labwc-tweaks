@@ -84,17 +84,17 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Όταν η εστίαση ακολουθεί το ποντίκι, απαιτείται κίνηση του δείκτη</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Καθυστέρηση πριν το παράθυρο έρθει στο προσκήνιο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Απόσταση μεταξύ παραθύρων και άκρων της οθόνης κατά τη μετακίνηση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="88"/>
@@ -104,45 +104,46 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση επικάλυψης όταν ένα παράθυρο προσκολλάται σε άκρο της οθόνης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="105"/>
         <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Πάντα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>Μόνο σε περιοχές</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Μόνο στα άκρα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="108"/>
         <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Ποτέ</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Κίνηση του δείκτη που απαιτείται για να μετακινηθεί ένα παράθυρο σε παράθεση ή μεγιστοποιημένο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Καθορίζει το πάχος των περιοχών σύλληψης στα
+όρια για την αλλαγή μεγέθους των παραθύρων</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>Φέρνει το παράθυρο στο προσκήνιο όταν εστιάζεται</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="98"/>
