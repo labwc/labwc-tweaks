@@ -6,47 +6,47 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius of server-side decoration top corners</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Render drop-shadows behind windows</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Render drop-shadows behind tiled windows</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Specify decorations for xdg-shell windows</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Server Side Decoration (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Client Side Decoration (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Show server side decorations on maximized windows</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Titlebar</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
 </context>
 <context>
@@ -54,47 +54,47 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Placement policy for new windows</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatic</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>Cascade</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Center</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus is given to window under mouse cursor</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Requires cursor movement if followMouse is enabled</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Delay before raising the window</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Distance between windows and output edges when using movement actions</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="88"/>
@@ -104,117 +104,124 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Show an overlay when snapping a window to an output edge</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="105"/>
         <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Always</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>Only on regions</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Only on edges</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="108"/>
         <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Never</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Movement of cursor required for a tiled or maximized window to be moved</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Specify the thickness of border grab areas for the
+purpose of resizing windows</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>Raise window to front when focused</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximize instead of snapping on top edge</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Snapping windows can trigger corresponding
+tiling events for native Wayland applications</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Resist interactive moves and resizes of a window
+ across screen edges</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation type="unfinished"></translation>
+        <translation>Resist interactive moves and resizes of a window
+ across the edges of any other window</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>One-dimensional movement of cursor required for
+a vertically or horizontally maximized window to be moved</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
-        <translation type="unfinished"></translation>
+        <translation>Application redraws its contents while resizing.
+If disabled, an outlined rectangle is shown</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Size of corner regions to which all &apos;Corner&apos; mouse binds contexts apply
+ as well size of border region for which mouse resizing will apply in any direction.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Show a small indicator on top of the window when resizing or moving</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Nonpixel</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="187"/>
         <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>For full screen magnifier set to -1</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
-        <translation type="unfinished"></translation>
+        <translation>Initial number of times by which magnified image is scaled</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>Apply a bilinear filter to the magnified image</translation>
     </message>
 </context>
 <context>
@@ -222,187 +229,187 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Both Shifts together</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Both Alts together</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Both Ctrls together</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Alt (while pressed)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Alt (while pressed)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Win (while pressed)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Win (while pressed)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Any Win (while pressed)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu (while pressed), Shift+Menu for Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Ctrl (while pressed)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock to first layout; Shift+Caps Lock to second layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Win to first layout; Right Win/Menu to second layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Ctrl to first layout; Right Ctrl to second layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Both Alts together; AltGr alone chooses third level</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Ctrl+Left Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Ctrl+Right Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Alt+Left Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Alt+Right Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Alt+Left Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Alt+Right Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Win+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>

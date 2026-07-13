@@ -148,74 +148,80 @@ purposes of resizing windows</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεγιστοποίηση αντί για προσκόλληση στο επάνω άκρο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Η προσκόλληση παραθύρων μπορεί να ενεργοποιήσει τα αντίστοιχα
+συμβάντα παράθεσης για εγγενείς εφαρμογές Wayland</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντίσταση στη διαδραστική μετακίνηση και αλλαγή μεγέθους ενός παραθύρου
+πέρα από τα άκρα της οθόνης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντίσταση στη διαδραστική μετακίνηση και αλλαγή μεγέθους ενός παραθύρου
+πέρα από τα άκρα οποιουδήποτε άλλου παραθύρου</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Απαιτούμενη μονοδιάστατη κίνηση του δρομέα για τη μετακίνηση
+ενός κατακόρυφα ή οριζόντια μεγιστοποιημένου παραθύρου</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
-        <translation type="unfinished"></translation>
+        <translation>Η εφαρμογή επανασχεδιάζει τα περιεχόμενά της κατά την αλλαγή μεγέθους.
+Αν απενεργοποιηθεί, εμφανίζεται ένα ορθογώνιο περίγραμμα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος των γωνιακών περιοχών στις οποίες εφαρμόζονται όλα τα περιβάλλοντα συνδέσεων ποντικιού «Corner»,
+καθώς και της συνοριακής περιοχής όπου η αλλαγή μεγέθους με το ποντίκι εφαρμόζεται προς οποιαδήποτε κατεύθυνση.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση μιας μικρής ένδειξης πάνω από το παράθυρο κατά την αλλαγή μεγέθους ή τη μετακίνηση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Σε μη εικονοστοιχειακή αλλαγή μεγέθους</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="187"/>
         <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορίστε την τιμή -1 για μεγεθυντή πλήρους οθόνης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχικός συντελεστής κλιμάκωσης της μεγεθυμένης εικόνας</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Βήμα μεταβολής σε κάθε κλήση της ενέργειας «ZoomIn» ή «ZoomOut»</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>Εφαρμογή διγραμμικού φίλτρου στη μεγεθυμένη εικόνα</translation>
     </message>
 </context>
 <context>
@@ -223,227 +229,227 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Και τα δύο Shift μαζί</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Και τα δύο Alt μαζί</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Και τα δύο Ctrl μαζί</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Alt (όσο είναι πατημένο)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Alt (όσο είναι πατημένο)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Win (όσο είναι πατημένο)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Win (όσο είναι πατημένο)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Οποιοδήποτε Win (όσο είναι πατημένο)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu (όσο είναι πατημένο), Shift+Menu για τη λειτουργία Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock (όσο είναι πατημένο), Alt+Caps Lock για την αρχική λειτουργία του Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Ctrl (όσο είναι πατημένο)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Alt</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Caps Lock για την πρώτη διάταξη· Shift+Caps Lock για τη δεύτερη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Win για την πρώτη διάταξη· Δεξιό Win/Menu για τη δεύτερη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Ctrl για την πρώτη διάταξη· Δεξιό Ctrl για τη δεύτερη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Και τα δύο Alt μαζί· μόνο το AltGr επιλέγει το τρίτο επίπεδο</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Ctrl+Αριστερό Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Ctrl+Δεξιό Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Ctrl+Αριστερό Shift για την προηγούμενη διάταξη, Δεξιό Ctrl + Δεξιό Shift για την επόμενη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Alt+Αριστερό Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Alt+Δεξιό Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Ctrl+Αριστερό Alt για την προηγούμενη διάταξη, Δεξιό Ctrl + Δεξιό Alt για την επόμενη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Alt+Αριστερό Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Alt+Δεξιό Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Alt+Αριστερό Shift για την προηγούμενη διάταξη, Δεξιό Alt + Δεξιό Shift για την επόμενη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιό Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Αριστερό Win για την πρώτη διάταξη· Ctrl+Menu για τη δεύτερη διάταξη</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερό Ctrl+Αριστερό Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
@@ -453,37 +459,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμός επανάληψης των πληκτρολογήσεων ανά δευτερόλεπτο</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Καθυστέρηση πριν από την επανάληψη των πληκτρολογήσεων</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση του Num Lock κατά την αναγνώριση νέου πληκτρολογίου</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Συνδυασμός πλήκτρων για την εναλλαγή διάταξης πληκτρολογίου</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλήκτρο</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιγραφή</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή συνδυασμού πλήκτρων</translation>
     </message>
 </context>
 <context>
@@ -506,17 +512,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Πληκτρολόγιο</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Οθόνη αφής</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Σχετικά</translation>
     </message>
 </context>
 <context>
@@ -524,63 +530,63 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Επίπεδο</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσαρμοζόμενο</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>αριστερό-δεξί-μεσαίο</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>αριστερό-μεσαίο-δεξί</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
-        <translation type="unfinished">Χωρίς</translation>
+        <translation>Χωρίς</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιοχή κουμπιών</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλικ με δάχτυλα</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Με δύο δάχτυλα</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Στο άκρο</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Με κουμπί</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποιημένη</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Απενεργοποίηση με εξωτερικό ποντίκι</translation>
     </message>
 </context>
 <context>
@@ -606,22 +612,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Κανονικός</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριστερά</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεξιά</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανεστραμμένος</translation>
     </message>
 </context>
 <context>
@@ -630,52 +636,52 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση wlroots</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>Υποστήριξη XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Υποστήριξη τοπικοποίησης</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>Υποστήριξη εικονιδίων SVG</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Υποστήριξη εικονιδίων μέσω libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Ιστοσελίδα</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιβάλλον</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Άδειες χρήσης</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανάπτυξη</translation>
     </message>
 </context>
 <context>
@@ -683,37 +689,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα εικονιδίων</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Σκιές παραθύρων</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση σκιών</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση σε πλακιδιωμένα παράθυρα</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished">Γραμμή τίτλου</translation>
+        <translation>Γραμμή τίτλου</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -723,17 +729,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Για προχωρημένους</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
         <source>Decoration mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Λειτουργία διακόσμησης</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="133"/>
         <source>Maximized decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Διακόσμηση μεγιστοποιημένων παραθύρων</translation>
     </message>
 </context>
 <context>
@@ -741,32 +747,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Η εστίαση ακολουθεί το ποντίκι</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>Απαίτηση κίνησης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεταφορά στο προσκήνιο κατά την εστίαση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>Διάκενο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>Τοποθέτηση παραθύρων</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Πολιτική</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -780,123 +786,123 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="425"/>
         <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> εικ</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Εστίαση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Καθυστέρηση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσκόλληση παραθύρων</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="201"/>
         <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>Εύρος γωνιών</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
-        <translation type="unfinished"></translation>
+        <translation>Ειδοποίηση εφαρμογών για την κατάσταση παράθεσης </translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεγιστοποίηση κατά την προσκόλληση στο επάνω άκρο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση επικάλυψης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση διγραμμικού φίλτρου</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντίσταση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Ισχύς αντίστασης στα άκρα της οθόνης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Ισχύς αντίστασης στα άκρα των παραθύρων</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>Κατώφλι αποκόλλησης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Κατώφλι αναίρεσης μεγιστοποίησης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Αλλαγή μεγέθους</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Πάχος περιοχής σύλληψης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Σχεδίαση περιεχομένων</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση αναδυόμενης ένδειξης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεγεθυντής</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλάτος</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Ύψος</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχική κλίμακα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>Βήμα</translation>
     </message>
 </context>
 <context>
@@ -904,37 +910,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Γενικά</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμός επανάληψης</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Καθυστέρηση επανάληψης</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Num Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση κατά την εκκίνηση</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Διάταξη πληκτρολογίου</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
@@ -949,7 +955,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Εναλλαγή διάταξης</translation>
     </message>
 </context>
 <context>
@@ -957,32 +963,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Φυσική κύλιση</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ταχύτητα δείκτη</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Προφίλ επιτάχυνσης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Κατάσταση</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Κτύπημα για κλικ</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντιστοίχιση κουμπιών κτυπήματος</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
@@ -992,67 +998,67 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Θέμα</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>Γενικά για τον δείκτη</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Λειτουργία αριστερόχειρα</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Κτύπημα και σύρσιμο</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλείδωμα συρσίματος</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύρσιμο με τρία δάχτυλα</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξομοίωση μεσαίου κουμπιού</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Απενεργοποίηση κατά την πληκτρολόγηση</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέθοδος κλικ</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέθοδος κύλισης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Συντελεστής κύλισης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιφάνεια αφής</translation>
     </message>
 </context>
 <context>
@@ -1060,12 +1066,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Οθόνη αφής</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιστροφή</translation>
     </message>
 </context>
 </TS>

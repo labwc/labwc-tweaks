@@ -204,7 +204,7 @@ y tamaño de la región de borde para redimensionar con el ratón en cualquier d
         <location filename="../../src/behaviour.cpp" line="187"/>
         <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>Para usar la lupa a pantalla completa, establecer en -1</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="195"/>
@@ -277,7 +277,7 @@ y tamaño de la región de borde para redimensionar con el ratón en cualquier d
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú (mientras se presiona), Mayús+Menú para Menú</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
@@ -387,7 +387,7 @@ y tamaño de la región de borde para redimensionar con el ratón en cualquier d
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
