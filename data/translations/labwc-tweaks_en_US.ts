@@ -404,92 +404,92 @@ If disabled, an outlined rectangle is shown</translation>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished">Win+Space</translation>
+        <translation>Win+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished">Ctrl+Space</translation>
+        <translation>Ctrl+Space</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Shift</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Right Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll Lock</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Left Ctrl+Left Win</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Select layout to add...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Rate at which keypresses are repeated per second</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Delay before keypresses are repeated</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable Num Lock when recognizing a new keyboard</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Key combination to switch keyboard layout</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Key</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Select key combination</translation>
     </message>
 </context>
 <context>
@@ -497,32 +497,32 @@ If disabled, an outlined rectangle is shown</translation>
     <message>
         <location filename="../../src/maindialog.cpp" line="47"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Appearance</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="51"/>
         <source>Behaviour</source>
-        <translation type="unfinished"></translation>
+        <translation>Behaviour</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="55"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Mouse &amp; Touchpad</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Keyboard</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Touchscreen</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>About</translation>
     </message>
 </context>
 <context>
@@ -530,63 +530,63 @@ If disabled, an outlined rectangle is shown</translation>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Flat</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Adaptive</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>left-right-middle</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>left-middle-right</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Button Area</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>Clickfinger</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Two Finger</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Edge</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>On Button</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Enabled</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Disable with external mouse</translation>
     </message>
 </context>
 <context>
@@ -594,12 +594,12 @@ If disabled, an outlined rectangle is shown</translation>
     <message>
         <location filename="../../src/main.cpp" line="56"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Error loading </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="58"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Run labwc-tweaks from a terminal to view error messages</translation>
     </message>
 </context>
 <context>
@@ -612,22 +612,22 @@ If disabled, an outlined rectangle is shown</translation>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Right</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverted</translation>
     </message>
 </context>
 <context>
@@ -636,37 +636,37 @@ If disabled, an outlined rectangle is shown</translation>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wlroots Version</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>XWayland support</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Native language support</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG icon support</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Icon support with libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Website</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="133"/>
