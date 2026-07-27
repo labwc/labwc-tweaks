@@ -6,12 +6,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Zerbitzariaren aldeko apainketaren goiko izkinetako erradioa</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Leihoen atzean sortzen diren itzalak aplikatu</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Xdg-shell leihoentzako apaingarriak zehaztu</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximizatutako leihoetan zerbitzari-aldeko apaindurak erakutsi</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Izenburuko barra</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
