@@ -89,7 +89,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Терезені көтеру алдындағы кідіріс</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
@@ -576,7 +576,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Батырмада</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
@@ -641,7 +641,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Wlroots нұсқасы</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
@@ -796,12 +796,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Кідіріс</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
         <source> ms</source>
-        <translation type="unfinished"> мс</translation>
+        <translation> мс</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
