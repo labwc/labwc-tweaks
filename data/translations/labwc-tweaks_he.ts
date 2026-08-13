@@ -544,7 +544,7 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
-        <translation type="unfinished">ללא</translation>
+        <translation>ללא</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
@@ -712,7 +712,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished">שורת כותרת</translation>
+        <translation>שורת כותרת</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
@@ -938,12 +938,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">הוספה</translation>
+        <translation>הוספה</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">הסרה</translation>
+        <translation>הסרה</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
@@ -986,7 +986,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished">סמן</translation>
+        <translation>סמן</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
