@@ -6,32 +6,32 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>تحديد استدارة الزوايا العلوية لزخرفة جانب الخادم</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>رسم ظلال خلف النوافذ</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>رسم ظلال خلف النوافذ المبلطة</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>تحديد جهة زخرفة نوافذ xdg-shell</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>زخرفة من جانب الخادم (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>زخرفة من جانب العميل (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>شريط العنوان</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>بدون زخارف</translation>
     </message>
 </context>
 <context>
@@ -59,22 +59,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>تلقائي</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>متتابع</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>في الوسط</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>عند المؤشر</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
@@ -110,23 +110,23 @@
         <location filename="../../src/behaviour.cpp" line="105"/>
         <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>دائمًا</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>فقط عند المناطق</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>فقط عند الحواف</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="108"/>
         <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>مطلقًا</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="136"/>
@@ -193,7 +193,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>عند استخدام أحجام غير بكسلية</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="187"/>
@@ -447,7 +447,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>اختر تخطيطًا لإضافته...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
@@ -505,17 +505,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>شاشة اللمس</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>حول</translation>
     </message>
 </context>
 <context>
@@ -629,52 +629,52 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>الإصدار</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>إصدار wlroots</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>دعم XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>دعم اللغة الأصلية</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>دعم أيقونات SVG</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>دعم الأيقونات مع libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>الموقع الإلكتروني</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>البيئة</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>التراخيص</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>التطوير</translation>
     </message>
 </context>
 <context>
@@ -682,57 +682,57 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>السمة</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>سمة Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>سمة الأيقونات</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>الظلال المسقطة للنوافذ</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>تمكين الظلال</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>تفعيلها على النوافذ المبلطة</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>شريط العنوان</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
         <source>Corner radius</source>
-        <translation>أركان نصف قطرية</translation>
+        <translation>نصف قطر الزوايا</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>متقدم</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
         <source>Decoration mode</source>
-        <translation type="unfinished"></translation>
+        <translation>وضع الزخرفة</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="133"/>
         <source>Maximized decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>زخرفة النوافذ المكبّرة</translation>
     </message>
 </context>
 <context>
@@ -740,32 +740,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>يتبع التركيز الفأرة</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>يتطلب حركة المؤشر</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>رفع النافذة عند التركيز</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>الفجوة</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>موضع النوافذ</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>طريقة التموضع</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -779,17 +779,17 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="425"/>
         <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> بكسل</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>التركيز</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>التأخير</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
@@ -799,103 +799,103 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>التصاق النوافذ</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="201"/>
         <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>نطاق الزوايا</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
-        <translation type="unfinished"></translation>
+        <translation>إشعار التطبيقات بحالة التجانب </translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>تكبير النافذة عند التصاقها بالحافة العلوية</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار التراكب</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>استخدام مرشح ثنائي خطي</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>المقاومة</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>قوة مقاومة حافة الشاشة</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>قوة مقاومة حافة النافذة</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>حد إلغاء الالتصاق</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>حد إلغاء التكبير</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>تغيير الحجم</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>سماكة منطقة الإمساك</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
-        <translation type="unfinished"></translation>
+        <translation>رسم المحتوى</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار المؤشر المنبثق</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>المكبّر</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>العرض</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>الارتفاع</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>مقياس التكبير الأولي</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>مقدار الزيادة</translation>
     </message>
 </context>
 <context>
@@ -903,37 +903,37 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>عام</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>معدل التكرار</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>تأخير التكرار</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> مللي ثانية</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>قفل الأرقام</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>تمكين عند بدء التشغيل</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>تخطيط لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
@@ -948,7 +948,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>تبديل التخطيط</translation>
     </message>
 </context>
 <context>
@@ -956,102 +956,102 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>التمرير الطبيعي</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>سرعة المؤشر</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>ملف تسارع المؤشر</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>الحالة</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>النقر باللمس</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
-        <translation type="unfinished"></translation>
+        <translation>تعيين أزرار النقر باللمس</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>مؤشر الفأرة</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>السمة</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>الحجم</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>إعدادات المؤشر العامة</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>وضع الاستخدام باليد اليسرى</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>النقر والسحب باللمس</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>قفل السحب</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>السحب بثلاثة أصابع</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>محاكاة الزر الأوسط</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>التعطيل أثناء الكتابة</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>طريقة النقر</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>طريقة التمرير</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>معامل التمرير</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>لوحة اللمس</translation>
     </message>
 </context>
 <context>
@@ -1064,7 +1064,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>التدوير</translation>
     </message>
 </context>
 </TS>
