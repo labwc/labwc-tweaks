@@ -120,6 +120,24 @@ target_link_libraries(t1003 PRIVATE ${GLIB_LDFLAGS})
 target_include_directories(t1003 PRIVATE src ${GLIB_INCLUDE_DIRS})
 add_test(NAME t1003 COMMAND t1003)
 
+add_executable(t1004 tests/t1004-curve-settings.cpp tests/tap.cpp
+    src/accel-curve.cpp src/accel-curve-editor.cpp src/accel-curve-editor.h
+    src/settings.cpp src/setting.cpp src/environment.cpp
+    src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)
+target_link_libraries(t1004 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
+target_include_directories(t1004 PRIVATE src ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
+add_test(NAME t1004 COMMAND t1004)
+set_tests_properties(t1004 PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+
+set(APPLY_TEST_SOURCES ${PROJECT_SOURCES})
+list(REMOVE_ITEM APPLY_TEST_SOURCES src/main.cpp)
+add_executable(t1005 tests/t1005-curve-apply.cpp tests/tap.cpp ${APPLY_TEST_SOURCES})
+target_link_libraries(t1005 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
+target_include_directories(t1005 PRIVATE src ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
+set_target_properties(t1005 PROPERTIES AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/src")
+add_test(NAME t1005 COMMAND t1005)
+set_tests_properties(t1005 PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+
 add_executable(t1006 tests/t1006-remove-setting.cpp tests/tap.cpp
     src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)
 target_link_libraries(t1006 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
