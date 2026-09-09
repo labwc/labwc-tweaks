@@ -54,6 +54,8 @@ set(PROJECT_SOURCES
     src/appearance.cpp src/appearance.h src/appearance.ui
     src/behaviour.cpp src/behaviour.h src/behaviour.ui
     src/mouse.cpp src/mouse.h src/mouse.ui
+    src/accel-curve.cpp src/accel-curve.h
+    src/accel-curve-editor.cpp src/accel-curve-editor.h
     src/keyboard.cpp src/keyboard.h src/keyboard.ui
     src/touchscreen.cpp src/touchscreen.h src/touchscreen.ui
     src/about.cpp src/about.h src/about.ui
@@ -103,6 +105,7 @@ target_include_directories(t1001 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_
 add_test(t1001 t1001)
 
 add_executable(t1002 tests/t1002-custom-profile.cpp tests/tap.cpp
+    src/accel-curve.cpp src/accel-curve-editor.cpp src/accel-curve-editor.h
     src/mouse.cpp src/mouse.h src/mouse.ui src/find-themes.cpp
     src/settings.cpp src/setting.cpp src/environment.cpp
     src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)

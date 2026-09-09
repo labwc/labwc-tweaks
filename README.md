@@ -15,6 +15,23 @@ Obligatory screenshot:
 Use environment variable `LABWC_CONFIG_DIR` to specify a non-standard location
 for configuration files.
 
+### Custom acceleration
+
+The Custom acceleration profile requires a Labwc version with
+[custom acceleration support](https://github.com/labwc/labwc/pull/3715).
+It disables Pointer Speed; Scroll Factor still applies.
+
+Each Motion, Scroll, or Fallback curve is optional. Enable its **Define** checkbox
+to configure a positive, finite Step and 2–32 finite, non-negative Points.
+Points are output speeds at equally spaced input-speed samples. Invalid input
+prevents Apply while Custom is selected.
+
+Undefined Motion and Scroll curves use Fallback. If Fallback is also undefined,
+unspecified movement types have no acceleration. Selecting Custom alone does not
+create any curves. Unchecking **Define** removes that curve when applied.
+Existing attributes and child elements are read; edited curves use child elements.
+Untouched curves retain their values and XML structure.
+
 ## ⬇️ Build instructions
 
 ### Dependencies

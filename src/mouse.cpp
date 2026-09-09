@@ -1,4 +1,5 @@
 #include "mouse.h"
+#include "accel-curve-editor.h"
 #include "environment.h"
 #include "find-themes.h"
 #include "macros.h"
@@ -9,10 +10,23 @@
 Mouse::Mouse(QWidget *parent) : QWidget(parent), ui(new Ui::pageMouse)
 {
     ui->setupUi(this);
+    m_curves = {
+        new AccelCurveEditor("motionCurve", tr("Define Motion curve"), this),
+        new AccelCurveEditor("scrollCurve", tr("Define Scroll curve"), this),
+        new AccelCurveEditor("fallbackCurve", tr("Define Fallback curve"), this),
+    };
+    for (auto curve : m_curves) {
+        ui->customCurvesLayout->addWidget(curve);
+        connect(curve, &AccelCurveEditor::validityChanged, this, [this] {
+            emit validityChanged(isValid());
+        });
+    }
     connect(ui->accelProfile, &QComboBox::currentIndexChanged, this, [this] {
         const bool custom = ui->accelProfile->currentData().toString() == "custom";
         ui->pointerSpeed->setEnabled(!custom);
         ui->label_pointerSpeed->setEnabled(!custom);
+        ui->customCurves->setEnabled(custom);
+        emit validityChanged(isValid());
     });
 }
 
@@ -195,10 +209,35 @@ void Mouse::activate()
     /* Scroll Factor */
     settingsAddXmlFlt("/labwc_config/libinput/device/scrollFactor", 1.0f);
     ui->scrollFactor->setValue(getFloat("/labwc_config/libinput/device/scrollFactor"));
+
+    for (auto curve : m_curves) {
+        curve->activate();
+    }
+}
+
+bool Mouse::isValid() const
+{
+    if (ui->accelProfile->currentData().toString() != "custom") {
+        return true;
+    }
+    for (auto curve : m_curves) {
+        if (!curve->isValid()) {
+            return false;
+        }
+    }
+    return true;
 }
 
 void Mouse::onApply()
 {
+    if (!isValid()) {
+        return;
+    }
+    if (ui->accelProfile->currentData().toString() == "custom") {
+        for (auto curve : m_curves) {
+            curve->onApply();
+        }
+    }
     /* ~/.config/labwc/rc.xml */
     setBool("/labwc_config/libinput/device/naturalScroll", ui->naturalScroll->isChecked());
     setBool("/labwc_config/libinput/device/leftHanded", ui->leftHanded->isChecked());

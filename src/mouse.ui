@@ -148,6 +148,25 @@
          </layout>
         </widget>
        </item>
+       <item>
+        <widget class="QGroupBox" name="customCurves">
+         <property name="title">
+          <string>Custom acceleration curves</string>
+         </property>
+         <layout class="QVBoxLayout" name="customCurvesLayout">
+          <item>
+           <widget class="QLabel" name="curveHelp">
+            <property name="text">
+             <string>Undefined Motion and Scroll curves use Fallback. If Fallback is undefined, unspecified movement types have no acceleration.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
        <!-- Group Box - Touchpad -->
        <item>
         <widget class="QGroupBox" name="groupBox_touchpad">
