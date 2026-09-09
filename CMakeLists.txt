@@ -102,6 +102,16 @@ target_link_libraries(t1001 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
 target_include_directories(t1001 PRIVATE ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
 add_test(t1001 t1001)
 
+add_executable(t1002 tests/t1002-custom-profile.cpp tests/tap.cpp
+    src/mouse.cpp src/mouse.h src/mouse.ui src/find-themes.cpp
+    src/settings.cpp src/setting.cpp src/environment.cpp
+    src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)
+target_link_libraries(t1002 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
+target_include_directories(t1002 PRIVATE src ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
+set_target_properties(t1002 PROPERTIES AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/src")
+add_test(NAME t1002 COMMAND t1002)
+set_tests_properties(t1002 PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+
 #===================================================================================================
 # Application
 #===================================================================================================
