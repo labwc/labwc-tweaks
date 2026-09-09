@@ -112,6 +112,12 @@ set_target_properties(t1002 PROPERTIES AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}
 add_test(NAME t1002 COMMAND t1002)
 set_tests_properties(t1002 PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
 
+add_executable(t1006 tests/t1006-remove-setting.cpp tests/tap.cpp
+    src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)
+target_link_libraries(t1006 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
+target_include_directories(t1006 PRIVATE src ${GLIB_INCLUDE_DIRS} ${LIBXML2_INCLUDE_DIR})
+add_test(NAME t1006 COMMAND t1006)
+
 #===================================================================================================
 # Application
 #===================================================================================================
