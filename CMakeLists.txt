@@ -112,6 +112,11 @@ set_target_properties(t1002 PROPERTIES AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}
 add_test(NAME t1002 COMMAND t1002)
 set_tests_properties(t1002 PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
 
+add_executable(t1003 tests/t1003-accel-curve.cpp tests/tap.cpp src/accel-curve.cpp)
+target_link_libraries(t1003 PRIVATE ${GLIB_LDFLAGS})
+target_include_directories(t1003 PRIVATE src ${GLIB_INCLUDE_DIRS})
+add_test(NAME t1003 COMMAND t1003)
+
 add_executable(t1006 tests/t1006-remove-setting.cpp tests/tap.cpp
     src/xml.cpp src/xml-prettify.cpp src/parse-bool.cpp src/nodename.cpp)
 target_link_libraries(t1006 PRIVATE ${GLIB_LDFLAGS} ${LIBXML2_LIBRARIES})
