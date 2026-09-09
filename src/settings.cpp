@@ -57,6 +57,16 @@ void settingsInit(std::vector<std::shared_ptr<Setting>> *settings)
     _settings = settings;
 }
 
+void settingsRemoveXml(QString name)
+{
+    xml_remove_node(name.toStdString().c_str());
+    std::erase_if(*_settings, [&name](const auto &setting) {
+        return setting->fileType() == LAB_FILE_TYPE_RCXML
+                && (!setting->name().compare(name, Qt::CaseInsensitive)
+                    || setting->name().startsWith(name + "/", Qt::CaseInsensitive));
+    });
+}
+
 static std::shared_ptr<Setting> retrieve(QString name)
 {
     for (auto &setting : *_settings) {

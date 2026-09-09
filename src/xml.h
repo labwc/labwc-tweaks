@@ -27,4 +27,9 @@ char *xpath_get_content(const char *xpath_expr);
  */
 void xpath_add_node(const char *xpath_expr);
 
+/* Case-insensitive setting paths, like xpath_add_node(). */
+bool xml_node_exists(const char *xpath);
+/* Remove matching settings (including their children); never remove the root. */
+void xml_remove_node(const char *xpath);
+
 #endif /* __XML_H */

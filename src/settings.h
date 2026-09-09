@@ -15,6 +15,9 @@ void settingsAddXmlFlt(QString name, float defaultValue);
 void settingsAddEnvStr(QString name, QString defaultValue);
 void settingsAddEnvInt(QString name, int defaultValue);
 
+// Remove an XML subtree and forget its registered settings before recreating it.
+void settingsRemoveXml(QString name);
+
 // Get values
 QString getStr(QString name);
 int getInt(QString name);

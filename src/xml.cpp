@@ -305,6 +305,29 @@ static xmlNode *xml_get_node(const char *xpath)
     return ctx.node;
 }
 
+bool xml_node_exists(const char *xpath)
+{
+    return xml_get_node(xpath) != NULL;
+}
+
+void xml_remove_node(const char *xpath)
+{
+    while (xmlNode *node = xml_get_node(xpath)) {
+        if (node->type == XML_TEXT_NODE || node->type == XML_CDATA_SECTION_NODE) {
+            node = node->parent;
+        }
+        if (node == xmlDocGetRootElement(ctx.doc)) {
+            return;
+        }
+        if (node->type == XML_ATTRIBUTE_NODE) {
+            xmlRemoveProp((xmlAttr *)node);
+        } else {
+            xmlUnlinkNode(node);
+            xmlFreeNode(node);
+        }
+    }
+}
+
 char *xpath_get_content(const char *xpath_expr)
 {
     xmlChar *ret = NULL;
