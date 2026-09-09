@@ -9,6 +9,11 @@
 Mouse::Mouse(QWidget *parent) : QWidget(parent), ui(new Ui::pageMouse)
 {
     ui->setupUi(this);
+    connect(ui->accelProfile, &QComboBox::currentIndexChanged, this, [this] {
+        const bool custom = ui->accelProfile->currentData().toString() == "custom";
+        ui->pointerSpeed->setEnabled(!custom);
+        ui->label_pointerSpeed->setEnabled(!custom);
+    });
 }
 
 Mouse::~Mouse()
@@ -57,13 +62,14 @@ void Mouse::activate()
     QVector<QSharedPointer<Pair>> profiles;
     profiles.append(QSharedPointer<Pair>(new Pair("flat", tr("Flat"))));
     profiles.append(QSharedPointer<Pair>(new Pair("adaptive", tr("Adaptive"))));
+    profiles.append(QSharedPointer<Pair>(new Pair("custom", tr("Custom"))));
 
     QString current_profile = getStr("/labwc_config/libinput/device/accelProfile");
     int profile_index = -1;
     foreach (auto profile, profiles) {
         ui->accelProfile->addItem(profile.get()->description(), QVariant(profile.get()->value()));
         ++profile_index;
-        if (current_profile == profile.get()->value()) {
+        if (!current_profile.compare(profile.get()->value(), Qt::CaseInsensitive)) {
             ui->accelProfile->setCurrentIndex(profile_index);
         }
     }
@@ -196,7 +202,9 @@ void Mouse::onApply()
     /* ~/.config/labwc/rc.xml */
     setBool("/labwc_config/libinput/device/naturalScroll", ui->naturalScroll->isChecked());
     setBool("/labwc_config/libinput/device/leftHanded", ui->leftHanded->isChecked());
-    setFloat("/labwc_config/libinput/device/pointerSpeed", ui->pointerSpeed->value() / 10.0);
+    if (ui->accelProfile->currentData().toString() != "custom") {
+        setFloat("/labwc_config/libinput/device/pointerSpeed", ui->pointerSpeed->value() / 10.0);
+    }
     setStr("/labwc_config/libinput/device/accelProfile", DATA(ui->accelProfile));
     setBool("/labwc_config/libinput/device/tap", ui->tap->isChecked());
     setStr("/labwc_config/libinput/device/tapButtonMap", DATA(ui->tapButtonMap));
