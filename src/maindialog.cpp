@@ -7,6 +7,7 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <QPushButton>
 #include "appearance.h"
 #include "behaviour.h"
 #include "mouse.h"
@@ -134,6 +135,9 @@ MainDialog::MainDialog(QWidget *parent) : QDialog(parent)
         }
     });
 
+    connect(m_pageMouse, &Mouse::validityChanged, this, [this](bool valid) {
+        m_buttonBox->button(QDialogButtonBox::Apply)->setEnabled(valid);
+    });
     activate();
 }
 
@@ -159,6 +163,9 @@ void MainDialog::activate()
 
 void MainDialog::onApply()
 {
+    if (!m_pageMouse->isValid()) {
+        return;
+    }
     m_pageAppearance->onApply();
     m_pageBehaviour->onApply();
     m_pageMouse->onApply();
