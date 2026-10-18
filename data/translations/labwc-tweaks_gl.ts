@@ -6,47 +6,47 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Raio das esquinas superiores da decoración do lado do servidor</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
         <source>Render drop-shadows behind windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Renderizar sombras detrás das xanelas</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Renderizar sombras detrás das xanelas en mosaico</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
         <source>Specify decorations for xdg-shell windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Especificar as decoracións para as xanelas xdg-shell</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="57"/>
         <source>Server Side Decoration (SSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Decoración do lado do servidor (SSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="59"/>
         <source>Client Side Decoration (CSD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Decoración do lado do cliente (CSD)</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar decoracións do lado do servidor nas xanelas maximizadas</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de título</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="78"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ningunha</translation>
     </message>
 </context>
 <context>
@@ -54,47 +54,47 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="23"/>
         <source>Placement policy for new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Política de colocación para as novas xanelas</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automático</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cascade</source>
-        <translation type="unfinished"></translation>
+        <translation>Cascada</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
         <source>Focus is given to window under mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>O foco outórgase á xanela baixo o cursor do rato</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="50"/>
         <source>Requires cursor movement if followMouse is enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Require movemento do cursor se followMouse está activado</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="69"/>
         <source>Delay before raising the window</source>
-        <translation type="unfinished"></translation>
+        <translation>Atraso antes de elevar a xanela</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Distancia entre as xanelas e os bordos da saída ao usar accións de movemento</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="88"/>
@@ -104,117 +104,124 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
         <source>Show an overlay when snapping a window to an output edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar unha superposición ao axustar unha xanela ao bordo dunha saída</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="105"/>
         <location filename="../../src/behaviour.cpp" line="170"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Sempre</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="106"/>
         <source>Only on regions</source>
-        <translation type="unfinished"></translation>
+        <translation>Só nas rexións</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="107"/>
         <source>Only on edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Só nos bordos</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="108"/>
         <location filename="../../src/behaviour.cpp" line="169"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Nunca</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="136"/>
         <source>Movement of cursor required for a tiled or maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Movemento do cursor necesario para mover unha xanela en mosaico ou maximizada</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="159"/>
         <source>Specify the thickness of border grab areas for the
 purposes of resizing windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Especificar o grosor das áreas de agarre do bordo
+para efectos de redimensionar xanelas</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="58"/>
         <source>Raise window to front when focused</source>
-        <translation type="unfinished"></translation>
+        <translation>Elevar a xanela ao primeiro plano ao focala</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="98"/>
         <source>Maximize instead of snapping on top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximizar en vez de axustar ao bordo superior</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="102"/>
         <source>Snapping windows can trigger corresponding
 tiling events for native Wayland applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Axustar xanelas pode desencadear os eventos
+de mosaico correspondentes para aplicacións nativas de Wayland</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation type="unfinished"></translation>
+        <translation>Resistir os movementos e redimensionamentos interactivos dunha xanela
+ a través dos bordos da pantalla</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation type="unfinished"></translation>
+        <translation>Resistir os movementos e redimensionamentos interactivos dunha xanela
+ a través dos bordos de calquera outra xanela</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="141"/>
         <source>One-dimensional movement of cursor required for
 a vertically or horizontally maximized window to be moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Movemento unidimensional do cursor necesario para
+mover unha xanela maximizada vertical ou horizontalmente</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="146"/>
         <source>Application redraws its contents while resizing.
 If disabled, an outlined rectangle is shown</source>
-        <translation type="unfinished"></translation>
+        <translation>A aplicación redebuxa o seu contido mentres se redimensiona.
+Se está desactivado, móstrase un rectángulo con contorno</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño das rexións de esquina ás que se aplican todos os contextos de atallos de rato &apos;Corner&apos;
+ así como o tamaño da rexión de bordo na que se aplicará o redimensionamento co rato en calquera dirección.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un pequeno indicador enriba da xanela ao redimensionar ou mover</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Sen píxeles</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="187"/>
         <location filename="../../src/behaviour.cpp" line="191"/>
         <source>For full screen magnifier set to -1</source>
-        <translation type="unfinished"></translation>
+        <translation>Para a lupa de pantalla completa, definir en -1</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="195"/>
         <source>Initial number of times by which magnified image is scaled</source>
-        <translation type="unfinished"></translation>
+        <translation>Número inicial de veces que se escala a imaxe ampliada</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="199"/>
         <source>Steps for changes on each call to &apos;ZoomIn&apos; or &apos;ZoomOut&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasos para os cambios en cada chamada a &apos;ZoomIn&apos; ou &apos;ZoomOut&apos;</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="203"/>
         <source>Apply a bilinear filter to the magnified image</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar un filtro bilinear á imaxe ampliada</translation>
     </message>
 </context>
 <context>
@@ -222,267 +229,267 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.cpp" line="31"/>
         <source>Shift+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Maiús+Bloq Maiús</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="32"/>
         <source>Alt+Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Bloq Maiús</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="33"/>
         <source>Both Shifts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambas as teclas Maiús xuntas</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="34"/>
         <source>Both Alts together</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambas as teclas Alt xuntas</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="35"/>
         <source>Both Ctrls together</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambas as teclas Ctrl xuntas</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="36"/>
         <source>Right Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt dereito (mentres se preme)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="37"/>
         <source>Left Alt (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt esquerdo (mentres se preme)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="38"/>
         <source>Left Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Win esquerdo (mentres se preme)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="39"/>
         <source>Right Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Win dereito (mentres se preme)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="40"/>
         <source>Any Win (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Calquera Win (mentres se preme)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="42"/>
         <source>Menu (while pressed), Shift+Menu for Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú (mentres se preme), Maiús+Menú para Menú</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="44"/>
         <source>Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloq Maiús (mentres se preme), Alt+Bloq Maiús para a acción orixinal de Bloq Maiús</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="46"/>
         <source>Right Ctrl (while pressed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl dereito (mentres se preme)</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="47"/>
         <source>Right Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="48"/>
         <source>Left Alt</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="49"/>
         <source>Caps Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloq Maiús</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="51"/>
         <source>Caps Lock to first layout; Shift+Caps Lock to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloq Maiús para a primeira disposición; Maiús+Bloq Maiús para a segunda disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="53"/>
         <source>Left Win to first layout; Right Win/Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Win esquerdo para a primeira disposición; Win dereito/Menú para a segunda disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="55"/>
         <source>Left Ctrl to first layout; Right Ctrl to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl esquerdo para a primeira disposición; Ctrl dereito para a segunda disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="57"/>
         <source>Both Alts together; AltGr alone chooses third level</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambas as teclas Alt xuntas; AltGr só escolle o terceiro nivel</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="58"/>
         <source>Ctrl+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maiús</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="60"/>
         <source>Left Ctrl+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl esquerdo+Maiús esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="62"/>
         <source>Right Ctrl+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl dereito+Maiús dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="64"/>
         <source>Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl esquerdo+Maiús esquerdo escolle a disposición anterior, Ctrl dereito + Maiús dereito escolle a seguinte disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="65"/>
         <source>Alt+Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ctrl</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="66"/>
         <source>Left Alt+Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt esquerdo+Ctrl esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="68"/>
         <source>Right Alt+Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt dereito+Ctrl dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="70"/>
         <source>Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl esquerdo+Alt esquerdo escolle a disposición anterior, Ctrl dereito + Alt dereito escolle a seguinte disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="71"/>
         <source>Alt+Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maiús</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="73"/>
         <source>Left Alt+Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt esquerdo+Maiús esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="75"/>
         <source>Right Alt+Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt dereito+Maiús dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="77"/>
         <source>Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt esquerdo+Maiús esquerdo escolle a disposición anterior, Alt dereito + Maiús dereito escolle a seguinte disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="78"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="79"/>
         <source>Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Win esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="80"/>
         <source>Alt+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Espazo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="81"/>
         <source>Win+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Win+Espazo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="82"/>
         <source>Ctrl+Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Espazo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="83"/>
         <source>Right Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Win dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="84"/>
         <source>Left Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Maiús esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="85"/>
         <source>Right Shift</source>
-        <translation type="unfinished"></translation>
+        <translation>Maiús dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="86"/>
         <source>Left Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="87"/>
         <source>Right Ctrl</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl dereito</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="88"/>
         <source>Scroll Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloq Despr</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="90"/>
         <source>Ctrl+Left Win to first layout; Ctrl+Menu to second layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Win esquerdo para a primeira disposición; Ctrl+Menú para a segunda disposición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="91"/>
         <source>Left Ctrl+Left Win</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl esquerdo+Win esquerdo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="110"/>
         <source>Select layout to add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona a disposición para engadir...</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="118"/>
         <source>Rate at which keypresses are repeated per second</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa á que se repiten as pulsacións de teclas por segundo</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="123"/>
         <source>Delay before keypresses are repeated</source>
-        <translation type="unfinished"></translation>
+        <translation>Atraso antes de que se repitan as pulsacións de teclas</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="128"/>
         <source>Enable Num Lock when recognizing a new keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar Bloq Num ao recoñecer un novo teclado</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="132"/>
         <source>Key combination to switch keyboard layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Combinación de teclas para cambiar a disposición do teclado</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Tecla</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="148"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Descrición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.cpp" line="164"/>
         <source>Select key combination</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar combinación de teclas</translation>
     </message>
 </context>
 <context>
@@ -490,7 +497,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="47"/>
         <source>Appearance</source>
-        <translation>Apariencia</translation>
+        <translation>Aparencia</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="51"/>
@@ -500,22 +507,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/maindialog.cpp" line="55"/>
         <source>Mouse &amp; Touchpad</source>
-        <translation>Rato e Touchpad</translation>
+        <translation>Rato e área táctil</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="59"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Teclado</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="63"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla táctil</translation>
     </message>
     <message>
         <location filename="../../src/maindialog.cpp" line="67"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobre</translation>
     </message>
 </context>
 <context>
@@ -523,63 +530,63 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="58"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation>Plano</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="59"/>
         <source>Adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Adaptativo</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
         <source>left-right-middle</source>
-        <translation type="unfinished"></translation>
+        <translation>esquerdo-dereito-medio</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>left-middle-right</source>
-        <translation type="unfinished"></translation>
+        <translation>esquerdo-medio-dereito</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="132"/>
         <location filename="../../src/mouse.cpp" line="153"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ningún</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="133"/>
         <source>Button Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de botones</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="134"/>
         <source>Clickfinger</source>
-        <translation type="unfinished"></translation>
+        <translation>Dedo de Click</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="150"/>
         <source>Two Finger</source>
-        <translation type="unfinished"></translation>
+        <translation>Dous dedos</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="151"/>
         <source>Edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Bordo</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="152"/>
         <source>On Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Ao premer o botón</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="174"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Activado</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="176"/>
         <source>Disable with external mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivar cun rato externo</translation>
     </message>
 </context>
 <context>
@@ -587,12 +594,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/main.cpp" line="56"/>
         <source>Error loading </source>
-        <translation type="unfinished"></translation>
+        <translation>Erro ao cargar </translation>
     </message>
     <message>
         <location filename="../../src/main.cpp" line="58"/>
         <source>Run labwc-tweaks from a terminal to view error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Executa labwc-tweaks desde un terminal para ver as mensaxes de erro</translation>
     </message>
 </context>
 <context>
@@ -605,22 +612,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="26"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Dereita</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation type="unfinished"></translation>
+        <translation>Invertido</translation>
     </message>
 </context>
 <context>
@@ -629,52 +636,52 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/about.ui" line="31"/>
         <location filename="../../src/about.ui" line="205"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="45"/>
         <source>Wlroots Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión de wlroots</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="59"/>
         <source>XWayland support</source>
-        <translation type="unfinished"></translation>
+        <translation>Compatibilidade con XWayland</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="73"/>
         <source>Native language support</source>
-        <translation type="unfinished"></translation>
+        <translation>Compatibilidade co idioma nativo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="87"/>
         <source>SVG icon support</source>
-        <translation type="unfinished"></translation>
+        <translation>Compatibilidade con iconas SVG</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="101"/>
         <source>Icon support with libsfdo</source>
-        <translation type="unfinished"></translation>
+        <translation>Compatibilidade con iconas mediante libsfdo</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="115"/>
         <source>Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Sitio web</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="133"/>
         <source>Environment</source>
-        <translation type="unfinished"></translation>
+        <translation>Contorno</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="219"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenzas</translation>
     </message>
     <message>
         <location filename="../../src/about.ui" line="233"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenvolvemento</translation>
     </message>
 </context>
 <context>
@@ -682,57 +689,57 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="22"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="34"/>
         <source>Labwc theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema de Labwc</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="51"/>
         <source>Icon theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema de iconas</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="64"/>
         <source>Window Drop Shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Sombras das xanelas</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="76"/>
         <source>Enable shadows</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar sombras</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar en xanelas en mosaico</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
         <source>Titlebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de título</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
         <source>Corner radius</source>
-        <translation>Redondeado De Esquina</translation>
+        <translation>Raio de esquina</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Avanzado</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="158"/>
         <source>Decoration mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de decoración</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="133"/>
         <source>Maximized decoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Decoración maximizada</translation>
     </message>
 </context>
 <context>
@@ -740,32 +747,32 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/behaviour.ui" line="102"/>
         <source>Focus follows mouse</source>
-        <translation type="unfinished"></translation>
+        <translation>O foco segue ao rato</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="129"/>
         <source>Requires movement</source>
-        <translation type="unfinished"></translation>
+        <translation>Require movemento</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="149"/>
         <source>Raise on focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Elevar ao focar</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="57"/>
         <source>Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>Espazo</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="22"/>
         <source>Window Placement</source>
-        <translation type="unfinished"></translation>
+        <translation>Colocación de xanelas</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="34"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Política</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="64"/>
@@ -779,123 +786,123 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="425"/>
         <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Foco</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="169"/>
         <source>Delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Atraso</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="176"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="189"/>
         <source>Window Snapping</source>
-        <translation type="unfinished"></translation>
+        <translation>Axuste de xanelas</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="201"/>
         <location filename="../../src/behaviour.ui" line="351"/>
         <source>Corner range</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de esquina</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="222"/>
         <source>Notify applications of tiled state </source>
-        <translation type="unfinished"></translation>
+        <translation>Notificar ás aplicacións o estado en mosaico </translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="232"/>
         <source>Maximize when snapping to top edge</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximizar ao axustar ao bordo superior</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="239"/>
         <source>Show overlay</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar superposición</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="508"/>
         <source>Use bilinear filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar filtro bilinear</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="249"/>
         <source>Resistance</source>
-        <translation type="unfinished"></translation>
+        <translation>Resistencia</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="261"/>
         <source>Screen edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Forza do bordo da pantalla</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="285"/>
         <source>Window edge strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Forza do bordo da xanela</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="302"/>
         <source>Threshold to unsnap</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite para desaxustar</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="316"/>
         <source>Threshold to unmaximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite para desmaximizar</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="339"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Redimensionar</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="372"/>
         <source>Grab thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Grosor de agarre</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="396"/>
         <source>Draw contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Debuxar contido</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="386"/>
         <source>Show popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar xanela emerxente</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="406"/>
         <source>Magnifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Lupa</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="418"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Largura</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="448"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Altura</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="471"/>
         <source>Initial scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Escala inicial</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="491"/>
         <source>Increment</source>
-        <translation type="unfinished"></translation>
+        <translation>Incremento</translation>
     </message>
 </context>
 <context>
@@ -903,52 +910,52 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/keyboard.ui" line="23"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Xeral</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="35"/>
         <source>Repeat rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de repetición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="52"/>
         <source>Repeat delay</source>
-        <translation type="unfinished"></translation>
+        <translation>Atraso de repetición</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="62"/>
         <source> ms</source>
-        <translation type="unfinished"></translation>
+        <translation> ms</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="72"/>
         <source>Num lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloq Num</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="79"/>
         <source>Enable on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar ao inicio</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="90"/>
         <source>Keyboard Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Disposición do teclado</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="120"/>
         <source>Add</source>
-        <translation type="unfinished">Engadir</translation>
+        <translation>Engadir</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="127"/>
         <source>Remove</source>
-        <translation type="unfinished">Eliminar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../../src/keyboard.ui" line="136"/>
         <source>Layout switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambio de disposición</translation>
     </message>
 </context>
 <context>
@@ -956,102 +963,102 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="137"/>
         <source>Natural scroll</source>
-        <translation type="unfinished"></translation>
+        <translation>Desprazamento natural</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="78"/>
         <source>Pointer speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Velocidade do punteiro</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="101"/>
         <source>Acceleration profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Perfil de aceleración</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="169"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Estado</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="226"/>
         <source>Tap to click</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocar para premer</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="186"/>
         <source>Tap button map</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa de botóns ao tocar</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="23"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="35"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="52"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="66"/>
         <source>Pointer General</source>
-        <translation type="unfinished"></translation>
+        <translation>Xeral do punteiro</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="144"/>
         <source>Left handed mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo para zurdos</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="236"/>
         <source>Tap and drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocar e arrastrar</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="259"/>
         <source>Drag lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloqueo de arrastre</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="273"/>
         <source>Three finger drag</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrastre con tres dedos</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="280"/>
         <source>Middle button emulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulación do botón central</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="287"/>
         <source>Disable while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivar mentres se escribe</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="196"/>
         <source>Click method</source>
-        <translation type="unfinished"></translation>
+        <translation>Método de clic</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="206"/>
         <source>Scroll method</source>
-        <translation type="unfinished"></translation>
+        <translation>Método de desprazamento</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="111"/>
         <source>Scroll factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor de desprazamento</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="155"/>
         <source>Touchpad</source>
-        <translation type="unfinished"></translation>
+        <translation>Área táctil</translation>
     </message>
 </context>
 <context>
@@ -1059,12 +1066,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.ui" line="22"/>
         <source>Touchscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla táctil</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.ui" line="34"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotación</translation>
     </message>
 </context>
 </TS>
