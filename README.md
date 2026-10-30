@@ -1,6 +1,8 @@
-## ℹ️ Overview
+<h3 align="center">[<a href="NEWS.md">Release&nbsp;Notes</a>]</h3>
 
-`labwc-tweaks` is a GUI settings application for `labwc`.
+# Overview
+
+[labwc-tweaks] is the official GUI settings application for [labwc].
 
 It manages settings in `rc.xml` and `environment`.
 
@@ -8,7 +10,10 @@ Obligatory screenshot:
 
 <img src="data/screenshot.png"/>
 
-## 🚀 Usage instructions
+[labwc]: https://github.com/labwc/labwc
+[labwc-tweaks]: https://github.com/labwc/labwc-tweaks
+
+## Usage Instructions
 
 ### Usage
 
@@ -17,7 +22,7 @@ for configuration files.
 
 ### Custom acceleration
 
-The Custom acceleration profile requires a Labwc version with
+The Custom acceleration profile requires [labwc] version >=0.20.3 with
 [custom acceleration support](https://github.com/labwc/labwc/pull/3715).
 It disables Pointer Speed; Scroll Factor still applies.
 
@@ -32,7 +37,7 @@ create any curves. Unchecking **Define** removes that curve when applied.
 Existing attributes and child elements are read; edited curves use child elements.
 Untouched curves retain their values and XML structure.
 
-## ⬇️ Build instructions
+## Build Instructions
 
 ### Dependencies
 
@@ -75,8 +80,6 @@ and data files to their respective locations in a "package" directory.
 DESTDIR="$(pwd)/package" cmake --install build
 ```
 
-If you find it a useful tool and want to expand its scope, feel free.
-
 ## Packages
 
 [![Packaging status]](https://repology.org/project/labwc-tweaks/versions)
@@ -93,10 +96,9 @@ For contributing translations the [LXQt Weblate] platform can be used.
 - LXQt build tools cmake modules are licensed under the [BSD-3-Clause] license.
 
 
-[alternative]:          https://wiki.archlinux.org/title/CMake_package_guidelines#Fixing_the_automatic_optimization_flag_override
-[BSD-3-Clause]:         BSD-3-Clause
-[CI]:                   https://github.com/labwc/labwc-tweaks/actions/workflows/build.yml/badge.svg
-[GPL-2.0-only]:         LICENSE
-[LXQt Weblate]:         https://translate.lxqt-project.org/projects/labwc/labwc-tweaks/
-[Packaging status]:     https://repology.org/badge/vertical-allrepos/labwc-tweaks.svg
-[Translation status]:   https://translate.lxqt-project.org/widgets/labwc/-/labwc-tweaks/multi-auto.svg
+[alternative]: https://wiki.archlinux.org/title/CMake_package_guidelines#Fixing_the_automatic_optimization_flag_override
+[BSD-3-Clause]: BSD-3-Clause
+[GPL-2.0-only]: LICENSE
+[LXQt Weblate]: https://translate.lxqt-project.org/projects/labwc/labwc-tweaks/
+[Packaging status]: https://repology.org/badge/vertical-allrepos/labwc-tweaks.svg
+[Translation status]: https://translate.lxqt-project.org/widgets/labwc/-/labwc-tweaks/multi-auto.svg
