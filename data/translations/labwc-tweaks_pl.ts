@@ -2,6 +2,39 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
+    <name>AccelCurveEditor</name>
+    <message>
+        <location filename="../../src/accel-curve-editor.cpp" line="29"/>
+        <source>Positive spacing between input-speed samples.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/accel-curve-editor.cpp" line="30"/>
+        <source>Step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/accel-curve-editor.cpp" line="33"/>
+        <source>2 to 32 non-negative output speeds, separated by spaces. Labwc interpolates between samples and extrapolates beyond the last two.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/accel-curve-editor.cpp" line="35"/>
+        <source>Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/accel-curve-editor.cpp" line="72"/>
+        <source>Step must be a positive, finite number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/accel-curve-editor.cpp" line="75"/>
+        <source>Enter 2 to 32 finite, non-negative numbers separated by spaces.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Appearance</name>
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
@@ -36,7 +69,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation>Pokaż dekoracje po stronie serwera w zmaksymalizowanych oknach</translation>
+        <translation>Pokaż dekoracje po stronie serwera w&#xa0;zmaksymalizowanych oknach</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -99,7 +132,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="88"/>
         <source></source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="93"/>
@@ -161,14 +194,14 @@ kafelkowania dla natywnych aplikacji Wayland</translation>
         <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation>Ograniczaj interaktywne ruchy i zmiany rozmiaru
+        <translation>Ograniczaj interaktywne ruchy i&#xa0;zmiany rozmiaru
 okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru
+        <translation>Zapobiegaj interaktywnym ruchom i&#xa0;zmianom rozmiaru
 okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
@@ -495,32 +528,32 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
 <context>
     <name>MainDialog</name>
     <message>
-        <location filename="../../src/maindialog.cpp" line="47"/>
+        <location filename="../../src/maindialog.cpp" line="48"/>
         <source>Appearance</source>
         <translation>Wygląd</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="51"/>
+        <location filename="../../src/maindialog.cpp" line="52"/>
         <source>Behaviour</source>
         <translation>Zachowanie</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="55"/>
+        <location filename="../../src/maindialog.cpp" line="56"/>
         <source>Mouse &amp; Touchpad</source>
         <translation>Mysz i panel dotykowy</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="59"/>
+        <location filename="../../src/maindialog.cpp" line="60"/>
         <source>Keyboard</source>
         <translation>Klawiatura</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="63"/>
+        <location filename="../../src/maindialog.cpp" line="64"/>
         <source>Touchscreen</source>
         <translation>Ekran dotykowy</translation>
     </message>
     <message>
-        <location filename="../../src/maindialog.cpp" line="67"/>
+        <location filename="../../src/maindialog.cpp" line="68"/>
         <source>About</source>
         <translation>Informacje</translation>
     </message>
@@ -528,63 +561,83 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
 <context>
     <name>Mouse</name>
     <message>
-        <location filename="../../src/mouse.cpp" line="58"/>
+        <location filename="../../src/mouse.cpp" line="14"/>
+        <source>Define Motion curve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="15"/>
+        <source>Define Scroll curve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="16"/>
+        <source>Define Fallback curve</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="77"/>
         <source>Flat</source>
         <translation>Płaski</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="59"/>
+        <location filename="../../src/mouse.cpp" line="78"/>
         <source>Adaptive</source>
         <translation>Adaptacyjny</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="78"/>
+        <location filename="../../src/mouse.cpp" line="79"/>
+        <source>Custom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.cpp" line="98"/>
         <source>left-right-middle</source>
         <translation>lewy-prawy-środkowy</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="79"/>
+        <location filename="../../src/mouse.cpp" line="99"/>
         <source>left-middle-right</source>
         <translation>lewy-środkowy-prawy</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="132"/>
-        <location filename="../../src/mouse.cpp" line="153"/>
+        <location filename="../../src/mouse.cpp" line="152"/>
+        <location filename="../../src/mouse.cpp" line="173"/>
         <source>None</source>
         <translation>Brak</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="133"/>
+        <location filename="../../src/mouse.cpp" line="153"/>
         <source>Button Area</source>
         <translation>Obszar przycisków</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="134"/>
+        <location filename="../../src/mouse.cpp" line="154"/>
         <source>Clickfinger</source>
         <translation>Kliknięcie palcem</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="150"/>
+        <location filename="../../src/mouse.cpp" line="170"/>
         <source>Two Finger</source>
         <translation>Dwa palce</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="151"/>
+        <location filename="../../src/mouse.cpp" line="171"/>
         <source>Edge</source>
         <translation>Krawędź</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="152"/>
+        <location filename="../../src/mouse.cpp" line="172"/>
         <source>On Button</source>
         <translation>Na przycisku</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="174"/>
+        <location filename="../../src/mouse.cpp" line="194"/>
         <source>Enabled</source>
         <translation>Włączone</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.cpp" line="176"/>
+        <location filename="../../src/mouse.cpp" line="196"/>
         <source>Disable with external mouse</source>
         <translation>Wyłącz za pomocą myszy zewnętrznej</translation>
     </message>
@@ -607,7 +660,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/touchscreen.cpp" line="23"/>
         <source></source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
@@ -976,17 +1029,17 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
         <translation>Profil przyspieszenia</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="169"/>
+        <location filename="../../src/mouse.ui" line="188"/>
         <source>Status</source>
         <translation>Stan</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="226"/>
+        <location filename="../../src/mouse.ui" line="245"/>
         <source>Tap to click</source>
         <translation>Stuknij, aby kliknąć</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="186"/>
+        <location filename="../../src/mouse.ui" line="205"/>
         <source>Tap button map</source>
         <translation>Mapa przycisków stukania</translation>
     </message>
@@ -1016,37 +1069,47 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
         <translation>Tryb leworęczny</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="236"/>
+        <location filename="../../src/mouse.ui" line="154"/>
+        <source>Custom acceleration curves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.ui" line="160"/>
+        <source>Undefined Motion and Scroll curves use Fallback. If Fallback is undefined, unspecified movement types have no acceleration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mouse.ui" line="255"/>
         <source>Tap and drag</source>
         <translation>Stuknij i przeciągnij</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="259"/>
+        <location filename="../../src/mouse.ui" line="278"/>
         <source>Drag lock</source>
         <translation>Blokada przeciągania</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="273"/>
+        <location filename="../../src/mouse.ui" line="292"/>
         <source>Three finger drag</source>
         <translation>Przeciąganie trzema palcami</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="280"/>
+        <location filename="../../src/mouse.ui" line="299"/>
         <source>Middle button emulation</source>
         <translation>Emulacja środkowego przycisku</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="287"/>
+        <location filename="../../src/mouse.ui" line="306"/>
         <source>Disable while typing</source>
         <translation>Wyłącz podczas pisania</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="196"/>
+        <location filename="../../src/mouse.ui" line="215"/>
         <source>Click method</source>
         <translation>Metoda klikania</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="206"/>
+        <location filename="../../src/mouse.ui" line="225"/>
         <source>Scroll method</source>
         <translation>Metoda przewijania</translation>
     </message>
@@ -1056,9 +1119,57 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
         <translation>Współczynnik przewijania</translation>
     </message>
     <message>
-        <location filename="../../src/mouse.ui" line="155"/>
+        <location filename="../../src/mouse.ui" line="174"/>
         <source>Touchpad</source>
         <translation>Panel dotykowy</translation>
+    </message>
+</context>
+<context>
+    <name>pageTemplate</name>
+    <message>
+        <location filename="../../src/template.ui" line="24"/>
+        <source>GroupBox0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="38"/>
+        <source>ComboBox Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="61"/>
+        <source>ComboBox Test2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="75"/>
+        <source>GroupBox1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="87"/>
+        <source>Enable something special</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="115"/>
+        <source>Indented checkbox (state depends on parent)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="122"/>
+        <source>QCheckBox3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="129"/>
+        <source>QCheckBox4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/template.ui" line="140"/>
+        <source>GroupBox2</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
