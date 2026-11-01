@@ -61,8 +61,7 @@ void About::loadInfo()
     ui->labwcLinkValue->setTextInteractionFlags(Qt::TextBrowserInteraction);
     ui->labwcLinkValue->setOpenExternalLinks(true);
 
-    QString labwcTweaksVersion = QStringLiteral("0.1.0");
-    ui->labwcTweaksVersionValue->setText(labwcTweaksVersion);
+    ui->labwcTweaksVersionValue->setText(APPLICATION_VERSION);
 
     QString labwcTweaksLink = QStringLiteral(
             "<a href=\"https://github.com/labwc/labwc-tweaks/\">github.com/labwc/labwc-tweaks</a>");
