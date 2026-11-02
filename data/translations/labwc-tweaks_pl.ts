@@ -6,32 +6,32 @@
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="29"/>
         <source>Positive spacing between input-speed samples.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodatnie odstępy między próbkami prędkości wejściowej.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="30"/>
         <source>Step</source>
-        <translation type="unfinished"></translation>
+        <translation>Krok</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="33"/>
         <source>2 to 32 non-negative output speeds, separated by spaces. Labwc interpolates between samples and extrapolates beyond the last two.</source>
-        <translation type="unfinished"></translation>
+        <translation>Od 2 do 32 nieujemnych wartości prędkości wyjściowych, rozdzielonych spacjami. Labwc dokonuje interpolacji pomiędzy próbkami oraz ekstrapolacji poza dwiema ostatnimi próbkami.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="35"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkty</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="72"/>
         <source>Step must be a positive, finite number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Krok musi być liczbą dodatnią i skończoną.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="75"/>
         <source>Enter 2 to 32 finite, non-negative numbers separated by spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wprowadź od 2 do 32 skończonych, nieujemnych liczb, oddzielonych spacjami.</translation>
     </message>
 </context>
 <context>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="74"/>
         <source>Show server side decorations on maximized windows</source>
-        <translation>Pokaż dekoracje po stronie serwera w&#xa0;zmaksymalizowanych oknach</translation>
+        <translation>Pokaż dekoracje po stronie serwera w zmaksymalizowanych oknach</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="77"/>
@@ -194,14 +194,14 @@ kafelkowania dla natywnych aplikacji Wayland</translation>
         <location filename="../../src/behaviour.cpp" line="126"/>
         <source>Resist interactive moves and resizes of a window
  across screen edges</source>
-        <translation>Ograniczaj interaktywne ruchy i&#xa0;zmiany rozmiaru
+        <translation>Ograniczaj interaktywne ruchy i zmiany rozmiaru
 okna na krawędziach ekranu</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="131"/>
         <source>Resist interactive moves and resizes of a window
  across the edges of any other window</source>
-        <translation>Zapobiegaj interaktywnym ruchom i&#xa0;zmianom rozmiaru
+        <translation>Zapobiegaj interaktywnym ruchom i zmianom rozmiaru
 okna na krawędziach dowolnego innego okna</translation>
     </message>
     <message>
@@ -563,17 +563,17 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/mouse.cpp" line="14"/>
         <source>Define Motion curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ krzywą ruchu</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="15"/>
         <source>Define Scroll curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ krzywą przewijania</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="16"/>
         <source>Define Fallback curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ krzywą zastępczą</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="77"/>
@@ -588,7 +588,7 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Niestandardowe</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="98"/>
@@ -1071,12 +1071,12 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/mouse.ui" line="154"/>
         <source>Custom acceleration curves</source>
-        <translation type="unfinished"></translation>
+        <translation>Niestandardowe krzywe przyspieszenia</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="160"/>
         <source>Undefined Motion and Scroll curves use Fallback. If Fallback is undefined, unspecified movement types have no acceleration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieokreślone krzywe ruchu i przewijania korzystają z funkcji zastępczej. Jeśli zastępcza jest niezdefiniowana, nieokreślone typy ruchu nie mają przyspieszenia.</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="255"/>
@@ -1129,47 +1129,47 @@ a także rozmiar obszaru obramowania, do którego będzie stosowana zmiana rozmi
     <message>
         <location filename="../../src/template.ui" line="24"/>
         <source>GroupBox0</source>
-        <translation type="unfinished"></translation>
+        <translation>PoleGrupy0</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="38"/>
         <source>ComboBox Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Test PolaKombi</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="61"/>
         <source>ComboBox Test2</source>
-        <translation type="unfinished"></translation>
+        <translation>Test2 PolaKombi</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="75"/>
         <source>GroupBox1</source>
-        <translation type="unfinished"></translation>
+        <translation>PoleGrupy1</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="87"/>
         <source>Enable something special</source>
-        <translation type="unfinished"></translation>
+        <translation>Włączenie czegoś wyjątkowego</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="115"/>
         <source>Indented checkbox (state depends on parent)</source>
-        <translation type="unfinished"></translation>
+        <translation>Wcięte pole wyboru (stan zależy od elementu nadrzędnego)</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="122"/>
         <source>QCheckBox3</source>
-        <translation type="unfinished"></translation>
+        <translation>PoleWyboruQ3</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="129"/>
         <source>QCheckBox4</source>
-        <translation type="unfinished"></translation>
+        <translation>PoleWyboruQ4</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="140"/>
         <source>GroupBox2</source>
-        <translation type="unfinished"></translation>
+        <translation>PoleGrupy2</translation>
     </message>
 </context>
 <context>
