@@ -6,32 +6,32 @@
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="29"/>
         <source>Positive spacing between input-speed samples.</source>
-        <translation type="unfinished"></translation>
+        <translation>Θετικό διάστημα μεταξύ των δειγμάτων ταχύτητας εισόδου.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="30"/>
         <source>Step</source>
-        <translation type="unfinished"></translation>
+        <translation>Βήμα</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="33"/>
         <source>2 to 32 non-negative output speeds, separated by spaces. Labwc interpolates between samples and extrapolates beyond the last two.</source>
-        <translation type="unfinished"></translation>
+        <translation>2 έως 32 μη αρνητικές ταχύτητες εξόδου, χωρισμένες με κενά. Το Labwc εφαρμόζει παρεμβολή μεταξύ των δειγμάτων και παρεκβολή πέρα από τα δύο τελευταία.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="35"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Σημεία</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="72"/>
         <source>Step must be a positive, finite number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το βήμα πρέπει να είναι θετικός, πεπερασμένος αριθμός.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="75"/>
         <source>Enter 2 to 32 finite, non-negative numbers separated by spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγάγετε 2 έως 32 πεπερασμένους, μη αρνητικούς αριθμούς χωρισμένους με κενά.</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="29"/>
         <source>Radius of server side decoration top corners</source>
-        <translation>Ακτίνα στρογγυλοποίησης των επάνω γωνιών του παραθύρου</translation>
+        <translation>Ακτίνα στρογγυλοποίησης των επάνω γωνιών της διακόσμησης του διαχειριστή παραθύρων</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="34"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../../src/appearance.cpp" line="39"/>
         <source>Render drop-shadows behind tiled windows</source>
-        <translation>Εμφάνιση σκιών πίσω από πλακιδιωμένα παράθυρα</translation>
+        <translation>Εμφάνιση σκιών πίσω από παράθυρα σε παράθεση</translation>
     </message>
     <message>
         <location filename="../../src/appearance.cpp" line="53"/>
@@ -92,22 +92,22 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="25"/>
         <source>Automatic</source>
-        <translation>Αυτόματο</translation>
+        <translation>Αυτόματη</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="26"/>
         <source>Cascade</source>
-        <translation>Κλιμάκωση</translation>
+        <translation>Διαδοχική</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="27"/>
         <source>Center</source>
-        <translation>Κεντράρισμα</translation>
+        <translation>Στο κέντρο</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="28"/>
         <source>Cursor</source>
-        <translation>Δρομέας</translation>
+        <translation>Στον δρομέα</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="43"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../../src/behaviour.cpp" line="83"/>
         <source>Distance between windows and output edges when using movement actions</source>
-        <translation>Απόσταση μεταξύ παραθύρων και άκρων της οθόνης κατά τη μετακίνηση</translation>
+        <translation>Απόσταση μεταξύ παραθύρων και άκρων της οθόνης κατά τη χρήση ενεργειών μετακίνησης</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="88"/>
@@ -222,18 +222,18 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.cpp" line="153"/>
         <source>Size of corner regions to which all &apos;Corner&apos; mousebinds contexts apply
  as well size of border region for which mouse resizing will apply in any direction.</source>
-        <translation>Μέγεθος των γωνιακών περιοχών στις οποίες εφαρμόζονται όλα τα περιβάλλοντα συνδέσεων ποντικιού «Corner»,
-καθώς και της συνοριακής περιοχής όπου η αλλαγή μεγέθους με το ποντίκι εφαρμόζεται προς οποιαδήποτε κατεύθυνση.</translation>
+        <translation>Μέγεθος των γωνιακών περιοχών στις οποίες ισχύουν όλες οι αντιστοιχίσεις ποντικιού «Corner»,
+καθώς και της περιοχής περιγράμματος όπου η αλλαγή μεγέθους με το ποντίκι ισχύει προς οποιαδήποτε κατεύθυνση.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="167"/>
         <source>Show a small indicator on top of the window when resizing or moving</source>
-        <translation>Εμφάνιση μιας μικρής ένδειξης πάνω από το παράθυρο κατά την αλλαγή μεγέθους ή τη μετακίνηση</translation>
+        <translation>Εμφάνιση μιας μικρής ένδειξης επάνω στο παράθυρο κατά την αλλαγή μεγέθους ή τη μετακίνηση</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="171"/>
         <source>Nonpixel</source>
-        <translation>Σε μη εικονοστοιχειακή αλλαγή μεγέθους</translation>
+        <translation>Μόνο με βήματα μεγέθους</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.cpp" line="187"/>
@@ -563,22 +563,22 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="14"/>
         <source>Define Motion curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός καμπύλης κίνησης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="15"/>
         <source>Define Scroll curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός καμπύλης κύλισης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="16"/>
         <source>Define Fallback curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός εναλλακτικής καμπύλης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="77"/>
         <source>Flat</source>
-        <translation>Επίπεδο</translation>
+        <translation>Σταθερό</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="78"/>
@@ -588,7 +588,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσαρμοσμένο</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="98"/>
@@ -665,7 +665,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="24"/>
         <source>Normal</source>
-        <translation>Κανονικός</translation>
+        <translation>Κανονική</translation>
     </message>
     <message>
         <location filename="../../src/touchscreen.cpp" line="25"/>
@@ -680,7 +680,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/touchscreen.cpp" line="27"/>
         <source>Inverted</source>
-        <translation>Ανεστραμμένος</translation>
+        <translation>Ανεστραμμένη</translation>
     </message>
 </context>
 <context>
@@ -767,7 +767,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="83"/>
         <source>Enable on tiled windows</source>
-        <translation>Ενεργοποίηση σε πλακιδιωμένα παράθυρα</translation>
+        <translation>Ενεργοποίηση σε παράθυρα σε παράθεση</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="100"/>
@@ -777,7 +777,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/appearance.ui" line="112"/>
         <source>Corner radius</source>
-        <translation>Γωνιακή ακτίνα</translation>
+        <translation>Ακτίνα γωνιών</translation>
     </message>
     <message>
         <location filename="../../src/appearance.ui" line="146"/>
@@ -839,7 +839,7 @@ If disabled, an outlined rectangle is shown</source>
         <location filename="../../src/behaviour.ui" line="425"/>
         <location filename="../../src/behaviour.ui" line="455"/>
         <source> px</source>
-        <translation> εικ</translation>
+        <translation> εικ.</translation>
     </message>
     <message>
         <location filename="../../src/behaviour.ui" line="90"/>
@@ -1071,12 +1071,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="154"/>
         <source>Custom acceleration curves</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσαρμοσμένες καμπύλες επιτάχυνσης</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="160"/>
         <source>Undefined Motion and Scroll curves use Fallback. If Fallback is undefined, unspecified movement types have no acceleration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι μη καθορισμένες καμπύλες κίνησης και κύλισης χρησιμοποιούν την εναλλακτική καμπύλη. Αν δεν έχει οριστεί εναλλακτική καμπύλη, οι τύποι κίνησης χωρίς καθορισμένη καμπύλη δεν έχουν επιτάχυνση.</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="255"/>
@@ -1129,47 +1129,47 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/template.ui" line="24"/>
         <source>GroupBox0</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλαίσιο ομάδας 0</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="38"/>
         <source>ComboBox Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Δοκιμή σύνθετου πλαισίου</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="61"/>
         <source>ComboBox Test2</source>
-        <translation type="unfinished"></translation>
+        <translation>Δοκιμή σύνθετου πλαισίου 2</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="75"/>
         <source>GroupBox1</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλαίσιο ομάδας 1</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="87"/>
         <source>Enable something special</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση ειδικής λειτουργίας</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="115"/>
         <source>Indented checkbox (state depends on parent)</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλαίσιο επιλογής με εσοχή (η κατάστασή του εξαρτάται από το γονικό στοιχείο)</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="122"/>
         <source>QCheckBox3</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλαίσιο επιλογής 3</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="129"/>
         <source>QCheckBox4</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλαίσιο επιλογής 4</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="140"/>
         <source>GroupBox2</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλαίσιο ομάδας 2</translation>
     </message>
 </context>
 <context>
