@@ -6,32 +6,32 @@
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="29"/>
         <source>Positive spacing between input-speed samples.</source>
-        <translation type="unfinished"></translation>
+        <translation>Положительный шаг между выборками скорости ввода.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="30"/>
         <source>Step</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаг</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="33"/>
         <source>2 to 32 non-negative output speeds, separated by spaces. Labwc interpolates between samples and extrapolates beyond the last two.</source>
-        <translation type="unfinished"></translation>
+        <translation>От 2 до 32 неотрицательных значений выходной скорости, разделённых пробелами. Labwc интерполирует между выборками и экстраполирует за пределами двух последних.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="35"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Точки</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="72"/>
         <source>Step must be a positive, finite number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаг должен быть положительным конечным числом.</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="75"/>
         <source>Enter 2 to 32 finite, non-negative numbers separated by spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите от 2 до 32 конечных неотрицательных чисел, разделённых пробелами.</translation>
     </message>
 </context>
 <context>
@@ -563,17 +563,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="14"/>
         <source>Define Motion curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать кривую движения</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="15"/>
         <source>Define Scroll curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать кривую прокрутки</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="16"/>
         <source>Define Fallback curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать резервную кривую</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="77"/>
@@ -588,7 +588,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательская</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="98"/>
@@ -1071,12 +1071,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.ui" line="154"/>
         <source>Custom acceleration curves</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательские кривые ускорения</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="160"/>
         <source>Undefined Motion and Scroll curves use Fallback. If Fallback is undefined, unspecified movement types have no acceleration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Если кривые движения и прокрутки не заданы, используется резервная кривая. Если резервная кривая не задана, для незаданных типов перемещения ускорение не применяется.</translation>
     </message>
     <message>
         <location filename="../../src/mouse.ui" line="255"/>
@@ -1129,47 +1129,47 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/template.ui" line="24"/>
         <source>GroupBox0</source>
-        <translation type="unfinished"></translation>
+        <translation>GroupBox0</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="38"/>
         <source>ComboBox Test</source>
-        <translation type="unfinished"></translation>
+        <translation>ComboBox Test</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="61"/>
         <source>ComboBox Test2</source>
-        <translation type="unfinished"></translation>
+        <translation>ComboBox Test2</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="75"/>
         <source>GroupBox1</source>
-        <translation type="unfinished"></translation>
+        <translation>GroupBox1</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="87"/>
         <source>Enable something special</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить кое-что особенное</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="115"/>
         <source>Indented checkbox (state depends on parent)</source>
-        <translation type="unfinished"></translation>
+        <translation>Вложенный флажок (состояние зависит от родителя)</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="122"/>
         <source>QCheckBox3</source>
-        <translation type="unfinished"></translation>
+        <translation>QCheckBox3</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="129"/>
         <source>QCheckBox4</source>
-        <translation type="unfinished"></translation>
+        <translation>QCheckBox4</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="140"/>
         <source>GroupBox2</source>
-        <translation type="unfinished"></translation>
+        <translation>GroupBox2</translation>
     </message>
 </context>
 <context>
