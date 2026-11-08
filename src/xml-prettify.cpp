@@ -5,6 +5,15 @@
 #include <fstream>
 #include <string>
 
+static bool
+has_space_before(std::string &line, size_t index)
+{
+    if (index < 1) {
+        return false;
+    }
+    return line[index - 1] == ' ';
+}
+
 void xml_prettify(const char *filename)
 {
     char const *noPrettify = getenv("LABWC_TWEAKS_NO_PRETTIFY");
@@ -28,7 +37,7 @@ void xml_prettify(const char *filename)
 
         // Convert <foo/> to <foo />
         for (size_t i = 0; i < line.size(); ++i) {
-            if (line[i] == '/' && line[i + 1] == '>') {
+            if (line[i] == '/' && line[i + 1] == '>' && !has_space_before(line, i)) {
                 output += " />";
                 i += 1;
                 continue;
