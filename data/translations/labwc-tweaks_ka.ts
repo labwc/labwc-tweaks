@@ -11,7 +11,7 @@
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="30"/>
         <source>Step</source>
-        <translation type="unfinished"></translation>
+        <translation>ნაბიჯი</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="33"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="35"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>წერტილები</translation>
     </message>
     <message>
         <location filename="../../src/accel-curve-editor.cpp" line="72"/>
@@ -581,7 +581,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/mouse.cpp" line="79"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>მორგებული</translation>
     </message>
     <message>
         <location filename="../../src/mouse.cpp" line="98"/>
@@ -1122,12 +1122,12 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/template.ui" line="24"/>
         <source>GroupBox0</source>
-        <translation type="unfinished"></translation>
+        <translation>GroupBox0</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="38"/>
         <source>ComboBox Test</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩამოსაშლელი სიის ტესტი</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="61"/>
@@ -1137,7 +1137,7 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/template.ui" line="75"/>
         <source>GroupBox1</source>
-        <translation type="unfinished"></translation>
+        <translation>GroupBox1</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="87"/>
@@ -1152,17 +1152,17 @@ If disabled, an outlined rectangle is shown</source>
     <message>
         <location filename="../../src/template.ui" line="122"/>
         <source>QCheckBox3</source>
-        <translation type="unfinished"></translation>
+        <translation>QCheckBox3</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="129"/>
         <source>QCheckBox4</source>
-        <translation type="unfinished"></translation>
+        <translation>QCheckBox4</translation>
     </message>
     <message>
         <location filename="../../src/template.ui" line="140"/>
         <source>GroupBox2</source>
-        <translation type="unfinished"></translation>
+        <translation>GroupBox2</translation>
     </message>
 </context>
 <context>
